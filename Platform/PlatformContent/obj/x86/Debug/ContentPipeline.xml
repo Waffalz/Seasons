@@ -37,6 +37,24 @@
       <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb</Output>
       <Time>2015-02-13T09:02:03.1600535-06:00</Time>
     </Item>
+    <Item>
+      <Source>menuItems\Button.jpg</Source>
+      <Name>menuItems\Button</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Button.xnb</Output>
+      <Time>2015-02-18T09:54:35.6011307-06:00</Time>
+    </Item>
+    <Item>
+      <Source>menuItems\Seasons_Menu.png</Source>
+      <Name>menuItems\Seasons_Menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb</Output>
+      <Time>2015-02-18T09:54:35.6323343-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
