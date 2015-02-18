@@ -27,9 +27,11 @@ namespace Platform.World
         private List<Particle> addPList;
         private List<Particle> removePList;
 
-        Camera cam;
+        private Camera cam;
         private Player player;
         private float gAccel; //default -150
+
+        private List<BackgroundObject> backList;
 
         public Tile[,] Tiles
         {
@@ -61,6 +63,11 @@ namespace Platform.World
             get { return cam; }
             set { cam = value; }
         }
+        public List<BackgroundObject> BackList
+        {
+            get { return backList; }
+            set { backList = value; }
+        }
 
         public Map()
         {
@@ -73,6 +80,10 @@ namespace Platform.World
             removePList = new List<Particle>();
             gAccel = -150;
             cam = new DefaultCamera(this);
+            backList = new List<BackgroundObject>();
+
+            
+
         }
 
         public void AddEntity(Entity toAdd)
@@ -225,7 +236,6 @@ namespace Platform.World
             removePList.Clear();
         }
 
-
         /* Old Map loading stuff
         public static Map LoadMap(string pathname)
         {
@@ -257,8 +267,6 @@ namespace Platform.World
             
         }
         */
-
-        
 
         public static Map LoadMap2(string pathname)
         {

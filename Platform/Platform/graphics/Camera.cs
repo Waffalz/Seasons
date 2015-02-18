@@ -82,6 +82,14 @@ namespace Platform.Graphics
                 if (parent.Player != null){
                     position = parent.Player.Position;
                 }
+
+                for (int i = parent.BackList.Count - 1; i >= 0; i-- )
+                {
+                    BackgroundObject o = parent.BackList[i];
+
+                }
+
+
                 for (int y = 0; y < parent.Tiles.GetLength(0); y++)
                 {
                     for (int x = 0; x < parent.Tiles.GetLength(1); x++)
