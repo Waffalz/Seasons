@@ -18,6 +18,11 @@ namespace Platform.Mobs
         private float walkSpeed;
         private float jumpSpeed;
         private bool onGround;
+        private int shieldAmount;
+        private int attackSpeed;
+        private int damage;
+        private int defense;
+
 
         public Vector2 WalkVelocity
         {
@@ -46,6 +51,18 @@ namespace Platform.Mobs
             set { health = value; }
         }
 
+        public int AttackSpeed
+        {
+            get { return attackSpeed; }
+            set { attackSpeed = value; }
+        }
+
+        public int Defense
+        {
+            get { return defense; }
+            set { defense = value; }
+        }
+
         public Mob():base()
         {
             Size = new Vector2(10,10);
@@ -55,6 +72,8 @@ namespace Platform.Mobs
             jumpSpeed = 50;
             walkVelocity = new Vector2();
             onGround = false;
+            health = 100;
+            attackSpeed = 1;
         }
 
         public void Damage(int toHit)
