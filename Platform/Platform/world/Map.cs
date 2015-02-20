@@ -82,8 +82,6 @@ namespace Platform.World
             cam = new DefaultCamera(this);
             backList = new List<BackgroundObject>();
 
-            
-
         }
 
         public void AddEntity(Entity toAdd)

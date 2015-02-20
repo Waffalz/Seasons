@@ -83,15 +83,19 @@ namespace Platform.Graphics
                     position = parent.Player.Position;
                 }
 
-                for (int i = parent.BackList.Count - 1; i >= 0; i-- )
+                for (int i = 0; i < parent.BackList.Count; i++ ) //draw background
                 {
                     BackgroundObject o = parent.BackList[i];
 
                     if (o.Image != null)
                     {
-                        spriteBatch.Draw(o.Image, new Rectangle((int)(o.Position.X - position.X), (int)(o.Position.X - position.X), (int)o.Size.X, (int)o.Size.Y), o.SrcRect, o.Col);
+                        spriteBatch.Draw(o.Image,
+                            new Rectangle(
+                            (int)(((o.Position.X - o.Size.X / 2) - position.X) * zoomScale *o.Depth + PointOnScreen.X),
+                            (int)(-((o.Position.Y + o.Size.Y / 2) - position.Y) * zoomScale *o.Depth + PointOnScreen.Y),
+                            (int)(o.Size.X * zoomScale), (int)(o.Size.Y * zoomScale)),
+                            o.SrcRect, o.Col);
                     }
-                    
 
                 }
 
@@ -125,7 +129,8 @@ namespace Platform.Graphics
                         spriteBatch.Draw(ent.Texture, new Rectangle(
                             (int)((ent.Position.X - ent.Size.X / 2 - position.X) * zoomScale + PointOnScreen.X),
                             (int)(-(ent.Position.Y + ent.Size.Y / 2 - position.Y) * zoomScale + PointOnScreen.Y),
-                            (int)(ent.Size.X * zoomScale), (int)(ent.Size.Y * zoomScale)), ent.SourceRect, ent.Color);
+                            (int)(ent.Size.X * zoomScale), (int)(ent.Size.Y * zoomScale)),
+                            ent.SourceRect, ent.Color);
                     }
 
                 }

@@ -62,7 +62,20 @@ namespace Platform
             mappu = Map.LoadMap2(@"Content/maps/Level02.txt");
             mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width/2, Window.ClientBounds.Height/2);
 
+            for (int i = 0; i < 10; i++)
+            {
+                BackgroundObject boi = new BackgroundObject();
+                boi.Position = new Vector2(rand.Next(1, 200), rand.Next(1, 100));
+                boi.Size = new Vector2(rand.Next(1, 30));
 
+                boi.Col = new Color((byte)rand.Next(1, 255), (byte)rand.Next(1, 255), (byte)rand.Next(1, 255));
+
+                boi.Depth = (float)rand.Next(1,100)/100;
+                boi.Image = particleSheets["DefaultParticle"];
+                mappu.BackList.Add(boi);
+
+            }
+            mappu.BackList.Sort();
             oKipz = Keyboard.GetState();
             oMus = Mouse.GetState();
         }
@@ -88,17 +101,7 @@ namespace Platform
             particleSheets = new Dictionary<string, Texture2D>();
             particleSheets.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
 
-            for (int i = 0; i < 10; i++)
-            {
-                BackgroundObject boi = new BackgroundObject();
-                boi.Position = new Vector2(rand.Next(1, 30));
-                boi.Size = new Vector2(rand.Next(1, 30));
-
-                boi.Depth = rand.Next(1, 5);
-                boi.Image = particleSheets["DefaultParticle"];
-                mappu.BackList.Add(boi);
-
-            }
+            
 
         }
 
