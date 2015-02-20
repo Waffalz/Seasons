@@ -43,6 +43,8 @@ namespace Platform
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            
+            rand = new Random();
         }
 
         /// <summary>
@@ -56,10 +58,10 @@ namespace Platform
             // TODO: Add your initialization logic here
 
             base.Initialize();
-            rand = new Random();
 
             mappu = Map.LoadMap2(@"Content/maps/Level02.txt");
             mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width/2, Window.ClientBounds.Height/2);
+
 
             oKipz = Keyboard.GetState();
             oMus = Mouse.GetState();
@@ -85,6 +87,19 @@ namespace Platform
 
             particleSheets = new Dictionary<string, Texture2D>();
             particleSheets.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
+
+            for (int i = 0; i < 10; i++)
+            {
+                BackgroundObject boi = new BackgroundObject();
+                boi.Position = new Vector2(rand.Next(1, 30));
+                boi.Size = new Vector2(rand.Next(1, 30));
+
+                boi.Depth = rand.Next(1, 5);
+                boi.Image = particleSheets["DefaultParticle"];
+                mappu.BackList.Add(boi);
+
+            }
+
         }
 
         /// <summary>

@@ -58,7 +58,6 @@ namespace Platform.Mobs
             maxAttack = (float).01;
         }
 
-
         public override void Update(float gameTime)
         {
             base.Update(gameTime);
@@ -118,7 +117,6 @@ namespace Platform.Mobs
             }
             parent.Cam.ZoomScale += (Game1.mus.ScrollWheelValue - Game1.oMus.ScrollWheelValue) / 120;
             
-
             attackTime += gameTime;
 
         }
@@ -126,7 +124,6 @@ namespace Platform.Mobs
         public void Attack(Vector2 target)
         {
             Vector2 dif = target - position;
-
             
             double ang = (float)Math.Atan2((double)dif.Y, (double)dif.X) + MathHelper.ToRadians(Game1.rand.Next((int)(-spread / 2), (int)(spread / 2)));//calculate spread
 
@@ -141,6 +138,7 @@ namespace Platform.Mobs
             b.Gravity = true;
 
             parent.AddEntity(b);
+
         }
     }
 }

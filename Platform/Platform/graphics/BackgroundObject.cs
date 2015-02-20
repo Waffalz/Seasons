@@ -17,7 +17,13 @@ namespace Platform.Graphics
         private Vector2 position;
         private Vector2 size;
         private float depth;
+        private Color col;
 
+        public Color Col
+        {
+            get { return col; }
+            set { col = value; }
+        }
         public Texture2D Image
         {
             get { return image; }
@@ -52,6 +58,7 @@ namespace Platform.Graphics
             position = new Vector2();
             size = new Vector2();
             depth = 0;
+            col = Color.White;
         }
 
         public int CompareTo(object e)

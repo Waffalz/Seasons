@@ -87,6 +87,12 @@ namespace Platform.Graphics
                 {
                     BackgroundObject o = parent.BackList[i];
 
+                    if (o.Image != null)
+                    {
+                        spriteBatch.Draw(o.Image, new Rectangle((int)(o.Position.X - position.X), (int)(o.Position.X - position.X), (int)o.Size.X, (int)o.Size.Y), o.SrcRect, o.Col);
+                    }
+                    
+
                 }
 
                 for (int y = 0; y < parent.Tiles.GetLength(0); y++)
