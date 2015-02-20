@@ -18,6 +18,9 @@ namespace Platform.Mobs
         private float walkSpeed;
         private float jumpSpeed;
         private bool onGround;
+        private int damage;
+        private int attackSpeed;
+
 
         public Vector2 WalkVelocity
         {
@@ -46,6 +49,12 @@ namespace Platform.Mobs
             set { health = value; }
         }
 
+        public int AttackSpeed
+        {
+            get { return attackSpeed; }
+            set { attackSpeed = value; }
+        }
+
         public Mob():base()
         {
             Size = new Vector2(10,10);
@@ -55,6 +64,7 @@ namespace Platform.Mobs
             jumpSpeed = 50;
             walkVelocity = new Vector2();
             onGround = false;
+            attackSpeed = 1;
         }
 
         public void Damage(int toHit)
