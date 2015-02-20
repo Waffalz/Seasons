@@ -9,12 +9,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace Menu
+namespace Platform
 {
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class Menu : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -32,7 +32,7 @@ namespace Menu
 
         Button btnPlay;
 
-        public Game1()
+        public Menu()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -67,7 +67,7 @@ namespace Menu
             graphics.ApplyChanges();
             IsMouseVisible = true;
 
-            btnPlay = new Button(Content.Load<Texture2D>("Button"), graphics.GraphicsDevice);
+            btnPlay = new Button(Content.Load<Texture2D>("menuItems/Button"), graphics.GraphicsDevice);
             btnPlay.setPosition(new Vector2(325, 450));
         }
 
@@ -106,11 +106,19 @@ namespace Menu
                     break;
 
                 case GameState.Playing:
-
+                    System.Threading.Thread newThread = new System.Threading.Thread(NewGame);
+                    newThread.Start();
                     break;
             }
 
             base.Update(gameTime);
+        }
+
+        public void NewGame()
+        {
+            this.Exit();
+            Game1 game = new Game1();
+            game.Run();
         }
 
         /// <summary>
@@ -125,7 +133,7 @@ namespace Menu
             switch (CurrentGameState)
             {
                 case GameState.MainMenu:
-                    spriteBatch.Draw(Content.Load<Texture2D>("Seasons_Menu"), new Rectangle(0, 0, screenWidth, screenHeight), btnPlay.colour);
+                    spriteBatch.Draw(Content.Load<Texture2D>("menuItems/Seasons_Menu"), new Rectangle(0, 0, screenWidth, screenHeight), btnPlay.colour);
                     btnPlay.Draw(spriteBatch);
                     break;
             }
