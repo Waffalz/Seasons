@@ -16,6 +16,15 @@ using Platform.Mobs;
 namespace Platform
 {
     /// <summary>
+    /// This keeps track of what screen we are showing in the game: the main menu, the character select screen, and the game
+    /// </summary>
+    enum GameState
+    {
+        MainMenu,
+        CharacterSelect,
+        Playing
+    }
+    /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
@@ -35,6 +44,12 @@ namespace Platform
         private MouseState oMus;
 
         int maxScroll = 10, minScroll = 1;
+
+        GameState CurrentGameState = GameState.MainMenu;
+        // Screen Adjustments
+        int screenWidth = 800, screenHeight = 600;
+        Texture2D menuTexture;
+        Button btnPlay;
 
         public Game1()
         {
@@ -83,6 +98,18 @@ namespace Platform
 
             particleSheets = new Dictionary<string, Texture2D>();
             particleSheets.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
+
+            // Screen stuff
+            graphics.PreferredBackBufferWidth = screenWidth;
+            graphics.PreferredBackBufferHeight = screenHeight;
+            //graphics.IsFullScreen = true;
+            graphics.ApplyChanges();
+            IsMouseVisible = true;
+
+            btnPlay = new Button(Content.Load<Texture2D>("menuItems/Button"), graphics.GraphicsDevice);
+            btnPlay.setPosition(new Vector2(325, 450));
+
+            menuTexture = Content.Load<Texture2D>("menuItems/Seasons_Menu");
         }
 
         /// <summary>
@@ -101,84 +128,93 @@ namespace Platform
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            MouseState mus = Mouse.GetState();
+            KeyboardState kipz = Keyboard.GetState();
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             // TODO: Add your update logic here
-            KeyboardState kipz = Keyboard.GetState();
-            MouseState mus = Mouse.GetState();
-            float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
-
-            
-            if (mappu.Player != null){//if a player exists
-                Player p = mappu.Player;
-                if (kipz.IsKeyDown(Keys.D)) //running right
-                {
-                    p.WalkVelocity += new Vector2(p.WalkSpeed, 0);
-                }
-                if (kipz.IsKeyDown(Keys.A)) //running left
-                {
-                    p.WalkVelocity += new Vector2(-p.WalkSpeed, 0);
-
-                }
-                
-                if ((kipz.IsKeyDown(Keys.Space) || kipz.IsKeyDown(Keys.W)) && p.OnGround)//jumping
-                {
-                    for (int i = 0; i < 30; i++ )//particle effects
+            btnPlay.Update(mus);
+            switch (CurrentGameState)
+            {
+                //Main menu
+                case GameState.MainMenu:
+                    if (btnPlay.isClicked == true)
                     {
-                        Particle poi = new Particle((float)2,(float)2);
-                        poi.Color = Color.SkyBlue;
-                        poi.Position = new Vector2(p.Position.X, p.Position.Y-p.Size.Y/2);
-                        double rAngle = MathHelper.ToRadians(rand.Next(0, 360));
-                        double speed = rand.Next(20, 40);
-                        poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), Math.Abs((float)Math.Round(Math.Sin(rAngle) * speed)));
-                        poi.ColorSpeed = new Vector3(rand.Next(-10,10), rand.Next(-10,10), rand.Next(-10,10));
-                        mappu.AddParticle(poi);
-
+                        CurrentGameState = GameState.Playing;
+                        btnPlay.colour = new Color(255, 255, 255, 255);
                     }
-                    p.OnGround = false;
-                    p.Velocity = new Vector2(p.Velocity.X, p.JumpSpeed);
-                }
+                    break;
 
-                if (p.WalkVelocity.X != 0 && p.OnGround == true){ //fancy particles effects when running
-                    for (int i = 0; i < 5; i++) {
-                        Particle poi = new Particle((float)2, (float)1);
-                        poi.Color = Color.SkyBlue;
-                        poi.Position = new Vector2(p.Position.X, p.Position.Y - p.Size.Y / 2);
-                        double rAngle = MathHelper.ToRadians(rand.Next(0, 360));
-                        float speed = rand.Next(20, 40);
-                        poi.Velocity = new Vector2((float)Math.Cos(rAngle), Math.Abs((float)(Math.Sin(rAngle)))) * speed;
-                        poi.ColorSpeed = new Vector3(rand.Next(-10, 10), rand.Next(-10, 10), rand.Next(-10, 10));
-                        mappu.AddParticle(poi);
+                //character select menu
+                case GameState.CharacterSelect:
 
+                    //Return to main menu logic
+                    KeyboardState kb = Keyboard.GetState();
+                    if (kipz.IsKeyDown(Keys.Escape))
+                        CurrentGameState = GameState.MainMenu;
+                    break;
+                
+                //Logic for playing the game
+                case GameState.Playing:
+                    float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                    int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
+
+
+                    if (mappu.Player != null)
+                    {//if a player exists
+                        Player p = mappu.Player;
+                        if (kipz.IsKeyDown(Keys.D)) //running right
+                        {
+                            p.WalkVelocity += new Vector2(p.WalkSpeed, 0);
+                        }
+                        if (kipz.IsKeyDown(Keys.A)) //running left
+                        {
+                            p.WalkVelocity += new Vector2(-p.WalkSpeed, 0);
+
+                        }
+
+                        if ((kipz.IsKeyDown(Keys.Space) || kipz.IsKeyDown(Keys.W)) && p.OnGround)//jumping
+                        {
+                            p.OnGround = false;
+                            p.Velocity = new Vector2(p.Velocity.X, p.JumpSpeed);
+                        }
+
+                        /*if (mus.LeftButton == ButtonState.Pressed)
+                        {//left click firing
+                            if (p.AttackTime > p.MaxAttack)
+                            {
+                                p.Attack(mappu.Cam.PositionFromScreen(new Point(mus.X, mus.Y)));
+
+                                p.AttackTime = 0;
+                            }
+                        }*/
+                        mappu.Cam.ZoomScale += (mus.ScrollWheelValue - oMus.ScrollWheelValue) / 120;
                     }
-                }
-                if (mus.LeftButton == ButtonState.Pressed) {//left click firing
-                    if (p.AttackTime > p.MaxAttack) {
-                        p.Attack(mappu.Cam.PositionFromScreen(new Point(mus.X, mus.Y)));
-                        
-                        p.AttackTime = 0;
 
+                    mappu.Tick(gameTime); //update stuff in the Map
+
+                    if (scroll < 0)
+                    {
+                        mappu.Cam.ZoomScale = Math.Max(minScroll, mappu.Cam.ZoomScale + scroll / 120);
                     }
-                }
-                mappu.Cam.ZoomScale += (mus.ScrollWheelValue - oMus.ScrollWheelValue)/120;
+                    if (scroll > 0)
+                    {
+                        mappu.Cam.ZoomScale = Math.Min(maxScroll, mappu.Cam.ZoomScale + scroll / 120);
+                    }
+
+                    //Return to main menu logic
+                    if (kipz.IsKeyDown(Keys.Escape))
+                        CurrentGameState = GameState.MainMenu;
+                    break;
             }
-
-            mappu.Tick(gameTime); //update stuff in the Map
-
-            
-
             oKipz = kipz;
             oMus = mus;
 
-            if (scroll < 0){
-                mappu.Cam.ZoomScale = Math.Max(minScroll, mappu.Cam.ZoomScale + scroll/120);
-            }
-            if (scroll > 0) {
-                mappu.Cam.ZoomScale = Math.Min(maxScroll, mappu.Cam.ZoomScale + scroll/120);
-            }
+            //Quitting the game from anywhere
+            if ((kipz.IsKeyDown(Keys.LeftControl) || kipz.IsKeyDown(Keys.RightControl)) && kipz.IsKeyDown(Keys.Q))
+                this.Exit();
 
             base.Update(gameTime);
         }
@@ -193,9 +229,21 @@ namespace Platform
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            
-            //Draw entities
-            mappu.Cam.Draw(gameTime, spriteBatch);
+
+            switch (CurrentGameState)
+            {
+                case GameState.MainMenu:
+                    spriteBatch.Draw(menuTexture, new Rectangle(0, 0, screenWidth, screenHeight), Color.White);
+                    btnPlay.Draw(spriteBatch);
+                    break;
+                case GameState.CharacterSelect:
+
+                    break;
+                case GameState.Playing:
+                    //Draw entities
+                    mappu.Cam.Draw(gameTime, spriteBatch);
+                    break;
+            }
 
             spriteBatch.End();
             base.Draw(gameTime);

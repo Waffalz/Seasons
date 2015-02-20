@@ -108,8 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="menu\Button.cs" />
-    <Compile Include="menu\Menu.cs" />
+    <Compile Include="menuButtons\MenuButton.cs" />
     <Compile Include="mobs\Baddu.cs" />
     <Compile Include="mobs\Ball.cs" />
     <Compile Include="mobs\Behavior.cs" />

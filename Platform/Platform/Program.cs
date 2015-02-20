@@ -10,7 +10,7 @@ namespace Platform
         /// </summary>
         static void Main(string[] args)
         {
-            using (Menu game = new Menu())
+            using (Game1 game = new Game1())
             {
                 game.Run();
             }

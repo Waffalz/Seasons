@@ -49,11 +49,12 @@ namespace Platform
 
                 if (mouse.LeftButton == ButtonState.Pressed)
                     isClicked = true;
-                else if (colour.A < 255)
-                {
-                    colour.A += 3;
+                else
                     isClicked = false;
-                }
+            }
+            else if(colour.A <  255)
+            {
+                colour.A += 3;
             }
         }
 
