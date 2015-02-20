@@ -150,7 +150,7 @@ namespace Platform
                 //character select menu
                 case GameState.CharacterSelect:
 
-                    //Return to main menu logic
+                    //Return to main menu by pressing escape
                     KeyboardState kb = Keyboard.GetState();
                     if (kipz.IsKeyDown(Keys.Escape))
                         CurrentGameState = GameState.MainMenu;
@@ -181,7 +181,7 @@ namespace Platform
                             p.Velocity = new Vector2(p.Velocity.X, p.JumpSpeed);
                         }
 
-                        /*if (mus.LeftButton == ButtonState.Pressed)
+                        if (mus.LeftButton == ButtonState.Pressed)
                         {//left click firing
                             if (p.AttackTime > p.MaxAttack)
                             {
@@ -189,7 +189,7 @@ namespace Platform
 
                                 p.AttackTime = 0;
                             }
-                        }*/
+                        }
                         mappu.Cam.ZoomScale += (mus.ScrollWheelValue - oMus.ScrollWheelValue) / 120;
                     }
 
@@ -204,7 +204,7 @@ namespace Platform
                         mappu.Cam.ZoomScale = Math.Min(maxScroll, mappu.Cam.ZoomScale + scroll / 120);
                     }
 
-                    //Return to main menu logic
+                    //Return to main menu by pressing escape
                     if (kipz.IsKeyDown(Keys.Escape))
                         CurrentGameState = GameState.MainMenu;
                     break;
@@ -212,7 +212,7 @@ namespace Platform
             oKipz = kipz;
             oMus = mus;
 
-            //Quitting the game from anywhere
+            //You can quit the game from anywhere by pressing Ctrl+Q
             if ((kipz.IsKeyDown(Keys.LeftControl) || kipz.IsKeyDown(Keys.RightControl)) && kipz.IsKeyDown(Keys.Q))
                 this.Exit();
 
