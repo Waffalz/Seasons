@@ -89,7 +89,6 @@ namespace Platform.Graphics
 
                 }
 
-
                 for (int y = 0; y < parent.Tiles.GetLength(0); y++)
                 {
                     for (int x = 0; x < parent.Tiles.GetLength(1); x++)

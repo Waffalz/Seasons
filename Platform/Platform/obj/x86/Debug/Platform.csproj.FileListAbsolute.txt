@@ -6,12 +6,10 @@
 \\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.pdb
 \\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.exe
 \\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.pdb
-H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.exe
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.pdb
-H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\ResolveAssemblyReference.cache
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.exe
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.pdb
@@ -29,3 +27,4 @@ H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debu
 \\fisd-fs4\hs\CTE\109204\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
 \\fisd-fs4\hs\CTE\109204\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\entities\player.png
 \\fisd-fs4\hs\CTE\109204\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache

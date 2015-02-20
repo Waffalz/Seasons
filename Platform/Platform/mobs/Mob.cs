@@ -12,12 +12,12 @@ namespace Platform.Mobs
     class Mob:Entity
     {
 
-        private int health;
+        protected int health;
 
-        private Vector2 walkVelocity;
-        private float walkSpeed;
-        private float jumpSpeed;
-        private bool onGround;
+        protected Vector2 walkVelocity;
+        protected float walkSpeed;
+        protected float jumpSpeed;
+        protected bool onGround;
 
         public Vector2 WalkVelocity
         {
