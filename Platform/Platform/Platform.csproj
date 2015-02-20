@@ -113,9 +113,13 @@
     <Compile Include="mobs\Baddu.cs" />
     <Compile Include="mobs\Ball.cs" />
     <Compile Include="mobs\Behavior.cs" />
+    <Compile Include="mobs\Fall.cs" />
     <Compile Include="mobs\Mob.cs" />
     <Compile Include="graphics\Camera.cs" />
     <Compile Include="graphics\Particle.cs" />
+    <Compile Include="mobs\Spring.cs" />
+    <Compile Include="mobs\Summer.cs" />
+    <Compile Include="mobs\Winter.cs" />
     <Compile Include="world\Entity.cs" />
     <Compile Include="world\Map.cs" />
     <Compile Include="mobs\Player.cs" />
