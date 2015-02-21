@@ -43,7 +43,8 @@ namespace Platform
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            
+            graphics.PreferredBackBufferWidth = 1080;
+            graphics.PreferredBackBufferHeight = 720;
             rand = new Random();
         }
 
@@ -65,11 +66,11 @@ namespace Platform
             oKipz = Keyboard.GetState();
             oMus = Mouse.GetState();
             
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 40; i++)
             {
                 BackgroundObject boi = new BackgroundObject();
                 boi.Position = new Vector2(rand.Next(1, 200), rand.Next(1, 100));
-                boi.Size = new Vector2(rand.Next(1, 30));
+                boi.Size = new Vector2(rand.Next(1, 10));
 
                 boi.Col = new Color((byte)rand.Next(1, 255), (byte)rand.Next(1, 255), (byte)rand.Next(1, 255));
 
