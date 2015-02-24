@@ -108,6 +108,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\AIPathing.cs" />
+    <Compile Include="lib\PriorityQueue.cs" />
     <Compile Include="mobs\Baddu.cs" />
     <Compile Include="mobs\Ball.cs" />
     <Compile Include="mobs\Behavior.cs" />
