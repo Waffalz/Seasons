@@ -91,11 +91,7 @@ namespace Platform.World
 			Console.WriteLine( Height );
         }
 
-		public int TileCost( int x, int y ) {
-			return 0;
-		}
-
-		public int TileCost( int x1, int y1, int x2, int y2 ) {
+		public int MoveCost( int x1, int y1, int x2, int y2 ) {
 			return 0;
 		}
 
@@ -104,6 +100,9 @@ namespace Platform.World
 		}
 
 		public bool IsValidEntityPosition( int x, int y ) {
+			if ( !IsValidCoord( x, y ) ) {
+				return false;			
+			}
 			return false;
 		}
 

@@ -74,3 +74,5 @@ H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\pa
 H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
 H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
 H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+F:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
+F:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt

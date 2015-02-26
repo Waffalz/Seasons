@@ -42,6 +42,10 @@ namespace Platform.AI {
 			this.y = y;
 			this.cost = 0;
 		}
+
+		public bool Equals( pathNode_t otherNode ) {
+			return this.X == otherNode.X && this.Y == otherNode.Y;
+		}
 	}
 
 	class AIPathing {
@@ -65,21 +69,21 @@ namespace Platform.AI {
 					break;
 				}
 
-				pathNode_t[] neighbors = getAllNeighborPositions( curNode );
+				pathNode_t[] neighbors = getAllNeighborNodes( curNode, ref map );
 
 				for ( int index = 0; index < neighbors.Length; index++ ) {
 					pathNode_t neighbor = neighbors[ index ];
 
 					if ( !map.IsValidEntityPosition( neighbor.X, neighbor.Y ) ) {
-						int newCost = pathCosts[ curNode ] + map.TileCost( curNode.X, curNode.Y, neighbor.X, neighbor.Y );
+						int newCost = pathCosts[ curNode ] + neighbor.Cost;
 
 						if ( !pathCosts.ContainsKey( neighbor ) ) {
 							pathCosts[ neighbor ] = newCost;
+							frontier.Enqueue( new pathNode_t( neighbor.X, neighbor.Y, newCost ) );
+							destinationToSourceMap[ neighbor ] = curNode;
 						} else if ( newCost < pathCosts[ neighbor ] ) {
 							pathCosts[ neighbor ] = newCost;
-						}
-
-						if ( !destinationToSourceMap.ContainsKey( neighbor ) ) {
+							frontier.Enqueue( new pathNode_t( neighbor.X, neighbor.Y, newCost ) );
 							destinationToSourceMap[ neighbor ] = curNode;
 						}
 					}
@@ -89,16 +93,12 @@ namespace Platform.AI {
 			return new pathNode_t[ 0 ];
 		}
 
-		private static pathNode_t[] getAllNeighborPositions( pathNode_t center ) {
-			pathNode_t[] neighbors = new pathNode_t[ 8 ];
-			neighbors[ 0 ] = new pathNode_t( center.X - 1,	center.Y - 1 );
-			neighbors[ 1 ] = new pathNode_t( center.X,		center.Y - 1 );
-			neighbors[ 2 ] = new pathNode_t( center.X + 1,	center.Y - 1 );
-			neighbors[ 3 ] = new pathNode_t( center.X - 1,	center.Y );
-			neighbors[ 4 ] = new pathNode_t( center.X + 1,	center.Y );
-			neighbors[ 5 ] = new pathNode_t( center.X - 1,	center.Y + 1 );
-			neighbors[ 6 ] = new pathNode_t( center.X,		center.Y + 1 );
-			neighbors[ 7 ] = new pathNode_t( center.X + 1, center.Y + 1 );
+		private static pathNode_t[] getAllNeighborNodes( pathNode_t center, ref Map map ) {
+			pathNode_t[] neighbors = new pathNode_t[ 4 ];
+			neighbors[ 0 ] = new pathNode_t( center.X,		center.Y - 1,	map.MoveCost( center.X, center.Y, center.X, center.Y - 1 ) );	//NORTH
+			neighbors[ 1 ] = new pathNode_t( center.X - 1,	center.Y,		map.MoveCost( center.X, center.Y, center.X - 1, center.Y ) );	//WEST
+			neighbors[ 2 ] = new pathNode_t( center.X + 1, center.Y,		map.MoveCost( center.X, center.Y, center.X + 1, center.Y ) );	//EAST
+			neighbors[ 3 ] = new pathNode_t( center.X, center.Y + 1,		map.MoveCost( center.X, center.Y, center.X, center.Y + 1 ) );	//SOUTH
 			return neighbors;
 		}
 
