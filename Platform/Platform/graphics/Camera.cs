@@ -41,6 +41,7 @@ namespace Platform.Graphics
                 parent = value;
             }
         }
+
         public int ZoomScale
         {
             get { return zoomScale; }
@@ -62,12 +63,8 @@ namespace Platform.Graphics
         }
     }
 
-
-
     class DefaultCamera : Camera
     {
-
-
        
         public DefaultCamera(Map p) : base(p)
         {
@@ -91,8 +88,8 @@ namespace Platform.Graphics
                     {
                         spriteBatch.Draw(o.Image,
                             new Rectangle(
-                            (int)(((o.Position.X - o.Size.X / 2) - position.X) * zoomScale *o.Depth + PointOnScreen.X),
-                            (int)(-((o.Position.Y + o.Size.Y / 2) - position.Y) * zoomScale *o.Depth + PointOnScreen.Y),
+                            (int)(((o.Position.X - o.Size.X / 2) - position.X) * zoomScale * o.Depth + PointOnScreen.X),
+                            (int)(-((o.Position.Y + o.Size.Y / 2) - position.Y) * zoomScale * o.Depth + PointOnScreen.Y),
                             (int)(o.Size.X * zoomScale), (int)(o.Size.Y * zoomScale)),
                             o.SrcRect, o.Col);
                     }
@@ -117,12 +114,11 @@ namespace Platform.Graphics
                                     (til.TileSheetIndex / Tile.VARS) * Tile.TILE_TEX_WIDTH,
                                     Tile.TILE_TEX_WIDTH, Tile.TILE_TEX_WIDTH),
                                 Color.White);
-
                         }
                     }
                 }
 
-                foreach (Entity ent in Parent.Entities)
+                foreach (Entity ent in Parent.Entities)//draw entities
                 {
                     if (ent.Texture != null)
                     {
@@ -132,12 +128,10 @@ namespace Platform.Graphics
                             (int)(ent.Size.X * zoomScale), (int)(ent.Size.Y * zoomScale)),
                             ent.SourceRect, ent.Color);
                     }
-
                 }
                 
-                foreach (Particle p in Parent.Particles)
+                foreach (Particle p in Parent.Particles) //draw particles
                 {
-                    //TODO: implement particle graphics
                     if (p.Texture != null)
                     {
                         spriteBatch.Draw(p.Texture, new Rectangle(
