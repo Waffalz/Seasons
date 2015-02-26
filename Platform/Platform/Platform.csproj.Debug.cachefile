@@ -4,6 +4,7 @@ Content\entities\player.xnb
 Content\particles\Square.xnb
 Button.xnb
 Seasons_Menu.xnb
+Content\menuItems\ImageGen.xnb
 Content\tiles\Blocks.png
 Content\tiles\Platforms.png
 Content\entities\player.png

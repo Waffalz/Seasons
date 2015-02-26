@@ -133,7 +133,7 @@ namespace Platform
             switch (CurrentGameState)
             {
                 case GameState.MainMenu:
-                    spriteBatch.Draw(Content.Load<Texture2D>("menuItems/Seasons_Menu"), new Rectangle(0, 0, screenWidth, screenHeight), btnPlay.colour);
+                    spriteBatch.Draw(Content.Load<Texture2D>("menuItems/ImageGen"), new Rectangle(0, 0, screenWidth, screenHeight), btnPlay.colour);
                     btnPlay.Draw(spriteBatch);
                     break;
             }
