@@ -14,7 +14,10 @@ namespace Platform
         Vector2 position;
         Rectangle rectangle;
 
-        public Color colour = new Color(255, 255, 255, 255);
+        bool down;
+        public bool isClicked;
+
+        public Color color = new Color(255, 255, 255, 255);
 
         public Vector2 size;
 
@@ -27,8 +30,6 @@ namespace Platform
             size = new Vector2(graphics.Viewport.Width / 6, graphics.Viewport.Height / 10);
         }
 
-        bool down;
-        public bool isClicked;
         public void Update(MouseState mouse)
         {
             rectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y);
@@ -37,24 +38,24 @@ namespace Platform
 
             if (mouseRectangle.Intersects(rectangle))
             {
-                if (colour.A == 255)
+                if (color.A == 255)
                     down = false;
-                if (colour.A == 0)
+                if (color.A == 0)
                     down = true;
 
                 if (down)
-                    colour.A += 3;
+                    color.A += 3;
                 else
-                    colour.A -= 3;
+                    color.A -= 3;
 
                 if (mouse.LeftButton == ButtonState.Pressed)
                     isClicked = true;
                 else
                     isClicked = false;
             }
-            else if(colour.A <  255)
+            else if(color.A <  255)
             {
-                colour.A += 3;
+                color.A += 3;
             }
         }
 
@@ -65,7 +66,7 @@ namespace Platform
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, rectangle, colour);
+            spriteBatch.Draw(texture, rectangle, color);
         }
     }
 }

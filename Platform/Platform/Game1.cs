@@ -49,7 +49,7 @@ namespace Platform
         // Screen Adjustments
         int screenWidth = 800, screenHeight = 600;
         Texture2D menuTexture;
-        Button btnPlay;
+        Button start;
 
         public Game1()
         {
@@ -106,8 +106,8 @@ namespace Platform
             graphics.ApplyChanges();
             IsMouseVisible = true;
 
-            btnPlay = new Button(Content.Load<Texture2D>("menuItems/Button"), graphics.GraphicsDevice);
-            btnPlay.setPosition(new Vector2(325, 450));
+            start = new Button(Content.Load<Texture2D>("menuItems/Button"), graphics.GraphicsDevice);
+            start.setPosition(new Vector2(325, 450));
 
             menuTexture = Content.Load<Texture2D>("menuItems/Seasons_Menu");
         }
@@ -135,23 +135,22 @@ namespace Platform
                 this.Exit();
 
             // TODO: Add your update logic here
-            btnPlay.Update(mus);
+            start.Update(mus);
             switch (CurrentGameState)
             {
                 //Main menu
                 case GameState.MainMenu:
-                    if (btnPlay.isClicked == true)
+                    //Starting the game by clicking the start button
+                    if (start.isClicked == true)
                     {
                         CurrentGameState = GameState.Playing;
-                        btnPlay.colour = new Color(255, 255, 255, 255);
+                        start.color = new Color(255, 255, 255, 255);
                     }
                     break;
 
                 //character select menu
                 case GameState.CharacterSelect:
-
                     //Return to main menu by pressing escape
-                    KeyboardState kb = Keyboard.GetState();
                     if (kipz.IsKeyDown(Keys.Escape))
                         CurrentGameState = GameState.MainMenu;
                     break;
@@ -234,7 +233,7 @@ namespace Platform
             {
                 case GameState.MainMenu:
                     spriteBatch.Draw(menuTexture, new Rectangle(0, 0, screenWidth, screenHeight), Color.White);
-                    btnPlay.Draw(spriteBatch);
+                    start.Draw(spriteBatch);
                     break;
                 case GameState.CharacterSelect:
 
