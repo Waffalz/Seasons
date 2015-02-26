@@ -63,9 +63,3 @@ C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
-C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Blocks.xnb
-C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platforms.xnb
-C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\player.xnb
-C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Square.xnb
-C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Button.xnb
-C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Seasons_Menu.xnb
