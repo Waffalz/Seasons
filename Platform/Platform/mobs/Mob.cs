@@ -5,6 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
+using Platform.GameFlow;
 using Platform.World;
 
 namespace Platform.Mobs
@@ -49,7 +50,7 @@ namespace Platform.Mobs
         public Mob():base()
         {
             Size = new Vector2(10,10);
-            Texture = Game1.particleSheets["DefaultParticle"];
+            Texture = Game1.Textures["DefaultParticle"];
             SourceRect = Texture.Bounds;
             walkSpeed = 20;
             jumpSpeed = 50;

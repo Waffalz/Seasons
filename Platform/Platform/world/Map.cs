@@ -58,7 +58,7 @@ namespace Platform.World
             get { return player; }
             set { player = value; }
         }
-        public Camera Cam
+        public Camera Camera
         {
             get { return cam; }
             set { cam = value; }
@@ -141,7 +141,7 @@ namespace Platform.World
                     ((Behavior)ent).Behave(timeDifference);
                 }
 
-                ent.Update(timeDifference);//if ent has to do some specific things, do them
+                ent.Update(gameTime);//if ent has to do some specific things, do them
 
                 if (ent.Anchored == false){//don't handle movement if ent is anchored
                     if (ent is Mob){
@@ -194,12 +194,10 @@ namespace Platform.World
 
                 foreach (Entity other in entList){ //check for interactions between entities in entlis
                     if (ent != other){
-
                         if (ent.Collides(other)){
                             ent.OnCollide(other);
                             other.OnCollide(ent);
                         }
-
                     }
                 }
 
@@ -212,7 +210,7 @@ namespace Platform.World
                 }
             }
             foreach (Particle p in partList) {//call to each particle's specific behaviors
-                p.Update(timeDifference);
+                p.Update(gameTime);
             }
 
             foreach(Entity ent in removeEList){//removes entities in queue
@@ -269,21 +267,17 @@ namespace Platform.World
         public static Map LoadMap2(string pathname)
         {
             Map nMap = new Map();
-            try
-            {
-                using (StreamReader file = new StreamReader(pathname))
-                {
+            try{
+                using (StreamReader file = new StreamReader(pathname)){
                     Dictionary<char, string> tileKey = new Dictionary<char,string>();
 
                     List<List<char>> rawmap = new List<List<char>>();
 
                     int y = 0;
-                    while (!file.EndOfStream)
-                    {
+                    while (!file.EndOfStream){
                         string line = file.ReadLine();
                         if (line.StartsWith("<")){
-                            while (!file.EndOfStream)
-                            {
+                            while (!file.EndOfStream){
                                 
                                 line = file.ReadLine();
                                 Console.WriteLine(line);
@@ -292,13 +286,11 @@ namespace Platform.World
                                     line = file.ReadLine();
                                     break;
                                 }
-                                try
-                                {
+                                try{
                                     char[] kLine = line.ToCharArray();
                                     tileKey.Add(kLine[0], line.Substring(line.IndexOf('=')+1).Trim());
                                 }
-                                catch (Exception o)
-                                {
+                                catch (Exception o){
                                     Console.WriteLine("bad file line");
                                     Console.WriteLine(o);
                                 }
@@ -307,8 +299,7 @@ namespace Platform.World
                         char[] cLine = line.ToCharArray();
                         List<char> toAdd = new List<char>();
  
-                        for (int x = 0; x < line.Length; x++)
-                        {
+                        for (int x = 0; x < line.Length; x++){
                             char raw = cLine[x];
                             
                             toAdd.Add(raw);
@@ -318,14 +309,11 @@ namespace Platform.World
                     }
                     rawmap.Reverse();
                     //
-                    for (int y1 = 0; y1 < rawmap.Count; y1++)
-                    {
-                        for (int x1 = 0; x1 < rawmap[y1].Count; x1++)
-                        {
+                    for (int y1 = 0; y1 < rawmap.Count; y1++){
+                        for (int x1 = 0; x1 < rawmap[y1].Count; x1++){
                             //Load tile
                             string tileDat = tileKey[rawmap[y1][x1]];
-                            switch (tileDat)
-                            {
+                            switch (tileDat){
                                 case "null":
                                     nMap.Tiles[y1, x1] = null;
                                     break;
@@ -341,15 +329,13 @@ namespace Platform.World
                                     b.Parent = nMap;
                                     break;
                                 default:
-                                    try
-                                    {
+                                    try{
                                         string type = tileDat.Substring(0, tileDat.IndexOf(','));
                                         int multi = Convert.ToInt32(tileDat.Substring(tileDat.IndexOf(',') + 1).Trim());
 
                                         nMap.Tiles[y1, x1] = Tile.getVariation(type, multi * Tile.VARS);
                                     }
-                                    catch (Exception i)
-                                    {
+                                    catch (Exception i){
                                         Console.WriteLine("Tile couldn't be loaded, bad key");
                                         Console.WriteLine(i);
                                     }
@@ -360,8 +346,7 @@ namespace Platform.World
                     }
                 }
             }
-            catch (FileNotFoundException e)
-            {
+            catch (FileNotFoundException e){
                 Console.WriteLine("File couldn't be read.");
                 Console.WriteLine(e.StackTrace);
             }

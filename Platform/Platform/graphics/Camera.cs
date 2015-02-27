@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using Platform.GameFlow;
 using Platform.World;
 
 namespace Platform.Graphics
@@ -33,10 +34,9 @@ namespace Platform.Graphics
         public Map Parent
         {
             get { return parent; }
-            set
-            {
+            set{
                 if (parent != null){
-                    parent.Cam = null;
+                    parent.Camera = null;
                 }
                 parent = value;
             }
@@ -77,18 +77,16 @@ namespace Platform.Graphics
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //draw tiles
-            if (parent != null)
-            {
+            if (parent != null){
                 if (parent.Player != null){
                     position = parent.Player.Position;
                 }
 
-                for (int i = 0; i < parent.BackList.Count; i++ ) //draw background
-                {
+                for (int i = 0; i < parent.BackList.Count; i++ ){//draw background
+                
                     BackgroundObject o = parent.BackList[i];
 
-                    if (o.Image != null)
-                    {
+                    if (o.Image != null){
                         spriteBatch.Draw(o.Image,
                             new Rectangle(
                             (int)(((o.Position.X - o.Size.X / 2) - position.X) * zoomScale *o.Depth + PointOnScreen.X),
@@ -99,15 +97,11 @@ namespace Platform.Graphics
 
                 }
 
-                for (int y = 0; y < parent.Tiles.GetLength(0); y++)
-                {
-                    for (int x = 0; x < parent.Tiles.GetLength(1); x++)
-                    {
+                for (int y = 0; y < parent.Tiles.GetLength(0); y++){
+                    for (int x = 0; x < parent.Tiles.GetLength(1); x++){
                         Tile til = parent.Tiles[y, x];
-                        if (til != null)
-                        {
-
-                            spriteBatch.Draw(Game1.tileSheets[til.TileSheetName],
+                        if (til != null){
+                            spriteBatch.Draw(Game1.Textures[til.TileSheetName],
                                 new Rectangle(
                                     (int)((x * Tile.TILE_WIDTH - position.X) * zoomScale + PointOnScreen.X),
                                     (int)(-((y + 1) * Tile.TILE_WIDTH - position.Y) * zoomScale + PointOnScreen.Y),
@@ -122,28 +116,13 @@ namespace Platform.Graphics
                     }
                 }
 
-                foreach (Entity ent in Parent.Entities)
-                {
-                    if (ent.Texture != null)
-                    {
-                        spriteBatch.Draw(ent.Texture, new Rectangle(
-                            (int)((ent.Position.X - ent.Size.X / 2 - position.X) * zoomScale + PointOnScreen.X),
-                            (int)(-(ent.Position.Y + ent.Size.Y / 2 - position.Y) * zoomScale + PointOnScreen.Y),
-                            (int)(ent.Size.X * zoomScale), (int)(ent.Size.Y * zoomScale)),
-                            ent.SourceRect, ent.Color);
-                    }
-
+                foreach (Entity ent in Parent.Entities){
+                    ent.Draw(gameTime, spriteBatch);
                 }
                 
-                foreach (Particle p in Parent.Particles)
-                {
-                    //TODO: implement particle graphics
-                    if (p.Texture != null)
-                    {
-                        spriteBatch.Draw(p.Texture, new Rectangle(
-                            (int)((p.Position.X - p.Size.X / 2 - position.X) * zoomScale + PointOnScreen.X),
-                            (int)(-(p.Position.Y + p.Size.Y / 2 - position.Y) * zoomScale + PointOnScreen.Y),
-                            (int)(p.Size.X * zoomScale), (int)(p.Size.Y * zoomScale)), p.SourceRect, p.Color);
+                foreach (Particle p in Parent.Particles){
+                    if (p.Texture != null){
+                        p.Draw(gameTime, spriteBatch);
                     }
                 }
                 

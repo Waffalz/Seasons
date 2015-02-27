@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Platform.GameFlow;
 
 namespace Platform.Mobs
 {
@@ -21,8 +22,8 @@ namespace Platform.Mobs
         {
             moveDirection = MoveDirection.Left;
             size = new Vector2(10,10);
-            texture = Game1.entSheets["Player"];
-            texSrc = texture.Bounds;
+            texture = Game1.Textures["Player"];
+            sourceRect = texture.Bounds;
             color = Color.Red;
         }
 

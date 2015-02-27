@@ -17,7 +17,7 @@ namespace Platform.World
     {
 
         protected Texture2D texture;
-        protected Microsoft.Xna.Framework.Rectangle texSrc;
+        protected Microsoft.Xna.Framework.Rectangle sourceRect;
 
         internal protected Map parent;
         protected Vector2 position;
@@ -32,15 +32,11 @@ namespace Platform.World
         public virtual Map Parent
         {
             get { return parent; }
-
-            set
-            {
-                if (parent != null)
-                {
+            set{
+                if (parent != null){
                     parent.RemoveEntity(this);
                 }
-                if (value != null)
-                {
+                if (value != null){
                     value.AddEntity(this);
                 }
                 parent = value;
@@ -83,8 +79,8 @@ namespace Platform.World
         }
         public Microsoft.Xna.Framework.Rectangle SourceRect
         {
-            get { return texSrc; }
-            set { texSrc = value; }
+            get { return sourceRect; }
+            set { sourceRect = value; }
         }
         public Microsoft.Xna.Framework.Color Color
         {
@@ -100,13 +96,14 @@ namespace Platform.World
             gravity = true;
             solid = true;
             texture = null;
-            texSrc = new Microsoft.Xna.Framework.Rectangle();
+            sourceRect = new Microsoft.Xna.Framework.Rectangle();
             color = Microsoft.Xna.Framework.Color.White;
         }
 
         public virtual void OnCollide(Entity other){
 
         }
+
         public bool Collides(Entity other)
         {
             
@@ -127,9 +124,21 @@ namespace Platform.World
             return new RectangleF(this.position.X - this.size.X / 2, -(this.position.Y + this.size.Y / 2), this.size.X, this.size.Y);
         }
 
-        public virtual void Update(float gameTime)
+        public virtual void Update(GameTime gameTime)
         {
 
         }
+
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch) 
+        {
+            if (texture != null) {
+                spriteBatch.Draw(texture, new Microsoft.Xna.Framework.Rectangle(
+                    (int)((position.X - size.X / 2 - parent.Camera.Position.X) * parent.Camera.ZoomScale + parent.Camera.PointOnScreen.X),
+                    (int)(-(position.Y + size.Y / 2 - parent.Camera.Position.Y) * parent.Camera.ZoomScale + parent.Camera.PointOnScreen.Y),
+                    (int)(size.X * parent.Camera.ZoomScale), (int)(size.Y * parent.Camera.ZoomScale)),
+                    sourceRect, color);
+            }
+        }
+
     }
 }

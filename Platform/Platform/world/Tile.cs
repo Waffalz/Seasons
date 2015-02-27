@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using Platform.GameFlow;
 using Platform.Graphics;
 
 namespace Platform.World
@@ -63,7 +64,7 @@ namespace Platform.World
 
         public static Tile getVariation(string sheetName, int colorRow)
         {
-            return new Tile(sheetName, colorRow + Game1.rand.Next(VARS));
+            return new Tile(sheetName, colorRow + Game1.Rand.Next(VARS));
         }
 
         

@@ -13,7 +13,7 @@ using Platform.Graphics;
 using Platform.World;
 using Platform.Mobs;
 
-namespace Platform
+namespace Platform.GameFlow
 {
     /// <summary>
     /// This is the main type for your game
@@ -23,20 +23,33 @@ namespace Platform
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Map mappu;
+        GameScreen gameMode;//the current context of the game, be it a menu screen, the actual game, etc.
+
+        public static Dictionary<string, Texture2D> textures;
 
         public static Dictionary<string, Texture2D> tileSheets;
         public static Dictionary<string, Texture2D> entSheets;
         public static Dictionary<string, Texture2D> particleSheets;
 
-        public static Random rand;
+        public static Random Rand;
 
         public static KeyboardState kipz;
         public static KeyboardState oKipz;
-        public static MouseState mus;
-        public static MouseState oMus;
+        private static MouseState mus;
+        private static MouseState oMus;
 
-        int maxScroll = 10, minScroll = 1;
+
+        public static Dictionary<string, Texture2D> Textures
+        {
+            get { return textures; }
+        }
+        public static MouseState Mouse{
+            get { return mus; }
+        }
+        public static MouseState OldMouse
+        {
+            get { return oMus; }
+        }
 
         public Game1()
         {
@@ -45,7 +58,7 @@ namespace Platform
             IsMouseVisible = true;
             graphics.PreferredBackBufferWidth = 1080;
             graphics.PreferredBackBufferHeight = 720;
-            rand = new Random();
+            Rand = new Random();
         }
 
         /// <summary>
@@ -57,31 +70,40 @@ namespace Platform
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            
+            //Pre-content load
+            oKipz = Keyboard.GetState();
+            oMus = Microsoft.Xna.Framework.Input.Mouse.GetState();
+
+            textures = new Dictionary<string, Texture2D>();
+            
+            //call to LoadContent
             base.Initialize();
 
-            mappu = Map.LoadMap2(@"Content/maps/Level02.txt");
-            mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width/2, Window.ClientBounds.Height/2);
+            //TODO: Post content loading here
 
-            
-            oKipz = Keyboard.GetState();
-            oMus = Mouse.GetState();
-            
-            for (int i = 0; i < 40; i++)
-            {
-                BackgroundObject boi = new BackgroundObject();
-                boi.Position = new Vector2(rand.Next(1, 200), rand.Next(1, 100));
-                boi.Size = new Vector2(rand.Next(1, 10));
+            //Debugging hardcode here
+            gameMode = new CombatGame();
+            if (gameMode is CombatGame){
+                CombatGame cGame = (CombatGame)gameMode;
+                cGame.World = Map.LoadMap2(@"Content/maps/Level02.txt");
+                cGame.World.Camera.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
+                for (int i = 0; i < 40; i++) {
+                    BackgroundObject boi = new BackgroundObject();
+                    boi.Position = new Vector2(Game1.Rand.Next(-50, 250), Game1.Rand.Next(-50, 250));
+                    boi.Size = new Vector2(Game1.Rand.Next(10, 50));
 
-                boi.Col = new Color((byte)rand.Next(1, 255), (byte)rand.Next(1, 255), (byte)rand.Next(1, 255));
+                    boi.Col = new Color((byte)Game1.Rand.Next(1, 255), (byte)Game1.Rand.Next(1, 255), (byte)Game1.Rand.Next(1, 255));
 
-                boi.Depth = (float)rand.Next(1,100)/100;
-                boi.Image = particleSheets["DefaultParticle"];
-                mappu.BackList.Add(boi);
+                    boi.Depth = (float)Game1.Rand.Next(1, 100) / 100;
+                    boi.Image = Game1.Textures["DefaultParticle"];
+                    cGame.World.BackList.Add(boi);
 
+                }
+                cGame.World.BackList.Sort();
             }
-            mappu.BackList.Sort();
 
-            
+
         }
 
         /// <summary>
@@ -95,17 +117,10 @@ namespace Platform
 
             // TODO: use this.Content to load your game content here
 
-            tileSheets = new Dictionary<string, Texture2D>();
-            tileSheets.Add("Blocks", Content.Load<Texture2D>("tiles/Blocks"));
-            tileSheets.Add("Platforms", Content.Load<Texture2D>("tiles/Platforms"));
-
-            entSheets = new Dictionary<string, Texture2D>();
-            entSheets.Add("Player", Content.Load<Texture2D>("entities/player"));
-
-            particleSheets = new Dictionary<string, Texture2D>();
-            particleSheets.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
-
-            
+            textures.Add("Blocks", Content.Load<Texture2D>("tiles/Blocks"));
+            textures.Add("Platforms", Content.Load<Texture2D>("tiles/Platforms"));
+            textures.Add("Player", Content.Load<Texture2D>("entities/player"));
+            textures.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
         }
 
         /// <summary>
@@ -130,26 +145,15 @@ namespace Platform
 
             // TODO: Add your update logic here
             kipz = Keyboard.GetState();
-            mus = Mouse.GetState();
+            mus = Microsoft.Xna.Framework.Input.Mouse.GetState();
+
             float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
-
-            
             
 
-            mappu.Tick(gameTime); //update stuff in the Map
-
-            
+            gameMode.Update(gameTime);
 
             oKipz = kipz;
             oMus = mus;
-
-            if (scroll < 0){
-                mappu.Cam.ZoomScale = Math.Max(minScroll, mappu.Cam.ZoomScale + scroll/120);
-            }
-            if (scroll > 0) {
-                mappu.Cam.ZoomScale = Math.Min(maxScroll, mappu.Cam.ZoomScale + scroll/120);
-            }
 
             base.Update(gameTime);
         }
@@ -164,9 +168,8 @@ namespace Platform
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            
-            //Draw entities
-            mappu.Cam.Draw(gameTime, spriteBatch);
+
+            gameMode.Draw(gameTime,spriteBatch);//draw for game screen
 
             spriteBatch.End();
             base.Draw(gameTime);

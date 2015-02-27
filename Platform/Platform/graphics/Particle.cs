@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
-using Platform.Graphics;
 
+using Platform.Graphics;
+using Platform.GameFlow;
 
 namespace Platform.World
 {
@@ -54,14 +55,11 @@ namespace Platform.World
         public override Map Parent
         {
             get { return parent; }
-            set
-            {
-                if (parent != null)
-                {
+            set{
+                if (parent != null){
                     parent.RemoveParticle(this);
                 }
-                if (value != null)
-                {
+                if (value != null){
                     value.AddParticle(this);
                 }
                 parent = value;
@@ -87,15 +85,17 @@ namespace Platform.World
             lifeTime = maxLife;
             maxSize = new Vector2(siz);
             size = maxSize;
-            texture = Game1.particleSheets["DefaultParticle"];
+            texture = Game1.Textures["DefaultParticle"];
             SourceRect = Texture.Bounds;
             color = Color.Red;
             colorSpeed = new Vector3();
             acceleration = -50;
         }
 
-        public override void Update(float timeElapsed)
+        public override void Update(GameTime gameTime)
         {
+            float timeElapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
             Position += Velocity * timeElapsed;
             Velocity = new Vector2(Velocity.X, Velocity.Y + timeElapsed * parent.Gravity *(float).5);
             lifeTime -= timeElapsed;
@@ -104,9 +104,11 @@ namespace Platform.World
             Vector2 dir = velocity;
             dir.Normalize();
             velocity = velocity + dir * acceleration * timeElapsed;
-            color = new Color((byte)(color.R + colorSpeed.X * timeElapsed), (byte)(color.G + colorSpeed.Y * timeElapsed), (byte)(color.B + colorSpeed.Z * timeElapsed));
-            if (lifeTime <= 0)
-            {
+            color = new Color(
+                (byte)(color.R + colorSpeed.X * timeElapsed),
+                (byte)(color.G + colorSpeed.Y * timeElapsed),
+                (byte)(color.B + colorSpeed.Z * timeElapsed));
+            if (lifeTime <= 0){
                 Parent = null;
             }
 

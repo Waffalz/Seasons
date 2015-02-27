@@ -108,6 +108,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameFlow\CombatGame.cs" />
+    <Compile Include="GameFlow\GameScreen.cs" />
     <Compile Include="graphics\BackgroundObject.cs" />
     <Compile Include="mobs\Baddu.cs" />
     <Compile Include="mobs\Ball.cs" />
@@ -119,8 +121,8 @@
     <Compile Include="world\Map.cs" />
     <Compile Include="mobs\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="GameFlow\Program.cs" />
+    <Compile Include="GameFlow\Game1.cs" />
     <Compile Include="world\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
