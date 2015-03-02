@@ -14,7 +14,7 @@ namespace Platform.World
     class Map
     {
         public const int MAP_BOUNDS = 100;//max number of tiles in each dimension
-        public const float WALL_BUFFER = 0;
+        public const float WALL_BUFFER = 1;
 
         public const float MAX_WUBS = MAP_BOUNDS * Tile.TILE_WIDTH;
 
@@ -152,37 +152,37 @@ namespace Platform.World
                 }
 
                 if (ent.Gravity == true){ //handle gravity on ent if gravity is true
-                    if (ent is Mob && ((Mob)ent).OnGround){
-                        ent.Velocity = new Vector2(ent.Velocity.X, 0);
-                    }else{
-                        ent.Velocity = new Vector2(ent.Velocity.X, ent.Velocity.Y + this.Gravity * timeDifference);
-                    }
+                    ent.Velocity = new Vector2(ent.Velocity.X, ent.Velocity.Y + this.Gravity * timeDifference);
                 }
                 
                 if (ent is Mob){ //ent is, by default, not on the ground until proven otherwise
                     ((Mob)ent).OnGround = false;
                 }
+                //TODO: fix onground problems due to the fact that entities no longer collide after repositioning after collision
 
                 foreach(Entity tilent in tileEnts){ //Tile collisions
+                    //System.Drawing.RectangleF re = tilent.getRekt();
+                    //re.Size += new System.Drawing.SizeF(0,WALL_BUFFER);
+                    //re = new System.Drawing.RectangleF(tilent.Position.X - re.Size.Width / 2, -(tilent.Position.Y + re.Size.Height), re.Size.Width, re.Size.Height);
                     if (ent.Collides(tilent)){//if ent collides with a tileent
-                        if (oldPos.Y - ent.Size.Y / 2 >= tilent.Position.Y + tilent.Size.Y / 2 - WALL_BUFFER) { //if ent is over tile
+                        if (oldPos.Y - ent.Size.Y / 2 >= tilent.Position.Y + tilent.Size.Y / 2) { //if ent is over tile
                             ent.Position = new Vector2(ent.Position.X, tilent.Position.Y + (tilent.Size.Y + ent.Size.Y) / 2);
                             ent.Velocity = new Vector2(ent.Velocity.X, 0);
                             if (ent is Mob){
                                 ((Mob)ent).OnGround = true;
                             }
                         }else {
-                            if (oldPos.Y + ent.Size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2 + WALL_BUFFER) {// if ent is under tile
+                            if (oldPos.Y + ent.Size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
                             
                                 ent.Position = new Vector2(ent.Position.X, tilent.Position.Y - (tilent.Size.Y + ent.Size.Y) / 2);
                                 ent.Velocity = new Vector2(ent.Velocity.X, 0);
                             }
-                            if (oldPos.X - ent.Size.X / 2 >= tilent.Position.X + tilent.Size.X / 2 - WALL_BUFFER) {// if ent is to the right of tile 
+                            if (oldPos.X - ent.Size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
                            
                                 ent.Position = new Vector2(tilent.Position.X + (tilent.Size.X + ent.Size.X) / 2, ent.Position.Y);
                                 ent.Velocity = new Vector2(0, ent.Velocity.Y);
                             }
-                            if (oldPos.X + ent.Size.X / 2 <= tilent.Position.X - tilent.Size.X / 2 + WALL_BUFFER){ // if ent is to the left of tile
+                            if (oldPos.X + ent.Size.X / 2 <= tilent.Position.X - tilent.Size.X / 2){ // if ent is to the left of tile
                             
                                 ent.Position = new Vector2(tilent.Position.X - (tilent.Size.X + ent.Size.X) / 2, ent.Position.Y);
                                 ent.Velocity = new Vector2(0, ent.Velocity.Y);

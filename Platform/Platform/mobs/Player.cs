@@ -9,18 +9,16 @@ using Microsoft.Xna.Framework.Input;
 using Platform.GameFlow;
 using Platform.Graphics;
 using Platform.World;
-
+using Platform.Control;
 
 namespace Platform.Mobs
 {
     class Player : Mob
     {
-
-        float attackTime;
-        float maxAttack;
-
         float spread;
         float shotspeed;
+
+        private Dictionary<string,GameAction> controls;
 
         public float ShotSpeed
         {
@@ -31,16 +29,6 @@ namespace Platform.Mobs
         {
             get { return spread; }
             set { spread = value; }
-        }
-        public float AttackTime
-        {
-            get { return attackTime; }
-            set { attackTime = value; }
-        }
-        public float MaxAttack
-        {
-            get { return maxAttack; }
-            set { maxAttack = value; }
         }
 
         public Player():base()
@@ -56,8 +44,41 @@ namespace Platform.Mobs
             spread = 10;
             shotspeed = 200;
 
-            attackTime = 0;
-            maxAttack = (float).01;
+            controls = new Dictionary<string, GameAction>();
+
+            controls.Add("Move Left", new ContinuousAction(this, 0,
+                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.D); },
+                delegate() { walkVelocity += new Vector2(walkSpeed, 0); }));//add run left control
+            controls.Add("Move Right", new ContinuousAction(this, 0,
+                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.A); },
+                delegate() { walkVelocity += new Vector2(-walkSpeed, 0); }));//add run right control
+            controls.Add("Basic Attack", new ContinuousAction(this, (float).5,
+                delegate() { return Game1.MouseInput.LeftButton == ButtonState.Pressed; },
+                delegate() { BasicAttack(spread); }));
+            controls.Add("Jump W", new ContinuousAction(this, 0,
+                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.W);},
+                delegate() {
+                    if (onGround) {
+                        onGround = false;
+                        velocity = new Vector2(velocity.X, jumpSpeed);
+                    }
+                }));
+            controls.Add("Jump Space", new ContinuousAction(this, 0,
+                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.Space); },
+                delegate() {
+                    if (onGround) {
+                        onGround = false;
+                        velocity = new Vector2(velocity.X, jumpSpeed);
+                    }
+                }));
+            controls.Add("Shatgann", new OnceAction(this, 1,
+                delegate() { return (Game1.MouseInput.RightButton == ButtonState.Pressed); },
+                delegate() { return (Game1.OldMouseInput.RightButton == ButtonState.Pressed); },
+                delegate() {
+                    for (int p = 0; p < 10; p++) {
+                        BasicAttack(spread*3);
+                    }
+                }));
         }
 
         public override void Update(GameTime gameTime)
@@ -66,60 +87,31 @@ namespace Platform.Mobs
 
             float gTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             
-            if (Game1.kipz.IsKeyDown(Keys.D)){//running right
-                walkVelocity += new Vector2(walkSpeed, 0);
+            foreach (KeyValuePair<string, GameAction> a in controls) {
+                a.Value.Update(gameTime);
             }
-            if (Game1.kipz.IsKeyDown(Keys.A)){ //running left
-                walkVelocity += new Vector2(-walkSpeed, 0);
-            }
-
-            if ((Game1.kipz.IsKeyDown(Keys.Space) || Game1.kipz.IsKeyDown(Keys.W)) && onGround){//jumping
-            
-                for (int i = 0; i < 30; i++){//particle effects
+            /*
+            for (int i = 0; i < 30; i++){//particle effects
                 
-                    Particle poi = new Particle((float)2, (float)2);
-                    poi.Color = Color.SkyBlue;
-                    poi.Position = new Vector2(position.X, position.Y - size.Y / 2);
-                    double rAngle = MathHelper.ToRadians(Game1.Rand.Next(0, 360));
-                    double speed = Game1.Rand.Next(20, 40);
-                    poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), Math.Abs((float)Math.Round(Math.Sin(rAngle) * speed)));
-                    poi.ColorSpeed = new Vector3(Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10));
-                    parent.AddParticle(poi);
+                Particle poi = new Particle((float)2, (float)2);
+                poi.Color = Color.SkyBlue;
+                poi.Position = new Vector2(position.X, position.Y - size.Y / 2);
+                double rAngle = MathHelper.ToRadians(Game1.Rand.Next(0, 360));
+                double speed = Game1.Rand.Next(20, 40);
+                poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), Math.Abs((float)Math.Round(Math.Sin(rAngle) * speed)));
+                poi.ColorSpeed = new Vector3(Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10));
+                parent.AddParticle(poi);
 
-                }
-                onGround = false;
-                velocity = new Vector2(velocity.X, jumpSpeed);
             }
-
-            if (walkVelocity.X != 0 && onGround == true){ //fancy particles effects when running
-                for (int i = 0; i < 5; i++){
-                    Particle poi = new Particle((float)2, (float)1);
-                    poi.Color = Color.SkyBlue;
-                    poi.Position = new Vector2(position.X, position.Y - size.Y / 2);
-                    double rAngle = MathHelper.ToRadians(Game1.Rand.Next(0, 360));
-                    float speed = Game1.Rand.Next(20, 40);
-                    poi.Velocity = new Vector2((float)Math.Cos(rAngle), Math.Abs((float)(Math.Sin(rAngle)))) * speed;
-                    poi.ColorSpeed = new Vector3(Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10));
-                    parent.AddParticle(poi);
-
-                }
-            }
-            if (Game1.Mouse.LeftButton == ButtonState.Pressed){//left click firing
-                if (AttackTime > MaxAttack){
-                    Attack(parent.Camera.PositionFromScreen(new Point(Game1.Mouse.X, Game1.Mouse.Y)));
-
-                    AttackTime = 0;
-
-                }
-            }
-            parent.Camera.ZoomScale += (Game1.Mouse.ScrollWheelValue - Game1.OldMouse.ScrollWheelValue) / 120;
+            */
+            parent.Camera.ZoomScale += (Game1.MouseInput.ScrollWheelValue - Game1.OldMouseInput.ScrollWheelValue) / 120;
             
-            attackTime += gTime;
 
         }
 
-        public void Attack(Vector2 target)
-        {
+        public void BasicAttack(float spread){
+        
+            Vector2 target = parent.Camera.PositionFromScreen(new Point(Game1.MouseInput.X, Game1.MouseInput.Y));
             Vector2 dif = target - position;
             
             double ang = (float)Math.Atan2((double)dif.Y, (double)dif.X) + MathHelper.ToRadians(Game1.Rand.Next((int)(-spread / 2), (int)(spread / 2)));//calculate spread
@@ -138,4 +130,5 @@ namespace Platform.Mobs
 
         }
     }
+
 }

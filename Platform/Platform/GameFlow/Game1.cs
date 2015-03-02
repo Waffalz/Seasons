@@ -33,8 +33,8 @@ namespace Platform.GameFlow
 
         public static Random Rand;
 
-        public static KeyboardState kipz;
-        public static KeyboardState oKipz;
+        private static KeyboardState kipz;
+        private static KeyboardState oKipz;
         private static MouseState mus;
         private static MouseState oMus;
 
@@ -43,10 +43,18 @@ namespace Platform.GameFlow
         {
             get { return textures; }
         }
-        public static MouseState Mouse{
+        public static KeyboardState KeyboardInput
+        {
+            get { return kipz; }
+        }
+        public static KeyboardState OldKeyboardInput
+        {
+            get { return oKipz; }
+        }
+        public static MouseState MouseInput{
             get { return mus; }
         }
-        public static MouseState OldMouse
+        public static MouseState OldMouseInput
         {
             get { return oMus; }
         }
@@ -72,8 +80,11 @@ namespace Platform.GameFlow
             // TODO: Add your initialization logic here
             
             //Pre-content load
-            oKipz = Keyboard.GetState();
-            oMus = Microsoft.Xna.Framework.Input.Mouse.GetState();
+            kipz = Keyboard.GetState();
+            oKipz = kipz;
+            mus = Mouse.GetState();
+            oMus = mus;
+            
 
             textures = new Dictionary<string, Texture2D>();
             
@@ -148,7 +159,6 @@ namespace Platform.GameFlow
             mus = Microsoft.Xna.Framework.Input.Mouse.GetState();
 
             float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            
 
             gameMode.Update(gameTime);
 

@@ -35,8 +35,8 @@ namespace Platform.GameFlow
 
         public override void Update(GameTime gameTime)
         {
-            MouseState mus = Game1.Mouse;
-            MouseState oMus = Game1.OldMouse;
+            MouseState mus = Game1.MouseInput;
+            MouseState oMus = Game1.OldMouseInput;
             int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
 
             world.Tick(gameTime); //update stuff in the Map

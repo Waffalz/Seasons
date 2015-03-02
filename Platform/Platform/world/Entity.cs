@@ -109,7 +109,6 @@ namespace Platform.World
             
             RectangleF r1 = getRekt();
             RectangleF r2 = other.getRekt();
-
             return r1.IntersectsWith(r2);
         }
 

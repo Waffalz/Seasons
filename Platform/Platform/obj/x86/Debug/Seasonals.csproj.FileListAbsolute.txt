@@ -1,0 +1,15 @@
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb

@@ -110,29 +110,33 @@
   <ItemGroup>
     <Compile Include="GameFlow\CombatGame.cs" />
     <Compile Include="GameFlow\GameScreen.cs" />
-    <Compile Include="graphics\BackgroundObject.cs" />
-    <Compile Include="mobs\Baddu.cs" />
-    <Compile Include="mobs\Ball.cs" />
-    <Compile Include="mobs\Behavior.cs" />
-    <Compile Include="mobs\Mob.cs" />
-    <Compile Include="graphics\Camera.cs" />
-    <Compile Include="graphics\Particle.cs" />
-    <Compile Include="world\Entity.cs" />
-    <Compile Include="world\Map.cs" />
-    <Compile Include="mobs\Player.cs" />
+    <Compile Include="Graphics\BackgroundObject.cs" />
+    <Compile Include="Mobs\Baddu.cs" />
+    <Compile Include="Mobs\Ball.cs" />
+    <Compile Include="Mobs\Behavior.cs" />
+    <Compile Include="Mobs\Mob.cs" />
+    <Compile Include="Graphics\Camera.cs" />
+    <Compile Include="Graphics\Particle.cs" />
+    <Compile Include="Control\GameAction.cs" />
+    <Compile Include="Control\ContinuousAction.cs" />
+    <Compile Include="Control\OnceAction.cs" />
+    <Compile Include="World\Entity.cs" />
+    <Compile Include="World\Map.cs" />
+    <Compile Include="Mobs\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameFlow\Program.cs" />
     <Compile Include="GameFlow\Game1.cs" />
-    <Compile Include="world\Tile.cs" />
+    <Compile Include="World\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PlatformContent\PlatformContent.contentproj">
-      <Name>PlatformContent</Name>
+    <ProjectReference Include="..\PlatformContent\SeasonsContent.contentproj">
+      <Name>SeasonsContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{76D07ABD-EB84-4E22-9818-DF6564004531}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
