@@ -31,6 +31,20 @@ namespace Platform.World
         private Player player;
         private float gAccel; //default -150
 
+		public int Width {
+			get {
+				return tiles.GetLength( 0 );
+			}
+			private set {
+			}
+		}
+		public int Height {
+			get {
+				return tiles.GetLength( 1 );
+			}
+			private set {
+			}
+		}
         public Tile[,] Tiles
         {
             get { return tiles; }
@@ -73,12 +87,30 @@ namespace Platform.World
             removePList = new List<Particle>();
             gAccel = -150;
             cam = new DefaultCamera(this);
+			Console.WriteLine( Width );
+			Console.WriteLine( Height );
         }
+
+		public int MoveCost( int x1, int y1, int x2, int y2 ) {
+			return 0;
+		}
+
+		public bool IsValidCoord( int x, int y ) {
+			return x > -1 && x < Width && y > -1 && y < Height;
+		}
+
+		public bool IsValidEntityPosition( int x, int y ) {
+			if ( !IsValidCoord( x, y ) ) {
+				return false;			
+			}
+			return false;
+		}
 
         public void AddEntity(Entity toAdd)
         {
             addEList.Add(toAdd);
         }
+
         public void RemoveEntity(Entity toRemove)
         {
             removeEList.Add(toRemove);
@@ -88,6 +120,7 @@ namespace Platform.World
         {
             addPList.Add(toAdd);
         }
+
         public void RemoveParticle(Particle toRemove)
         {
             removePList.Add(toRemove);
@@ -225,7 +258,6 @@ namespace Platform.World
             removePList.Clear();
         }
 
-
         /* Old Map loading stuff
         public static Map LoadMap(string pathname)
         {
@@ -257,8 +289,6 @@ namespace Platform.World
             
         }
         */
-
-        
 
         public static Map LoadMap2(string pathname)
         {
