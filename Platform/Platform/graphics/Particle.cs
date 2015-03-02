@@ -72,7 +72,7 @@ namespace Platform.World
             lifeTime = maxLife;
             maxSize = new Vector2(2);
             size = maxSize;
-            texture = Game1.particleSheets["DefaultParticle"];
+            texture = Game1.Textures["DefaultParticle"];
             SourceRect = texture.Bounds;
             color = Color.Red;
             colorSpeed = new Vector3();

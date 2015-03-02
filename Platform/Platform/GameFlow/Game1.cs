@@ -23,13 +23,9 @@ namespace Platform.GameFlow
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        GameScreen gameMode;//the current context of the game, be it a menu screen, the actual game, etc.
+        private static GameScreen gameMode;//the current context of the game, be it a menu screen, the actual game, etc.
 
         public static Dictionary<string, Texture2D> textures;
-
-        public static Dictionary<string, Texture2D> tileSheets;
-        public static Dictionary<string, Texture2D> entSheets;
-        public static Dictionary<string, Texture2D> particleSheets;
 
         public static Random Rand;
 
@@ -37,7 +33,6 @@ namespace Platform.GameFlow
         private static KeyboardState oKipz;
         private static MouseState mus;
         private static MouseState oMus;
-
 
         public static Dictionary<string, Texture2D> Textures
         {
@@ -57,6 +52,11 @@ namespace Platform.GameFlow
         public static MouseState OldMouseInput
         {
             get { return oMus; }
+        }
+        public static GameScreen GameMode
+        {
+            get { return gameMode; }
+            set { gameMode = value; }
         }
 
         public Game1()
@@ -84,7 +84,6 @@ namespace Platform.GameFlow
             oKipz = kipz;
             mus = Mouse.GetState();
             oMus = mus;
-            
 
             textures = new Dictionary<string, Texture2D>();
             
@@ -158,7 +157,6 @@ namespace Platform.GameFlow
             kipz = Keyboard.GetState();
             mus = Microsoft.Xna.Framework.Input.Mouse.GetState();
 
-            float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             gameMode.Update(gameTime);
 

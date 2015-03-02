@@ -13,3 +13,18 @@ C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasonal
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.exe
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.pdb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.exe
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.pdb
