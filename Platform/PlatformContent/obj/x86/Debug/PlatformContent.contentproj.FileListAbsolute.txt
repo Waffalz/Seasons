@@ -1,0 +1,6 @@
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentprojResolveAssemblyReference.cache
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\PlatformContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentprojResolveAssemblyReference.cache
+C:\Users\MAX\Seasons\Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentprojResolveAssemblyReference.cache
+H:\Video_Game_Design\Projects\Seasons\Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentprojResolveAssemblyReference.cache
+F:\Video_Game_Design\Projects\Seasons\Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentprojResolveAssemblyReference.cache
