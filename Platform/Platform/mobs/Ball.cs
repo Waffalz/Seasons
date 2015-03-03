@@ -37,7 +37,7 @@ namespace Platform.Mobs
 
         public Ball() : base()
         {
-            texture = Game1.Textures["Player"];
+            texture = Game1.CurrentGame.Textures["Player"];
             sourceRect = texture.Bounds;
             damage = 10;
             size = new Vector2(5,5);
@@ -55,10 +55,10 @@ namespace Platform.Mobs
                     Particle poi = new Particle((float)2, (float)size.X/(float)1.5);
                     poi.Color = Color.SkyBlue;
                     poi.Position = Position;
-                    double rAngle = MathHelper.ToRadians(Game1.Rand.Next(0, 360));
-                    double speed = Game1.Rand.Next(20, 40);
+                    double rAngle = MathHelper.ToRadians(Game1.CurrentGame.Rand.Next(0, 360));
+                    double speed = Game1.CurrentGame.Rand.Next(20, 40);
                     poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), (float)Math.Round(Math.Sin(rAngle) * speed));
-                    poi.ColorSpeed = new Vector3(Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10));
+                    poi.ColorSpeed = new Vector3(Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10));
                     Parent.AddParticle(poi);
                 }
                 parent.RemoveEntity(this);

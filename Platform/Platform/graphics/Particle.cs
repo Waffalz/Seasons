@@ -10,7 +10,7 @@ using Platform.GameFlow;
 
 namespace Platform.World
 {
-    class Particle:Entity
+    public class Particle:Entity
     {
 
         private float maxLife;
@@ -72,7 +72,7 @@ namespace Platform.World
             lifeTime = maxLife;
             maxSize = new Vector2(2);
             size = maxSize;
-            texture = Game1.Textures["DefaultParticle"];
+            texture = Game1.CurrentGame.Textures["DefaultParticle"];
             SourceRect = texture.Bounds;
             color = Color.Red;
             colorSpeed = new Vector3();
@@ -85,7 +85,7 @@ namespace Platform.World
             lifeTime = maxLife;
             maxSize = new Vector2(siz);
             size = maxSize;
-            texture = Game1.Textures["DefaultParticle"];
+            texture = Game1.CurrentGame.Textures["Square"];
             SourceRect = Texture.Bounds;
             color = Color.Red;
             colorSpeed = new Vector3();

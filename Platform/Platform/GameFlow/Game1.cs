@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -20,43 +21,67 @@ namespace Platform.GameFlow
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+
+        private Player player;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        private static GameScreen gameMode;//the current context of the game, be it a menu screen, the actual game, etc.
+        private static Game1 currentGame;
 
-        public static Dictionary<string, Texture2D> textures;
+        private GameScreen gameMode;//the current context of the game, be it a menu screen, the actual game, etc.
 
-        public static Random Rand;
+        private Dictionary<string, Texture2D> textures;
+        private Dictionary<string, SpriteFont> fonts;
 
-        private static KeyboardState kipz;
-        private static KeyboardState oKipz;
-        private static MouseState mus;
-        private static MouseState oMus;
+        private Random rand;
 
-        public static Dictionary<string, Texture2D> Textures
+        private KeyboardState kipz;
+        private KeyboardState oKipz;
+        private MouseState mus;
+        private MouseState oMus;
+
+        public static Game1 CurrentGame
+        {
+            get { return currentGame; }
+        }
+
+        public Random Rand
+        {
+            get { return rand; }
+        }
+        public Dictionary<string, Texture2D> Textures
         {
             get { return textures; }
         }
-        public static KeyboardState KeyboardInput
+        public Dictionary<string, SpriteFont> Fonts
+        {
+            get { return fonts; }
+        }
+        public KeyboardState KeyboardInput
         {
             get { return kipz; }
         }
-        public static KeyboardState OldKeyboardInput
+        public KeyboardState OldKeyboardInput
         {
             get { return oKipz; }
         }
-        public static MouseState MouseInput{
+        public MouseState MouseInput{
             get { return mus; }
         }
-        public static MouseState OldMouseInput
+        public MouseState OldMouseInput
         {
             get { return oMus; }
         }
-        public static GameScreen GameMode
+        public GameScreen GameMode
         {
             get { return gameMode; }
             set { gameMode = value; }
+        }
+        public Player Player
+        {
+            get { return player; }
+            set { player = value; }
         }
 
         public Game1()
@@ -66,7 +91,8 @@ namespace Platform.GameFlow
             IsMouseVisible = true;
             graphics.PreferredBackBufferWidth = 1080;
             graphics.PreferredBackBufferHeight = 720;
-            Rand = new Random();
+            rand = new Random();
+            currentGame = this;
         }
 
         /// <summary>
@@ -86,33 +112,16 @@ namespace Platform.GameFlow
             oMus = mus;
 
             textures = new Dictionary<string, Texture2D>();
-            
+            fonts = new Dictionary<string, SpriteFont>();
             //call to LoadContent
+
+
             base.Initialize();
 
             //TODO: Post content loading here
 
             //Debugging hardcode here
-            gameMode = new CombatGame();
-            if (gameMode is CombatGame){
-                CombatGame cGame = (CombatGame)gameMode;
-                cGame.World = Map.LoadMap2(@"Content/maps/Level02.txt");
-                cGame.World.Camera.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
-                for (int i = 0; i < 40; i++) {
-                    BackgroundObject boi = new BackgroundObject();
-                    boi.Position = new Vector2(Game1.Rand.Next(-50, 250), Game1.Rand.Next(-50, 250));
-                    boi.Size = new Vector2(Game1.Rand.Next(10, 50));
-
-                    boi.Col = new Color((byte)Game1.Rand.Next(1, 255), (byte)Game1.Rand.Next(1, 255), (byte)Game1.Rand.Next(1, 255));
-
-                    boi.Depth = (float)Game1.Rand.Next(1, 100) / 100;
-                    boi.Image = Game1.Textures["DefaultParticle"];
-                    cGame.World.BackList.Add(boi);
-
-                }
-                cGame.World.BackList.Sort();
-            }
-
+            gameMode = new MenuScreen();
 
         }
 
@@ -130,7 +139,11 @@ namespace Platform.GameFlow
             textures.Add("Blocks", Content.Load<Texture2D>("tiles/Blocks"));
             textures.Add("Platforms", Content.Load<Texture2D>("tiles/Platforms"));
             textures.Add("Player", Content.Load<Texture2D>("entities/player"));
-            textures.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
+            textures.Add("Square", Content.Load<Texture2D>("particles/Square"));
+            textures.Add("MenuBack", Content.Load<Texture2D>("menuItems/Seasons_Menu"));
+
+            fonts.Add("ButtonFont", Content.Load<SpriteFont>("fonts/ButtonFont"));
+
         }
 
         /// <summary>

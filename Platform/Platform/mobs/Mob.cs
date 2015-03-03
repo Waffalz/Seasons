@@ -10,7 +10,7 @@ using Platform.World;
 
 namespace Platform.Mobs
 {
-    class Mob:Entity
+    public class Mob:Entity
     {
 
         protected int health;
@@ -50,7 +50,7 @@ namespace Platform.Mobs
         public Mob():base()
         {
             Size = new Vector2(10,10);
-            Texture = Game1.Textures["DefaultParticle"];
+            Texture = Game1.CurrentGame.Textures["Square"];
             SourceRect = Texture.Bounds;
             walkSpeed = 20;
             jumpSpeed = 50;

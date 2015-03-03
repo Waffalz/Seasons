@@ -11,7 +11,7 @@ using Platform.World;
 
 namespace Platform.Graphics
 {
-    abstract class Camera
+    public abstract class Camera
     {
         protected Map parent;
         protected int zoomScale;
@@ -101,7 +101,7 @@ namespace Platform.Graphics
                     for (int x = 0; x < parent.Tiles.GetLength(1); x++){
                         Tile til = parent.Tiles[y, x];
                         if (til != null){
-                            spriteBatch.Draw(Game1.Textures[til.TileSheetName],
+                            spriteBatch.Draw(Game1.CurrentGame.Textures[til.TileSheetName],
                                 new Rectangle(
                                     (int)((x * Tile.TILE_WIDTH - position.X) * zoomScale + PointOnScreen.X),
                                     (int)(-((y + 1) * Tile.TILE_WIDTH - position.Y) * zoomScale + PointOnScreen.Y),

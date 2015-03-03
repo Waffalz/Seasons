@@ -6,12 +6,14 @@ using System.IO;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+
 using Platform.Mobs;
 using Platform.Graphics;
+using Platform.GameFlow;
 
 namespace Platform.World
 {
-    class Map
+    public class Map
     {
         public const int MAP_BOUNDS = 100;//max number of tiles in each dimension
         public const float WALL_BUFFER = 1;
@@ -318,7 +320,7 @@ namespace Platform.World
                                     nMap.Tiles[y1, x1] = null;
                                     break;
                                 case "Player":
-                                    Player p = new Player();
+                                    Player p = Game1.CurrentGame.Player;
                                     p.Position = new Vector2(x1 * Tile.TILE_WIDTH + Tile.TILE_WIDTH/2, y1 * Tile.TILE_WIDTH + p.Size.Y/2);
                                     p.Parent = nMap;
                                     nMap.Player = p;

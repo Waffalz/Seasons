@@ -9,7 +9,7 @@ using Platform.World;
 
 namespace Platform.Graphics
 {
-    class BackgroundObject : IComparable
+    public class BackgroundObject : IComparable
     {
 
         private Texture2D image;

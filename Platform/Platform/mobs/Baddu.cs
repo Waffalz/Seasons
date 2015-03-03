@@ -22,7 +22,7 @@ namespace Platform.Mobs
         {
             moveDirection = MoveDirection.Left;
             size = new Vector2(10,10);
-            texture = Game1.Textures["Player"];
+            texture = Game1.CurrentGame.Textures["Player"];
             sourceRect = texture.Bounds;
             color = Color.Red;
         }

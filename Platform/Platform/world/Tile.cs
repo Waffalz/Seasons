@@ -11,7 +11,7 @@ using Platform.Graphics;
 
 namespace Platform.World
 {
-    class Tile
+    public class Tile
     {
         
         public const float TILE_WIDTH = 10;// in wubs
@@ -64,7 +64,7 @@ namespace Platform.World
 
         public static Tile getVariation(string sheetName, int colorRow)
         {
-            return new Tile(sheetName, colorRow + Game1.Rand.Next(VARS));
+            return new Tile(sheetName, colorRow + Game1.CurrentGame.Rand.Next(VARS));
         }
 
         

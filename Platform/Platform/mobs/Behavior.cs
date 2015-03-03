@@ -12,6 +12,6 @@ namespace Platform.Mobs
         void Behave(float timeDif);
 
     }
-    enum MoveDirection { Up, Down, Left, Right }
+    public enum MoveDirection { Up, Down, Left, Right }
     
 }

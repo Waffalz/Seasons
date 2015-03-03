@@ -13,7 +13,7 @@ using Platform.Control;
 
 namespace Platform.Mobs
 {
-    class Player : Mob
+    public class Player : Mob
     {
         float spread;
         float shotspeed;
@@ -34,7 +34,7 @@ namespace Platform.Mobs
         public Player():base()
         {
             Size = new Vector2(10,10);
-            texture = Game1.Textures["Player"];
+            texture = Game1.CurrentGame.Textures["Player"];
             SourceRect = texture.Bounds;
             WalkSpeed = 50;
             JumpSpeed = 100;
@@ -47,16 +47,16 @@ namespace Platform.Mobs
             controls = new Dictionary<string, GameAction>();
 
             controls.Add("Move Left", new ContinuousAction(this, 0,
-                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.D); },
+                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.D); },
                 delegate() { walkVelocity += new Vector2(walkSpeed, 0); }));//add run left control
             controls.Add("Move Right", new ContinuousAction(this, 0,
-                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.A); },
+                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A); },
                 delegate() { walkVelocity += new Vector2(-walkSpeed, 0); }));//add run right control
             controls.Add("Basic Attack", new ContinuousAction(this, (float).5,
-                delegate() { return Game1.MouseInput.LeftButton == ButtonState.Pressed; },
+                delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },
                 delegate() { BasicAttack(spread); }));
             controls.Add("Jump W", new ContinuousAction(this, 0,
-                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.W);},
+                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W); },
                 delegate() {
                     if (onGround) {
                         onGround = false;
@@ -64,7 +64,7 @@ namespace Platform.Mobs
                     }
                 }));
             controls.Add("Jump Space", new ContinuousAction(this, 0,
-                delegate() { return Game1.KeyboardInput.IsKeyDown(Keys.Space); },
+                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
                 delegate() {
                     if (onGround) {
                         onGround = false;
@@ -72,8 +72,8 @@ namespace Platform.Mobs
                     }
                 }));
             controls.Add("Shatgann", new OnceAction(this, 1,
-                delegate() { return (Game1.MouseInput.RightButton == ButtonState.Pressed); },
-                delegate() { return (Game1.OldMouseInput.RightButton == ButtonState.Pressed); },
+                delegate() { return (Game1.CurrentGame.MouseInput.RightButton == ButtonState.Pressed); },
+                delegate() { return (Game1.CurrentGame.OldMouseInput.RightButton == ButtonState.Pressed); },
                 delegate() {
                     for (int p = 0; p < 10; p++) {
                         BasicAttack(spread*3);
@@ -104,17 +104,17 @@ namespace Platform.Mobs
 
             }
             */
-            parent.Camera.ZoomScale += (Game1.MouseInput.ScrollWheelValue - Game1.OldMouseInput.ScrollWheelValue) / 120;
+            parent.Camera.ZoomScale += (Game1.CurrentGame.MouseInput.ScrollWheelValue - Game1.CurrentGame.OldMouseInput.ScrollWheelValue) / 120;
             
 
         }
 
         public void BasicAttack(float spread){
-        
-            Vector2 target = parent.Camera.PositionFromScreen(new Point(Game1.MouseInput.X, Game1.MouseInput.Y));
+
+            Vector2 target = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
             Vector2 dif = target - position;
-            
-            double ang = (float)Math.Atan2((double)dif.Y, (double)dif.X) + MathHelper.ToRadians(Game1.Rand.Next((int)(-spread / 2), (int)(spread / 2)));//calculate spread
+
+            double ang = (float)Math.Atan2((double)dif.Y, (double)dif.X) + MathHelper.ToRadians(Game1.CurrentGame.Rand.Next((int)(-spread / 2), (int)(spread / 2)));//calculate spread
 
             dif.Normalize();
 
