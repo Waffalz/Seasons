@@ -7,9 +7,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-
 using Platform.World;
 using Platform.Graphics;
+using Platform.UserInterface;
 
 namespace Platform.GameFlow
 {
@@ -19,6 +19,9 @@ namespace Platform.GameFlow
 
         Map world;
         bool paused;
+
+        UIComponent gameHUD;
+        UIComponent pauseMenu;
 
         public Map World
         {
@@ -33,6 +36,14 @@ namespace Platform.GameFlow
 
         public CombatGame (){
             //TODO: initialize world
+
+            //create Hud for in game stuff
+            gameHUD = new UIComponent();
+
+            //create UI for game when it's paused
+            pauseMenu = new UIComponent();
+            pauseMenu.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
+
 
             world = Map.LoadMap2(@"Content/maps/Level02.txt");
             world.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);
@@ -60,12 +71,28 @@ namespace Platform.GameFlow
 
         public override void Update(GameTime gameTime)
         {
+            KeyboardState kipz = Game1.CurrentGame.KeyboardInput;
+            KeyboardState oKipz = Game1.CurrentGame.OldKeyboardInput;
             MouseState mus = Game1.CurrentGame.MouseInput;
             MouseState oMus = Game1.CurrentGame.OldMouseInput;
             int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
 
-            if (!paused) {
+            if (!paused)
+            {
                 world.Tick(gameTime); //update stuff in the Map
+                gameHUD.visible = true;
+                pauseMenu.visible = false;
+                gameHUD.Update(gameTime);
+                
+            }
+            else
+            {
+                pauseMenu.visible = true;
+                pauseMenu.Update(gameTime);
+            }
+
+            if (kipz.IsKeyDown(Keys.Escape) && !oKipz.IsKeyDown(Keys.Escape)){
+                paused = !paused;
             }
 
             if (scroll < 0){
@@ -81,6 +108,10 @@ namespace Platform.GameFlow
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             world.Camera.Draw(gameTime, spriteBatch);
+            gameHUD.Draw(gameTime, spriteBatch);
+            pauseMenu.Draw(gameTime, spriteBatch);
+
+
         }
 
     }

@@ -42,7 +42,7 @@ namespace Platform.GameFlow
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            gui.Draw(spriteBatch);
+            gui.Draw(gameTime, spriteBatch);
         }
 
     }

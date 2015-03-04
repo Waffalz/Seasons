@@ -33,17 +33,21 @@ namespace Platform.UserInterface
 
         public virtual void Update(GameTime gameTime)
         {
-            foreach (UIComponent comp in contents) {
-                comp.Update(gameTime);
+            if (visible)
+            {
+                foreach (UIComponent comp in contents)
+                {
+                    comp.Update(gameTime);
+                }
             }
-
         }
-        public virtual void Draw(SpriteBatch spriteBatch)
+
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (visible) {
                 spriteBatch.Draw(texture, bounds, sourceRect, color);
                 foreach(UIComponent comp in contents){
-                    comp.Draw(spriteBatch);
+                    comp.Draw(gameTime, spriteBatch);
                 }
             }
 

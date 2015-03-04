@@ -30,3 +30,5 @@ H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debu
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.pdb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb
