@@ -53,5 +53,11 @@ namespace Platform.UserInterface
 
         }
 
+        public void Add(UIComponent child)
+        {
+            contents.Add(child);
+        }
+
+
     }
 }

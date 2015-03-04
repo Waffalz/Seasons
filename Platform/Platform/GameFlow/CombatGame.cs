@@ -37,13 +37,28 @@ namespace Platform.GameFlow
         public CombatGame (){
             //TODO: initialize world
 
+            Rectangle window = Game1.CurrentGame.Window.ClientBounds;
+
             //create Hud for in game stuff
             gameHUD = new UIComponent();
 
             //create UI for game when it's paused
             pauseMenu = new UIComponent();
-            pauseMenu.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
+            pauseMenu.bounds = new Rectangle(0, 0, window.Width, window.Height);
+            pauseMenu.color = new Color(0, 0, 0, 100);
 
+            //Pause menu button for going back to the main menu
+            UIButton menuButton = new UIButton(new Rectangle(10, 10, 200, 100), Color.Gold, delegate() { Game1.CurrentGame.GameMode = new MenuScreen(); });
+            menuButton.text = "Main menu";
+            pauseMenu.Add(menuButton);
+            
+            //pause menu button for quitting the game
+            UIButton quitButton = new UIButton(new Rectangle(10, window.Height - 110, 200, 100), Color.Gold, delegate() { Game1.CurrentGame.Exit(); });
+            quitButton.text = "Quit game";
+            pauseMenu.Add(quitButton);
+
+            gameHUD.visible = true;
+            pauseMenu.visible = false;
 
             world = Map.LoadMap2(@"Content/maps/Level02.txt");
             world.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);

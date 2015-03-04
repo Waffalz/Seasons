@@ -29,7 +29,7 @@ namespace Platform.GameFlow
                 Game1.CurrentGame.GameMode = new CombatGame();
             });
             startButton.text = "Start";
-            gui.contents.Add(startButton);
+            gui.Add(startButton);
             gui.texture = Game1.CurrentGame.Textures["MenuBack"];
             gui.sourceRect = gui.texture.Bounds;
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
