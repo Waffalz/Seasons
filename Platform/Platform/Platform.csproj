@@ -108,8 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="AI\AIPathing.cs" />
     <Compile Include="lib\PriorityQueue.cs" />
+=======
+    <Compile Include="graphics\BackgroundObject.cs" />
+>>>>>>> origin/Parallax
     <Compile Include="mobs\Baddu.cs" />
     <Compile Include="mobs\Ball.cs" />
     <Compile Include="mobs\Behavior.cs" />

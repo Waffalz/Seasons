@@ -31,8 +31,10 @@ namespace Platform
 
         public static Random rand;
 
-        private KeyboardState oKipz;
-        private MouseState oMus;
+        public static KeyboardState kipz;
+        public static KeyboardState oKipz;
+        public static MouseState mus;
+        public static MouseState oMus;
 
         int maxScroll = 10, minScroll = 1;
 
@@ -41,6 +43,9 @@ namespace Platform
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            graphics.PreferredBackBufferWidth = 1080;
+            graphics.PreferredBackBufferHeight = 720;
+            rand = new Random();
         }
 
         /// <summary>
@@ -51,16 +56,10 @@ namespace Platform
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
-            base.Initialize();
-            rand = new Random();
-
-            mappu = Map.LoadMap2(@"Content/maps/Level02.txt");
-            mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width/2, Window.ClientBounds.Height/2);
-
             oKipz = Keyboard.GetState();
             oMus = Mouse.GetState();
+
+            base.Initialize();
         }
 
         /// <summary>
@@ -83,6 +82,27 @@ namespace Platform
 
             particleSheets = new Dictionary<string, Texture2D>();
             particleSheets.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
+
+
+            mappu = Map.LoadMap2(@"Content/maps/Level02.txt");
+            mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
+            
+
+            for (int i = 0; i < 40; i++)
+            {
+                BackgroundObject boi = new BackgroundObject();
+                boi.Position = new Vector2(rand.Next(1, 200), rand.Next(1, 100));
+                boi.Size = new Vector2(rand.Next(1, 10));
+
+                boi.Col = new Color((byte)rand.Next(1, 255), (byte)rand.Next(1, 255), (byte)rand.Next(1, 255));
+
+                boi.Depth = (float)rand.Next(1, 100) / 100;
+                boi.Image = particleSheets["DefaultParticle"];
+                mappu.BackList.Add(boi);
+
+            }
+            mappu.BackList.Sort();
+
         }
 
         /// <summary>
@@ -107,65 +127,13 @@ namespace Platform
                 this.Exit();
 
             // TODO: Add your update logic here
-            KeyboardState kipz = Keyboard.GetState();
-            MouseState mus = Mouse.GetState();
+            kipz = Keyboard.GetState();
+            mus = Mouse.GetState();
             float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
 
             
-            if (mappu.Player != null){//if a player exists
-                Player p = mappu.Player;
-                if (kipz.IsKeyDown(Keys.D)) //running right
-                {
-                    p.WalkVelocity += new Vector2(p.WalkSpeed, 0);
-                }
-                if (kipz.IsKeyDown(Keys.A)) //running left
-                {
-                    p.WalkVelocity += new Vector2(-p.WalkSpeed, 0);
-
-                }
-                
-                if ((kipz.IsKeyDown(Keys.Space) || kipz.IsKeyDown(Keys.W)) && p.OnGround)//jumping
-                {
-                    for (int i = 0; i < 30; i++ )//particle effects
-                    {
-                        Particle poi = new Particle((float)2,(float)2);
-                        poi.Color = Color.SkyBlue;
-                        poi.Position = new Vector2(p.Position.X, p.Position.Y-p.Size.Y/2);
-                        double rAngle = MathHelper.ToRadians(rand.Next(0, 360));
-                        double speed = rand.Next(20, 40);
-                        poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), Math.Abs((float)Math.Round(Math.Sin(rAngle) * speed)));
-                        poi.ColorSpeed = new Vector3(rand.Next(-10,10), rand.Next(-10,10), rand.Next(-10,10));
-                        mappu.AddParticle(poi);
-
-                    }
-                    p.OnGround = false;
-                    p.Velocity = new Vector2(p.Velocity.X, p.JumpSpeed);
-                }
-
-                if (p.WalkVelocity.X != 0 && p.OnGround == true){ //fancy particles effects when running
-                    for (int i = 0; i < 5; i++) {
-                        Particle poi = new Particle((float)2, (float)1);
-                        poi.Color = Color.SkyBlue;
-                        poi.Position = new Vector2(p.Position.X, p.Position.Y - p.Size.Y / 2);
-                        double rAngle = MathHelper.ToRadians(rand.Next(0, 360));
-                        float speed = rand.Next(20, 40);
-                        poi.Velocity = new Vector2((float)Math.Cos(rAngle), Math.Abs((float)(Math.Sin(rAngle)))) * speed;
-                        poi.ColorSpeed = new Vector3(rand.Next(-10, 10), rand.Next(-10, 10), rand.Next(-10, 10));
-                        mappu.AddParticle(poi);
-
-                    }
-                }
-                if (mus.LeftButton == ButtonState.Pressed) {//left click firing
-                    if (p.AttackTime > p.MaxAttack) {
-                        p.Attack(mappu.Cam.PositionFromScreen(new Point(mus.X, mus.Y)));
-                        
-                        p.AttackTime = 0;
-
-                    }
-                }
-                mappu.Cam.ZoomScale += (mus.ScrollWheelValue - oMus.ScrollWheelValue)/120;
-            }
+            
 
             mappu.Tick(gameTime); //update stuff in the Map
 

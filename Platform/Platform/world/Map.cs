@@ -27,9 +27,11 @@ namespace Platform.World
         private List<Particle> addPList;
         private List<Particle> removePList;
 
-        Camera cam;
+        private Camera cam;
         private Player player;
         private float gAccel; //default -150
+
+		private List<BackgroundObject> backList;
 
 		public int Width {
 			get {
@@ -75,6 +77,11 @@ namespace Platform.World
             get { return cam; }
             set { cam = value; }
         }
+        public List<BackgroundObject> BackList
+        {
+            get { return backList; }
+            set { backList = value; }
+        }
 
         public Map()
         {
@@ -87,6 +94,7 @@ namespace Platform.World
             removePList = new List<Particle>();
             gAccel = -150;
             cam = new DefaultCamera(this);
+            backList = new List<BackgroundObject>();
 			Console.WriteLine( Width );
 			Console.WriteLine( Height );
         }
@@ -393,4 +401,5 @@ namespace Platform.World
         }
 
     }
+
 }
