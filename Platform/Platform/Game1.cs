@@ -49,7 +49,9 @@ namespace Platform
         // Screen Adjustments
         int screenWidth = 800, screenHeight = 600;
         Texture2D menuTexture;
+
         Button start;
+        Button pause;
 
         public Game1()
         {
