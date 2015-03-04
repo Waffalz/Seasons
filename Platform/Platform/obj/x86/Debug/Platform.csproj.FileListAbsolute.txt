@@ -80,3 +80,4 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojR
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
