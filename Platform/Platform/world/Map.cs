@@ -361,6 +361,10 @@ namespace Platform.World
             }
             return nMap;
         }
+        public static Map ResetMap(string path)
+        {
+            return LoadMap2(path);
+        }
 
     }
 }

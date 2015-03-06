@@ -203,9 +203,20 @@ namespace Platform
                         mappu.Cam.ZoomScale = Math.Min(maxScroll, mappu.Cam.ZoomScale + scroll / 120);
                     }
 
-                    //Return to main menu by pressing escape
+                    //Return to main menu by pressing escape. Also resets the game
                     if (kipz.IsKeyDown(Keys.Escape))
+                    {
                         CurrentGameState = GameState.MainMenu;
+                        mappu = Map.ResetMap(@"Content/maps/Level02.txt");
+                        mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
+                    }
+
+                    //Resets the game
+                    if (kipz.IsKeyDown(Keys.R) && !oKipz.IsKeyDown(Keys.R))
+                    {
+                        mappu = Map.ResetMap(@"Content/maps/Level02.txt");
+                        mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
+                    }
                     break;
             }
             oKipz = kipz;
