@@ -7,5 +7,8 @@ Content\entities\player.xnb
 Content\tiles\Blocks.png
 Content\tiles\Platforms.png
 Content\particles\Square.bmp
+Content\maps\Level01.txt
 Content\maps\Level02.txt
 Content\maps\Level03.txt
+Content\maps\Level04.txt
+Content\maps\Level05.txt

@@ -58,12 +58,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="maps\Level02.txt">
-      <Name>Level02</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="particles\Square.bmp">
       <Name>Square</Name>
       <Importer>TextureImporter</Importer>
@@ -91,8 +85,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="maps\Level01.txt">
+      <Name>Level01</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="maps\Level02.txt">
+      <Name>Level02</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="maps\Level03.txt">
       <Name>Level03</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="maps\Level04.txt">
+      <Name>Level04</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="maps\Level05.txt">
+      <Name>Level05</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
