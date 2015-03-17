@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb</Output>
-      <Time>2015-02-13T09:02:03.1630538-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb</Output>
+      <Time>2015-03-17T08:58:51.4842046-05:00</Time>
     </Item>
     <Item>
       <Source>tiles\Platforms.png</Source>
@@ -16,17 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb</Output>
-      <Time>2015-02-13T09:02:03.1660541-06:00</Time>
-    </Item>
-    <Item>
-      <Source>entities\player.png</Source>
-      <Name>entities\player</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb</Output>
-      <Time>2015-02-13T09:02:03.1310506-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb</Output>
+      <Time>2015-03-17T08:58:51.9833918-05:00</Time>
     </Item>
     <Item>
       <Source>particles\Square.bmp</Source>
@@ -34,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb</Output>
-      <Time>2015-02-13T09:02:03.1600535-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb</Output>
+      <Time>2015-03-17T08:58:35.0328198-05:00</Time>
     </Item>
     <Item>
       <Source>menuItems\Button.jpg</Source>
@@ -43,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Button.xnb</Output>
-      <Time>2015-03-02T10:07:56.6627964-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Button.xnb</Output>
+      <Time>2015-03-17T08:58:02.7092414-05:00</Time>
     </Item>
     <Item>
       <Source>menuItems\Seasons_Menu.png</Source>
@@ -52,8 +43,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-03-02T10:07:56.6677964-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb</Output>
+      <Time>2015-03-17T08:58:12.9729854-05:00</Time>
+    </Item>
+    <Item>
+      <Source>entities\player.png</Source>
+      <Name>entities\player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb</Output>
+      <Time>2015-03-17T08:56:37.6295666-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -61,10 +61,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\131546\Desktop\GitHub\Seasons\Platform\PlatformContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\131546\Desktop\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

@@ -71,7 +71,6 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItem
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
