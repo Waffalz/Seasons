@@ -81,7 +81,7 @@ namespace Platform.World
             addPList = new List<Particle>();
             removePList = new List<Particle>();
             gAccel = -150;
-            cam = new DefaultCamera(this);
+            cam = new LookCamera(this);
             backList = new List<BackgroundObject>();
 
         }
@@ -232,6 +232,8 @@ namespace Platform.World
                 }
             }
             removePList.Clear();
+
+            cam.Update(gameTime);
         }
 
         /* Old Map loading stuff

@@ -52,6 +52,13 @@ namespace Platform.Graphics
             zoomScale = 5;
         }
 
+        public virtual void Update(GameTime gameTime)
+        {
+            if (parent.Player != null) {
+                position = parent.Player.Position;
+            }
+        }
+
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
 
         public Vector2 PositionFromScreen(Point p)
@@ -66,21 +73,21 @@ namespace Platform.Graphics
 
     class DefaultCamera : Camera
     {
-
-
-       
         public DefaultCamera(Map p) : base(p)
         {
             position = new Vector2();
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //draw tiles
             if (parent != null){
-                if (parent.Player != null){
-                    position = parent.Player.Position;
-                }
+                
 
                 for (int i = 0; i < parent.BackList.Count; i++ ){//draw background
                 

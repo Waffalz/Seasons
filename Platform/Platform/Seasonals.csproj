@@ -112,6 +112,7 @@
     <Compile Include="GameFlow\GameScreen.cs" />
     <Compile Include="GameFlow\MenuScreen.cs" />
     <Compile Include="Graphics\BackgroundObject.cs" />
+    <Compile Include="Graphics\LookCamera.cs" />
     <Compile Include="Mobs\Baddu.cs" />
     <Compile Include="Mobs\Ball.cs" />
     <Compile Include="Mobs\Behavior.cs" />
