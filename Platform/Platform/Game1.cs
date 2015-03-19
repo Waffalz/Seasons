@@ -71,7 +71,7 @@ namespace Platform
             base.Initialize();
             rand = new Random();
 
-            mappu = Map.LoadMap2(@"Content/maps/Level01.txt");
+            mappu = Map.LoadMap2(@"Content/maps/Level03.txt");
             mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width/2, Window.ClientBounds.Height/2);
 
             oKipz = Keyboard.GetState();
@@ -146,6 +146,8 @@ namespace Platform
                         CurrentGameState = GameState.Playing;
                         start.color = new Color(255, 255, 255, 255);
                     }
+                    if (kipz.IsKeyDown(Keys.Escape) && !oKipz.IsKeyDown(Keys.Escape))
+                        this.Exit();
                     break;
 
                 //character select menu
@@ -207,24 +209,20 @@ namespace Platform
                     if (kipz.IsKeyDown(Keys.Escape))
                     {
                         CurrentGameState = GameState.MainMenu;
-                        mappu = Map.ResetMap(@"Content/maps/Level01.txt");
+                        mappu = Map.ResetMap(@"Content/maps/Level03.txt");
                         mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
                     }
 
                     //Resets the game
                     if (kipz.IsKeyDown(Keys.R) && !oKipz.IsKeyDown(Keys.R))
                     {
-                        mappu = Map.ResetMap(@"Content/maps/Level01.txt");
+                        mappu = Map.ResetMap(@"Content/maps/Level03.txt");
                         mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
                     }
                     break;
             }
             oKipz = kipz;
             oMus = mus;
-
-            //You can quit the game from anywhere by pressing Ctrl+Q
-            if ((kipz.IsKeyDown(Keys.LeftControl) || kipz.IsKeyDown(Keys.RightControl)) && kipz.IsKeyDown(Keys.Q))
-                this.Exit();
 
             base.Update(gameTime);
         }
