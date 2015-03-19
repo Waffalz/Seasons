@@ -124,6 +124,7 @@
     <Compile Include="Control\OnceAction.cs" />
     <Compile Include="UserInterface\UIButton.cs" />
     <Compile Include="UserInterface\UIComponent.cs" />
+    <Compile Include="UserInterface\UIStatusBar.cs" />
     <Compile Include="World\Entity.cs" />
     <Compile Include="World\Map.cs" />
     <Compile Include="Mobs\Player.cs" />

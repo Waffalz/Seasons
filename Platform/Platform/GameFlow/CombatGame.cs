@@ -21,6 +21,8 @@ namespace Platform.GameFlow
         bool paused;
 
         UIComponent gameHUD;
+        UIStatusBar healthBar;
+
         UIComponent pauseMenu;
 
         public Map World
@@ -41,6 +43,13 @@ namespace Platform.GameFlow
 
             //create Hud for in game stuff
             gameHUD = new UIComponent();
+            UIComponent topLeft = new UIComponent();
+            topLeft.bounds = new Rectangle(0, 0, 300, 100);
+            topLeft.color = Color.LightGray;
+            gameHUD.Add(topLeft);
+            healthBar = new UIStatusBar();
+            healthBar.bounds = new Rectangle(20,20,150,10);
+            gameHUD.Add(healthBar);
 
             //create UI for game when it's paused
             pauseMenu = new UIComponent();
@@ -117,7 +126,7 @@ namespace Platform.GameFlow
                 world.Camera.ZoomScale = Math.Min(MAX_SCROLL, world.Camera.ZoomScale + scroll / 120);
             }
 
-
+            //healthBar.MaxValue = Game1.CurrentGame.Player.;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
