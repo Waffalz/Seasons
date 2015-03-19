@@ -78,6 +78,7 @@ namespace Platform.Mobs
                     for (int p = 0; p < 10; p++) {
                         BasicAttack(spread*3);
                     }
+                    health -= 10;
                 }));
         }
 

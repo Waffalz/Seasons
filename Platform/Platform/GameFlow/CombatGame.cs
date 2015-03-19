@@ -126,7 +126,8 @@ namespace Platform.GameFlow
                 world.Camera.ZoomScale = Math.Min(MAX_SCROLL, world.Camera.ZoomScale + scroll / 120);
             }
 
-            //healthBar.MaxValue = Game1.CurrentGame.Player.;
+            healthBar.MaxValue = Game1.CurrentGame.Player.MaxHealth;
+            healthBar.Value = Game1.CurrentGame.Player.Health;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

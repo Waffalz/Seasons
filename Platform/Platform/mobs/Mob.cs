@@ -13,6 +13,7 @@ namespace Platform.Mobs
     public class Mob:Entity
     {
 
+        protected int maxHealth;
         protected int health;
 
         protected Vector2 walkVelocity;
@@ -41,6 +42,11 @@ namespace Platform.Mobs
             set { onGround = value; }
         }
 
+        public int MaxHealth
+        {
+            get { return maxHealth; }
+            set { maxHealth = value; } 
+        }
         public int Health
         {
             get { return health; }
@@ -56,6 +62,8 @@ namespace Platform.Mobs
             jumpSpeed = 50;
             walkVelocity = new Vector2();
             onGround = false;
+            maxHealth = 100;
+            health = maxHealth;
         }
 
         public void Damage(int toHit)

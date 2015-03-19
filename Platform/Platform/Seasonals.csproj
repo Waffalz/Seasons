@@ -108,6 +108,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Characters\AutumnCharacter.cs" />
+    <Compile Include="Characters\SpringCharacter.cs" />
+    <Compile Include="Characters\SummerCharacter.cs" />
+    <Compile Include="Characters\WinterCharacter.cs" />
     <Compile Include="GameFlow\CombatGame.cs" />
     <Compile Include="GameFlow\GameScreen.cs" />
     <Compile Include="GameFlow\MenuScreen.cs" />
