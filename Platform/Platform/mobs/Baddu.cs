@@ -29,7 +29,7 @@ namespace Platform.Mobs
 
         public void Behave(float timeDif){
             Vector2 dir = Mob.GetDirection(moveDirection);
-            WalkVelocity += new Vector2(dir.X * WalkSpeed, 0);
+            WalkVelocity = new Vector2(dir.X * WalkSpeed, 0);
             
 
 

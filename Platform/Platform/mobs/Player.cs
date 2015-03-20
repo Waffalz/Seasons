@@ -18,6 +18,28 @@ namespace Platform.Mobs
         float spread;
         float shotspeed;
 
+        float mana;
+
+        public float Mana
+        {
+            get { return mana; }
+            set { mana = value; }
+        }
+        float maxMana;
+
+        public float MaxMana
+        {
+            get { return maxMana; }
+            set { maxMana = value; }
+        }
+        float manaGen;
+
+        public float ManaGen
+        {
+            get { return manaGen; }
+            set { manaGen = value; }
+        }
+
         private Dictionary<string,GameAction> controls;
 
         public float ShotSpeed
@@ -31,10 +53,12 @@ namespace Platform.Mobs
             set { spread = value; }
         }
 
+
+
         public Player():base()
         {
-            Size = new Vector2(10,10);
-            texture = Game1.CurrentGame.Textures["Player"];
+            Size = new Vector2((float)8,(float)16);
+            texture = Game1.CurrentGame.Textures["Square"];
             SourceRect = texture.Bounds;
             WalkSpeed = 50;
             JumpSpeed = 100;
@@ -46,25 +70,40 @@ namespace Platform.Mobs
 
             controls = new Dictionary<string, GameAction>();
 
+            maxMana = 100;
+            mana = maxMana;
+            manaGen = 10;
+
             controls.Add("Move Left", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.D); },
-                delegate() { walkVelocity += new Vector2(walkSpeed, 0); }));//add run left control
+                delegate() {
+                    if (Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A)) {
+                        if (walkVelocity.X > 0 || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.D)) {
+                            walkVelocity = new Vector2(walkSpeed, 0);
+                        }
+                    } else {
+                        walkVelocity = new Vector2(walkSpeed, 0);
+                    }
+                }));//add run left control
+
             controls.Add("Move Right", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A); },
-                delegate() { walkVelocity += new Vector2(-walkSpeed, 0); }));//add run right control
+                delegate() {
+
+                    if (Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.D)) {
+                        if (walkVelocity.X < 0 || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.A)) {
+                            walkVelocity = new Vector2(-walkSpeed, 0);
+                        }
+                    } else {
+                        walkVelocity = new Vector2(-walkSpeed, 0);
+                    }
+
+                }));//add run right control
             controls.Add("Basic Attack", new ContinuousAction(this, (float).5,
                 delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },
                 delegate() { BasicAttack(spread); }));
-            controls.Add("Jump W", new ContinuousAction(this, 0,
-                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W); },
-                delegate() {
-                    if (onGround) {
-                        onGround = false;
-                        velocity = new Vector2(velocity.X, jumpSpeed);
-                    }
-                }));
-            controls.Add("Jump Space", new ContinuousAction(this, 0,
-                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
+            controls.Add("Jump", new ContinuousAction(this, 0,
+                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
                 delegate() {
                     if (onGround) {
                         onGround = false;
@@ -75,10 +114,13 @@ namespace Platform.Mobs
                 delegate() { return (Game1.CurrentGame.MouseInput.RightButton == ButtonState.Pressed); },
                 delegate() { return (Game1.CurrentGame.OldMouseInput.RightButton == ButtonState.Pressed); },
                 delegate() {
-                    for (int p = 0; p < 10; p++) {
-                        BasicAttack(spread*3);
+                    float cost = 20;
+                    if (mana > cost) {
+                        for (int p = 0; p < 10; p++) {
+                            BasicAttack(spread * 3);
+                        }
+                        mana -= cost;
                     }
-                    health -= 10;
                 }));
         }
 
@@ -106,8 +148,8 @@ namespace Platform.Mobs
             }
             */
             parent.Camera.ZoomScale += (Game1.CurrentGame.MouseInput.ScrollWheelValue - Game1.CurrentGame.OldMouseInput.ScrollWheelValue) / 120;
-            
 
+            mana = Math.Min(maxMana, mana + manaGen * gTime);
         }
 
         public void BasicAttack(float spread){

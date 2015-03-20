@@ -22,6 +22,7 @@ namespace Platform.GameFlow
 
         UIComponent gameHUD;
         UIStatusBar healthBar;
+        UIStatusBar manaBar;
 
         UIComponent pauseMenu;
 
@@ -48,8 +49,14 @@ namespace Platform.GameFlow
             topLeft.color = Color.LightGray;
             gameHUD.Add(topLeft);
             healthBar = new UIStatusBar();
-            healthBar.bounds = new Rectangle(20,20,150,10);
+            healthBar.bounds = new Rectangle(20, 20, 150, 10);
+            healthBar.mColor = Color.Gray;
             gameHUD.Add(healthBar);
+            manaBar = new UIStatusBar();
+            manaBar.bounds = new Rectangle(20, 40, 150, 10);
+            manaBar.vColor = Color.SkyBlue; ;
+            manaBar.mColor = Color.Gray;
+            gameHUD.Add(manaBar);
 
             //create UI for game when it's paused
             pauseMenu = new UIComponent();
@@ -128,6 +135,9 @@ namespace Platform.GameFlow
 
             healthBar.MaxValue = Game1.CurrentGame.Player.MaxHealth;
             healthBar.Value = Game1.CurrentGame.Player.Health;
+
+            manaBar.MaxValue = Game1.CurrentGame.Player.MaxMana;
+            manaBar.Value = Game1.CurrentGame.Player.Mana;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

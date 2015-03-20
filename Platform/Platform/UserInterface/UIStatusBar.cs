@@ -13,8 +13,8 @@ namespace Platform.UserInterface
     class UIStatusBar: UIComponent
     {
 
-        private int val;
-        private int maxVal;
+        private float val;
+        private float maxVal;
 
         public Color vColor;
         public Color mColor;
@@ -25,13 +25,13 @@ namespace Platform.UserInterface
         public Rectangle vSrcRect;
         public Rectangle mSrcRect;
 
-        public int Value
+        public float Value
         {
             get { return val; }
             set { val = value; }
         }
 
-        public int MaxValue
+        public float MaxValue
         {
             get { return maxVal; }
             set { maxVal = value; }
@@ -93,8 +93,8 @@ namespace Platform.UserInterface
                 //draw valuebar
                 spriteBatch.Draw(
                     vTex,
-                    new Rectangle(bounds.X, bounds.Y, (int)((double)bounds.Width * (double)val / maxVal), bounds.Height),
-                    new Rectangle(vSrcRect.X, vSrcRect.Y, (int)((double)vSrcRect.Width * (double)val / maxVal), vSrcRect.Height),
+                    new Rectangle(bounds.X, bounds.Y, (int)(bounds.Width * val / maxVal), bounds.Height),
+                    new Rectangle(vSrcRect.X, vSrcRect.Y, (int)(vSrcRect.Width * val / maxVal), vSrcRect.Height),
                     vColor);
 
                 foreach(UIComponent comp in contents){

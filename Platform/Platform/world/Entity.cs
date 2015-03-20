@@ -28,6 +28,7 @@ namespace Platform.World
         protected bool solid;
         protected Microsoft.Xna.Framework.Color color;
 
+        protected Vector2 oldPos;
         
         public virtual Map Parent
         {
@@ -98,6 +99,7 @@ namespace Platform.World
             texture = null;
             sourceRect = new Microsoft.Xna.Framework.Rectangle();
             color = Microsoft.Xna.Framework.Color.White;
+            oldPos = position;
         }
 
         public virtual void OnCollide(Entity other){
@@ -125,6 +127,17 @@ namespace Platform.World
 
         public virtual void Update(GameTime gameTime)
         {
+            float timeDifference = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            oldPos = position;
+            
+            if (Anchored == false) {//don't handle movement if ent is anchored
+                position = position + timeDifference * velocity;
+            }
+            if (gravity == true) { //handle gravity on ent if gravity is true
+                velocity = new Vector2(velocity.X, velocity.Y + parent.Gravity * timeDifference);
+            }
+
 
         }
 
@@ -139,5 +152,38 @@ namespace Platform.World
             }
         }
 
+
+        public virtual void CorrectCollisionPosition(List<Entity> ents)
+        {
+            foreach (Entity tilent in ents) { //Tile collisions
+                //System.Drawing.RectangleF re = tilent.getRekt();
+                //re.Size += new System.Drawing.SizeF(0,WALL_BUFFER);
+                //re = new System.Drawing.RectangleF(tilent.Position.X - re.Size.Width / 2, -(tilent.Position.Y + re.Size.Height), re.Size.Width, re.Size.Height);
+                if (Collides(tilent)) {//if ent collides with a tileent
+                    if (oldPos.Y - size.Y / 2 >= tilent.Position.Y + tilent.Size.Y / 2) { //if ent is over tile
+                        position = new Vector2(position.X, tilent.Position.Y + (tilent.Size.Y + size.Y) / 2);
+                        velocity = new Vector2(velocity.X, 0);
+                    }
+                    else {
+                        if (oldPos.Y + size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
+
+                            position = new Vector2(position.X, tilent.Position.Y - (tilent.Size.Y + size.Y) / 2);
+                            velocity = new Vector2(velocity.X, 0);
+                        }
+                        if (oldPos.X - size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
+
+                            position = new Vector2(tilent.Position.X + (tilent.Size.X + size.X) / 2, position.Y);
+                            velocity = new Vector2(0, velocity.Y);
+                        }
+                        if (oldPos.X + size.X / 2 <= tilent.Position.X - tilent.Size.X / 2) { // if ent is to the left of tile
+
+                            position = new Vector2(tilent.Position.X - (tilent.Size.X + size.X) / 2, position.Y);
+                            velocity = new Vector2(0, velocity.Y);
+                        }
+                    }
+                    OnCollide(tilent);
+                }
+            }
+        }
     }
 }

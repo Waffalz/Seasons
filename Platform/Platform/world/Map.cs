@@ -81,7 +81,7 @@ namespace Platform.World
             addPList = new List<Particle>();
             removePList = new List<Particle>();
             gAccel = -150;
-            cam = new LookCamera(this);
+            cam = new DefaultCamera(this);
             backList = new List<BackgroundObject>();
 
         }
@@ -144,55 +144,11 @@ namespace Platform.World
                 }
 
                 ent.Update(gameTime);//if ent has to do some specific things, do them
-
-                if (ent.Anchored == false){//don't handle movement if ent is anchored
-                    if (ent is Mob){
-                        ent.Position = ent.Position + timeDifference * (ent.Velocity + ((Mob)ent).WalkVelocity);
-                    }else{
-                        ent.Position = ent.Position + timeDifference * ent.Velocity;
-                    }
+                if (ent.Solid) {
+                ent.CorrectCollisionPosition(tileEnts);
                 }
 
-                if (ent.Gravity == true){ //handle gravity on ent if gravity is true
-                    ent.Velocity = new Vector2(ent.Velocity.X, ent.Velocity.Y + this.Gravity * timeDifference);
-                }
-                
-                if (ent is Mob){ //ent is, by default, not on the ground until proven otherwise
-                    ((Mob)ent).OnGround = false;
-                }
                 //TODO: fix onground problems due to the fact that entities no longer collide after repositioning after collision
-
-                foreach(Entity tilent in tileEnts){ //Tile collisions
-                    //System.Drawing.RectangleF re = tilent.getRekt();
-                    //re.Size += new System.Drawing.SizeF(0,WALL_BUFFER);
-                    //re = new System.Drawing.RectangleF(tilent.Position.X - re.Size.Width / 2, -(tilent.Position.Y + re.Size.Height), re.Size.Width, re.Size.Height);
-                    if (ent.Collides(tilent)){//if ent collides with a tileent
-                        if (oldPos.Y - ent.Size.Y / 2 >= tilent.Position.Y + tilent.Size.Y / 2) { //if ent is over tile
-                            ent.Position = new Vector2(ent.Position.X, tilent.Position.Y + (tilent.Size.Y + ent.Size.Y) / 2);
-                            ent.Velocity = new Vector2(ent.Velocity.X, 0);
-                            if (ent is Mob){
-                                ((Mob)ent).OnGround = true;
-                            }
-                        }else {
-                            if (oldPos.Y + ent.Size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
-                            
-                                ent.Position = new Vector2(ent.Position.X, tilent.Position.Y - (tilent.Size.Y + ent.Size.Y) / 2);
-                                ent.Velocity = new Vector2(ent.Velocity.X, 0);
-                            }
-                            if (oldPos.X - ent.Size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
-                           
-                                ent.Position = new Vector2(tilent.Position.X + (tilent.Size.X + ent.Size.X) / 2, ent.Position.Y);
-                                ent.Velocity = new Vector2(0, ent.Velocity.Y);
-                            }
-                            if (oldPos.X + ent.Size.X / 2 <= tilent.Position.X - tilent.Size.X / 2){ // if ent is to the left of tile
-                            
-                                ent.Position = new Vector2(tilent.Position.X - (tilent.Size.X + ent.Size.X) / 2, ent.Position.Y);
-                                ent.Velocity = new Vector2(0, ent.Velocity.Y);
-                            }
-                        }
-                        ent.OnCollide(tilent);
-                    }
-                }
 
                 foreach (Entity other in entList){ //check for interactions between entities in entlis
                     if (ent != other){
@@ -207,9 +163,7 @@ namespace Platform.World
                     RemoveEntity(ent);
                 }
 
-                if (ent is Mob) {
-                    ((Mob)ent).WalkVelocity = new Vector2();
-                }
+                
             }
             foreach (Particle p in partList) {//call to each particle's specific behaviors
                 p.Update(gameTime);

@@ -49,7 +49,7 @@ namespace Platform.Mobs
             base.OnCollide(other);
             if (!(other == creator || (other is Ball && ((Ball)other).creator == creator))) {
                 if (other is Mob) {
-                    ((Mob)other).Damage(damage);
+                    ((Mob)other).Health -= damage;
                 }
                 for (int i = 0; i < size.X*2; i++) {
                     Particle poi = new Particle((float)2, (float)size.X/(float)1.5);
