@@ -11,7 +11,7 @@ using Platform.Mobs;
 
 namespace Platform.GameFlow
 {
-    public class MenuScreen: GameScreen
+    public class MainMenuContext: GameContext
     {
         public UIComponent gui;
 
@@ -21,19 +21,28 @@ namespace Platform.GameFlow
             set { gui = value; }
         }
 
-        public MenuScreen()
+        public MainMenuContext()
         {
             gui = new UIComponent();
-            UIButton startButton = new UIButton(new Rectangle(500, 500, 100, 100), delegate() {
-                Game1.CurrentGame.Player = new Player();
-                Game1.CurrentGame.GameMode = new CombatGame();
-            });
-            startButton.text = "Start";
-            gui.Add(startButton);
             gui.texture = Game1.CurrentGame.Textures["MenuBack"];
             gui.sourceRect = gui.texture.Bounds;
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
             gui.color = Color.White;
+
+            UIButton startButton = new UIButton(new Rectangle(0, 300, 300, 60), delegate()
+            {
+                Game1.CurrentGame.GameMode = new CharSelectContext();
+            }, "New Game");
+            startButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - startButton.bounds.Width) / 2;
+            gui.Add(startButton);
+
+            UIButton exitButton = new UIButton(new Rectangle(0, 480, 300, 60), delegate()
+            {
+                Game1.CurrentGame.Exit();
+            }, "Exit");
+            exitButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - startButton.bounds.Width) / 2;
+            gui.Add(exitButton);
+
         }
 
         public override void Update(GameTime gameTime)

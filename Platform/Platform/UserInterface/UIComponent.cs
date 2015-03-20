@@ -28,7 +28,7 @@ namespace Platform.UserInterface
             visible = true;
             texture = Game1.CurrentGame.Textures["Square"];
             sourceRect = texture.Bounds;
-            color = Color.Gold;
+            color = Color.MediumSeaGreen;
         }
 
         public virtual void Update(GameTime gameTime)

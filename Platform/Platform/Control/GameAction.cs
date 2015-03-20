@@ -10,7 +10,7 @@ using Platform.World;
 
 namespace Platform.Control
 {
-    delegate void ActionDelegate();
+    delegate void ActionDelegate(GameTime gameTime);
     delegate bool ActionCheck();
 
     abstract class GameAction

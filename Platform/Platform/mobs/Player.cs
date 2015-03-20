@@ -76,35 +76,37 @@ namespace Platform.Mobs
 
             controls.Add("Move Left", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.D); },
-                delegate() {
+                delegate(GameTime gameTime) {
                     if (Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A)) {
                         if (walkVelocity.X > 0 || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.D)) {
-                            walkVelocity = new Vector2(walkSpeed, 0);
+                            //walkVelocity.X = walkSpeed
+                            walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                         }
                     } else {
-                        walkVelocity = new Vector2(walkSpeed, 0);
+                        //walkVelocity.X = walkSpeed
+                        walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                     }
                 }));//add run left control
 
             controls.Add("Move Right", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A); },
-                delegate() {
-
+                delegate(GameTime gameTime){
                     if (Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.D)) {
                         if (walkVelocity.X < 0 || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.A)) {
-                            walkVelocity = new Vector2(-walkSpeed, 0);
+                            //walkVelocity.X = -walkSpeed
+                            walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                         }
                     } else {
-                        walkVelocity = new Vector2(-walkSpeed, 0);
+                        //walkVelocity.X = -walkSpeed
+                        walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                     }
-
                 }));//add run right control
             controls.Add("Basic Attack", new ContinuousAction(this, (float).5,
                 delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },
-                delegate() { BasicAttack(spread); }));
+                delegate(GameTime gameTime) { BasicAttack(spread); }));
             controls.Add("Jump", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
-                delegate() {
+                delegate(GameTime gameTime){
                     if (onGround) {
                         onGround = false;
                         velocity = new Vector2(velocity.X, jumpSpeed);
@@ -113,7 +115,7 @@ namespace Platform.Mobs
             controls.Add("Shatgann", new OnceAction(this, 1,
                 delegate() { return (Game1.CurrentGame.MouseInput.RightButton == ButtonState.Pressed); },
                 delegate() { return (Game1.CurrentGame.OldMouseInput.RightButton == ButtonState.Pressed); },
-                delegate() {
+                delegate(GameTime gameTime){
                     float cost = 20;
                     if (mana > cost) {
                         for (int p = 0; p < 10; p++) {

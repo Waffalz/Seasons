@@ -112,9 +112,10 @@
     <Compile Include="Characters\SpringCharacter.cs" />
     <Compile Include="Characters\SummerCharacter.cs" />
     <Compile Include="Characters\WinterCharacter.cs" />
-    <Compile Include="GameFlow\CombatGame.cs" />
-    <Compile Include="GameFlow\GameScreen.cs" />
-    <Compile Include="GameFlow\MenuScreen.cs" />
+    <Compile Include="GameFlow\CharSelectContext.cs" />
+    <Compile Include="GameFlow\CombatContext.cs" />
+    <Compile Include="GameFlow\GameContext.cs" />
+    <Compile Include="GameFlow\MainMenuContext.cs" />
     <Compile Include="Graphics\BackgroundObject.cs" />
     <Compile Include="Graphics\LookCamera.cs" />
     <Compile Include="Mobs\Baddu.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Control\OnceAction.cs" />
     <Compile Include="UserInterface\UIButton.cs" />
     <Compile Include="UserInterface\UIComponent.cs" />
+    <Compile Include="UserInterface\UILabel.cs" />
     <Compile Include="UserInterface\UIStatusBar.cs" />
     <Compile Include="World\Entity.cs" />
     <Compile Include="World\Map.cs" />

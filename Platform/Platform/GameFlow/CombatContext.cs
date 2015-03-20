@@ -13,7 +13,7 @@ using Platform.UserInterface;
 
 namespace Platform.GameFlow
 {
-    public class CombatGame : GameScreen
+    public class CombatContext : GameContext
     {
         public const int MAX_SCROLL = 10, MIN_SCROLL = 1;
 
@@ -37,7 +37,7 @@ namespace Platform.GameFlow
             set { paused = value; }
         }
 
-        public CombatGame (){
+        public CombatContext (){
             //TODO: initialize world
 
             Rectangle window = Game1.CurrentGame.Window.ClientBounds;
@@ -64,12 +64,12 @@ namespace Platform.GameFlow
             pauseMenu.color = new Color(0, 0, 0, 100);
 
             //Pause menu button for going back to the main menu
-            UIButton menuButton = new UIButton(new Rectangle(10, 10, 200, 100), Color.Gold, delegate() { Game1.CurrentGame.GameMode = new MenuScreen(); });
+            UIButton menuButton = new UIButton(new Rectangle(10, 10, 200, 100), delegate() { Game1.CurrentGame.GameMode = new MainMenuContext(); });
             menuButton.text = "Main menu";
             pauseMenu.Add(menuButton);
             
             //pause menu button for quitting the game
-            UIButton quitButton = new UIButton(new Rectangle(10, window.Height - 110, 200, 100), Color.Gold, delegate() { Game1.CurrentGame.Exit(); });
+            UIButton quitButton = new UIButton(new Rectangle(10, window.Height - 110, 200, 100), delegate() { Game1.CurrentGame.Exit(); });
             quitButton.text = "Quit game";
             pauseMenu.Add(quitButton);
 

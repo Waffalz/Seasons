@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Platform.GameFlow
 {
-    public abstract class GameScreen
+    public abstract class GameContext
     {
 
         public abstract void Update(GameTime gameTime);

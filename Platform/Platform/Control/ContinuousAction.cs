@@ -38,7 +38,7 @@ namespace Platform.Control
             currentCooldown += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (enabled && active && (currentCooldown >= maxCooldown)) {
                 if (action != null) {
-                    action();
+                    action(gameTime);
                 }
                 currentCooldown = 0;
             }

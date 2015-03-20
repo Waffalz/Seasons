@@ -21,7 +21,7 @@ namespace Platform.Mobs
         protected float jumpSpeed;
         protected bool onGround;
 
-        protected float movementDecel;
+        protected float movementAccel;
 
         public Vector2 WalkVelocity
         {
@@ -66,7 +66,7 @@ namespace Platform.Mobs
             onGround = false;
             maxHealth = 100;
             health = maxHealth;
-            movementDecel = -150;
+            movementAccel = 200;
         }
 
 
@@ -104,10 +104,10 @@ namespace Platform.Mobs
                 toDisp.Normalize();
 
                 if (walkVelocity.X != 0) {
-                    walkVelocity.X = Math.Sign(walkVelocity.X) * (Math.Max(Math.Abs(walkVelocity.X) + movementDecel * Math.Abs(toDisp.X) * timeDifference, 0));
+                    walkVelocity.X = Math.Sign(walkVelocity.X) * (Math.Max(Math.Abs(walkVelocity.X) - movementAccel * Math.Abs(toDisp.X) * timeDifference, 0));
                 }
                 if (walkVelocity.Y != 0) {
-                    walkVelocity.Y = Math.Sign(walkVelocity.Y) * (Math.Max(Math.Abs(walkVelocity.Y) + movementDecel * Math.Abs(toDisp.Y) * timeDifference, 0));
+                    walkVelocity.Y = Math.Sign(walkVelocity.Y) * (Math.Max(Math.Abs(walkVelocity.Y) - movementAccel * Math.Abs(toDisp.Y) * timeDifference, 0));
                 }
             }
 

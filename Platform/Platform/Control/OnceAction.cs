@@ -40,7 +40,7 @@ namespace Platform.Control
             currentCooldown += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (enabled && active && !oldActive && (currentCooldown >= maxCooldown)) {
                 if (action != null) {
-                    action();
+                    action(gameTime);
                 }
                 currentCooldown = 0;
             }

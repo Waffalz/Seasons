@@ -32,3 +32,20 @@ C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+H:\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
+H:\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
+H:\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb

@@ -22,41 +22,56 @@ namespace Platform.UserInterface
         public Color textColor;
         public ButtonAction clickAction;
 
-        public UIButton(): base(){
-            texture = Game1.CurrentGame.Textures["Square"];
+        public UIButton()
+            : base()
+        {
             font = Game1.CurrentGame.Fonts["ButtonFont"];
-            bounds = new Rectangle();
-            sourceRect = texture.Bounds;
             currentColor = color;
             text = "";
             textColor = Color.White;
             clickAction = null;
-            visible = true;
         }
         public UIButton(Rectangle pos, ButtonAction todo)
+            : base()
         {
-            texture = Game1.CurrentGame.Textures["Square"];
             font = Game1.CurrentGame.Fonts["ButtonFont"];
             bounds = pos;
-            sourceRect = texture.Bounds;
             currentColor = color;
             text = "";
             textColor = Color.White;
             clickAction = todo;
-            visible = true;
         }
         public UIButton(Rectangle pos, Color co, ButtonAction todo)
+            : base()
         {
-            texture = Game1.CurrentGame.Textures["Square"];
             font = Game1.CurrentGame.Fonts["ButtonFont"];
             bounds = pos;
-            sourceRect = texture.Bounds;
             color = co;
             currentColor = color;
             text = "";
             textColor = Color.White;
             clickAction = todo;
-            visible = true;
+        }
+        public UIButton(Rectangle pos, Color co, ButtonAction todo, String textu)
+            : base()
+        {
+            font = Game1.CurrentGame.Fonts["ButtonFont"];
+            bounds = pos;
+            color = co;
+            currentColor = color;
+            text = textu;
+            textColor = Color.White;
+            clickAction = todo;
+        }
+        public UIButton(Rectangle pos, ButtonAction todo, String textu)
+            : base()
+        {
+            font = Game1.CurrentGame.Fonts["ButtonFont"];
+            bounds = pos;
+            currentColor = color;
+            text = textu;
+            textColor = Color.White;
+            clickAction = todo;
         }
 
         public override void Update(GameTime gameTime)

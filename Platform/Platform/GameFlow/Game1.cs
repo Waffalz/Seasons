@@ -29,7 +29,7 @@ namespace Platform.GameFlow
 
         private static Game1 currentGame;
 
-        private GameScreen gameMode;//the current context of the game, be it a menu screen, the actual game, etc.
+        private GameContext gameMode;//the current context of the game, be it a menu screen, the actual game, etc.
 
         private Dictionary<string, Texture2D> textures;
         private Dictionary<string, SpriteFont> fonts;
@@ -73,7 +73,7 @@ namespace Platform.GameFlow
         {
             get { return oMus; }
         }
-        public GameScreen GameMode
+        public GameContext GameMode
         {
             get { return gameMode; }
             set { gameMode = value; }
@@ -121,7 +121,7 @@ namespace Platform.GameFlow
             //TODO: Post content loading here
 
             //Debugging hardcode here
-            gameMode = new MenuScreen();
+            gameMode = new MainMenuContext();
 
         }
 
