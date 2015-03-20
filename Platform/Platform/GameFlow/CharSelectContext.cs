@@ -8,22 +8,31 @@ using Microsoft.Xna.Framework.Graphics;
 
 using Platform.UserInterface;
 using Platform.Characters;
+using Platform.Mobs;
 
 namespace Platform.GameFlow
 {
     class CharSelectContext: GameContext
     {
+        private enum CharType { Spring, Summer, Autumn, Winter, None }
 
 
         UIComponent gui;
 
         UILabel modeTitle;
 
+        UILabel charPick;
         UILabel charName;
         UILabel charDesc;
 
+        UIButton playButton;
+
+        private CharType selected;
+
         public CharSelectContext()
         {
+            selected = CharType.None;
+
             gui = new UIComponent();
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
             gui.color = Color.Gray;
@@ -34,31 +43,62 @@ namespace Platform.GameFlow
             }, "Back");
             gui.Add(backButton);
 
-            UIButton springSelect = new UIButton(new Rectangle(100, 100, 150, 150), delegate() { }, "Spring");
-            gui.Add(springSelect);
-
-            UIButton summerSelect = new UIButton(new Rectangle(260, 100, 150, 150), delegate() { }, "Summer");
-            gui.Add(summerSelect);
-
-            UIButton autumnSelect = new UIButton(new Rectangle(260, 260, 150, 150), delegate() { }, "Autumn");
-            gui.Add(autumnSelect);
-
-            UIButton winterSelect = new UIButton(new Rectangle(100, 260, 150, 150), delegate() { }, "Winter");
-            gui.Add(winterSelect);
-
             modeTitle = new UILabel();
             modeTitle.bounds = new Rectangle(100, 0, Game1.CurrentGame.Window.ClientBounds.Width-100, 50);
             modeTitle.text = "Character Select";
+            modeTitle.hAlign = HorizontalTextAlignment.Center;
+            modeTitle.vAlign = VerticalTextAlignment.Center;
             gui.Add(modeTitle);
 
-            //TODO: implement selection of character, start button, char descriptions and such
+            
+            //TODO: char descriptions and such
+
+            charName = new UILabel();
+            
+            charDesc = new UILabel();
+            charDesc.bounds = new Rectangle(160, Game1.CurrentGame.Window.ClientBounds.Height - 50, Game1.CurrentGame.Window.ClientBounds.Width - 140, 300);
+            charDesc.Add(charDesc);
+
+            UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
+                selected = CharType.Spring;
+            }, "Spring");
+            gui.Add(springSelect);
+
+            UIButton summerSelect = new UIButton(new Rectangle(210, 100, 150, 150), delegate() {
+                selected = CharType.Summer;
+            }, "Summer");
+            gui.Add(summerSelect);
+
+            UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate() {
+                selected = CharType.Autumn;
+            }, "Autumn");
+            gui.Add(autumnSelect);
+
+            UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
+                selected = CharType.Winter;
+            }, "Winter");
+            gui.Add(winterSelect);
+
+            playButton = new UIButton(new Rectangle(10, Game1.CurrentGame.Window.ClientBounds.Height - 70, 150, 60), delegate() {
+                switch (selected){
+                    case CharType.Spring: Game1.CurrentGame.Player = new SpringCharacter(); break;
+                    case CharType.Summer: Game1.CurrentGame.Player = new SummerCharacter(); break;
+                    case CharType.Autumn: Game1.CurrentGame.Player = new AutumnCharacter(); break;
+                    case CharType.Winter: Game1.CurrentGame.Player = new WinterCharacter(); break;
+                    default: Game1.CurrentGame.Player = new Player(); break;
+                }
+                Game1.CurrentGame.GameMode = new CombatContext();
+            }, "Start Game");
+            playButton.visible = false;
+            gui.Add(playButton);
+
 
         }
 
         public override void Update(GameTime gameTime)
         {
-            //Game1.CurrentGame.Player = new Player();
-            //Game1.CurrentGame.GameMode = new CombatContext();
+            playButton.visible = selected != CharType.None;
+
             gui.Update(gameTime);
         }
 
