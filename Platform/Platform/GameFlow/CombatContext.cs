@@ -51,11 +51,13 @@ namespace Platform.GameFlow
             healthBar = new UIStatusBar();
             healthBar.bounds = new Rectangle(20, 20, 150, 10);
             healthBar.mColor = Color.Gray;
+            healthBar.depth = 1;
             gameHUD.Add(healthBar);
             manaBar = new UIStatusBar();
             manaBar.bounds = new Rectangle(20, 40, 150, 10);
             manaBar.vColor = Color.SkyBlue; ;
             manaBar.mColor = Color.Gray;
+            manaBar.depth = 1;
             gameHUD.Add(manaBar);
 
             //create UI for game when it's paused

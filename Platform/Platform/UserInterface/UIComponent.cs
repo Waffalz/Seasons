@@ -10,16 +10,18 @@ using Platform.GameFlow;
 
 namespace Platform.UserInterface
 {
-    public class UIComponent
+    public class UIComponent : IComparable
     {
 
-        public List<UIComponent> contents;
+        protected List<UIComponent> contents;
 
         public Rectangle bounds;
         public bool visible;
         public Texture2D texture;
         public Rectangle sourceRect;
         public Color color;
+
+        public float depth;
 
         public UIComponent()
         {
@@ -29,14 +31,13 @@ namespace Platform.UserInterface
             texture = Game1.CurrentGame.Textures["Square"];
             sourceRect = texture.Bounds;
             color = Color.MediumSeaGreen;
+            depth = (float)0.5;
         }
 
         public virtual void Update(GameTime gameTime)
         {
-            if (visible)
-            {
-                foreach (UIComponent comp in contents)
-                {
+            if (visible){
+                foreach (UIComponent comp in contents){
                     comp.Update(gameTime);
                 }
             }
@@ -56,8 +57,21 @@ namespace Platform.UserInterface
         public void Add(UIComponent child)
         {
             contents.Add(child);
+            contents.Sort();
         }
 
+        public int CompareTo(object e)
+        {
+            if (e == null) {
+                return 1;
+            }
 
+            UIComponent other = e as UIComponent;
+            if (other != this) {
+                return this.depth > other.depth ? 1 : this.depth < other.depth ? -1 : 0;
+            } else {
+                throw new ArgumentException("Object is not BackgroundObject");
+            }
+        }
     }
 }

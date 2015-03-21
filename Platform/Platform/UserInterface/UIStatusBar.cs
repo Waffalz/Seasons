@@ -75,10 +75,8 @@ namespace Platform.UserInterface
 
         public override void Update(GameTime gameTime)
         {
-            if (visible)
-            {
-                foreach (UIComponent comp in contents)
-                {
+            if (visible){
+                foreach (UIComponent comp in contents){
                     comp.Update(gameTime);
                 }
             }

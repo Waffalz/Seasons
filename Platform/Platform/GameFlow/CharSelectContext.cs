@@ -21,7 +21,7 @@ namespace Platform.GameFlow
 
         UILabel modeTitle;
 
-        UILabel charPick;
+        UIComponent charSplash;
         UILabel charName;
         UILabel charDesc;
 
@@ -50,36 +50,59 @@ namespace Platform.GameFlow
             modeTitle.vAlign = VerticalTextAlignment.Center;
             gui.Add(modeTitle);
 
-            
-            //TODO: char descriptions and such
-
-            charName = new UILabel();
+            charSplash = new UIComponent();
+            charSplash.bounds = new Rectangle(
+                Game1.CurrentGame.Window.ClientBounds.Width - 600,
+                Game1.CurrentGame.Window.ClientBounds.Height - 650,
+                600, 650);
+            charSplash.color = Color.LightGray;
+            charSplash.depth = 0;
+            gui.Add(charSplash);
             
             charDesc = new UILabel();
-            charDesc.bounds = new Rectangle(160, Game1.CurrentGame.Window.ClientBounds.Height - 50, Game1.CurrentGame.Window.ClientBounds.Width - 140, 300);
-            charDesc.Add(charDesc);
+            charDesc.bounds = new Rectangle(10, Game1.CurrentGame.Window.ClientBounds.Height - 260, Game1.CurrentGame.Window.ClientBounds.Width - 20, 250); 
+            gui.Add(charDesc);
+
+            charName = new UILabel();
+            charName.bounds = new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width - 260, charDesc.bounds.Y - 90, 250, 60);
+            charName.hAlign = HorizontalTextAlignment.Right;
+            charName.vAlign = VerticalTextAlignment.Center;
+            gui.Add(charName);
 
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
                 selected = CharType.Spring;
+                charName.text = "SPRINGNAME";
+                charDesc.text = "SPRINGDESC";
+                //TODO: set splash for selected char
             }, "Spring");
             gui.Add(springSelect);
 
             UIButton summerSelect = new UIButton(new Rectangle(210, 100, 150, 150), delegate() {
                 selected = CharType.Summer;
+                charName.text = "SUMMERNAME";
+                charDesc.text = "SUMMERDESC";
+                //TODO: set splash for selected char
+
             }, "Summer");
             gui.Add(summerSelect);
 
             UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate() {
                 selected = CharType.Autumn;
+                charName.text = "AUTUMNNAME";
+                charDesc.text = "AUTUMNDESC";
+                //TODO: set splash for selected char
             }, "Autumn");
             gui.Add(autumnSelect);
 
             UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
                 selected = CharType.Winter;
+                charName.text = "WINTERNAME";
+                charDesc.text = "WINTERDESC";
+                //TODO: set splash for selected char
             }, "Winter");
             gui.Add(winterSelect);
 
-            playButton = new UIButton(new Rectangle(10, Game1.CurrentGame.Window.ClientBounds.Height - 70, 150, 60), delegate() {
+            playButton = new UIButton(new Rectangle(370, 100, 150, 60), delegate() {
                 switch (selected){
                     case CharType.Spring: Game1.CurrentGame.Player = new SpringCharacter(); break;
                     case CharType.Summer: Game1.CurrentGame.Player = new SummerCharacter(); break;
@@ -98,7 +121,6 @@ namespace Platform.GameFlow
         public override void Update(GameTime gameTime)
         {
             playButton.visible = selected != CharType.None;
-
             gui.Update(gameTime);
         }
 

@@ -94,6 +94,9 @@ namespace Platform.UserInterface
                 else {
                     currentColor = color;
                 }
+                foreach (UIComponent comp in contents) {
+                    comp.Update(gameTime);
+                }
             }
 
         }
@@ -103,8 +106,7 @@ namespace Platform.UserInterface
             if (visible) {
                 spriteBatch.Draw(texture, bounds, sourceRect, currentColor);
                 spriteBatch.DrawString(font, text, new Vector2(bounds.X + bounds.Width / 2, bounds.Y + bounds.Height / 2) - font.MeasureString(text) / 2, textColor);
-                foreach (UIComponent comp in contents)
-                {
+                foreach (UIComponent comp in contents){
                     comp.Draw(gameTime, spriteBatch);
                 }
             }
