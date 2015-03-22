@@ -15,25 +15,21 @@ namespace Platform.Mobs
 {
     public class Player : Mob
     {
-        float spread;
-        float shotspeed;
-
         float mana;
-
         public float Mana
         {
             get { return mana; }
             set { mana = value; }
         }
-        float maxMana;
 
+        float maxMana;
         public float MaxMana
         {
             get { return maxMana; }
             set { maxMana = value; }
         }
-        float manaGen;
 
+        float manaGen;
         public float ManaGen
         {
             get { return manaGen; }
@@ -42,18 +38,19 @@ namespace Platform.Mobs
 
         private Dictionary<string,GameAction> controls;
 
+        float shotspeed;
         public float ShotSpeed
         {
             get { return shotspeed; }
             set { shotspeed = value; }
         }
+
+        float spread;
         public float Spread
         {
             get { return spread; }
             set { spread = value; }
         }
-
-
 
         public Player():base()
         {
@@ -87,7 +84,6 @@ namespace Platform.Mobs
                         walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                     }
                 }));//add run left control
-
             controls.Add("Move Right", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A); },
                 delegate(GameTime gameTime){
@@ -103,7 +99,8 @@ namespace Platform.Mobs
                 }));//add run right control
             controls.Add("Basic Attack", new ContinuousAction(this, (float).5,
                 delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },
-                delegate(GameTime gameTime) { BasicAttack(spread); }));
+                delegate(GameTime gameTime) { BasicAttack(spread);
+                }));
             controls.Add("Jump", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
                 delegate(GameTime gameTime){
@@ -155,7 +152,6 @@ namespace Platform.Mobs
         }
 
         public void BasicAttack(float spread){
-
             Vector2 target = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
             Vector2 dif = target - position;
 
