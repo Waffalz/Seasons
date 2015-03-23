@@ -54,7 +54,6 @@ C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\m
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
-C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
@@ -83,3 +82,7 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Lev
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
