@@ -13,7 +13,7 @@ namespace Platform.Control
     delegate void ActionDelegate(GameTime gameTime);
     delegate bool ActionCheck();
 
-    abstract class GameAction
+    public abstract class GameAction
     {
         protected float maxCooldown;
         protected float currentCooldown;

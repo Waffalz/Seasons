@@ -111,6 +111,7 @@
     <Compile Include="Characters\AutumnCharacter.cs" />
     <Compile Include="Characters\SpringCharacter.cs" />
     <Compile Include="Characters\SummerCharacter.cs" />
+    <Compile Include="Characters\TestPlayer.cs" />
     <Compile Include="Characters\WinterCharacter.cs" />
     <Compile Include="GameFlow\CharSelectContext.cs" />
     <Compile Include="GameFlow\CombatContext.cs" />

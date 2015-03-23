@@ -15,42 +15,28 @@ namespace Platform.Mobs
 {
     public class Player : Mob
     {
-        float mana;
+        protected float mana;
         public float Mana
         {
             get { return mana; }
             set { mana = value; }
         }
 
-        float maxMana;
+        protected float maxMana;
         public float MaxMana
         {
             get { return maxMana; }
             set { maxMana = value; }
         }
 
-        float manaGen;
+        protected float manaGen;
         public float ManaGen
         {
             get { return manaGen; }
             set { manaGen = value; }
         }
 
-        private Dictionary<string,GameAction> controls;
-
-        float shotspeed;
-        public float ShotSpeed
-        {
-            get { return shotspeed; }
-            set { shotspeed = value; }
-        }
-
-        float spread;
-        public float Spread
-        {
-            get { return spread; }
-            set { spread = value; }
-        }
+        protected Dictionary<string,GameAction> controls;
 
         public Player():base()
         {
@@ -61,9 +47,6 @@ namespace Platform.Mobs
             JumpSpeed = 100;
             WalkVelocity = new Vector2();
             OnGround = false;
-
-            spread = 10;
-            shotspeed = 200;
 
             controls = new Dictionary<string, GameAction>();
 
@@ -84,6 +67,7 @@ namespace Platform.Mobs
                         walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                     }
                 }));//add run left control
+
             controls.Add("Move Right", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A); },
                 delegate(GameTime gameTime){
@@ -97,10 +81,7 @@ namespace Platform.Mobs
                         walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                     }
                 }));//add run right control
-            controls.Add("Basic Attack", new ContinuousAction(this, (float).5,
-                delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },
-                delegate(GameTime gameTime) { BasicAttack(spread);
-                }));
+            
             controls.Add("Jump", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
                 delegate(GameTime gameTime){
@@ -109,18 +90,7 @@ namespace Platform.Mobs
                         velocity = new Vector2(velocity.X, jumpSpeed);
                     }
                 }));
-            controls.Add("Shatgann", new OnceAction(this, 1,
-                delegate() { return (Game1.CurrentGame.MouseInput.RightButton == ButtonState.Pressed); },
-                delegate() { return (Game1.CurrentGame.OldMouseInput.RightButton == ButtonState.Pressed); },
-                delegate(GameTime gameTime){
-                    float cost = 20;
-                    if (mana > cost) {
-                        for (int p = 0; p < 10; p++) {
-                            BasicAttack(spread * 3);
-                        }
-                        mana -= cost;
-                    }
-                }));
+            
         }
 
         public override void Update(GameTime gameTime)
@@ -151,25 +121,7 @@ namespace Platform.Mobs
             mana = Math.Min(maxMana, mana + manaGen * gTime);
         }
 
-        public void BasicAttack(float spread){
-            Vector2 target = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
-            Vector2 dif = target - position;
-
-            double ang = (float)Math.Atan2((double)dif.Y, (double)dif.X) + MathHelper.ToRadians(Game1.CurrentGame.Rand.Next((int)(-spread / 2), (int)(spread / 2)));//calculate spread
-
-            dif.Normalize();
-
-            Ball b = new Ball();
-            b.Creator = this;
-            b.Position = position;
-            b.Velocity = new Vector2((float)Math.Cos(ang), (float)Math.Sin(ang)) * shotspeed;
-            b.Size = new Vector2(5);
-            b.LifeLeft = 5;
-            b.Gravity = true;
-
-            parent.AddEntity(b);
-
-        }
+        
     }
 
 }
