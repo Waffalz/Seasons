@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework;
 
 namespace Platform.Mobs
 {
-    class Ball: Entity
+    public class Ball: Entity
     {
 
         private Entity creator;

@@ -13,7 +13,7 @@ using System.Drawing;
 
 namespace Platform.World
 {
-    class Entity
+    public class Entity
     {
 
         protected Texture2D texture;

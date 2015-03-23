@@ -9,7 +9,7 @@ using Platform.World;
 
 namespace Platform.Mobs
 {
-    class Mob:Entity
+    public class Mob:Entity
     {
 
         private int health;

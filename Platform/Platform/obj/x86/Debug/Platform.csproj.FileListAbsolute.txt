@@ -38,12 +38,8 @@ C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\t
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
-C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
-C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
-C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
 C:\Users\MAX\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
 C:\Users\MAX\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\MAX\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
@@ -76,3 +72,7 @@ H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Platform.e
 H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
 F:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
 F:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Seasons.exe
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Seasons.pdb
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasons.exe
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasons.pdb

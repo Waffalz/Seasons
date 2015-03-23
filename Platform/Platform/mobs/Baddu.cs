@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace Platform.Mobs
 {
-    class Baddu:Mob, Behavior
+    public class Baddu:Mob, Behavior
     {
         MoveDirection moveDirection;
 

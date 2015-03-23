@@ -11,7 +11,7 @@ using Platform.Graphics;
 
 namespace Platform.World
 {
-    class Map
+    public class Map
     {
         public const int MAP_BOUNDS = 100;//max number of tiles in each dimension
         public const float WALL_BUFFER = 0;
@@ -27,7 +27,7 @@ namespace Platform.World
         private List<Particle> addPList;
         private List<Particle> removePList;
 
-        Camera cam;
+        private Camera cam;
         private Player player;
         private float gAccel; //default -150
 

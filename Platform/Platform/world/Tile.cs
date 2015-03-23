@@ -10,7 +10,7 @@ using Platform.Graphics;
 
 namespace Platform.World
 {
-    class Tile
+    public class Tile
     {
         
         public const float TILE_WIDTH = 10;// in wubs

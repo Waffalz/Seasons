@@ -10,7 +10,7 @@ using Platform.World;
 
 namespace Platform.Mobs
 {
-    class Player : Mob
+    public class Player : Mob
     {
 
         float attackTime;

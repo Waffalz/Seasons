@@ -48,7 +48,7 @@ namespace Platform.AI {
 		}
 	}
 
-	class AIPathing {
+	public class AIPathing {
 
 		public static pathNode_t[] AStar( ref Map map, pathNode_t start, pathNode_t end, int maxRadius ) {
 			if ( maxRadius == 0 ) {
@@ -104,12 +104,12 @@ namespace Platform.AI {
 
 	}
 
-	private class PathNodeCostComparer : Comparer< pathNode_t > {
+	public class PathNodeCostComparer : Comparer< pathNode_t > {
 
 		public PathNodeCostComparer() {
 		}
 
-		int Compare( pathNode_t x, pathNode_t y ) {
+		public override int Compare( pathNode_t x, pathNode_t y ) {
 			if ( x.Cost > y.Cost ) {
 				return 1;
 			} else if ( x.Cost < y.Cost ) {
