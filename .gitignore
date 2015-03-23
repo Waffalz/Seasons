@@ -45,7 +45,8 @@ Temporary Items
 # User generated ignores
 *.suo
 *.sln
-Platform/PlatformContent/
+Platform/PlatformContent/PlatformContent.contentproj
+Platform/PlatformContent/obj/
 Platform/Platform/bin/
 Platform/Platform/obj/
 Platform/Platform/Properties/
