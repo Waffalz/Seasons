@@ -141,6 +141,8 @@ namespace Platform.GameFlow
             textures.Add("Player", Content.Load<Texture2D>("entities/player"));
             textures.Add("Square", Content.Load<Texture2D>("particles/Square"));
             textures.Add("MenuBack", Content.Load<Texture2D>("menuItems/Seasons_Menu"));
+            textures.Add("HealthBar", Content.Load<Texture2D>("GUITextures/HealthBar"));
+            textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
 
             fonts.Add("ButtonFont", Content.Load<SpriteFont>("fonts/ButtonFont"));
 

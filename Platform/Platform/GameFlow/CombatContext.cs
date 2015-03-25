@@ -21,8 +21,8 @@ namespace Platform.GameFlow
         bool paused;
 
         UIComponent gameHUD;
-        UIStatusBar healthBar;
-        UIStatusBar manaBar;
+        UIHealthBar healthBar;
+        UIHealthBar manaBar;
 
         UIComponent pauseMenu;
 
@@ -45,20 +45,25 @@ namespace Platform.GameFlow
             //create Hud for in game stuff
             gameHUD = new UIComponent();
             UIComponent topLeft = new UIComponent();
-            topLeft.bounds = new Rectangle(0, 0, 300, 100);
+            topLeft.bounds = new Rectangle(0, 0, 450, 150);
             topLeft.color = Color.LightGray;
+            topLeft.texture = Game1.CurrentGame.Textures["CombatHUD"];
+            topLeft.sourceRect = topLeft.texture.Bounds;
             gameHUD.Add(topLeft);
-            healthBar = new UIStatusBar();
-            healthBar.bounds = new Rectangle(20, 20, 150, 10);
-            healthBar.mColor = Color.Gray;
+            healthBar = new UIHealthBar();
+            healthBar.bounds = new Rectangle(10, 20, 300, 40);
+            healthBar.mColor = Color.White;
+            healthBar.vColor = Color.Green;
             healthBar.depth = 1;
             gameHUD.Add(healthBar);
-            manaBar = new UIStatusBar();
-            manaBar.bounds = new Rectangle(20, 40, 150, 10);
+            manaBar = new UIHealthBar();
+            manaBar.bounds = new Rectangle(30, 60, 260, 20);
             manaBar.vColor = Color.SkyBlue; ;
-            manaBar.mColor = Color.Gray;
+            manaBar.mColor = Color.White;
             manaBar.depth = 1;
             gameHUD.Add(manaBar);
+
+
 
             //create UI for game when it's paused
             pauseMenu = new UIComponent();

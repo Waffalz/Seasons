@@ -66,3 +66,5 @@ C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csproj
 C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
 C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb

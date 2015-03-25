@@ -13,8 +13,8 @@ namespace Platform.UserInterface
     class UIStatusBar: UIComponent
     {
 
-        private float val;
-        private float maxVal;
+        protected float val;
+        protected float maxVal;
 
         public Color vColor;
         public Color mColor;
@@ -37,7 +37,9 @@ namespace Platform.UserInterface
             set { maxVal = value; }
         }
 
-        public UIStatusBar() : base (){
+        public UIStatusBar()
+            : base ()
+        {
             bounds = new Rectangle(0,0,100,10);
 
             maxVal = 100;
