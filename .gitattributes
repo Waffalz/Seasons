@@ -15,3 +15,17 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+# Developer added attributes
+*.suo binary merge=ours
+*.sln binary merge=ours
+*.contentproj merge=ours
+*.csproj merge=ours
+*.csproj.user merge=ours
+*.csproj.Debug.cachefile merge=ours
+Platform/PlatformContent/obj/ merge=ours
+Platform/Platform/bin/ merge=ours
+Platform/Platform/obj/ merge=ours
+Platform/Platform/Properties merge=ours
+Platform/Platform/Game.ico merge=ours
+Platform/Platform/GameThumbnail.png
