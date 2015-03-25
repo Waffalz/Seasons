@@ -42,16 +42,20 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# User generated ignores
-*.suo
-*.sln
-Platform/PlatformContent/PlatformContent.contentproj
-Platform/PlatformContent/obj/
-Platform/Platform/bin/
-Platform/Platform/obj/
-Platform/Platform/Properties/
-Platform/Platform/Game.ico
-Platform/Platform/GameThumbnail.png
-Platform/Platform/Platform.csproj
-Platform/Platform/Platform.csproj.Debug.cachefile
-Platform/Platform/Platform.csproj.user
+# Developer generated ignores
+#*.suo
+#*.sln
+#Platform/PlatformContent/PlatformContent.contentproj
+#Platform/PlatformContent/SeasonsContent.contentproj
+#Platform/PlatformContent/obj/
+#Platform/Platform/bin/
+#Platform/Platform/obj/
+#Platform/Platform/Properties/
+#Platform/Platform/Game.ico
+#Platform/Platform/GameThumbnail.png
+#Platform/Platform/Platform.csproj
+#Platform/Platform/Platform.csproj.Debug.cachefile
+#Platform/Platform/Platform.csproj.user
+#Platform/Platform/Seasonals.csproj
+#Platform/Platform/Seasonals.csproj.Debug.cachefile
+#Platform/Platform/Seasonals.csproj.user
