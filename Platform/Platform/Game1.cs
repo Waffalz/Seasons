@@ -71,7 +71,7 @@ namespace Platform
             base.Initialize();
             rand = new Random();
 
-            mappu = Map.LoadMap2(@"Content/maps/Level04.txt");
+            mappu = Map.LoadMap2(@"Content/maps/Level05.txt");
             mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width/2, Window.ClientBounds.Height/2);
 
             oKipz = Keyboard.GetState();
@@ -209,14 +209,14 @@ namespace Platform
                     if (kipz.IsKeyDown(Keys.Escape))
                     {
                         CurrentGameState = GameState.MainMenu;
-                        mappu = Map.ResetMap(@"Content/maps/Level04.txt");
+                        mappu = Map.ResetMap(@"Content/maps/Level05.txt");
                         mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
                     }
 
                     //Resets the game
                     if (kipz.IsKeyDown(Keys.R) && !oKipz.IsKeyDown(Keys.R))
                     {
-                        mappu = Map.ResetMap(@"Content/maps/Level04.txt");
+                        mappu = Map.ResetMap(@"Content/maps/Level05.txt");
                         mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
                     }
                     break;
