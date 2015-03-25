@@ -41,7 +41,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-<<<<<<< HEAD
 
 # Developer generated ignores
 #*.suo
@@ -60,5 +59,3 @@ Temporary Items
 #Platform/Platform/Seasonals.csproj
 #Platform/Platform/Seasonals.csproj.Debug.cachefile
 #Platform/Platform/Seasonals.csproj.user
-=======
->>>>>>> parent of d98cb72... Fixed master branch and ignored right files.
