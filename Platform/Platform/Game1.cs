@@ -86,7 +86,7 @@ namespace Platform
 
             mappu = Map.LoadMap2(@"Content/maps/Level02.txt");
             mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
-            
+            mappu.BackList.Sort();
 
             for (int i = 0; i < 40; i++)
             {
@@ -101,7 +101,7 @@ namespace Platform
                 mappu.BackList.Add(boi);
 
             }
-            mappu.BackList.Sort();
+
 
         }
 
