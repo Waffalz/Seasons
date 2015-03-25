@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb</Output>
-      <Time>2015-03-23T09:55:18.111223-05:00</Time>
+      <Time>2015-03-25T09:13:37.4767422-05:00</Time>
     </Item>
     <Item>
       <Source>tiles\Platforms.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb</Output>
-      <Time>2015-03-23T09:55:18.1142233-05:00</Time>
+      <Time>2015-03-25T09:13:37.4787424-05:00</Time>
     </Item>
     <Item>
       <Source>entities\player.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb</Output>
-      <Time>2015-03-23T09:55:18.0792198-05:00</Time>
+      <Time>2015-03-25T09:13:37.4597405-05:00</Time>
     </Item>
     <Item>
       <Source>particles\Square.bmp</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb</Output>
-      <Time>2015-03-23T09:55:18.1082227-05:00</Time>
+      <Time>2015-03-25T09:13:37.4727418-05:00</Time>
     </Item>
     <Item>
       <Source>menuItems\Button.jpg</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Button.xnb</Output>
-      <Time>2015-03-23T09:55:18.0902209-05:00</Time>
+      <Time>2015-03-25T09:13:53.3766211-05:00</Time>
     </Item>
     <Item>
       <Source>menuItems\Seasons_Menu.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-03-23T09:55:18.0962215-05:00</Time>
+      <Time>2015-03-25T09:13:53.4166251-05:00</Time>
     </Item>
     <Item>
       <Source>menuItems\ImageGen.jpg</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\ImageGen.xnb</Output>
-      <Time>2015-03-23T09:55:20.8556063-05:00</Time>
+      <Time>2015-03-25T09:13:53.3916226-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
