@@ -28,4 +28,4 @@ Platform/Platform/bin/ merge=ours
 Platform/Platform/obj/ merge=ours
 Platform/Platform/Properties merge=ours
 Platform/Platform/Game.ico merge=ours
-Platform/Platform/GameThumbnail.png
+Platform/Platform/GameThumbnail.png merge=ours
