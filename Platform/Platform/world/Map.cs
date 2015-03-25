@@ -15,7 +15,7 @@ namespace Platform.World
 {
     public class Map
     {
-        public const int MAP_BOUNDS = 100;//max number of tiles in each dimension
+        public const int MAP_BOUNDS = 256;//max number of tiles in each dimension
         public const float WALL_BUFFER = 1;
 
         public const float MAX_WUBS = MAP_BOUNDS * Tile.TILE_WIDTH;
