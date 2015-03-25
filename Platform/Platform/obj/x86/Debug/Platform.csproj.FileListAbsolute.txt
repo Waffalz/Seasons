@@ -1,0 +1,78 @@
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.exe
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.pdb
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.exe
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.pdb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.exe
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Platform.pdb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.exe
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.pdb
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+\\fisd-fs4\hs\cte\109204\documents\visual studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+\\fisd-fs4\hs\CTE\109204\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+\\fisd-fs4\hs\CTE\109204\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+\\fisd-fs4\hs\CTE\109204\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+\\fisd-fs4\hs\CTE\109204\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\MAX\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
+C:\Users\MAX\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\MAX\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
+C:\Users\MAX\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
+C:\Users\MAX\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
+H:\Video_Game_Design\Projects\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+F:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
+F:\Video_Game_Design\Projects\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Seasons.exe
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Seasons.pdb
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasons.exe
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasons.pdb
