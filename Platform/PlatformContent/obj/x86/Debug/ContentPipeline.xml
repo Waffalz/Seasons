@@ -2,58 +2,49 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>tiles\Blocks.png</Source>
-      <Name>tiles\Blocks</Name>
+      <Source>Tiles\Blocks.png</Source>
+      <Name>Tiles\Blocks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb</Output>
-      <Time>2015-03-04T17:40:01.473225-06:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
+      <Time>2015-02-25T09:18:05.0648762-06:00</Time>
     </Item>
     <Item>
-      <Source>tiles\Platforms.png</Source>
-      <Name>tiles\Platforms</Name>
+      <Source>Tiles\Platforms.png</Source>
+      <Name>Tiles\Platforms</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb</Output>
-      <Time>2015-03-04T17:40:01.474224-06:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb</Output>
+      <Time>2015-02-25T09:18:05.0805015-06:00</Time>
     </Item>
     <Item>
-      <Source>entities\player.png</Source>
-      <Name>entities\player</Name>
+      <Source>Entities\Player.png</Source>
+      <Name>Entities\Player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb</Output>
-      <Time>2015-03-04T17:40:01.4562113-06:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
+      <Time>2015-02-25T09:18:04.8617491-06:00</Time>
     </Item>
     <Item>
-      <Source>particles\Square.bmp</Source>
-      <Name>particles\Square</Name>
+      <Source>Particles\Square.bmp</Source>
+      <Name>Particles\Square</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb</Output>
-      <Time>2015-03-04T17:40:01.4712245-06:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
+      <Time>2015-02-25T09:18:05.0336315-06:00</Time>
     </Item>
     <Item>
-      <Source>menuItems\Seasons_Menu.png</Source>
-      <Name>menuItems\Seasons_Menu</Name>
+      <Source>MenuItems\Seasons_Menu.png</Source>
+      <Name>MenuItems\Seasons_Menu</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-03-04T17:40:01.4632171-06:00</Time>
-    </Item>
-    <Item>
-      <Source>fonts\ButtonFont.spritefont</Source>
-      <Name>fonts\ButtonFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb</Output>
-      <Time>2015-03-04T17:40:01.459216-06:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
+      <Time>2015-03-03T08:58:44.6553463-06:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HealthBar.png</Source>
@@ -61,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
-      <Time>2015-03-25T23:31:33.3626268-05:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
+      <Time>2015-03-26T08:41:03.3762405-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HUDBack.png</Source>
@@ -70,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
-      <Time>2015-03-25T13:29:12.4262164-05:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
+      <Time>2015-03-26T08:41:03.3606139-05:00</Time>
     </Item>
     <Item>
       <Source>Particles\CircleParticle.png</Source>
@@ -79,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
-      <Time>2015-03-25T23:43:37.7414393-05:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
+      <Time>2015-03-26T08:41:03.4543657-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\ScrollBorder.png</Source>
@@ -88,8 +79,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
-      <Time>2015-03-26T00:51:49.3870709-05:00</Time>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
+      <Time>2015-03-26T08:41:03.3918635-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\ButtonFont.spritefont</Source>
+      <Name>Fonts\ButtonFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
+      <Time>2015-03-03T08:58:44.5772221-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -97,39 +97,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\PlatformContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>H:\Documents\GitHub\Seasons\Platform\PlatformContent\</RootDirectory>
+      <LoggerRootDirectory>H:\Documents\GitHub\Seasons\Platform\Platform\</LoggerRootDirectory>
+      <IntermediateDirectory>H:\Documents\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-02-20T19:02:19.6070261-06:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-10-27T09:07:54.8487633-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

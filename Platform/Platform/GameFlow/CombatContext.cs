@@ -58,7 +58,7 @@ namespace Platform.GameFlow
             healthBar.depth = 1;
             gameHUD.Add(healthBar);
             manaBar = new UIHealthBar();
-            manaBar.bounds = new Rectangle(80, 70, 350, 40);
+            manaBar.bounds = new Rectangle(50, 70, 350, 40);
             manaBar.vColor = Color.SkyBlue; ;
             manaBar.mColor = Color.White;
             manaBar.depth = 1;
@@ -85,7 +85,7 @@ namespace Platform.GameFlow
             world = Map.LoadMap2(@"Content/maps/Level02.txt");
             world.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);
             
-            for (int i = 0; i < 300; i++) {
+            for (int i = 0; i < 200; i++) {
 
                 BackgroundObject boi = new BackgroundObject();
                 int ro = Game1.CurrentGame.Rand.Next(0, 25);

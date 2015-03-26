@@ -15,6 +15,8 @@ namespace Platform.UserInterface
 
         protected List<UIComponent> contents;
 
+        UIBorder border;
+
         public Rectangle bounds;
         public bool visible;
         public Texture2D texture;
@@ -74,4 +76,6 @@ namespace Platform.UserInterface
             }
         }
     }
+
+    enum UIBorder { None, Scroll}
 }

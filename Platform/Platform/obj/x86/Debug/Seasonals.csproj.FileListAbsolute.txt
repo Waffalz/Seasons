@@ -70,3 +70,7 @@ C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb

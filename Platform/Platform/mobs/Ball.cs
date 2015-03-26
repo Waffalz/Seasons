@@ -51,7 +51,7 @@ namespace Platform.Mobs
                 if (other is Mob) {
                     ((Mob)other).Health -= damage;
                 }
-                for (int i = 0; i < size.X*2; i++) {
+                for (int i = 0; i < size.X*1.5; i++) {
                     Particle poi = new Particle((float)2, (float)size.X/(float)1.5);
                     poi.Color = Color.SkyBlue;
                     poi.Position = Position;
