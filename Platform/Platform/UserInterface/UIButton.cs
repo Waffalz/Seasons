@@ -105,7 +105,14 @@ namespace Platform.UserInterface
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (visible) {
-                spriteBatch.Draw(texture, bounds, sourceRect, currentColor);
+                if (Border == UIBorder.None)
+                {
+                    spriteBatch.Draw(texture, bounds, sourceRect, color);
+                }
+                else
+                {
+                    DrawBorder(spriteBatch, currentColor);
+                }
                 spriteBatch.DrawString(font, text, new Vector2(bounds.X + bounds.Width / 2, bounds.Y + bounds.Height / 2) - font.MeasureString(text) / 2, textColor);
                 foreach (UIComponent comp in contents){
                     comp.Draw(gameTime, spriteBatch);

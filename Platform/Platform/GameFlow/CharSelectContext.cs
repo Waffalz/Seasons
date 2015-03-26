@@ -67,6 +67,7 @@ namespace Platform.GameFlow
             charName.bounds = new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width - 260, charDesc.bounds.Y - 90, 250, 60);
             charName.hAlign = HorizontalTextAlignment.Right;
             charName.vAlign = VerticalTextAlignment.Center;
+            charName.Border = UIBorder.Scroll;
             gui.Add(charName);
 
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {

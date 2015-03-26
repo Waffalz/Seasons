@@ -15,13 +15,37 @@ namespace Platform.UserInterface
 
         protected List<UIComponent> contents;
 
-        UIBorder border;
+        private UIBorder border;
+        public UIBorder Border
+        {
+            get { return border; }
+            set
+            {
+                border = value;
+                
+                switch (border)
+                {
+                    case UIBorder.Scroll:
+                        texture = Game1.CurrentGame.Textures["ScrollBorder"];
+                        break;
+                    case UIBorder.None:
+
+                        break;
+                    default:
+                        texture = Game1.CurrentGame.Textures["Square"];
+                        break;
+                }
+                sourceRect = texture.Bounds;
+            }
+        }
 
         public Rectangle bounds;
         public bool visible;
         public Texture2D texture;
         public Rectangle sourceRect;
         public Color color;
+
+        public int borderSize;
 
         public float depth;
 
@@ -34,11 +58,14 @@ namespace Platform.UserInterface
             sourceRect = texture.Bounds;
             color = Color.MediumSeaGreen;
             depth = (float)0.5;
+            border = UIBorder.None;
+            borderSize = 30;
         }
 
         public virtual void Update(GameTime gameTime)
         {
             if (visible){
+                
                 foreach (UIComponent comp in contents){
                     comp.Update(gameTime);
                 }
@@ -48,7 +75,14 @@ namespace Platform.UserInterface
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (visible) {
-                spriteBatch.Draw(texture, bounds, sourceRect, color);
+                if (border == UIBorder.None)
+                {
+                    spriteBatch.Draw(texture, bounds, sourceRect, color);
+                }
+                else
+                {
+                    DrawBorder(spriteBatch, color);
+                }
                 foreach(UIComponent comp in contents){
                     comp.Draw(gameTime, spriteBatch);
                 }
@@ -75,7 +109,46 @@ namespace Platform.UserInterface
                 throw new ArgumentException("Object is not BackgroundObject");
             }
         }
+
+        public void DrawBorder(SpriteBatch spriteBatch, Color col)
+        {
+            //top left border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X, bounds.Y, borderSize, borderSize), new Rectangle(0, 0, 50, 50), col);
+
+            //top right border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X + bounds.Width - borderSize, bounds.Y, borderSize, borderSize),
+                new Rectangle(100, 0, 50, 50), col);
+
+            //bot left border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X, bounds.Y + bounds.Height - borderSize, borderSize, borderSize),
+                new Rectangle(0, 100, 50, 50), col);
+
+            //bot right border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X + bounds.Width - borderSize, bounds.Y + bounds.Height - borderSize, borderSize, borderSize),
+                new Rectangle(100, 100, 50, 50), col);
+
+            //top border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X + borderSize, bounds.Y, bounds.Width - 2 * borderSize, borderSize),
+                new Rectangle(50, 0, 50, 50), col);
+
+            //left border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X, bounds.Y + borderSize, borderSize, bounds.Height - 2 * borderSize),
+                new Rectangle(0, 50, 50, 50), col);
+
+            //right border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X + bounds.Width - borderSize, bounds.Y + borderSize, borderSize, bounds.Height - 2 * borderSize),
+                new Rectangle(100, 50, 50, 50), col);
+
+            //bot border
+            spriteBatch.Draw(texture, new Rectangle(bounds.X + borderSize, bounds.Y + bounds.Height - borderSize, bounds.Width - 2 * borderSize, borderSize),
+                new Rectangle(50, 100, 50, 50), col);
+
+            //center
+            spriteBatch.Draw(texture, new Rectangle(bounds.X + borderSize, bounds.Y + borderSize,
+                bounds.Width - 2 * borderSize, bounds.Height - 2 * borderSize),
+                new Rectangle(50, 50, 50, 50), col);
+        }
     }
 
-    enum UIBorder { None, Scroll}
+    public enum UIBorder { None, Scroll}
 }

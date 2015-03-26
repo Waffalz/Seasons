@@ -29,11 +29,12 @@ namespace Platform.GameFlow
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
             gui.color = Color.White;
 
-            UIBorderedButton startButton = new UIBorderedButton(new Rectangle(0, 300, 300, 100), delegate()
+            UIButton startButton = new UIButton(new Rectangle(0, 300, 300, 100), delegate()
             {
                 Game1.CurrentGame.GameMode = new CharSelectContext();
             }, "New Game");
             startButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - startButton.bounds.Width) / 2;
+            startButton.Border = UIBorder.Scroll;
             gui.Add(startButton);
 
             UIButton exitButton = new UIButton(new Rectangle(0, 480, 300, 60), delegate()

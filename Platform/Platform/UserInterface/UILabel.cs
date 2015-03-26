@@ -41,7 +41,16 @@ namespace Platform.UserInterface
         {
             if (visible)
             {
-                spriteBatch.Draw(texture, bounds, sourceRect, color);
+                if (Border == UIBorder.None)
+                {
+                    spriteBatch.Draw(texture, bounds, sourceRect, color);
+                }
+                else
+                {
+                    DrawBorder(spriteBatch, color);
+                }
+
+
                 Vector2 textPos = new Vector2();
                 
                 switch (hAlign) {
