@@ -42,7 +42,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="tiles\Blocks.png">
+    <Compile Include="Tiles\Blocks.png">
       <Name>Blocks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -50,7 +50,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="tiles\Platforms.png">
+    <Compile Include="Tiles\Platforms.png">
       <Name>Platforms</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -58,7 +58,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fonts\ButtonFont.spritefont">
+    <Compile Include="Fonts\ButtonFont.spritefont">
       <Name>ButtonFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
@@ -69,15 +69,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entities\player.png">
-      <Name>player</Name>
+    <Compile Include="Entities\Player.png">
+      <Name>Player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="particles\Square.bmp">
+    <Compile Include="Particles\Square.bmp">
       <Name>Square</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -85,7 +85,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="menuItems\Seasons_Menu.png">
+    <Compile Include="MenuItems\Seasons_Menu.png">
       <Name>Seasons_Menu</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -101,6 +101,20 @@
   <ItemGroup>
     <Compile Include="GUITextures\HUDBack.png">
       <Name>HUDBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Particles\CircleParticle.png">
+      <Name>CircleParticle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUITextures\ScrollBorder.png">
+      <Name>ScrollBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

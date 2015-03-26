@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
-      <Time>2015-03-25T14:03:59.5873425-05:00</Time>
+      <Time>2015-03-25T23:31:33.3626268-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HUDBack.png</Source>
@@ -72,6 +72,24 @@
       <Options>None</Options>
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
       <Time>2015-03-25T13:29:12.4262164-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Particles\CircleParticle.png</Source>
+      <Name>Particles\CircleParticle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
+      <Time>2015-03-25T23:43:37.7414393-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GUITextures\ScrollBorder.png</Source>
+      <Name>GUITextures\ScrollBorder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
+      <Time>2015-03-26T00:51:49.3870709-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

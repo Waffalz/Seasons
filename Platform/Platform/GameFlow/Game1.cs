@@ -136,15 +136,17 @@ namespace Platform.GameFlow
 
             // TODO: use this.Content to load your game content here
 
-            textures.Add("Blocks", Content.Load<Texture2D>("tiles/Blocks"));
-            textures.Add("Platforms", Content.Load<Texture2D>("tiles/Platforms"));
-            textures.Add("Player", Content.Load<Texture2D>("entities/player"));
-            textures.Add("Square", Content.Load<Texture2D>("particles/Square"));
-            textures.Add("MenuBack", Content.Load<Texture2D>("menuItems/Seasons_Menu"));
+            textures.Add("Blocks", Content.Load<Texture2D>("Tiles/Blocks"));
+            textures.Add("Platforms", Content.Load<Texture2D>("Tiles/Platforms"));
+            textures.Add("Player", Content.Load<Texture2D>("Entities/Player"));
+            textures.Add("Square", Content.Load<Texture2D>("Particles/Square"));
+            textures.Add("MenuBack", Content.Load<Texture2D>("MenuItems/Seasons_Menu"));
             textures.Add("HealthBar", Content.Load<Texture2D>("GUITextures/HealthBar"));
-            textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
+            //textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
+            textures.Add("CircleParticle", Content.Load<Texture2D>("Particles/CircleParticle"));
+            textures.Add("ScrollBorder", Content.Load<Texture2D>("GUITextures/ScrollBorder"));
 
-            fonts.Add("ButtonFont", Content.Load<SpriteFont>("fonts/ButtonFont"));
+            fonts.Add("ButtonFont", Content.Load<SpriteFont>("Fonts/ButtonFont"));
 
         }
 

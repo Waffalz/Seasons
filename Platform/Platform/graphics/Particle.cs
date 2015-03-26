@@ -72,7 +72,7 @@ namespace Platform.World
             lifeTime = maxLife;
             maxSize = new Vector2(2);
             size = maxSize;
-            texture = Game1.CurrentGame.Textures["DefaultParticle"];
+            texture = Game1.CurrentGame.Textures["CircleParticle"];
             SourceRect = texture.Bounds;
             color = Color.Red;
             colorSpeed = new Vector3();
@@ -85,7 +85,7 @@ namespace Platform.World
             lifeTime = maxLife;
             maxSize = new Vector2(siz);
             size = maxSize;
-            texture = Game1.CurrentGame.Textures["Square"];
+            texture = Game1.CurrentGame.Textures["CircleParticle"];
             SourceRect = Texture.Bounds;
             color = Color.Red;
             colorSpeed = new Vector3();

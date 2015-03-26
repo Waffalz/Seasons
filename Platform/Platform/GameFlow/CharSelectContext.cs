@@ -107,7 +107,7 @@ namespace Platform.GameFlow
                     case CharType.Spring: Game1.CurrentGame.Player = new SpringCharacter(); break;
                     case CharType.Summer: Game1.CurrentGame.Player = new SummerCharacter(); break;
                     case CharType.Autumn: Game1.CurrentGame.Player = new AutumnCharacter(); break;
-                    case CharType.Winter: Game1.CurrentGame.Player = new WinterCharacter(); break;
+                    case CharType.Winter: Game1.CurrentGame.Player = new TestPlayer(); break;
                     default: Game1.CurrentGame.Player = new Player(); break;
                 }
                 Game1.CurrentGame.GameMode = new CombatContext();

@@ -128,6 +128,7 @@
     <Compile Include="Control\GameAction.cs" />
     <Compile Include="Control\ContinuousAction.cs" />
     <Compile Include="Control\OnceAction.cs" />
+    <Compile Include="UserInterface\UIBorderedButton.cs" />
     <Compile Include="UserInterface\UIButton.cs" />
     <Compile Include="UserInterface\UIComponent.cs" />
     <Compile Include="UserInterface\UIHealthBar.cs" />

@@ -22,6 +22,7 @@ namespace Platform.UserInterface
         public Color textColor;
         public ButtonAction clickAction;
 
+
         public UIButton()
             : base()
         {

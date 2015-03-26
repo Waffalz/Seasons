@@ -37,20 +37,22 @@ namespace Platform.UserInterface
         {
             if (visible) {
                 int endLength = (int)(((float)end1SrcRect.Width / end1SrcRect.Height) * bounds.Height);
+
+                Rectangle middleBounds = new Rectangle(bounds.X + endLength, bounds.Y, bounds.Width - endLength * 2, bounds.Height);
+
+                //draw actual value
+                spriteBatch.Draw(texture,
+                    new Rectangle(middleBounds.X - (int)((float)endLength / 6 * 1), middleBounds.Y, (int)(val / maxVal * (middleBounds.Width + (int)((float)endLength / 6 * 2))), middleBounds.Height),
+                    new Rectangle(vSrcRect.X, vSrcRect.Y, (int)(val / maxVal * vSrcRect.Width), vSrcRect.Height), vColor);
+
                 //draw left end of bar frame
                 spriteBatch.Draw(texture, new Rectangle(bounds.X, bounds.Y, endLength, bounds.Height), end1SrcRect, mColor);
-
-                Rectangle middleBounds =  new Rectangle(bounds.X + endLength, bounds.Y, bounds.Width - endLength * 2, bounds.Height);
 
                 //draw middle of bar frame
                 spriteBatch.Draw(texture, middleBounds, mSrcRect, mColor);
 
                 //draw right end of bar frame
                 spriteBatch.Draw(texture, new Rectangle(bounds.X + bounds.Width - endLength, bounds.Y, endLength, bounds.Height), end2SrcRect, mColor);
-
-                //draw actual value
-                spriteBatch.Draw(texture, new Rectangle(middleBounds.X, middleBounds.Y, (int)(val / maxVal * middleBounds.Width), middleBounds.Height),
-                    new Rectangle(vSrcRect.X, vSrcRect.Y, (int)(val / maxVal * vSrcRect.Width), vSrcRect.Height), vColor);
 
                 foreach (UIComponent comp in contents) {
                     comp.Draw(gameTime, spriteBatch);

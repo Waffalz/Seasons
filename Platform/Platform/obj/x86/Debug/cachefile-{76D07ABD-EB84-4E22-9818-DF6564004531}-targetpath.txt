@@ -6,8 +6,10 @@ Content\menuItems\Seasons_Menu.xnb
 Content\fonts\ButtonFont.xnb
 Content\GUITextures\HealthBar.xnb
 Content\GUITextures\HUDBack.xnb
-Content\tiles\Blocks.png
-Content\tiles\Platforms.png
-Content\entities\player.png
-Content\particles\Square.bmp
+Content\Particles\CircleParticle.xnb
+Content\GUITextures\ScrollBorder.xnb
+Content\Tiles\Blocks.png
+Content\Tiles\Platforms.png
+Content\Entities\Player.png
+Content\Particles\Square.bmp
 Content\maps\Level02.txt
