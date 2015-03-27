@@ -44,7 +44,7 @@ namespace Platform.GameFlow
             gui.Add(backButton);
 
             modeTitle = new UILabel();
-            modeTitle.bounds = new Rectangle(100, 0, Game1.CurrentGame.Window.ClientBounds.Width-100, 50);
+            modeTitle.bounds = new Rectangle(100, 0, Game1.CurrentGame.Window.ClientBounds.Width - 100, 50);
             modeTitle.text = "Character Select";
             modeTitle.hAlign = HorizontalTextAlignment.Center;
             modeTitle.vAlign = VerticalTextAlignment.Center;
@@ -64,10 +64,11 @@ namespace Platform.GameFlow
             gui.Add(charDesc);
 
             charName = new UILabel();
-            charName.bounds = new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width - 260, charDesc.bounds.Y - 90, 250, 60);
+            charName.bounds = new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width - 260, charDesc.bounds.Y - 90, 250, 80);
             charName.hAlign = HorizontalTextAlignment.Right;
             charName.vAlign = VerticalTextAlignment.Center;
             charName.Border = UIBorder.Scroll;
+            charName.borderSize = 20;
             gui.Add(charName);
 
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {

@@ -15,7 +15,7 @@ namespace Platform.UserInterface
 
         protected List<UIComponent> contents;
 
-        private UIBorder border;
+        protected UIBorder border;
         public UIBorder Border
         {
             get { return border; }
@@ -64,30 +64,19 @@ namespace Platform.UserInterface
 
         public virtual void Update(GameTime gameTime)
         {
-            if (visible){
-                
-                foreach (UIComponent comp in contents){
-                    comp.Update(gameTime);
-                }
+            if (!visible) {
+                return;
             }
+            UpdateComponents(gameTime);
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (visible) {
-                if (border == UIBorder.None)
-                {
-                    spriteBatch.Draw(texture, bounds, sourceRect, color);
-                }
-                else
-                {
-                    DrawBorder(spriteBatch, color);
-                }
-                foreach(UIComponent comp in contents){
-                    comp.Draw(gameTime, spriteBatch);
-                }
+            if (!visible) {
+                return;
             }
-
+            DrawBackground(spriteBatch, color);
+            DrawComponents(gameTime, spriteBatch);
         }
 
         public void Add(UIComponent child)
@@ -101,12 +90,34 @@ namespace Platform.UserInterface
             if (e == null) {
                 return 1;
             }
-
             UIComponent other = e as UIComponent;
             if (other != this) {
                 return this.depth > other.depth ? 1 : this.depth < other.depth ? -1 : 0;
             } else {
                 throw new ArgumentException("Object is not BackgroundObject");
+            }
+        }
+
+        public void UpdateComponents(GameTime gameTime)
+        {
+            foreach (UIComponent comp in contents) {
+                comp.Update(gameTime);
+            }
+        }
+
+        public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            foreach (UIComponent comp in contents) {
+                comp.Draw(gameTime, spriteBatch);
+            }
+        }
+
+        public virtual void DrawBackground(SpriteBatch spriteBatch, Color col)
+        {
+            if (border == UIBorder.None) {
+                spriteBatch.Draw(texture, bounds, sourceRect, col);
+            } else {
+                DrawBorder(spriteBatch, col);
             }
         }
 

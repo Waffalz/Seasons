@@ -81,15 +81,25 @@ namespace Platform.Mobs
                         walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
                     }
                 }));//add run right control
-            
-            controls.Add("Jump", new ContinuousAction(this, 0,
+
+            controls.Add("Jump", new OnceAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
-                delegate(GameTime gameTime){
+                delegate() { return Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.Space); },
+                delegate(GameTime gameTime) {
                     if (onGround) {
                         onGround = false;
+                        position.Y += .1f;//elevating player position by a negligible amount to get around that stupid no-jumping bug
                         velocity = new Vector2(velocity.X, jumpSpeed);
                     }
                 }));
+            //controls.Add("Jump", new ContinuousAction(this, 0,
+            //    delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
+            //    delegate(GameTime gameTime) {
+            //        if (onGround) {
+            //            onGrou nd = false;
+            //            velocity = new Vector2(velocity.X, jumpSpeed);
+            //        }
+            //    }));
             
         }
 

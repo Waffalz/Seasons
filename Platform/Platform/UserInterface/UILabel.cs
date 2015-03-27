@@ -55,31 +55,31 @@ namespace Platform.UserInterface
                 
                 switch (hAlign) {
                     case HorizontalTextAlignment.Left:
-                        textPos.X = this.bounds.X;
+                        textPos.X = this.bounds.X + ((Border != UIBorder.None) ? borderSize : 0);
                         break;
                     case HorizontalTextAlignment.Center:
                         textPos.X = this.bounds.X + (this.bounds.Width - font.MeasureString(text).X)/2;
                         break;
                     case HorizontalTextAlignment.Right:
-                        textPos.X = this.bounds.X + this.bounds.Width - font.MeasureString(text).X;
+                        textPos.X = this.bounds.X + this.bounds.Width - font.MeasureString(text).X - ((Border != UIBorder.None) ? borderSize : 0);
                         break;
                     default:
-                        textPos.X = this.bounds.X;
+                        textPos.X = this.bounds.X + ((Border != UIBorder.None) ? borderSize : 0);
                         break;
                 }
 
                 switch (vAlign) {
                     case VerticalTextAlignment.Top:
-                        textPos.Y = this.bounds.Y;
+                        textPos.Y = this.bounds.Y + ((Border != UIBorder.None) ? borderSize : 0);
                         break;
                     case VerticalTextAlignment.Center:
                         textPos.Y = this.bounds.Y + (this.bounds.Height - font.MeasureString(text).Y) / 2;
                         break;
                     case VerticalTextAlignment.Bottom:
-                        textPos.Y = this.bounds.Y + this.bounds.Width - font.MeasureString(text).Y;
+                        textPos.Y = this.bounds.Y + this.bounds.Width - font.MeasureString(text).Y - ((Border != UIBorder.None) ? borderSize : 0);
                         break;
                     default:
-                        textPos.Y = this.bounds.Y;
+                        textPos.Y = this.bounds.Y + ((Border != UIBorder.None) ? borderSize : 0);
                         break;
                 }
 

@@ -145,7 +145,7 @@ namespace Platform.World
 
                 ent.Update(gameTime);//if ent has to do some specific things, do them
                 if (ent.Solid) {
-                ent.CorrectCollisionPosition(tileEnts);
+                    ent.CorrectCollisionPosition(tileEnts);
                 }
 
                 //TODO: fix onground problems due to the fact that entities no longer collide after repositioning after collision

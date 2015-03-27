@@ -77,46 +77,41 @@ namespace Platform.UserInterface
 
         public override void Update(GameTime gameTime)
         {
+
+            if (!visible) {
+                return;
+            }
+
             MouseState mos = Game1.CurrentGame.MouseInput;
             MouseState oMos = Game1.CurrentGame.OldMouseInput;
-            if (visible) {
-                if (bounds.Contains(new Point(mos.X, mos.Y))) {
-                    currentColor = new Color(
-                            color.R - 30,
-                            color.G - 30,
-                            color.B - 30);
-                    if (mos.LeftButton != ButtonState.Pressed && oMos.LeftButton == ButtonState.Pressed) {
-                        if (clickAction != null) {
-                            clickAction();
-                        }
+            
+            if (bounds.Contains(new Point(mos.X, mos.Y))) {
+                currentColor = new Color(
+                        color.R - 30,
+                        color.G - 30,
+                        color.B - 30);
+                if (mos.LeftButton != ButtonState.Pressed && oMos.LeftButton == ButtonState.Pressed) {
+                    if (clickAction != null) {
+                        clickAction();
                     }
+                }
 
-                }
-                else {
-                    currentColor = color;
-                }
-                foreach (UIComponent comp in contents) {
-                    comp.Update(gameTime);
-                }
+            } else {
+                currentColor = color;
             }
+            UpdateComponents(gameTime);
+            
 
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (visible) {
-                if (Border == UIBorder.None)
-                {
-                    spriteBatch.Draw(texture, bounds, sourceRect, color);
-                }
-                else
-                {
-                    DrawBorder(spriteBatch, currentColor);
-                }
+                DrawBackground(spriteBatch, currentColor);
+
                 spriteBatch.DrawString(font, text, new Vector2(bounds.X + bounds.Width / 2, bounds.Y + bounds.Height / 2) - font.MeasureString(text) / 2, textColor);
-                foreach (UIComponent comp in contents){
-                    comp.Draw(gameTime, spriteBatch);
-                }
+
+                DrawComponents(gameTime, spriteBatch);
             }
 
         }

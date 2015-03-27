@@ -93,6 +93,7 @@ namespace Platform.GameFlow
             graphics.PreferredBackBufferHeight = 720;
             rand = new Random();
             currentGame = this;
+            graphics.PreferMultiSampling = true;
         }
 
         /// <summary>

@@ -54,6 +54,7 @@ namespace Platform.UserInterface
             vSrcRect = vTex.Bounds;
             mSrcRect = mTex.Bounds;
 
+            borderSize = 0;
         }
 
         public UIStatusBar(int max)
@@ -73,34 +74,27 @@ namespace Platform.UserInterface
             vSrcRect = vTex.Bounds;
             mSrcRect = mTex.Bounds;
 
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            if (visible){
-                foreach (UIComponent comp in contents){
-                    comp.Update(gameTime);
-                }
-            }
+            borderSize = 0;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (visible) {
-                //draw maxBar
-                spriteBatch.Draw(mTex, bounds, mSrcRect, mColor);
-
-                //draw valuebar
-                spriteBatch.Draw(
-                    vTex,
-                    new Rectangle(bounds.X, bounds.Y, (int)(bounds.Width * val / maxVal), bounds.Height),
-                    new Rectangle(vSrcRect.X, vSrcRect.Y, (int)(vSrcRect.Width * val / maxVal), vSrcRect.Height),
-                    vColor);
-
-                foreach(UIComponent comp in contents){
-                    comp.Draw(gameTime, spriteBatch);
-                }
+            if (!visible) {
+                return;
             }
+
+            //draw maxBar
+            spriteBatch.Draw(mTex, bounds, mSrcRect, mColor);
+
+            //draw valuebar
+            spriteBatch.Draw(
+                vTex,
+                new Rectangle(bounds.X, bounds.Y, (int)(bounds.Width * val / maxVal), bounds.Height),
+                new Rectangle(vSrcRect.X, vSrcRect.Y, (int)(vSrcRect.Width * val / maxVal), vSrcRect.Height),
+                vColor);
+
+            DrawComponents(gameTime, spriteBatch);
+            
            
         }
 

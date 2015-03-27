@@ -119,6 +119,7 @@
     <Compile Include="GameFlow\MainMenuContext.cs" />
     <Compile Include="Graphics\BackgroundObject.cs" />
     <Compile Include="Graphics\LookCamera.cs" />
+    <Compile Include="Graphics\AnimationState.cs" />
     <Compile Include="Mobs\Baddu.cs" />
     <Compile Include="Mobs\Ball.cs" />
     <Compile Include="Mobs\Behavior.cs" />

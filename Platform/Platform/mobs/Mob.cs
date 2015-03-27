@@ -116,35 +116,44 @@ namespace Platform.Mobs
         public override void CorrectCollisionPosition(List<Entity> ents)
         {
             onGround = false;
+            System.Drawing.RectangleF thisRekt = getRekt();
+            System.Drawing.RectangleF botPlace = new System.Drawing.RectangleF(thisRekt.X, thisRekt.Y+thisRekt.Height, thisRekt.Width, .1f);
             foreach (Entity tilent in ents) { //Tile collisions
-                //System.Drawing.RectangleF re = tilent.getRekt();
-                //re.Size += new System.Drawing.SizeF(0,WALL_BUFFER);
-                //re = new System.Drawing.RectangleF(tilent.Position.X - re.Size.Width / 2, -(tilent.Position.Y + re.Size.Height), re.Size.Width, re.Size.Height);
-                if (Collides(tilent)) {//if ent collides with a tileent
+                System.Drawing.RectangleF otherRekt = tilent.getRekt();
+                if (thisRekt.IntersectsWith(otherRekt)) {
+                    if (oldPos.Y + size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
+
+                        position = new Vector2(position.X, tilent.Position.Y - (tilent.Size.Y + size.Y) / 2);
+                        velocity = new Vector2(velocity.X, 0);
+                    }
+
+                    if (oldPos.X - size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
+
+                        position = new Vector2(tilent.Position.X + (tilent.Size.X + size.X) / 2, position.Y);
+                        velocity = new Vector2(0, velocity.Y);
+                        OnCollide(tilent);
+                        continue;
+                    }
+                    if (oldPos.X + size.X / 2 <= tilent.Position.X - tilent.Size.X / 2) { // if ent is to the left of tile
+
+                        position = new Vector2(tilent.Position.X - (tilent.Size.X + size.X) / 2, position.Y);
+                        velocity = new Vector2(0, velocity.Y);
+                        OnCollide(tilent);
+                        continue;
+
+                    }
                     if (oldPos.Y - size.Y / 2 >= tilent.Position.Y + tilent.Size.Y / 2) { //if ent is over tile
                         position = new Vector2(position.X, tilent.Position.Y + (tilent.Size.Y + size.Y) / 2);
                         velocity = new Vector2(velocity.X, 0);
-                        onGround = true;
-                    }
-                    else {
-                        if (oldPos.Y + size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
-
-                            position = new Vector2(position.X, tilent.Position.Y - (tilent.Size.Y + size.Y) / 2);
-                            velocity = new Vector2(velocity.X, 0);
-                        }
-                        if (oldPos.X - size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
-
-                            position = new Vector2(tilent.Position.X + (tilent.Size.X + size.X) / 2, position.Y);
-                            velocity = new Vector2(0, velocity.Y);
-                        }
-                        if (oldPos.X + size.X / 2 <= tilent.Position.X - tilent.Size.X / 2) { // if ent is to the left of tile
-
-                            position = new Vector2(tilent.Position.X - (tilent.Size.X + size.X) / 2, position.Y);
-                            velocity = new Vector2(0, velocity.Y);
-                        }
+                        OnGround = true;
                     }
                     OnCollide(tilent);
                 }
+                    if (botPlace.IntersectsWith(otherRekt)){
+                        onGround = true;
+                    }
+                
+                 
             }
         }
 
