@@ -36,6 +36,8 @@ namespace Platform.Mobs
             set { manaGen = value; }
         }
 
+        protected MoveDirection moveDir;
+
         protected Dictionary<string,GameAction> controls;
 
         public Player():base()
@@ -48,6 +50,8 @@ namespace Platform.Mobs
             WalkVelocity = new Vector2();
             OnGround = false;
 
+            moveDir = MoveDirection.None;
+
             controls = new Dictionary<string, GameAction>();
 
             maxMana = 100;
@@ -58,13 +62,23 @@ namespace Platform.Mobs
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.D); },
                 delegate(GameTime gameTime) {
                     if (Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A)) {
-                        if (walkVelocity.X > 0 || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.D)) {
+                        if (moveDir == MoveDirection.Right || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.D)) {
                             //walkVelocity.X = walkSpeed
-                            walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                            if (onGround) {
+                                walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                            } else {
+                                walkVelocity.X = Math.Min(walkVelocity.X  + airControl * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                            }
+                            moveDir = MoveDirection.Right;
                         }
                     } else {
                         //walkVelocity.X = walkSpeed
-                        walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                        if (onGround) {
+                            walkVelocity.X = Math.Min(Math.Abs(walkVelocity.X) + movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                        } else {
+                            walkVelocity.X = Math.Min(walkVelocity.X + airControl * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                        }
+                        moveDir = MoveDirection.Right;
                     }
                 }));//add run left control
 
@@ -72,13 +86,23 @@ namespace Platform.Mobs
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.A); },
                 delegate(GameTime gameTime){
                     if (Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.D)) {
-                        if (walkVelocity.X < 0 || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.A)) {
+                        if (moveDir == MoveDirection.Left || !Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.A)) {
                             //walkVelocity.X = -walkSpeed
-                            walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                            if (onGround) {
+                                walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                            } else {
+                                walkVelocity.X = Math.Max(walkVelocity.X - (airControl * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds), -walkSpeed);
+                            }
+                            moveDir = MoveDirection.Left;
                         }
                     } else {
                         //walkVelocity.X = -walkSpeed
-                        walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + 4 * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                        if (onGround) {
+                            walkVelocity.X = -Math.Min(Math.Abs(walkVelocity.X) + movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds, walkSpeed);
+                        } else {
+                            walkVelocity.X = Math.Max(walkVelocity.X - (airControl * movementAccel * (float)gameTime.ElapsedGameTime.TotalSeconds), -walkSpeed);
+                        }
+                        moveDir = MoveDirection.Left;
                     }
                 }));//add run right control
 

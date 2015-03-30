@@ -23,6 +23,14 @@ namespace Platform.Mobs
 
         protected float movementAccel;
 
+        protected float airControl;
+
+        protected float AirControl
+        {
+            get { return airControl; }
+            set { airControl = value; }
+        }
+
         public Vector2 WalkVelocity
         {
             get { return walkVelocity; }
@@ -66,7 +74,8 @@ namespace Platform.Mobs
             onGround = false;
             maxHealth = 100;
             health = maxHealth;
-            movementAccel = 200;
+            movementAccel = 400;
+            airControl = .5f;
         }
 
 
@@ -92,24 +101,40 @@ namespace Platform.Mobs
 
             oldPos = position;
 
-            if (Anchored == false) {//don't handle movement if ent is anchored
+
+
+            if (anchored == false) {//don't handle movement if ent is anchored
                 position = position + timeDifference * (velocity + WalkVelocity);
             }
             if (gravity == true) { //handle gravity on ent if gravity is true
                 velocity = new Vector2(velocity.X, velocity.Y + parent.Gravity * timeDifference);
             }
 
+            if (onGround) {
+                if (!velocity.Equals(Vector2.Zero)) {
+                    Vector2 toDisp = velocity;
+                    toDisp.Normalize();
+
+                    if (velocity.X != 0) {
+                        velocity.X = Math.Sign(velocity.X) * (Math.Max(Math.Abs(velocity.X) - movementAccel/2 * Math.Abs(toDisp.X) * timeDifference, 0));
+                    }
+                }
+            }
+            
             if (!walkVelocity.Equals(Vector2.Zero)) {
                 Vector2 toDisp = walkVelocity;
                 toDisp.Normalize();
 
-                if (walkVelocity.X != 0) {
-                    walkVelocity.X = Math.Sign(walkVelocity.X) * (Math.Max(Math.Abs(walkVelocity.X) - movementAccel * Math.Abs(toDisp.X) * timeDifference, 0));
+                if (walkVelocity.X != 0 && onGround) {
+                    walkVelocity.X = Math.Sign(walkVelocity.X) * (Math.Max(Math.Abs(walkVelocity.X) - movementAccel/2 * Math.Abs(toDisp.X) * timeDifference, 0));
                 }
                 if (walkVelocity.Y != 0) {
-                    walkVelocity.Y = Math.Sign(walkVelocity.Y) * (Math.Max(Math.Abs(walkVelocity.Y) - movementAccel * Math.Abs(toDisp.Y) * timeDifference, 0));
+                    walkVelocity.Y = Math.Sign(walkVelocity.Y) * (Math.Max(Math.Abs(walkVelocity.Y) - movementAccel/2 * Math.Abs(toDisp.Y) * timeDifference, 0));
                 }
             }
+            
+
+            
 
         }
 
