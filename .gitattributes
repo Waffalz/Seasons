@@ -17,8 +17,8 @@
 *.RTF	 diff=astextplain
 
 # Developer added attributes
-*.suo binary merge=ours
-*.sln binary merge=ours
+*.suo merge=ours
+*.sln merge=ours
 *.contentproj merge=ours
 *.csproj merge=ours
 *.csproj.user merge=ours
