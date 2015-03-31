@@ -62,7 +62,7 @@ namespace Platform.Characters
         public void BasicAttack(float spread)
         {
             Vector2 target = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
-            Vector2 dif = target - position;
+            Vector2 dif = target - Position;
 
             double ang = (float)Math.Atan2((double)dif.Y, (double)dif.X) + MathHelper.ToRadians(Game1.CurrentGame.Rand.Next((int)(-spread / 2), (int)(spread / 2)));//calculate spread
 
@@ -70,7 +70,7 @@ namespace Platform.Characters
 
             Ball b = new Ball();
             b.Creator = this;
-            b.Position = position;
+            b.Position = Position;
             b.Velocity = new Vector2((float)Math.Cos(ang), (float)Math.Sin(ang)) * shotspeed;
             b.Size = new Vector2(5);
             b.LifeLeft = 5;

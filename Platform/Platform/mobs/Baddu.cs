@@ -21,7 +21,7 @@ namespace Platform.Mobs
         public Baddu():base()
         {
             moveDirection = MoveDirection.Left;
-            size = new Vector2(10,10);
+            Size = new Vector2(10, 10);
             texture = Game1.CurrentGame.Textures["Player"];
             sourceRect = texture.Bounds;
             color = Color.Red;

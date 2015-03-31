@@ -10,6 +10,7 @@ using Platform.GameFlow;
 using Platform.Control;
 using Platform.Mobs;
 using Platform.World;
+using Platform.UserInterface;
 
 namespace Platform.Characters
 {
@@ -18,45 +19,55 @@ namespace Platform.Characters
         float maxBoostTime;
         float boostTime;
         float boostAccel;
+        float boostVelocityTolerance;
+
+        UIHealthBar boostBar;
 
         public AutumnCharacter()
             : base()
         {
-            maxBoostTime = 3;
+            maxBoostTime = .75f;
             boostTime = maxBoostTime;
-            boostAccel = 400;
+            boostAccel = 200;
             airControl = 1;
-
-            controls.Add("Aerial Boost Start", new OnceAction(this, 0,
-                delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
-                delegate() { return Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.OldKeyboardInput.IsKeyDown(Keys.Space); },
-                delegate(GameTime gameTime) {
-                    if (!onGround) {
-                        controls["Aerial Boost"].Active = true;
-                        
-                    }
-                }));
+            boostVelocityTolerance = 30;
+            
             controls.Add("Aerial Boost", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
                 delegate(GameTime gameTime) {
-                    if (boostTime > 0) {
+                    if (boostTime > 0 && velocity.Y < boostVelocityTolerance) {
+
                         float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
-                        walkVelocity.Y += boostAccel * timePassed;
+                        velocity.Y += boostAccel * timePassed * (boostTime / maxBoostTime) * 2;
                         boostTime -= timePassed;
                     }
                 }));
 
+            GameContext gameCont = Game1.CurrentGame.GameMode;
+            if (gameCont is CombatContext) {
+                boostBar = new UIHealthBar();
+                boostBar.bounds = new Rectangle(50, 110, 350, 40);
+                boostBar.vColor = Color.Gold;
+                boostBar.mColor = Color.White;
+                boostBar.depth = 1;
+                ((CombatContext)gameCont).GameHUD.Add(boostBar);
+            }
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
+            float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (onGround) {
-                controls["Aerial Boost"].Active = false;
                 boostTime = maxBoostTime;
-                
+            } else {
             }
+
+            if (boostBar != null) {
+                boostBar.MaxValue = maxBoostTime;
+                boostBar.Value = boostTime;
+            }
+
         }
     }
 }

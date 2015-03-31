@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 
 using Platform.GameFlow;
 using Platform.World;
+using System.Drawing;
 
 namespace Platform.Mobs
 {
@@ -99,12 +100,12 @@ namespace Platform.Mobs
         {
             float timeDifference = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            oldPos = position;
+            oldPos = Position;
 
 
 
             if (anchored == false) {//don't handle movement if ent is anchored
-                position = position + timeDifference * (velocity + WalkVelocity);
+                Position += timeDifference * (velocity + WalkVelocity);
             }
             if (gravity == true) { //handle gravity on ent if gravity is true
                 velocity = new Vector2(velocity.X, velocity.Y + parent.Gravity * timeDifference);
@@ -119,6 +120,7 @@ namespace Platform.Mobs
                         velocity.X = Math.Sign(velocity.X) * (Math.Max(Math.Abs(velocity.X) - movementAccel/2 * Math.Abs(toDisp.X) * timeDifference, 0));
                     }
                 }
+                walkVelocity.Y = 0;
             }
             
             if (!walkVelocity.Equals(Vector2.Zero)) {
@@ -141,34 +143,34 @@ namespace Platform.Mobs
         public override void CorrectCollisionPosition(List<Entity> ents)
         {
             onGround = false;
-            System.Drawing.RectangleF thisRekt = getRekt();
+            System.Drawing.RectangleF thisRekt = rect;
             System.Drawing.RectangleF botPlace = new System.Drawing.RectangleF(thisRekt.X, thisRekt.Y+thisRekt.Height, thisRekt.Width, .1f);
             foreach (Entity tilent in ents) { //Tile collisions
-                System.Drawing.RectangleF otherRekt = tilent.getRekt();
+                System.Drawing.RectangleF otherRekt = tilent.Rekt;
                 if (thisRekt.IntersectsWith(otherRekt)) {
-                    if (oldPos.Y + size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
+                    if (oldPos.Y + Size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
 
-                        position = new Vector2(position.X, tilent.Position.Y - (tilent.Size.Y + size.Y) / 2);
+                        Position = new Vector2(Position.X, tilent.Position.Y - (tilent.Size.Y + Size.Y) / 2);
                         velocity = new Vector2(velocity.X, 0);
                     }
 
-                    if (oldPos.X - size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
+                    if (oldPos.X - Size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
 
-                        position = new Vector2(tilent.Position.X + (tilent.Size.X + size.X) / 2, position.Y);
+                        Position = new Vector2(tilent.Position.X + (tilent.Size.X + Size.X) / 2, Position.Y);
                         velocity = new Vector2(0, velocity.Y);
                         OnCollide(tilent);
                         continue;
                     }
-                    if (oldPos.X + size.X / 2 <= tilent.Position.X - tilent.Size.X / 2) { // if ent is to the left of tile
+                    if (oldPos.X + Size.X / 2 <= tilent.Position.X - tilent.Size.X / 2) { // if ent is to the left of tile
 
-                        position = new Vector2(tilent.Position.X - (tilent.Size.X + size.X) / 2, position.Y);
+                        Position = new Vector2(tilent.Position.X - (tilent.Size.X + Size.X) / 2, Position.Y);
                         velocity = new Vector2(0, velocity.Y);
                         OnCollide(tilent);
                         continue;
 
                     }
-                    if (oldPos.Y - size.Y / 2 >= tilent.Position.Y + tilent.Size.Y / 2) { //if ent is over tile
-                        position = new Vector2(position.X, tilent.Position.Y + (tilent.Size.Y + size.Y) / 2);
+                    if (oldPos.Y - Size.Y / 2 >= tilent.Position.Y + tilent.Size.Y / 2) { //if ent is over tile
+                        Position = new Vector2(Position.X, tilent.Position.Y + (tilent.Size.Y + Size.Y) / 2);
                         velocity = new Vector2(velocity.X, 0);
                         OnGround = true;
                     }

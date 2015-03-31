@@ -40,7 +40,7 @@ namespace Platform.Mobs
             texture = Game1.CurrentGame.Textures["Player"];
             sourceRect = texture.Bounds;
             damage = 10;
-            size = new Vector2(5,5);
+            Size = new Vector2(5, 5);
             lifeLeft = 10;
         }
 
@@ -51,8 +51,8 @@ namespace Platform.Mobs
                 if (other is Mob) {
                     ((Mob)other).Health -= damage;
                 }
-                for (int i = 0; i < size.X*1.5; i++) {
-                    Particle poi = new Particle((float)2, (float)size.X/(float)1.5);
+                for (int i = 0; i < Size.X * 1.5; i++) {
+                    Particle poi = new Particle((float)2, (float)Size.X / (float)1.5);
                     poi.Color = Color.SkyBlue;
                     poi.Position = Position;
                     double rAngle = MathHelper.ToRadians(Game1.CurrentGame.Rand.Next(0, 360));

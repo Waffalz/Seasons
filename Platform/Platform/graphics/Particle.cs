@@ -71,7 +71,7 @@ namespace Platform.World
             maxLife = 5;
             lifeTime = maxLife;
             maxSize = new Vector2(2);
-            size = maxSize;
+            Size = maxSize;
             texture = Game1.CurrentGame.Textures["CircleParticle"];
             SourceRect = texture.Bounds;
             color = Color.Red;
@@ -84,7 +84,7 @@ namespace Platform.World
             maxLife = life;
             lifeTime = maxLife;
             maxSize = new Vector2(siz);
-            size = maxSize;
+            Size = maxSize;
             texture = Game1.CurrentGame.Textures["CircleParticle"];
             SourceRect = Texture.Bounds;
             color = Color.Red;
@@ -99,7 +99,7 @@ namespace Platform.World
             Position += Velocity * timeElapsed;
             Velocity = new Vector2(Velocity.X, Velocity.Y + timeElapsed * parent.Gravity *(float).5);
             lifeTime -= timeElapsed;
-            size = maxSize*(lifeTime/maxLife);
+            Size = maxSize * (lifeTime / maxLife);
             float toDec = velocity.Length();
             Vector2 dir = velocity;
             dir.Normalize();

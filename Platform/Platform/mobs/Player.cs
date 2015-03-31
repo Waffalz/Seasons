@@ -112,7 +112,7 @@ namespace Platform.Mobs
                 delegate(GameTime gameTime) {
                     if (onGround) {
                         onGround = false;
-                        position.Y += .1f;//elevating player position by a negligible amount to get around that stupid no-jumping bug
+                        Position += new Vector2(0,.1f);//elevating player position by a negligible amount to get around that stupid no-jumping bug
                         velocity = new Vector2(velocity.X, jumpSpeed);
                     }
                 }));

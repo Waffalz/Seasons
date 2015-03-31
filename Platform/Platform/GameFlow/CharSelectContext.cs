@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Platform.UserInterface;
 using Platform.Characters;
 using Platform.Mobs;
+using Platform.World;
 
 namespace Platform.GameFlow
 {
@@ -105,14 +106,22 @@ namespace Platform.GameFlow
             gui.Add(winterSelect);
 
             playButton = new UIButton(new Rectangle(370, 100, 150, 60), delegate() {
+                CombatContext nextSlide = new CombatContext();
+                Player ploy = new TestPlayer();
+                Game1.CurrentGame.GameMode = nextSlide;
                 switch (selected){
-                    case CharType.Spring: Game1.CurrentGame.Player = new SpringCharacter(); break;
-                    case CharType.Summer: Game1.CurrentGame.Player = new SummerCharacter(); break;
-                    case CharType.Autumn: Game1.CurrentGame.Player = new AutumnCharacter(); break;
-                    case CharType.Winter: Game1.CurrentGame.Player = new TestPlayer(); break;
-                    default: Game1.CurrentGame.Player = new Player(); break;
+                    case CharType.Spring: ploy = new SpringCharacter(); break;
+                    case CharType.Summer: ploy = new SummerCharacter(); break;
+                    case CharType.Autumn: ploy = new AutumnCharacter(); break;
+                    case CharType.Winter: ploy = new WinterCharacter(); break;
+                    default: Game1.CurrentGame.Player = new TestPlayer(); break;
                 }
-                Game1.CurrentGame.GameMode = new CombatContext();
+                
+                Game1.CurrentGame.Player = ploy;
+                
+                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level02.txt");
+                nextSlide.CombatWorld.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);
+
             }, "Start Game");
             playButton.visible = false;
             gui.Add(playButton);
