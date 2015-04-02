@@ -5,10 +5,11 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 using Platform.GameFlow;
+using Platform.World;
 
 namespace Platform.Mobs
 {
-    class Baddu:Mob, Behavior
+    class Baddu : Mob, Behavior
     {
         MoveDirection moveDirection;
 
@@ -18,20 +19,59 @@ namespace Platform.Mobs
             set { moveDirection = value; }
         }
 
-        public Baddu():base()
+        public Baddu()
+            : base()
         {
             moveDirection = MoveDirection.Left;
             Size = new Vector2(10, 10);
-            texture = Game1.CurrentGame.Textures["Player"];
-            sourceRect = texture.Bounds;
+            Texture = Game1.CurrentGame.Textures["Player"];
+            SourceRect = texture.Bounds;
             color = Color.Red;
         }
 
-        public void Behave(float timeDif){
+        public void Behave(float timeDif)
+        {
             Vector2 dir = Mob.GetDirection(moveDirection);
             WalkVelocity = new Vector2(dir.X * WalkSpeed, 0);
-            
 
+            int tilePositionX = (int)(Position.X / Tile.TILE_WIDTH);
+            int tilePositionY = (int)(Position.Y / Tile.TILE_WIDTH);
+            Tile nextTile = null;
+            try
+            {
+                nextTile = parent.Tiles[tilePositionY, tilePositionX + (int)(Mob.GetDirection(moveDirection).X)];
+            }
+            catch (Exception e)
+            {
+                nextTile = null;
+            }
+            Entity nextPlace = new Entity();
+            nextPlace.Position = this.Position + (velocity + WalkVelocity) * timeDif;
+            nextPlace.Size = this.Size;
+
+            if (nextTile != null)
+            {
+                Entity lent = new Entity();
+                lent.Size = new Vector2(Tile.TILE_WIDTH, Tile.TILE_WIDTH);
+                lent.Position = new Vector2((tilePositionX + (int)(Mob.GetDirection(moveDirection).X)) * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2, (tilePositionY) * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2);
+                lent.Anchored = true;
+                lent.Gravity = false;
+                lent.Solid = true;
+
+                if (nextPlace.Collides(lent))
+                {
+                    if (moveDirection == MoveDirection.Left)
+                    {
+                        moveDirection = MoveDirection.Right;
+                    }
+                    else if (moveDirection == MoveDirection.Right)
+                    {
+                        moveDirection = MoveDirection.Left;
+                    }
+
+                }
+
+            }
 
 
         }

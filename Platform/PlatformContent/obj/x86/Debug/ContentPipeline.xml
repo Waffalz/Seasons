@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
-      <Time>2015-04-02T09:22:55.8642199-05:00</Time>
+      <Time>2015-04-02T09:28:45.6177257-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HUDBack.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
-      <Time>2015-04-02T09:03:01.4776263-05:00</Time>
+      <Time>2015-04-02T09:28:45.5897229-05:00</Time>
     </Item>
     <Item>
       <Source>Particles\CircleParticle.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
-      <Time>2015-04-02T09:22:30.0614083-05:00</Time>
+      <Time>2015-04-02T09:28:45.6347274-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\ScrollBorder.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
-      <Time>2015-04-02T09:22:55.8642199-05:00</Time>
+      <Time>2015-04-02T09:28:45.6187258-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\ButtonFont.spritefont</Source>
@@ -89,7 +89,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-04-02T09:02:32.8204654-05:00</Time>
+      <Time>2015-04-02T09:28:45.6227262-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
