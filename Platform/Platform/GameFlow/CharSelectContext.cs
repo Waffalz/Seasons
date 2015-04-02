@@ -119,7 +119,7 @@ namespace Platform.GameFlow
                 
                 Game1.CurrentGame.Player = ploy;
                 
-                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level04.txt");
+                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level01.txt");
                 nextSlide.CombatWorld.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);
 
             }, "Start Game");

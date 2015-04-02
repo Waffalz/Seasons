@@ -3,3 +3,4 @@ H:\Documents\Visual Studio 2010\Projects\Platform\Platform\PlatformContent\obj\x
 H:\Documents\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
 C:\Users\116162\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
 C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
+C:\Users\115254\Desktop\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
