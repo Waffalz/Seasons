@@ -1,0 +1,26 @@
+<
+. = null
+B = Platforms, 0
+G = Platforms, 1
+O = Platforms, 2
+R = Platforms, 3
+Y = Platforms, 4
+b = Blocks, 0
+g = Blocks, 1
+o = Blocks, 2
+r = Blocks, 3
+y = Blocks, 4
++ = Player
+x = Baddu
+>
+r...............................................x..................................................b
+o......................+.......................oryg................................................g
+r....................grbor.........................................................................y
+y...................yorgobg.........rogyg.......................................byr................b
+o..................rroggybob........................robyr......................by.go......bygor....g
+g.................gyobyrgbogb..............robg..............byro........................rg...ob...g
+b................ggrygobrogyby.............................roggyobg................................o
+y...............rgborgybrogbory...........................gryborgyro..................gobr.........b
+o..............orygborgybgorygbg.........................byrogyrogbyr................by..ro........r
+b.............gorygrobgrygborygbr.......................rygobyrogybrgo.............................r
+rrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoy

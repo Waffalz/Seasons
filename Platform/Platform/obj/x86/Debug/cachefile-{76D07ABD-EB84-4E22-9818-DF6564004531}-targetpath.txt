@@ -13,3 +13,7 @@ Content\Tiles\Platforms.png
 Content\Entities\Player.png
 Content\Particles\Square.bmp
 Content\maps\Level02.txt
+Content\maps\Level01.txt
+Content\maps\Level03.txt
+Content\maps\Level04.txt
+Content\maps\Level05.txt
