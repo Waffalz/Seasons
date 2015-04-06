@@ -12,28 +12,27 @@ namespace Platform.Characters
 {
     class WinterCharacter : Player
     {
-        private float ghostShield = 0.20f; //percent of damage shielded from
+        private float ghostShield = 20f; //percent of damage shielded from
 
-        public override float Health
-        {
-            get
-            {
-                return base.Health;
-            }
-            set
-            {
-                float dif = health - value;
-                if (dif < 0) {
-                    health += value * ghostShield; 
-                }
-            }
-        }
 
         public WinterCharacter()
             : base()
         {
             manaGen = -5f;
             ghostShield = 0.20f;
+        }
+
+        public override void Damage(float amount)
+        {
+            health -= amount * (100-ghostShield)/100;
+        }
+        public override void Damage(Mob attacker, float power)
+        {
+            health -= ((attacker.Attack - defense) * power / 100) * (100 - ghostShield) / 100;
+        }
+        public override void Damage(float amount, Mob attacker)
+        {
+            health -= amount * (100 - ghostShield) / 100;
         }
 
         public override void Update(GameTime gameTime)

@@ -16,6 +16,9 @@ namespace Platform.Mobs
 
         protected float maxHealth;
         protected float health;
+        protected int attack; //the amount of damage dealt by a 100% power attack on an enemy with no defense
+        protected int defense; //the amount subtracted from attack when taking damage
+        
 
         protected Vector2 walkVelocity;
         protected float walkSpeed;
@@ -63,6 +66,16 @@ namespace Platform.Mobs
             get { return health; }
             set { health = value; }
         }
+        public int Attack
+        {
+            get { return attack; }
+            set { attack = value; }
+        }
+        public int Defense
+        {
+            get { return defense; }
+            set { defense = value; }
+        }
 
         public Mob():base()
         {
@@ -79,7 +92,6 @@ namespace Platform.Mobs
             airControl = .5f;
         }
 
-
         public static Vector2 GetDirection(MoveDirection dir)
         {
             switch (dir) {
@@ -94,6 +106,19 @@ namespace Platform.Mobs
                 default:
                     return new Vector2();
             }
+        }
+
+        public virtual void Damage(float amount)
+        {
+            health -= amount;
+        }
+        public virtual void Damage(Mob attacker, float power)
+        {
+            health -= (attacker.Attack - defense) * power/100;
+        }
+        public virtual void Damage(float amount, Mob attacker)
+        {
+            health -= amount;
         }
 
         public override void Update(GameTime gameTime)
