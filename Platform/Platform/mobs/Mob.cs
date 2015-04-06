@@ -102,8 +102,6 @@ namespace Platform.Mobs
 
             oldPos = Position;
 
-
-
             if (anchored == false) {//don't handle movement if ent is anchored
                 Position += timeDifference * (velocity + WalkVelocity);
             }
@@ -134,9 +132,6 @@ namespace Platform.Mobs
                     walkVelocity.Y = Math.Sign(walkVelocity.Y) * (Math.Max(Math.Abs(walkVelocity.Y) - movementAccel/2 * Math.Abs(toDisp.Y) * timeDifference, 0));
                 }
             }
-            
-
-            
 
         }
 

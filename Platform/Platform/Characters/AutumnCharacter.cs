@@ -59,8 +59,9 @@ namespace Platform.Characters
             base.Update(gameTime);
             float timePassed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (onGround) {
-                boostTime = maxBoostTime;
+                boostTime = Math.Min(boostTime + timePassed, maxBoostTime);
             } else {
+               
             }
 
             if (boostBar != null) {

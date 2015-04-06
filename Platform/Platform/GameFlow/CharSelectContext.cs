@@ -75,7 +75,8 @@ namespace Platform.GameFlow
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
                 selected = CharType.Spring;
                 charName.text = "SPRINGNAME";
-                charDesc.text = "SPRINGDESC";
+                charDesc.text = 
+                    "SPRINDESC";
                 //TODO: set splash for selected char
             }, "Spring");
             gui.Add(springSelect);
