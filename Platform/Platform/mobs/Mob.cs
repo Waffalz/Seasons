@@ -14,8 +14,8 @@ namespace Platform.Mobs
     public class Mob:Entity
     {
 
-        protected int maxHealth;
-        protected int health;
+        protected float maxHealth;
+        protected float health;
 
         protected Vector2 walkVelocity;
         protected float walkSpeed;
@@ -53,12 +53,12 @@ namespace Platform.Mobs
             set { onGround = value; }
         }
 
-        public int MaxHealth
+        public float MaxHealth
         {
             get { return maxHealth; }
             set { maxHealth = value; } 
         }
-        public int Health
+        public virtual float Health
         {
             get { return health; }
             set { health = value; }

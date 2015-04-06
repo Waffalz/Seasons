@@ -124,3 +124,7 @@ C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasonals
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
+H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
