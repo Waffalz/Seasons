@@ -19,3 +19,24 @@ C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojR
 C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Seasons.exe
 C:\Users\116162\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Seasons.pdb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.bmp
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Seasons.exe
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Seasons.pdb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Platform.csprojResolveAssemblyReference.cache
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Seasons.exe
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Seasons.pdb

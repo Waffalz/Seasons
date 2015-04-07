@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
-      <Time>2015-03-31T09:41:38.1588272-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>Tiles\Platforms.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb</Output>
-      <Time>2015-03-31T09:41:38.1608272-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>Entities\Player.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
-      <Time>2015-03-31T09:41:38.1418272-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>Particles\Square.bmp</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
-      <Time>2015-03-31T09:41:38.1548272-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>MenuItems\Seasons_Menu.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-03-27T09:51:25.7101556-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HealthBar.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
-      <Time>2015-03-27T09:51:25.634148-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HUDBack.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
-      <Time>2015-03-27T09:51:25.6321478-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>Particles\CircleParticle.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
-      <Time>2015-03-27T09:51:25.7211567-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\ScrollBorder.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
-      <Time>2015-03-27T09:51:25.6361482-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\ButtonFont.spritefont</Source>
@@ -88,8 +88,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-03-27T09:51:25.6381484-05:00</Time>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
+      <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -97,10 +97,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\116162\Desktop\Seasons\Platform\PlatformContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\116162\Desktop\Seasons\Platform\Platform\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\116162\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\116162\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\PlatformContent\</RootDirectory>
+      <LoggerRootDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\</LoggerRootDirectory>
+      <IntermediateDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
