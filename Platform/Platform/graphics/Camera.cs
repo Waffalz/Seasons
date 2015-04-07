@@ -117,8 +117,8 @@ namespace Platform.Graphics
                                     (int)(Tile.TILE_WIDTH * zoomScale + 16), (int)(Tile.TILE_WIDTH * zoomScale + 16)),
                                 //source rectangle
                                 new Rectangle(
-                                    (til.TileSheetIndex % Tile.VARS) * Tile.TILE_TEX_WIDTH,
-                                    (til.TileSheetIndex / Tile.VARS) * Tile.TILE_TEX_WIDTH,
+                                    (til.TileSheetRow) * Tile.TILE_TEX_WIDTH,
+                                    (til.TileSheetCol) * Tile.TILE_TEX_WIDTH,
                                     Tile.TILE_TEX_WIDTH, Tile.TILE_TEX_WIDTH),
                                 Color.White);
 

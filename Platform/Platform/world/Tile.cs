@@ -15,22 +15,24 @@ namespace Platform.World
     {
         
         public const float TILE_WIDTH = 10;// in wubs
-        public const int VARS = 5;
         public const int TILE_TEX_WIDTH = 64;
+        public const int VARS = 5;
 
         public string TileSheetName;
-        public int TileSheetIndex;
+        public int TileSheetRow;
+        public int TileSheetCol;
 
         
-        public Tile(string sheetName, int sheetIndex)
+        public Tile(string sheetName, int sheetRowIndex, int sheetColIndex)
         {
             TileSheetName = sheetName;
-            TileSheetIndex = sheetIndex;
+            TileSheetRow = sheetRowIndex;
+            TileSheetCol = sheetColIndex;
         }
 
-        public static Tile getVariation(string sheetName, int colorRow)
+        public static Tile getVariation(string sheetName, int colorRow, int colorCol)
         {
-            return new Tile(sheetName, colorRow + Game1.CurrentGame.Rand.Next(VARS));
+            return new Tile(sheetName, colorRow, colorCol);
         }
 
         
