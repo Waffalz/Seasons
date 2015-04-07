@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb</Output>
       <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb</Output>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb</Output>
       <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
+      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb</Output>
       <Time>2015-04-02T10:02:52-05:00</Time>
     </Item>
     <Item>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Time>2015-04-07T09:15:06-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HealthBar.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Time>2015-04-07T09:15:06-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HUDBack.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Time>2015-04-07T09:15:06-05:00</Time>
     </Item>
     <Item>
       <Source>Particles\CircleParticle.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Time>2015-04-07T09:15:06-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\ScrollBorder.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Time>2015-04-07T09:15:06-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\ButtonFont.spritefont</Source>
@@ -89,7 +89,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Time>2015-04-07T09:15:06-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

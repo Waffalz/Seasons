@@ -1,6 +1,6 @@
-Content\Tiles\Blocks.xnb
-Content\Tiles\Platforms.xnb
-Content\Entities\Player.xnb
+Content\tiles\Blocks.xnb
+Content\tiles\Platforms.xnb
+Content\entities\player.xnb
 Content\Particles\Square.xnb
 Content\MenuItems\Seasons_Menu.xnb
 Content\GUITextures\HealthBar.xnb

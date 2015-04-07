@@ -9,7 +9,7 @@ using Platform.Graphics;
 
 namespace Platform.World
 {
-    class Particle:Entity
+    public class Particle:Entity
     {
 
         private float maxLife;

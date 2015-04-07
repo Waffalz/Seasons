@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Platform.lib {
 
-	class PriorityQueue< T > {
+	public class PriorityQueue< T > {
 
 		private List< T > queue;
 		private readonly Comparer< T > comparer;

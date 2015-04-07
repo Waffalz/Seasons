@@ -10,7 +10,7 @@ using Platform.World;
 
 namespace Platform.Graphics
 {
-    abstract class Camera
+    public abstract class Camera
     {
         protected Map parent;
         protected int zoomScale;

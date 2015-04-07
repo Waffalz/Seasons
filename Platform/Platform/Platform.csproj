@@ -108,7 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\AIPathing.cs" />
+    <Compile Include="ai\AIPathing.cs" />
     <Compile Include="lib\PriorityQueue.cs" />
     <Compile Include="graphics\BackgroundObject.cs" />
     <Compile Include="mobs\Baddu.cs" />

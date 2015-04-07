@@ -48,7 +48,7 @@ namespace Platform.AI {
 		}
 	}
 
-	class AIPathing {
+	public class AIPathing {
 
 		public static pathNode_t[] AStar( ref Map map, pathNode_t start, pathNode_t end, int maxRadius ) {
 			if ( maxRadius == 0 ) {
