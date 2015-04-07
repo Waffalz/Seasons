@@ -25,7 +25,7 @@ namespace Platform.Graphics
             maxMouseExtend = 200;
         }
 
-        public override void Update(GameTime gameTime)
+       /* public override void Update(GameTime gameTime)
         {
             if (parent.Player != null) {
                 origin = parent.Player.Position;
@@ -53,10 +53,10 @@ namespace Platform.Graphics
                 position = origin;
             }
         }
-
+        */
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-
+            /*
             if (parent != null) {
 
 
@@ -85,8 +85,8 @@ namespace Platform.Graphics
                                     (int)(-((y + 1) * Tile.TILE_WIDTH - position.Y) * zoomScale + PointOnScreen.Y),
                                     (int)(Tile.TILE_WIDTH * zoomScale), (int)(Tile.TILE_WIDTH * zoomScale)),
                                 new Rectangle(
-                                    (til.TileSheetIndex % Tile.VARS) * Tile.TILE_TEX_WIDTH,
-                                    (til.TileSheetIndex / Tile.VARS) * Tile.TILE_TEX_WIDTH,
+                                    (til.TileSheetRowIndex % Tile.VARS) * Tile.TILE_TEX_WIDTH,
+                                    (til.TileSheetRowIndex / Tile.VARS) * Tile.TILE_TEX_WIDTH,
                                     Tile.TILE_TEX_WIDTH, Tile.TILE_TEX_WIDTH),
                                 Color.White);
 
@@ -103,7 +103,7 @@ namespace Platform.Graphics
                         p.Draw(gameTime, spriteBatch);
                     }
                 }
-            }
+            }*/
         }
     }
 }

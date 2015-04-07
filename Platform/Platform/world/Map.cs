@@ -214,7 +214,7 @@ namespace Platform.World
 
             cam.Update(gameTime);
         }
-
+        //Loading the map into an array to store the initial locations of tiles, enemies, and the player
         public static Map LoadMap2(string pathname)
         {
             Map nMap = new Map();
@@ -281,10 +281,11 @@ namespace Platform.World
                                     break;
                                 default:
                                     try{
-                                        string type = tileDat.Substring(0, tileDat.IndexOf(','));
-                                        int multi = Convert.ToInt32(tileDat.Substring(tileDat.IndexOf(',') + 1).Trim());
-
-                                        nMap.Tiles[y1, x1] = Tile.getVariation(type, multi * Tile.VARS);
+                                        string[] values = tileDat.Split(',');
+                                        string type = values[0];
+                                        int row = Convert.ToInt32(values[1].Trim());
+                                        int col = Convert.ToInt32(values[2].Trim());
+                                        nMap.Tiles[y1, x1] = Tile.getVariation(type, row, col);
                                     }
                                     catch (Exception i){
                                         Console.WriteLine("Tile couldn't be loaded, bad key");

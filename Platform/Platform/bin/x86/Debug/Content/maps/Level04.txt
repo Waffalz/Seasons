@@ -1,10 +1,5 @@
 <
 . = null
-B = Platforms, 0
-G = Platforms, 1
-O = Platforms, 2
-R = Platforms, 3
-Y = Platforms, 4
 b = Blocks, 0
 g = Blocks, 1
 o = Blocks, 2

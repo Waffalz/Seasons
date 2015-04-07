@@ -82,6 +82,15 @@
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
       <Time>2015-04-07T09:15:58.9376415-05:00</Time>
     </Item>
+    <Item>
+      <Source>Tiles\NewBlocks.png</Source>
+      <Name>Tiles\NewBlocks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb</Output>
+      <Time>2015-04-07T09:36:31.7494357-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

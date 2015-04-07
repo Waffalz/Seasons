@@ -44,6 +44,7 @@ namespace Platform.Mobs
             catch (Exception e)
             {
                 nextTile = null;
+                Console.WriteLine(e.Message);
             }
             Entity nextPlace = new Entity();
             nextPlace.Position = this.Position + (velocity + WalkVelocity) * timeDif;
