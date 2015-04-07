@@ -178,7 +178,14 @@ namespace Platform.World
                 }
 
                 if (ent.Position.Y < -50) {//remove ent if below the kill level
-                    RemoveEntity(ent);
+                    if (ent is Mob) {
+                        ent.Position = ((Mob)ent).previousPosition;
+                        ent.Velocity = new Vector2(0,0);
+                        ((Mob)ent).WalkVelocity = new Vector2();
+                        ((Mob)ent).Damage(20);
+                    } else {
+                        RemoveEntity(ent);
+                    }
                 }
 
                 

@@ -18,7 +18,8 @@ namespace Platform.Mobs
         protected float health;
         protected int attack; //the amount of damage dealt by a 100% power attack on an enemy with no defense
         protected int defense; //the amount subtracted from attack when taking damage
-        
+
+        public Vector2 previousPosition;
 
         protected Vector2 walkVelocity;
         protected float walkSpeed;
@@ -90,6 +91,7 @@ namespace Platform.Mobs
             health = maxHealth;
             movementAccel = 400;
             airControl = .5f;
+            previousPosition = new Vector2(); 
         }
 
         public static Vector2 GetDirection(MoveDirection dir)
@@ -138,6 +140,21 @@ namespace Platform.Mobs
                 if (!velocity.Equals(Vector2.Zero)) {
                     Vector2 toDisp = velocity;
                     toDisp.Normalize();
+
+                    int tilePositionX = (int)(Position.X / Tile.TILE_WIDTH);
+                    int tilePositionY = (int)(Position.Y / Tile.TILE_WIDTH);
+                    Tile nextTile = null;
+                    try {
+                        nextTile = parent.Tiles[tilePositionY-1, tilePositionX];
+                    }
+                    catch (Exception e) {
+                        nextTile = null;
+                    }
+                    if (nextTile != null) {
+                        previousPosition = new Vector2((tilePositionX + .5f) * Tile.TILE_WIDTH, Position.Y + .1f);
+                    }
+                    
+
 
                     if (velocity.X != 0) {
                         velocity.X = Math.Sign(velocity.X) * (Math.Max(Math.Abs(velocity.X) - movementAccel/2 * Math.Abs(toDisp.X) * timeDifference, 0));
