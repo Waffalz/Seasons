@@ -109,10 +109,13 @@ namespace Platform.Graphics
                         Tile til = parent.Tiles[y, x];
                         if (til != null){
                             spriteBatch.Draw(Game1.CurrentGame.Textures[til.TileSheetName],
+                                //destination rectangle
+                                //*NOTE: -8 to positions and +16 to dimensions are to make the player appear to stand in the grass on blocks instead of on top of the grass
                                 new Rectangle(
-                                    (int)((x * Tile.TILE_WIDTH - position.X) * zoomScale + PointOnScreen.X),
-                                    (int)(-((y + 1) * Tile.TILE_WIDTH - position.Y) * zoomScale + PointOnScreen.Y),
-                                    (int)(Tile.TILE_WIDTH * zoomScale), (int)(Tile.TILE_WIDTH * zoomScale)),
+                                    (int)((x * Tile.TILE_WIDTH - position.X) * zoomScale + PointOnScreen.X - 8),
+                                    (int)(-((y + 1) * Tile.TILE_WIDTH - position.Y) * zoomScale + PointOnScreen.Y - 8),
+                                    (int)(Tile.TILE_WIDTH * zoomScale + 16), (int)(Tile.TILE_WIDTH * zoomScale + 16)),
+                                //source rectangle
                                 new Rectangle(
                                     (til.TileSheetIndex % Tile.VARS) * Tile.TILE_TEX_WIDTH,
                                     (til.TileSheetIndex / Tile.VARS) * Tile.TILE_TEX_WIDTH,

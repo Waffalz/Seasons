@@ -145,7 +145,7 @@ namespace Platform.GameFlow
             //textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
             textures.Add("CircleParticle", Content.Load<Texture2D>("Particles/CircleParticle"));
             textures.Add("ScrollBorder", Content.Load<Texture2D>("GUITextures/ScrollBorder"));
-
+            textures.Add("NewBlocks", Content.Load<Texture2D>("Tiles/NewBlocks"));
             fonts.Add("ButtonFont", Content.Load<SpriteFont>("Fonts/ButtonFont"));
 
         }

@@ -1,10 +1,10 @@
 <
 . = null
-b = Blocks, 0
-g = Blocks, 1
-o = Blocks, 2
-r = Blocks, 3
-y = Blocks, 4
+b = NewBlocks, 0, 0
+g = NewBlocks, 0, 1
+o = NewBlocks, 0, 2
+r = NewBlocks, 0, 3
+y = NewBlocks, 0, 4
 + = Player
 x = Baddu
 >
