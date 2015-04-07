@@ -104,6 +104,10 @@ namespace Platform.Graphics
 
                 }
 
+                foreach (Entity ent in Parent.Entities) {
+                    ent.Draw(gameTime, spriteBatch);
+                }
+
                 for (int y = 0; y < parent.Tiles.GetLength(0); y++){
                     for (int x = 0; x < parent.Tiles.GetLength(1); x++){
                         Tile til = parent.Tiles[y, x];
@@ -126,9 +130,7 @@ namespace Platform.Graphics
                     }
                 }
 
-                foreach (Entity ent in Parent.Entities){
-                    ent.Draw(gameTime, spriteBatch);
-                }
+                
                 
                 foreach (Particle p in Parent.Particles){
                     if (p.Texture != null){

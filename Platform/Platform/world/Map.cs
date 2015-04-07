@@ -33,6 +33,8 @@ namespace Platform.World
         private Player player;
         private float gAccel; //default -150
 
+        private List<Entity> tileEnts;//since I don't wanna make tile to entity collisions, create an entity based off of tiles to check for entity collision
+
         private List<BackgroundObject> backList;
 
         public Tile[,] Tiles
@@ -84,6 +86,8 @@ namespace Platform.World
             cam = new DefaultCamera(this);
             backList = new List<BackgroundObject>();
 
+            tileEnts = new List<Entity>();
+
             for (int i = 0; i < 200; i++) {
 
                 BackgroundObject boi = new BackgroundObject();
@@ -92,10 +96,10 @@ namespace Platform.World
                 boi.Position = new Vector2(Game1.CurrentGame.Rand.Next(-100, 500), Game1.CurrentGame.Rand.Next(-100, 500)) * (2 - boi.Depth);
                 boi.Size = new Vector2(Game1.CurrentGame.Rand.Next(5, 10)) * (boi.Depth / 2 + (float).5);
                 boi.Col = Color.White;
-                boi.Image = Game1.CurrentGame.Textures["Blocks"];
+                boi.Image = Game1.CurrentGame.Textures["NewBlocks"];
                 boi.SrcRect = new Rectangle(
-                                (ro % Tile.VARS) * Tile.TILE_TEX_WIDTH,
-                                (ro / Tile.VARS) * Tile.TILE_TEX_WIDTH,
+                                (ro * 5) * Tile.TILE_TEX_WIDTH,
+                                (ro * 5) * Tile.TILE_TEX_WIDTH,
                                 Tile.TILE_TEX_WIDTH, Tile.TILE_TEX_WIDTH);
                 backList.Add(boi);
 
@@ -139,20 +143,8 @@ namespace Platform.World
             }
             addPList.Clear();
 
-            List<Entity> tileEnts = new List<Entity>();//since I don't wanna make tile to entity collisions, create an entity based off of tiles to check for entity collision
-            for (int y = 0; y<tiles.GetLength(0); y++){
-                for (int x = 0; x<tiles.GetLength(1); x++){
-                    if (tiles[y, x] != null){
-                        Entity lent = new Entity();
-                        lent.Size = new Vector2(Tile.TILE_WIDTH, Tile.TILE_WIDTH);
-                        lent.Position = new Vector2(x * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2, y * Tile.TILE_WIDTH + Tile.TILE_WIDTH/2);
-                        lent.Anchored = true;
-                        lent.Gravity = false;
-                        lent.Solid = true;
-                        tileEnts.Add(lent);
-                    }
-                }
-            }
+            
+            
 
             foreach (Entity ent in entList){ //iterate over each entity in entlist to calculate all happenings
                 Vector2 oldPos = ent.Position;//old position of ent in case we ever need to revert to it
@@ -214,6 +206,25 @@ namespace Platform.World
 
             cam.Update(gameTime);
         }
+
+        public void UpdateTileWorld()
+        {
+            tileEnts = new List<Entity>();
+            for (int y = 0; y < tiles.GetLength(0); y++) {
+                for (int x = 0; x < tiles.GetLength(1); x++) {
+                    if (tiles[y, x] != null) {
+                        Entity lent = new Entity();
+                        lent.Size = new Vector2(Tile.TILE_WIDTH, Tile.TILE_WIDTH);
+                        lent.Position = new Vector2(x * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2, y * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2);
+                        lent.Anchored = true;
+                        lent.Gravity = false;
+                        lent.Solid = true;
+                        tileEnts.Add(lent);
+                    }
+                }
+            }
+        }
+
         //Loading the map into an array to store the initial locations of tiles, enemies, and the player
         public static Map LoadMap2(string pathname)
         {
@@ -302,6 +313,7 @@ namespace Platform.World
                 Console.WriteLine("File couldn't be read.");
                 Console.WriteLine(e.StackTrace);
             }
+            nMap.UpdateTileWorld();
             return nMap;
         }
 

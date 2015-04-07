@@ -11,6 +11,10 @@ Content\Tiles\NewBlocks.xnb
 Content\Tiles\Blocks.png
 Content\Entities\Player.png
 Content\Particles\Square.bmp
+Content\GUITextures\HealthBar.png
+Content\GUITextures\HUDBack.png
+Content\Particles\CircleParticle.png
+Content\GUITextures\ScrollBorder.png
 Content\maps\Level02.txt
 Content\maps\Level01.txt
 Content\maps\Level03.txt
