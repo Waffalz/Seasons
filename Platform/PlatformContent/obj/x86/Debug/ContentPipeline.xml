@@ -7,17 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
-      <Time>2015-02-25T09:18:05.0648762-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Tiles\Platforms.png</Source>
-      <Name>Tiles\Platforms</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb</Output>
-      <Time>2015-02-25T09:18:05.0805015-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
+      <Time>2015-04-02T09:19:03.9533648-05:00</Time>
     </Item>
     <Item>
       <Source>Entities\Player.png</Source>
@@ -25,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
-      <Time>2015-02-25T09:18:04.8617491-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
+      <Time>2015-03-25T09:22:30.1960223-05:00</Time>
     </Item>
     <Item>
       <Source>Particles\Square.bmp</Source>
@@ -34,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
-      <Time>2015-02-25T09:18:05.0336315-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
+      <Time>2015-04-02T09:19:19.3646699-05:00</Time>
     </Item>
     <Item>
       <Source>MenuItems\Seasons_Menu.png</Source>
@@ -43,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-03-03T08:58:44.6553463-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
+      <Time>2015-04-02T10:08:39.0022786-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HealthBar.png</Source>
@@ -52,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
-      <Time>2015-03-26T08:41:03.3762405-05:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
+      <Time>2015-04-02T10:08:38.9802764-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HUDBack.png</Source>
@@ -61,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
-      <Time>2015-03-26T08:41:03.3606139-05:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
+      <Time>2015-04-02T10:08:38.9782762-05:00</Time>
     </Item>
     <Item>
       <Source>Particles\CircleParticle.png</Source>
@@ -70,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
-      <Time>2015-03-26T08:41:03.4543657-05:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
+      <Time>2015-04-02T10:08:39.01628-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\ScrollBorder.png</Source>
@@ -79,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
-      <Time>2015-03-26T08:41:03.3918635-05:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
+      <Time>2015-04-02T10:08:38.9812765-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\ButtonFont.spritefont</Source>
@@ -88,8 +79,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-03-03T08:58:44.5772221-06:00</Time>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
+      <Time>2015-04-02T10:08:38.9872771-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -97,10 +88,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>H:\Documents\GitHub\Seasons\Platform\PlatformContent\</RootDirectory>
-      <LoggerRootDirectory>H:\Documents\GitHub\Seasons\Platform\Platform\</LoggerRootDirectory>
-      <IntermediateDirectory>H:\Documents\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -129,7 +120,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-10-27T09:07:54.8487633-05:00</Value>
+        <Value>2013-05-10T15:10:32.0376459-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

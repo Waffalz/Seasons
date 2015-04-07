@@ -138,7 +138,6 @@ namespace Platform.GameFlow
             // TODO: use this.Content to load your game content here
 
             textures.Add("Blocks", Content.Load<Texture2D>("Tiles/Blocks"));
-            textures.Add("Platforms", Content.Load<Texture2D>("Tiles/Platforms"));
             textures.Add("Player", Content.Load<Texture2D>("Entities/Player"));
             textures.Add("Square", Content.Load<Texture2D>("Particles/Square"));
             textures.Add("MenuBack", Content.Load<Texture2D>("MenuItems/Seasons_Menu"));

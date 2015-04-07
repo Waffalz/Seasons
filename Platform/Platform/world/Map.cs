@@ -208,38 +208,6 @@ namespace Platform.World
             cam.Update(gameTime);
         }
 
-        /* Old Map loading stuff
-        public static Map LoadMap(string pathname)
-        {
-            Map nMap = new Map();
-            try
-            {
-                using (StreamReader file = new StreamReader(pathname)){
-                    int y = 0;
-                    while (!file.EndOfStream)
-                    {
-                        string line = file.ReadLine();
-                        char[] cLine = line.ToCharArray();
-
-                        for (int x = 0; x < line.Length; x++)
-                        {
-                            nMap.Tiles[y, x] = Tile.getTile(cLine[x]);
-                        }
-                        y++;
-                    }
-                }
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine("File couldn't be read.");
-                Console.WriteLine(e.StackTrace);
-            }
-
-            return nMap;
-            
-        }
-        */
-
         public static Map LoadMap2(string pathname)
         {
             Map nMap = new Map();
