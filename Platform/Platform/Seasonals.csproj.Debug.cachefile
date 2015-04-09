@@ -6,8 +6,8 @@ Content\GUITextures\HealthBar.xnb
 Content\GUITextures\HUDBack.xnb
 Content\Particles\CircleParticle.xnb
 Content\GUITextures\ScrollBorder.xnb
-Content\Fonts\ButtonFont.xnb
 Content\Tiles\NewBlocks.xnb
+Content\Fonts\ButtonFont.xnb
 Content\Tiles\Blocks.png
 Content\Entities\Player.png
 Content\Particles\Square.bmp
