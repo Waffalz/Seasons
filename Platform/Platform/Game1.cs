@@ -74,17 +74,17 @@ namespace Platform
             // TODO: use this.Content to load your game content here
 
             tileSheets = new Dictionary<string, Texture2D>();
-            tileSheets.Add("Blocks", Content.Load<Texture2D>("tiles/Blocks"));
-            tileSheets.Add("Platforms", Content.Load<Texture2D>("tiles/Platforms"));
+            tileSheets.Add("Blocks", Content.Load<Texture2D>("Tiles/Blocks"));
+            tileSheets.Add("Platforms", Content.Load<Texture2D>("Tiles/Platforms"));
 
             entSheets = new Dictionary<string, Texture2D>();
-            entSheets.Add("Player", Content.Load<Texture2D>("entities/player"));
+            entSheets.Add("Player", Content.Load<Texture2D>("Entities/player"));
 
             particleSheets = new Dictionary<string, Texture2D>();
-            particleSheets.Add("DefaultParticle", Content.Load<Texture2D>("particles/Square"));
+            particleSheets.Add("DefaultParticle", Content.Load<Texture2D>("Particles/Square"));
 
 
-            mappu = Map.LoadMap2(@"Content/maps/Level02.txt");
+            mappu = Map.LoadMap2(@"Content/Maps/Level02.txt");
             mappu.Cam.PointOnScreen = new Point(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
             mappu.BackList.Sort();
 
