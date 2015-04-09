@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Time>2015-04-09T09:22:52-05:00</Time>
     </Item>
     <Item>
       <Source>Entities\Player.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-04-07T09:15:06-05:00</Time>
+      <Time>2015-04-09T09:22:52-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\HealthBar.png</Source>
@@ -89,7 +89,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-04-07T09:15:06-05:00</Time>
+      <Time>2015-04-09T09:22:52-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
