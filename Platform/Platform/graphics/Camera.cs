@@ -104,6 +104,11 @@ namespace Platform.Graphics
 
                 }
 
+                foreach (Entity ent in Parent.Entities)
+                {
+                    ent.Draw(gameTime, spriteBatch);
+                }
+
                 for (int y = 0; y < parent.Tiles.GetLength(0); y++){
                     for (int x = 0; x < parent.Tiles.GetLength(1); x++){
                         Tile til = parent.Tiles[y, x];
@@ -112,9 +117,9 @@ namespace Platform.Graphics
                                 //destination rectangle
                                 //*NOTE: -8 to positions and +16 to dimensions are to make the player appear to stand in the grass on blocks instead of on top of the grass
                                 new Rectangle(
-                                    (int)((x * Tile.TILE_WIDTH - position.X) * zoomScale + PointOnScreen.X - 8),
-                                    (int)(-((y + 1) * Tile.TILE_WIDTH - position.Y) * zoomScale + PointOnScreen.Y - 8),
-                                    (int)(Tile.TILE_WIDTH * zoomScale + 16), (int)(Tile.TILE_WIDTH * zoomScale + 16)),
+                                    (int)((x * Tile.TILE_WIDTH - position.X - 8f/Tile.TILE_TEX_WIDTH*Tile.TILE_WIDTH) * zoomScale + PointOnScreen.X),
+                                    (int)(-((y + 1) * Tile.TILE_WIDTH - position.Y + 8f / Tile.TILE_TEX_WIDTH * Tile.TILE_WIDTH) * zoomScale + PointOnScreen.Y),
+                                    (int)((1 + 16f / Tile.TILE_TEX_WIDTH) * Tile.TILE_WIDTH * zoomScale), (int)((1 + 16f / Tile.TILE_TEX_WIDTH) * Tile.TILE_WIDTH * zoomScale)),
                                 //source rectangle
                                 new Rectangle(
                                     (til.TileSheetRow) * Tile.TILE_TEX_WIDTH,
@@ -124,10 +129,6 @@ namespace Platform.Graphics
 
                         }
                     }
-                }
-
-                foreach (Entity ent in Parent.Entities){
-                    ent.Draw(gameTime, spriteBatch);
                 }
                 
                 foreach (Particle p in Parent.Particles){
