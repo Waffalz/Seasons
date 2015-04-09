@@ -1,7 +1,7 @@
 Content\tiles\Blocks.xnb
 Content\tiles\Platforms.xnb
 Content\entities\player.xnb
-Content\Particles\Square.xnb
+Content\particles\Square.xnb
 Content\MenuItems\Seasons_Menu.xnb
 Content\GUITextures\HealthBar.xnb
 Content\GUITextures\HUDBack.xnb
