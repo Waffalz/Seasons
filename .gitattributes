@@ -37,6 +37,15 @@ Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentprojResolveAssembl
 Platform\PlatformContent\particles\ binary merge=ours
 Platform\PlatformContent\tiles\ binary merge=ours
 
+Platform\PlatformContent\SeasonsContent.contentproj merge=text
+Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentproj.FileListAbsolute.txt merge=text
+Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache binary merge=ours
+Platform\PlatformContent\Entities\ binary merge=ours
+Platform\PlatformContent\Maps\ merge=text
+Platform\PlatformContent\Particles\ binary merge=ours
+Platform\PlatformContent\Tiles\ binary merge=ours
+
+Platform\Platform\ai\ merge=text
 Platform\Platform\AI\ merge=text
 Platform\Platform\bin\x86\Debug\ binary merge=ours
 Platform\Platform\graphics\ merge=text
@@ -52,3 +61,12 @@ Platform\Platform\Platform.csproj merge=text
 Platform\Platform\Platform.csproj.Debug.cachefile merge=text
 Platform\Platform\Platform.csproj.user merge=text
 Platform\Platform\Program.cs merge=text
+
+Platform\Platform\Characters\ merge=text
+Platform\Platform\Control\ merge=text
+Platform\Platform\GameFlow\ merge=text
+Platform\Platform\Projectiles\ merge=text
+Platform\Platform\UserInterface\ merge=text
+Platform\Platform\Seasonals.csproj merge=text
+Platform\Platform\Seasonals.csproj.Debug.cachefile merge=text
+Platform\Platform\Seasonals.csproj.user merge=text
