@@ -168,16 +168,11 @@ namespace Platform.Mobs
             foreach (Entity tilent in ents) { //Tile collisions
                 System.Drawing.RectangleF otherRekt = tilent.Rekt;
                 if (thisRekt.IntersectsWith(otherRekt)) {
-                    if (oldPos.Y + Size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
-
-                        Position = new Vector2(Position.X, tilent.Position.Y - (tilent.Size.Y + Size.Y) / 2);
-                        velocity = new Vector2(velocity.X, 0);
-                    }
-
                     if (oldPos.X - Size.X / 2 >= tilent.Position.X + tilent.Size.X / 2) {// if ent is to the right of tile 
 
                         Position = new Vector2(tilent.Position.X + (tilent.Size.X + Size.X) / 2, Position.Y);
                         velocity = new Vector2(0, velocity.Y);
+                        //walkVelocity = new Vector2(0, walkVelocity.Y);
                         OnCollide(tilent);
                         continue;
                     }
@@ -185,6 +180,7 @@ namespace Platform.Mobs
 
                         Position = new Vector2(tilent.Position.X - (tilent.Size.X + Size.X) / 2, Position.Y);
                         velocity = new Vector2(0, velocity.Y);
+                        //walkVelocity = new Vector2(0, walkVelocity.Y);
                         OnCollide(tilent);
                         continue;
 
@@ -193,6 +189,12 @@ namespace Platform.Mobs
                         Position = new Vector2(Position.X, tilent.Position.Y + (tilent.Size.Y + Size.Y) / 2);
                         velocity = new Vector2(velocity.X, 0);
                         OnGround = true;
+                    }
+                    if (oldPos.Y + Size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2)
+                    {// if ent is under tile
+
+                        Position = new Vector2(Position.X, tilent.Position.Y - (tilent.Size.Y + Size.Y) / 2);
+                        velocity = new Vector2(velocity.X, 0);
                     }
                     OnCollide(tilent);
                 }

@@ -34,8 +34,5 @@ namespace Platform.World
         {
             return new Tile(sheetName, colorRow, colorCol);
         }
-
-        
-
     }
 }

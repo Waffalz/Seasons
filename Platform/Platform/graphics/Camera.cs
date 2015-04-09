@@ -135,13 +135,7 @@ namespace Platform.Graphics
                         p.Draw(gameTime, spriteBatch);
                     }
                 }
-                
-
-
-
             }
-
         }
     }
-
 }

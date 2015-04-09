@@ -1,21 +1,33 @@
 <
 . = null
-b = Blocks, 0
-g = Blocks, 1
-o = Blocks, 2
-r = Blocks, 3
-y = Blocks, 4
+q = NewBlocks, 0, 0
+w = NewBlocks, 1, 0
+e = NewBlocks, 2, 0
+r = NewBlocks, 3, 0
+t = NewBlocks, 4, 0
+a = NewBlocks, 0, 1
+s = NewBlocks, 2, 1
+d = NewBlocks, 4, 1
+f = NewBlocks, 2, 2
+z = NewBlocks, 0, 3
+c = NewBlocks, 2, 3
+v = NewBlocks, 4, 3
+y = NewBlocks, 0, 4
+u = NewBlocks, 1, 4
+i = NewBlocks, 2, 4
+o = NewBlocks, 3, 4
+p = NewBlocks, 4, 4
 + = Player
 x = Baddu
 >
-r...............................................x..................................................b
-o......................+.......................oryg................................................g
-r....................grbor.........................................................................y
-y...................yorgobg.........rogyg...........robyr.......................byr.......bygor....b
-o..................rroggybob...................................................by.go.....rg...ob...g
-g.................gyobyrgbogb..............robg..............byro..................................g
-b................ggrygobrogyby.............................roggyobg...................gobr.........o
-y...............rgborgybrogbory...........................gryborgyro.................by..ro........b
-o..............orygborgybgorygbg.........................byrogyrogbyr..............................r
-b.............gorygrobgrygborygbr.......................rygobyrogybrgo.............................r
-rrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoyrrbbggooyyrbgoyrbgoy
+w...............................................x..................................................r
+a......................+.......................qsst................................................d
+a....................wsssr.........................................................................d
+a...................wfffffr.........qssst...........qssst.......................wsr.......wsssr....d
+a..................wfffffffr.................................wssr..............qf.ft.....qf...ft...d
+a.................wfffffffffr..............qsst.............wffffr.................................d
+a................wfffffffffffr.............................wffffffr...................wssr.........d
+a...............wfffffffffffffr...........................wffffffffr.................qf..ft........d
+a..............wfffffffffffffffr.........................wffffffffffr..............................d
+a.............wfffffffffffffffffr.......................wffffffffffffr.............................d
+yuuououououooououououoououououoouoouououououououoouououououoououououuuuuooououououououuuouoooououuup

@@ -25,7 +25,7 @@ namespace Platform.Graphics
             maxMouseExtend = 200;
         }
 
-       /* public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             if (parent.Player != null) {
                 origin = parent.Player.Position;
@@ -53,12 +53,10 @@ namespace Platform.Graphics
                 position = origin;
             }
         }
-        */
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            /*
+        {/*
+            
             if (parent != null) {
-
 
                 for (int i = 0; i < parent.BackList.Count; i++) {//draw background
 
@@ -103,7 +101,8 @@ namespace Platform.Graphics
                         p.Draw(gameTime, spriteBatch);
                     }
                 }
-            }*/
+            }
+            */
         }
     }
 }
