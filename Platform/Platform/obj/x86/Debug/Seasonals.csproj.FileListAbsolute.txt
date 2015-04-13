@@ -86,17 +86,12 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\Bu
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.bmp
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
@@ -127,3 +122,8 @@ H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level2.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level1.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level3.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level4.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level5.txt

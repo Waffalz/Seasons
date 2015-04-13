@@ -55,8 +55,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
-    <None Include="maps\Level02.txt">
-      <Name>Level02</Name>
+    <None Include="maps\Level2.txt">
+      <Name>Level2</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -105,20 +105,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="maps\Level01.txt">
-      <Name>Level01</Name>
+    <None Include="maps\Level1.txt">
+      <Name>Level1</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="maps\Level03.txt">
-      <Name>Level03</Name>
+    <None Include="maps\Level3.txt">
+      <Name>Level3</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="maps\Level04.txt">
-      <Name>Level04</Name>
+    <None Include="maps\Level4.txt">
+      <Name>Level4</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="maps\Level05.txt">
-      <Name>Level05</Name>
+    <None Include="maps\Level5.txt">
+      <Name>Level5</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

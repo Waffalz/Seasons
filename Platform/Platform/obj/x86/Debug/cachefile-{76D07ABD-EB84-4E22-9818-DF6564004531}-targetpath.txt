@@ -11,8 +11,8 @@ Content\Tiles\NewBlocks.xnb
 Content\Tiles\Blocks.png
 Content\Entities\Player.png
 Content\Particles\Square.bmp
-Content\maps\Level02.txt
-Content\maps\Level01.txt
-Content\maps\Level03.txt
-Content\maps\Level04.txt
-Content\maps\Level05.txt
+Content\maps\Level2.txt
+Content\maps\Level1.txt
+Content\maps\Level3.txt
+Content\maps\Level4.txt
+Content\maps\Level5.txt

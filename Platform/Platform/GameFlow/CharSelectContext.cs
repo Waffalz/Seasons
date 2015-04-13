@@ -15,8 +15,15 @@ namespace Platform.GameFlow
 {
     class CharSelectContext: GameContext
     {
-        private enum CharType { Spring, Summer, Autumn, Winter, None }
+        private enum CharType { Spring, Summer, Autumn, Winter, None, Test }
 
+        int level = 1;
+
+        public int Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
 
         UIComponent gui;
 
@@ -71,12 +78,13 @@ namespace Platform.GameFlow
             charName.Border = UIBorder.Scroll;
             charName.borderSize = 20;
             gui.Add(charName);
+            UIButton testSelect = new UIButton(new Rectangle(370, 260, 150, 150), delegate() { selected = CharType.Test; charName.text = "testPlayer"; charDesc.text = "testDesc"; }, "test");
+            gui.Add(testSelect);
 
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
                 selected = CharType.Spring;
                 charName.text = "SPRINGNAME";
-                charDesc.text = 
-                    "SPRINDESC";
+                charDesc.text = "SPRINDESC";
                 //TODO: set splash for selected char
             }, "Spring");
             gui.Add(springSelect);
@@ -115,12 +123,13 @@ namespace Platform.GameFlow
                     case CharType.Summer: ploy = new SummerCharacter(); break;
                     case CharType.Autumn: ploy = new AutumnCharacter(); break;
                     case CharType.Winter: ploy = new WinterCharacter(); break;
+                    case CharType.Test: ploy = new TestPlayer(); break;
                     default: Game1.CurrentGame.Player = new TestPlayer(); break;
                 }
                 
                 Game1.CurrentGame.Player = ploy;
                 
-                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level01.txt");
+                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level"+level+".txt");
                 nextSlide.CombatWorld.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);
 
             }, "Start Game");
