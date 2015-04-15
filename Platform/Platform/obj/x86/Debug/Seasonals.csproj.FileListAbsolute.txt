@@ -127,3 +127,7 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Lev
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level3.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level4.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level5.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\BackPortal.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\ForwardPortal.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Sound\Game Soundtrack.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Sound\Game Soundtrack.wma

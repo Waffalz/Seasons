@@ -84,6 +84,8 @@ namespace Platform.GameFlow
             set { player = value; }
         }
 
+        public Song gameMusic;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -146,7 +148,14 @@ namespace Platform.GameFlow
             textures.Add("CircleParticle", Content.Load<Texture2D>("Particles/CircleParticle"));
             textures.Add("ScrollBorder", Content.Load<Texture2D>("GUITextures/ScrollBorder"));
             textures.Add("NewBlocks", Content.Load<Texture2D>("Tiles/NewBlocks"));
+            textures.Add("BackPortal", Content.Load<Texture2D>("Tiles/BackPortal"));
+            textures.Add("ForwardPortal", Content.Load<Texture2D>("Tiles/ForwardPortal"));
             fonts.Add("ButtonFont", Content.Load<SpriteFont>("Fonts/ButtonFont"));
+
+            gameMusic = Content.Load<Song>("Sound/Game Soundtrack");
+            MediaPlayer.Play(gameMusic);
+            MediaPlayer.IsRepeating = true;
+
 
         }
 
@@ -173,7 +182,6 @@ namespace Platform.GameFlow
             // TODO: Add your update logic here
             kipz = Keyboard.GetState();
             mus = Microsoft.Xna.Framework.Input.Mouse.GetState();
-
 
             gameMode.Update(gameTime);
 

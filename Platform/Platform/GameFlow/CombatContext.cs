@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Platform.World;
 using Platform.Graphics;
 using Platform.UserInterface;
+using Microsoft.Xna.Framework.Media;
 
 namespace Platform.GameFlow
 {
@@ -104,18 +105,21 @@ namespace Platform.GameFlow
             MouseState oMus = Game1.CurrentGame.OldMouseInput;
             int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
 
+
             if (!paused)
             {
                 world.Tick(gameTime); //update stuff in the Map
                 gameHUD.visible = true;
                 pauseMenu.visible = false; 
                 gameHUD.Update(gameTime);
+                MediaPlayer.Resume();
                 
             }
             else
             {
                 pauseMenu.visible = true;
                 pauseMenu.Update(gameTime);
+                MediaPlayer.Pause();
             }
 
             if (kipz.IsKeyDown(Keys.Escape) && !oKipz.IsKeyDown(Keys.Escape)){

@@ -91,6 +91,34 @@
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb</Output>
       <Time>2015-04-07T09:36:31.7494357-05:00</Time>
     </Item>
+    <Item>
+      <Source>Tiles\BackPortal.png</Source>
+      <Name>Tiles\BackPortal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\BackPortal.xnb</Output>
+      <Time>2015-04-13T09:51:07.584077-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\ForwardPortal.png</Source>
+      <Name>Tiles\ForwardPortal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\ForwardPortal.xnb</Output>
+      <Time>2015-04-13T09:51:23.6410258-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sound\Game Soundtrack.mp3</Source>
+      <Name>Sound\Game Soundtrack</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Sound\Game Soundtrack.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Sound\Game Soundtrack.wma</Extra>
+      <Time>2015-04-15T08:48:59.7063376-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
