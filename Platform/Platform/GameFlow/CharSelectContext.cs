@@ -83,16 +83,16 @@ namespace Platform.GameFlow
 
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
                 selected = CharType.Spring;
-                charName.text = "SPRINGNAME";
-                charDesc.text = "SPRINDESC";
+                charName.text = "Anoixi";
+                charDesc.text = "A member of royalty for the kingdom of the Geogon, or Earthborn, who have a special affinity\nwith plants and the natural world. However, humans have indirectly wiped out her race as a\nresult of industrialization.";
                 //TODO: set splash for selected char
             }, "Spring");
             gui.Add(springSelect);
 
             UIButton summerSelect = new UIButton(new Rectangle(210, 100, 150, 150), delegate() {
                 selected = CharType.Summer;
-                charName.text = "SUMMERNAME";
-                charDesc.text = "SUMMERDESC";
+                charName.text = "Kalokairi";
+                charDesc.text = "Formerly a priest to Pelor, the Sun god. He died a heroic death protecting a city from invasion\nby demons.";
                 //TODO: set splash for selected char
 
             }, "Summer");
@@ -100,15 +100,15 @@ namespace Platform.GameFlow
 
             UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate() {
                 selected = CharType.Autumn;
-                charName.text = "AUTUMNNAME";
-                charDesc.text = "AUTUMNDESC";
+                charName.text = "Akichira";
+                charDesc.text = "A poor, kindhearted girl, the Titan of Autumn took pity on her for her kindness when she starved\nto death, and made her his envoy.";
                 //TODO: set splash for selected char
             }, "Autumn");
             gui.Add(autumnSelect);
 
             UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
                 selected = CharType.Winter;
-                charName.text = "WINTERNAME";
+                charName.text = "Zima";
                 charDesc.text = "WINTERDESC";
                 //TODO: set splash for selected char
             }, "Winter");
