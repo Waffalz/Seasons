@@ -109,7 +109,7 @@ namespace Platform.GameFlow
             UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
                 selected = CharType.Winter;
                 charName.text = "Zima";
-                charDesc.text = "WINTERDESC";
+                charDesc.text = "During an enemy raid of his city, Zimo\'s wife sacrificed herself to save him. Stricken with\ngrief, Zimo hung himself. By the time the previous Envoy of Winter found him, Zimo was already\npartially gone.";
                 //TODO: set splash for selected char
             }, "Winter");
             gui.Add(winterSelect);
