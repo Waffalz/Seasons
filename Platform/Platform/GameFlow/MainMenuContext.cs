@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 using Platform.UserInterface;
 using Platform.Mobs;
+using Microsoft.Xna.Framework.Media;
 
 namespace Platform.GameFlow
 {
@@ -37,19 +38,63 @@ namespace Platform.GameFlow
             startButton.Border = UIBorder.Scroll;
             gui.Add(startButton);
 
-            UIButton controlButton = new UIButton(new Rectangle(0, 410, 300, 60), delegate()
+            UIButton controlButton = new UIButton(new Rectangle(0, 480, 300, 60), delegate()
             {
                 Game1.CurrentGame.GameMode = new ControlContext(this);
             }, "Controls");
             controlButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - controlButton.bounds.Width) / 2;
             gui.Add(controlButton);
 
-            UIButton exitButton = new UIButton(new Rectangle(0, 480, 300, 60), delegate()
+            UIButton exitButton = new UIButton(new Rectangle(0, 550, 300, 60), delegate()
             {
                 Game1.CurrentGame.Exit();
             }, "Exit");
             exitButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - exitButton.bounds.Width) / 2;
             gui.Add(exitButton);
+            MediaPlayer.Volume = 1.0f;
+
+        }
+
+        public MainMenuContext(GameContext lastContext)
+        {
+            gui = new UIComponent();
+            gui.texture = Game1.CurrentGame.Textures["MenuBack"];
+            gui.sourceRect = gui.texture.Bounds;
+            gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
+            gui.color = Color.White;
+
+            UIButton startButton = new UIButton(new Rectangle(0, 300, 300, 100), delegate()
+            {
+                Game1.CurrentGame.GameMode = new CharSelectContext();
+            }, "New Game");
+            startButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - startButton.bounds.Width) / 2;
+            startButton.Border = UIBorder.Scroll;
+            gui.Add(startButton);
+
+            if (lastContext is CombatContext)
+            {
+                UIButton resumeGameButton = new UIButton(new Rectangle(1, 410, 300, 60), delegate()
+                {
+                    Game1.CurrentGame.GameMode = lastContext;
+                }, "Resume Game");
+                resumeGameButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - resumeGameButton.bounds.Width) / 2;
+                gui.Add(resumeGameButton);
+            }
+
+            UIButton controlButton = new UIButton(new Rectangle(0, 480, 300, 60), delegate()
+            {
+                Game1.CurrentGame.GameMode = new ControlContext(this);
+            }, "Controls");
+            controlButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - controlButton.bounds.Width) / 2;
+            gui.Add(controlButton);
+
+            UIButton exitButton = new UIButton(new Rectangle(0, 550, 300, 60), delegate()
+            {
+                Game1.CurrentGame.Exit();
+            }, "Exit");
+            exitButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - exitButton.bounds.Width) / 2;
+            gui.Add(exitButton);
+            MediaPlayer.Volume = 1.0f;
 
         }
 

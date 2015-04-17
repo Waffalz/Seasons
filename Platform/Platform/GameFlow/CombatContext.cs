@@ -83,7 +83,7 @@ namespace Platform.GameFlow
             pauseMenu.color = new Color(0, 0, 0, 100);
 
             //Pause menu button for going back to the main menu
-            UIButton menuButton = new UIButton(new Rectangle(10, 10, 200, 100), delegate() { Game1.CurrentGame.GameMode = new MainMenuContext(); });
+            UIButton menuButton = new UIButton(new Rectangle(10, 10, 200, 100), delegate() { Game1.CurrentGame.GameMode = new MainMenuContext(this); });
             menuButton.text = "Main menu";
             pauseMenu.Add(menuButton);
             
@@ -118,14 +118,14 @@ namespace Platform.GameFlow
                 gameHUD.visible = true;
                 pauseMenu.visible = false; 
                 gameHUD.Update(gameTime);
-                MediaPlayer.Resume();
+                MediaPlayer.Volume = 1.0f;
                 
             }
             else
             {
                 pauseMenu.visible = true;
                 pauseMenu.Update(gameTime);
-                MediaPlayer.Pause();
+                MediaPlayer.Volume = .4f;
             }
 
             if (kipz.IsKeyDown(Keys.Escape) && !oKipz.IsKeyDown(Keys.Escape)){
