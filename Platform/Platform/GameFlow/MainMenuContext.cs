@@ -37,11 +37,18 @@ namespace Platform.GameFlow
             startButton.Border = UIBorder.Scroll;
             gui.Add(startButton);
 
+            UIButton controlButton = new UIButton(new Rectangle(0, 410, 300, 60), delegate()
+            {
+                Game1.CurrentGame.GameMode = new ControlContext();
+            }, "Controls");
+            gui.Add(controlButton);
+            controlButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - controlButton.bounds.Width) / 2;
+
             UIButton exitButton = new UIButton(new Rectangle(0, 480, 300, 60), delegate()
             {
                 Game1.CurrentGame.Exit();
             }, "Exit");
-            exitButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - startButton.bounds.Width) / 2;
+            exitButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - exitButton.bounds.Width) / 2;
             gui.Add(exitButton);
 
         }

@@ -115,6 +115,7 @@
     <Compile Include="Characters\WinterCharacter.cs" />
     <Compile Include="GameFlow\CharSelectContext.cs" />
     <Compile Include="GameFlow\CombatContext.cs" />
+    <Compile Include="GameFlow\ControlContext.cs" />
     <Compile Include="GameFlow\GameContext.cs" />
     <Compile Include="GameFlow\MainMenuContext.cs" />
     <Compile Include="Graphics\BackgroundObject.cs" />
