@@ -42,100 +42,100 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tiles\Blocks.png">
-      <Name>Blocks</Name>
+    <Compile Include="Tiles\blocks.png">
+      <Name>blocks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fonts\ButtonFont.spritefont">
-      <Name>ButtonFont</Name>
+    <Compile Include="Fonts\buttonFont.spritefont">
+      <Name>buttonFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
-    <None Include="maps\Level02.txt">
-      <Name>Level02</Name>
+    <None Include="Maps\level02.txt">
+      <Name>level02</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Player.png">
-      <Name>Player</Name>
+    <Compile Include="Entities\player.png">
+      <Name>player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Particles\Square.bmp">
-      <Name>Square</Name>
+    <Compile Include="Particles\square.bmp">
+      <Name>square</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuItems\Seasons_Menu.png">
-      <Name>Seasons_Menu</Name>
+    <Compile Include="MenuItems\seasonsMenu.png">
+      <Name>seasonsMenu</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUITextures\HealthBar.png">
-      <Name>HealthBar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="GUITextures\HUDBack.png">
-      <Name>HUDBack</Name>
+    <Compile Include="GUITextures\healthBar.png">
+      <Name>healthBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Particles\CircleParticle.png">
-      <Name>CircleParticle</Name>
+    <Compile Include="GUITextures\hUDBack.png">
+      <Name>hUDBack</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="maps\Level01.txt">
-      <Name>Level01</Name>
+    <Compile Include="Particles\circleParticle.png">
+      <Name>circleParticle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maps\level01.txt">
+      <Name>level01</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="maps\Level03.txt">
-      <Name>Level03</Name>
+    <None Include="Maps\level03.txt">
+      <Name>level03</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="maps\Level04.txt">
-      <Name>Level04</Name>
+    <None Include="Maps\level04.txt">
+      <Name>level04</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="maps\Level05.txt">
-      <Name>Level05</Name>
+    <None Include="Maps\level05.txt">
+      <Name>level05</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUITextures\ScrollBorder.png">
-      <Name>ScrollBorder</Name>
+    <Compile Include="GUITextures\scrollBorder.png">
+      <Name>scrollBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tiles\NewBlocks.png">
-      <Name>NewBlocks</Name>
+    <Compile Include="Tiles\newBlocks.png">
+      <Name>newBlocks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

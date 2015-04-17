@@ -10,36 +10,15 @@ using Platform.Graphics;
 
 using System.Drawing;
 
+namespace Platform.World {
 
-namespace Platform.World
-{
-    public class Entity
-    {
+    public class Entity {
 
-        protected Texture2D texture;
-        protected Microsoft.Xna.Framework.Rectangle sourceRect;
-
-        internal protected Map parent;
-        private Vector2 position;
-        private Vector2 size;
-        protected Vector2 velocity;
-        protected bool gravity;
-        protected bool anchored;
-        protected bool solid;
-        protected Microsoft.Xna.Framework.Color color;
-
-        protected Vector2 oldPos;
-
-        private AnimationState animState;
-
-        protected RectangleF rect;
-
-        public RectangleF Rekt
+		public RectangleF Rekt
         {
             get { return rect; }
             
         }
-        
         public virtual Map Parent
         {
             get { return parent; }
@@ -53,7 +32,6 @@ namespace Platform.World
                 parent = value;
             }
         }
-
         public Vector2 Position
         {
             get { return position; }
@@ -116,7 +94,65 @@ namespace Platform.World
             }
         }
 
-        public Entity()
+		internal protected Map parent;
+        protected Texture2D texture;
+        protected Microsoft.Xna.Framework.Rectangle sourceRect;
+        protected Vector2 velocity;
+        protected bool gravity;
+        protected bool anchored;
+        protected bool solid;
+        protected Microsoft.Xna.Framework.Color color;
+        protected Vector2 oldPos;
+        protected RectangleF rect;
+
+		private Vector2 position;
+        private Vector2 size;
+		private AnimationState animState;
+		private int damage;
+
+		protected int maxHealth;
+		protected int health;
+		protected int attack;
+		protected int defense;
+
+		protected Vector2 previousPos;
+
+		protected Vector2 walkVelocity;
+		protected float walkSpeed;
+		protected float jumpSpeed;
+		protected bool onGround;
+
+		protected float movementAccel;
+		protected float airControl;
+
+		protected float AirControl {
+			get {
+				return airControl;
+			}
+			set {
+				airControl = value;
+			}
+		}
+		public Vector2 WalkVelocity {
+			get {
+				return walkVelocity;
+			}
+			set {
+				walkVelocity = value;
+			}
+		}
+		public float WalkSpeed {
+			get {
+				return walkSpeed;
+			}
+			set {
+				walkSpeed = value;
+			}
+		}
+		public 
+
+
+		protected Entity()
         {
             position = new Vector2();
             size = new Vector2();
@@ -128,10 +164,11 @@ namespace Platform.World
             color = Microsoft.Xna.Framework.Color.White;
             oldPos = position;
             rect = new RectangleF(this.position.X - this.size.X / 2, -(this.position.Y + this.size.Y / 2), this.size.X, this.size.Y);
+			damage = 0;
         }
+		
 
         public virtual void OnCollide(Entity other){
-
         }
 
         public bool Collides(Entity other)
@@ -142,8 +179,17 @@ namespace Platform.World
         public void Destroy()
         {
             Parent = null;
-
         }
+
+		public int Damage {
+			get {
+				return damage;
+			}
+			set {
+				damage = value;
+			}
+
+		}
 
         public virtual void Update(GameTime gameTime)
         {
@@ -173,7 +219,6 @@ namespace Platform.World
                     sourceRect, color);
             }
         }
-
 
         public virtual void CorrectCollisionPosition(List<Entity> ents)
         {
@@ -210,5 +255,11 @@ namespace Platform.World
                 }
             }
         }
-    }
+
+		//public RectangleF getRekt() {
+		//    return new RectangleF( this.position.X - this.size.X / 2, -( this.position.Y + this.size.Y / 2 ), this.size.X, this.size.Y );
+		//}
+
+	}
+
 }

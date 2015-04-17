@@ -108,6 +108,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ai\AIBase.cs" />
+    <Compile Include="ai\AIPathing.cs" />
+    <Compile Include="ai\AIBasicEnemy.cs" />
     <Compile Include="characters\AutumnCharacter.cs" />
     <Compile Include="characters\SpringCharacter.cs" />
     <Compile Include="characters\SummerCharacter.cs" />
@@ -120,6 +123,7 @@
     <Compile Include="graphics\BackgroundObject.cs" />
     <Compile Include="graphics\LookCamera.cs" />
     <Compile Include="graphics\AnimationState.cs" />
+    <Compile Include="lib\PriorityQueue.cs" />
     <Compile Include="mobs\Baddu.cs" />
     <Compile Include="mobs\Ball.cs" />
     <Compile Include="mobs\Behavior.cs" />
@@ -130,11 +134,11 @@
     <Compile Include="control\ContinuousAction.cs" />
     <Compile Include="control\OnceAction.cs" />
     <Compile Include="projectiles\BasicSeed.cs" />
-    <Compile Include="UserInterface\UIButton.cs" />
-    <Compile Include="UserInterface\UIComponent.cs" />
-    <Compile Include="UserInterface\UIHealthBar.cs" />
-    <Compile Include="UserInterface\UILabel.cs" />
-    <Compile Include="UserInterface\UIStatusBar.cs" />
+    <Compile Include="ui\UIButton.cs" />
+    <Compile Include="ui\UIComponent.cs" />
+    <Compile Include="ui\UIHealthBar.cs" />
+    <Compile Include="ui\UILabel.cs" />
+    <Compile Include="ui\UIStatusBar.cs" />
     <Compile Include="world\Entity.cs" />
     <Compile Include="world\Map.cs" />
     <Compile Include="mobs\Player.cs" />

@@ -2,94 +2,94 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Tiles\Blocks.png</Source>
-      <Name>Tiles\Blocks</Name>
+      <Source>Tiles\blocks.png</Source>
+      <Name>Tiles\blocks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>Entities\Player.png</Source>
-      <Name>Entities\Player</Name>
+      <Source>Entities\player.png</Source>
+      <Name>Entities\player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\player.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>Particles\Square.bmp</Source>
-      <Name>Particles\Square</Name>
+      <Source>Particles\square.bmp</Source>
+      <Name>Particles\square</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
-      <Time>2015-04-02T10:02:52-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>MenuItems\Seasons_Menu.png</Source>
-      <Name>MenuItems\Seasons_Menu</Name>
+      <Source>MenuItems\seasonsMenu.png</Source>
+      <Name>MenuItems\seasonsMenu</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-04-09T08:51:54-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\seasonsMenu.xnb</Output>
+      <Time>2015-04-12T20:38:26-05:00</Time>
     </Item>
     <Item>
-      <Source>GUITextures\HealthBar.png</Source>
-      <Name>GUITextures\HealthBar</Name>
+      <Source>GUITextures\healthBar.png</Source>
+      <Name>GUITextures\healthBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
-      <Time>2015-04-07T09:15:06-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>GUITextures\HUDBack.png</Source>
-      <Name>GUITextures\HUDBack</Name>
+      <Source>GUITextures\hUDBack.png</Source>
+      <Name>GUITextures\hUDBack</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
-      <Time>2015-04-07T09:15:06-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>Particles\CircleParticle.png</Source>
-      <Name>Particles\CircleParticle</Name>
+      <Source>Particles\circleParticle.png</Source>
+      <Name>Particles\circleParticle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
-      <Time>2015-04-07T09:15:06-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>GUITextures\ScrollBorder.png</Source>
-      <Name>GUITextures\ScrollBorder</Name>
+      <Source>GUITextures\scrollBorder.png</Source>
+      <Name>GUITextures\scrollBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
-      <Time>2015-04-07T09:15:06-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>Tiles\NewBlocks.png</Source>
-      <Name>Tiles\NewBlocks</Name>
+      <Source>Tiles\newBlocks.png</Source>
+      <Name>Tiles\newBlocks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb</Output>
-      <Time>2015-04-09T08:51:54-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\newBlocks.xnb</Output>
+      <Time>2015-04-12T20:37:12-05:00</Time>
     </Item>
     <Item>
-      <Source>Fonts\ButtonFont.spritefont</Source>
-      <Name>Fonts\ButtonFont</Name>
+      <Source>Fonts\buttonFont.spritefont</Source>
+      <Name>Fonts\buttonFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-04-09T08:51:54-05:00</Time>
+      <Output>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb</Output>
+      <Time>2015-04-12T20:38:26-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -97,10 +97,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\PlatformContent\</RootDirectory>
-      <LoggerRootDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\</LoggerRootDirectory>
-      <IntermediateDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>F:\Video_Game_Design\Seasons\Platform\PlatformContent\</RootDirectory>
+      <LoggerRootDirectory>F:\Video_Game_Design\Seasons\Platform\Platform\</LoggerRootDirectory>
+      <IntermediateDirectory>F:\Video_Game_Design\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

@@ -5,3 +5,5 @@ C:\Users\116162\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsCo
 C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
 F:\Video_Game_Design\New folder\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
+H:\Video_Game_Design\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
+F:\Video_Game_Design\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
