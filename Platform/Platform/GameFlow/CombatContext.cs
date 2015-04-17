@@ -92,8 +92,10 @@ namespace Platform.GameFlow
             quitButton.text = "Quit game";
             pauseMenu.Add(quitButton);
 
-            UIButton controlButton = new UIButton(new Rectangle(10, 120, 200, 100), delegate() {Game1.CurrentGame.Exit(); });
-            controlButton.text = "Controls";
+            UIButton controlButton = new UIButton(new Rectangle(10, 120, 200, 100), delegate()
+            {
+                Game1.CurrentGame.GameMode = new ControlContext(this);
+            }, "Controls");
             pauseMenu.Add(controlButton);
 
             gameHUD.visible = true;

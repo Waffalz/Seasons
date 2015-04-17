@@ -39,10 +39,10 @@ namespace Platform.GameFlow
 
             UIButton controlButton = new UIButton(new Rectangle(0, 410, 300, 60), delegate()
             {
-                Game1.CurrentGame.GameMode = new ControlContext();
+                Game1.CurrentGame.GameMode = new ControlContext(this);
             }, "Controls");
-            gui.Add(controlButton);
             controlButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - controlButton.bounds.Width) / 2;
+            gui.Add(controlButton);
 
             UIButton exitButton = new UIButton(new Rectangle(0, 480, 300, 60), delegate()
             {

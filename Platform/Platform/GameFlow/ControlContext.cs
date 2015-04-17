@@ -19,7 +19,7 @@ namespace Platform.GameFlow
             set { gui = value; }
         }
 
-        public ControlContext()
+        public ControlContext(GameContext lastContext)
         {
             gui = new UIComponent();
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
@@ -29,7 +29,7 @@ namespace Platform.GameFlow
 
             UIButton backButton = new UIButton(new Rectangle(0, 0, 100, 50), delegate()
             {
-                Game1.CurrentGame.GameMode = new MainMenuContext();
+                Game1.CurrentGame.GameMode = lastContext;
             }, "Back");
             gui.Add(backButton);
         }
