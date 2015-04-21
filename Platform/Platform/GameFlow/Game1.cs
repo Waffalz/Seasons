@@ -159,6 +159,7 @@ namespace Platform.GameFlow
             gameMusic.Add(Content.Load<Song>("Songs/Questionable"));
             gameMusic.Add(Content.Load<Song>("Songs/The Key"));
             gameMusic.Add(Content.Load<Song>("Songs/Welcome to Summer"));
+            ShuffleMusic();
             for (int i = 0; i < gameMusic.Count; i++)
             {
                 MediaPlayer.Play(gameMusic[i]);
@@ -166,6 +167,20 @@ namespace Platform.GameFlow
             MediaPlayer.IsRepeating = true;
 
 
+        }
+
+        public void ShuffleMusic()
+        {
+            Random rand = new Random();
+            int x = gameMusic.Count;
+            while (x > 1)
+            {
+                x--;
+                int a = rand.Next(x + 1);
+                Song songSave = gameMusic[a];
+                gameMusic[a] = gameMusic[x];
+                gameMusic[x] = songSave;
+            }
         }
 
         /// <summary>
