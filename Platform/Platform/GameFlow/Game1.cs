@@ -84,7 +84,7 @@ namespace Platform.GameFlow
             set { player = value; }
         }
 
-        public Song gameMusic;
+        public List<Song> gameMusic;
 
         public Game1()
         {
@@ -118,6 +118,7 @@ namespace Platform.GameFlow
             fonts = new Dictionary<string, SpriteFont>();
             //call to LoadContent
 
+            gameMusic = new List<Song>();
 
             base.Initialize();
 
@@ -152,8 +153,16 @@ namespace Platform.GameFlow
             textures.Add("ForwardPortal", Content.Load<Texture2D>("Tiles/ForwardPortal"));
             fonts.Add("ButtonFont", Content.Load<SpriteFont>("Fonts/ButtonFont"));
 
-            gameMusic = Content.Load<Song>("Sound/Game Soundtrack");
-            MediaPlayer.Play(gameMusic);
+            gameMusic.Add(Content.Load<Song>("Songs/Ah, The 808's"));
+            gameMusic.Add(Content.Load<Song>("Songs/Description N-A"));
+            gameMusic.Add(Content.Load<Song>("Songs/Ominosity"));
+            gameMusic.Add(Content.Load<Song>("Songs/Questionable"));
+            gameMusic.Add(Content.Load<Song>("Songs/The Key"));
+            gameMusic.Add(Content.Load<Song>("Songs/Welcome to Summer"));
+            for (int i = 0; i < gameMusic.Count; i++)
+            {
+                MediaPlayer.Play(gameMusic[i]);
+            }
             MediaPlayer.IsRepeating = true;
 
 

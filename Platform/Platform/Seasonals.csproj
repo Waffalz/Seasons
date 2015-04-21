@@ -117,6 +117,7 @@
     <Compile Include="GameFlow\CombatContext.cs" />
     <Compile Include="GameFlow\ControlContext.cs" />
     <Compile Include="GameFlow\GameContext.cs" />
+    <Compile Include="GameFlow\LevelSelectContext.cs" />
     <Compile Include="GameFlow\MainMenuContext.cs" />
     <Compile Include="Graphics\BackgroundObject.cs" />
     <Compile Include="Graphics\LookCamera.cs" />

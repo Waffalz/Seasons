@@ -32,7 +32,7 @@ namespace Platform.GameFlow
 
             UIButton startButton = new UIButton(new Rectangle(0, 300, 300, 100), delegate()
             {
-                Game1.CurrentGame.GameMode = new CharSelectContext();
+                Game1.CurrentGame.GameMode = new LevelSelectContext();
             }, "New Game");
             startButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - startButton.bounds.Width) / 2;
             startButton.Border = UIBorder.Scroll;
@@ -65,7 +65,7 @@ namespace Platform.GameFlow
 
             UIButton startButton = new UIButton(new Rectangle(0, 300, 300, 100), delegate()
             {
-                Game1.CurrentGame.GameMode = new CharSelectContext();
+                Game1.CurrentGame.GameMode = new LevelSelectContext();
             }, "New Game");
             startButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - startButton.bounds.Width) / 2;
             startButton.Border = UIBorder.Scroll;

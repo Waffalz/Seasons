@@ -151,8 +151,33 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sound\Game Soundtrack.mp3">
-      <Name>Game Soundtrack</Name>
+    <Compile Include="Songs\Ah, The 808%27s.mp3">
+      <Name>Ah, The 808%27s</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Songs\Description N-A.mp3">
+      <Name>Description N-A</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Songs\Ominosity.mp3">
+      <Name>Ominosity</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Songs\Questionable.mp3">
+      <Name>Questionable</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Songs\The Key.mp3">
+      <Name>The Key</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Songs\Welcome to Summer.mp3">
+      <Name>Welcome to Summer</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>

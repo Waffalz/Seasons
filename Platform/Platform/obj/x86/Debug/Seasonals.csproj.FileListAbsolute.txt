@@ -129,5 +129,15 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Lev
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level5.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\BackPortal.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\ForwardPortal.xnb
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Sound\Game Soundtrack.xnb
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Sound\Game Soundtrack.wma
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma

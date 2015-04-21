@@ -10,8 +10,18 @@ Content\Fonts\ButtonFont.xnb
 Content\Tiles\NewBlocks.xnb
 Content\Tiles\BackPortal.xnb
 Content\Tiles\ForwardPortal.xnb
-Content\Sound\Game Soundtrack.xnb
-Content\Sound\Game Soundtrack.wma
+Content\Songs\Ah, The 808's.xnb
+Content\Songs\Description N-A.xnb
+Content\Songs\Ominosity.xnb
+Content\Songs\Questionable.xnb
+Content\Songs\The Key.xnb
+Content\Songs\Welcome to Summer.xnb
+Content\Songs\Ah, The 808's.wma
+Content\Songs\Description N-A.wma
+Content\Songs\Ominosity.wma
+Content\Songs\Questionable.wma
+Content\Songs\The Key.wma
+Content\Songs\Welcome to Summer.wma
 Content\Tiles\Blocks.png
 Content\Entities\Player.png
 Content\Particles\Square.bmp

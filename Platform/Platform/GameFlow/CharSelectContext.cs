@@ -17,13 +17,7 @@ namespace Platform.GameFlow
     {
         private enum CharType { Spring, Summer, Autumn, Winter, None, Test }
 
-        int level = 1;
-
-        public int Level
-        {
-            get { return level; }
-            set { level = value; }
-        }
+        int level = 0;
 
         UIComponent gui;
 
@@ -37,9 +31,11 @@ namespace Platform.GameFlow
 
         private CharType selected;
 
-        public CharSelectContext()
+        public CharSelectContext(int mapNumber)
         {
             selected = CharType.None;
+
+            level = mapNumber;
 
             gui = new UIComponent();
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
@@ -78,6 +74,7 @@ namespace Platform.GameFlow
             charName.Border = UIBorder.Scroll;
             charName.borderSize = 20;
             gui.Add(charName);
+            
             UIButton testSelect = new UIButton(new Rectangle(370, 260, 150, 150), delegate() { selected = CharType.Test; charName.text = "testPlayer"; charDesc.text = "testDesc"; }, "test");
             gui.Add(testSelect);
 
@@ -129,7 +126,7 @@ namespace Platform.GameFlow
                 
                 Game1.CurrentGame.Player = ploy;
                 
-                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level"+level+".txt");
+                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level"+mapNumber+".txt");
                 nextSlide.CombatWorld.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);
 
             }, "Start Game");
