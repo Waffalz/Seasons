@@ -53,37 +53,37 @@ namespace Platform.GameFlow
             modeTitle.vAlign = VerticalTextAlignment.Center;
             gui.Add(modeTitle);
 
-            UIButton levelOne = new UIButton(new Rectangle(370, 260, 150, 150), delegate()
+            UIButton levelOne = new UIButton(new Rectangle(200, 200, 150, 150), delegate()
             {
                 selected = NumberType.one;
             }, "Level One");
             gui.Add(levelOne);
 
-            UIButton levelTwo = new UIButton(new Rectangle(50, 100, 150, 150), delegate()
+            UIButton levelTwo = new UIButton(new Rectangle(450, 200, 150, 150), delegate()
             {
                 selected = NumberType.two;
             }, "Level Two");
             gui.Add(levelTwo);
 
-            UIButton levelThree = new UIButton(new Rectangle(210, 100, 150, 150), delegate()
+            UIButton levelThree = new UIButton(new Rectangle(700, 200, 150, 150), delegate()
             {
                 selected = NumberType.three;
             }, "Level Three");
             gui.Add(levelThree);
 
-            UIButton levelFour = new UIButton(new Rectangle(210, 260, 150, 150), delegate()
+            UIButton levelFour = new UIButton(new Rectangle(325, 400, 150, 150), delegate()
             {
                 selected = NumberType.four;
             }, "Level Four");
             gui.Add(levelFour);
 
-            UIButton levelFive = new UIButton(new Rectangle(50, 260, 150, 150), delegate()
+            UIButton levelFive = new UIButton(new Rectangle(575, 400, 150, 150), delegate()
             {
                 selected = NumberType.five;
             }, "Level Five");
             gui.Add(levelFive);
 
-            nextButton = new UIButton(new Rectangle(370, 100, 150, 60), delegate()
+            nextButton = new UIButton(new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width - 100, 0, 100, 50), delegate()
             {
                 switch (selected)
                 {

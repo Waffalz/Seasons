@@ -15,7 +15,7 @@ namespace Platform.GameFlow
 {
     class CharSelectContext: GameContext
     {
-        private enum CharType { Spring, Summer, Autumn, Winter, None, Test }
+        private enum CharType { Spring, Summer, Autumn, Winter, None }
 
         int level = 0;
 
@@ -43,7 +43,7 @@ namespace Platform.GameFlow
 
             UIButton backButton = new UIButton(new Rectangle(0, 0, 100, 50), delegate()
             {
-                Game1.CurrentGame.GameMode = new MainMenuContext(); 
+                Game1.CurrentGame.GameMode = new LevelSelectContext(); 
             }, "Back");
             gui.Add(backButton);
 
@@ -74,9 +74,6 @@ namespace Platform.GameFlow
             charName.Border = UIBorder.Scroll;
             charName.borderSize = 20;
             gui.Add(charName);
-            
-            UIButton testSelect = new UIButton(new Rectangle(370, 260, 150, 150), delegate() { selected = CharType.Test; charName.text = "testPlayer"; charDesc.text = "testDesc"; }, "test");
-            gui.Add(testSelect);
 
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
                 selected = CharType.Spring;
@@ -89,7 +86,7 @@ namespace Platform.GameFlow
             UIButton summerSelect = new UIButton(new Rectangle(210, 100, 150, 150), delegate() {
                 selected = CharType.Summer;
                 charName.text = "Kalokairi";
-                charDesc.text = "Formerly a priest to Pelor, the Sun god. He died a heroic death protecting a city from invasion\nby demons.";
+                charDesc.text = "Formerly a priest to Pelor, the Sun god. He died a heroic death protecting his city from an\ninvasion of demons.";
                 //TODO: set splash for selected char
 
             }, "Summer");
@@ -105,13 +102,14 @@ namespace Platform.GameFlow
 
             UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
                 selected = CharType.Winter;
-                charName.text = "Zima";
+                charName.text = "Zimo";
                 charDesc.text = "During an enemy raid of his city, Zimo\'s wife sacrificed herself to save him. Stricken with\ngrief, Zimo hung himself. By the time the previous Envoy of Winter found him, Zimo was already\npartially gone.";
                 //TODO: set splash for selected char
             }, "Winter");
             gui.Add(winterSelect);
 
-            playButton = new UIButton(new Rectangle(370, 100, 150, 60), delegate() {
+            playButton = new UIButton(new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width - 150, 0, 150, 50), delegate()
+            {
                 CombatContext nextSlide = new CombatContext();
                 Player ploy = new TestPlayer();
                 Game1.CurrentGame.GameMode = nextSlide;
@@ -120,7 +118,6 @@ namespace Platform.GameFlow
                     case CharType.Summer: ploy = new SummerCharacter(); break;
                     case CharType.Autumn: ploy = new AutumnCharacter(); break;
                     case CharType.Winter: ploy = new WinterCharacter(); break;
-                    case CharType.Test: ploy = new TestPlayer(); break;
                     default: Game1.CurrentGame.Player = new TestPlayer(); break;
                 }
                 
