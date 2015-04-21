@@ -116,6 +116,7 @@
     <Compile Include="GameFlow\CharSelectContext.cs" />
     <Compile Include="GameFlow\CombatContext.cs" />
     <Compile Include="GameFlow\ControlContext.cs" />
+    <Compile Include="GameFlow\CreditsContext.cs" />
     <Compile Include="GameFlow\GameContext.cs" />
     <Compile Include="GameFlow\LevelSelectContext.cs" />
     <Compile Include="GameFlow\MainMenuContext.cs" />

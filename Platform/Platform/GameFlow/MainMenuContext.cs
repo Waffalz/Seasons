@@ -56,7 +56,14 @@ namespace Platform.GameFlow
             controlButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - controlButton.bounds.Width) / 2;
             gui.Add(controlButton);
 
-            UIButton exitButton = new UIButton(new Rectangle(0, 550, 300, 60), delegate()
+            UIButton creditsButton = new UIButton(new Rectangle(0, 550, 300, 60), delegate()
+            {
+                    Game1.CurrentGame.GameMode = new CreditsContext();
+            }, "Credits");
+            creditsButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - creditsButton.bounds.Width) / 2;
+            gui.Add(creditsButton);
+
+            UIButton exitButton = new UIButton(new Rectangle(0, 620, 300, 60), delegate()
             {
                 Game1.CurrentGame.Exit();
             }, "Exit");
