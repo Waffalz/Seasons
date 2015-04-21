@@ -83,7 +83,7 @@ namespace Platform.GameFlow
             pauseMenu.color = new Color(0, 0, 0, 100);
 
             //Pause menu button for going back to the main menu
-            UIButton menuButton = new UIButton(new Rectangle(10, 10, 200, 100), delegate() { Game1.CurrentGame.GameMode = new MainMenuContext(this); });
+            UIButton menuButton = new UIButton(new Rectangle(10, 10, 200, 100), delegate() { Game1.CurrentGame.SaveCombatContext = this; Game1.CurrentGame.GameMode = new MainMenuContext(); });
             menuButton.text = "Main menu";
             pauseMenu.Add(menuButton);
             
@@ -154,6 +154,5 @@ namespace Platform.GameFlow
 
 
         }
-
     }
 }

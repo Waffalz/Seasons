@@ -41,6 +41,15 @@ namespace Platform.GameFlow
         private MouseState mus;
         private MouseState oMus;
 
+
+        private CombatContext saveCombatContext;
+
+        public CombatContext SaveCombatContext
+        {
+            get { return saveCombatContext; }
+            set { saveCombatContext = value; }
+        }
+
         public static Game1 CurrentGame
         {
             get { return currentGame; }
