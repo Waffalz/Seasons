@@ -132,7 +132,7 @@ namespace Platform.world {
             return rect.IntersectsWith(other.rect);
         }
 
-        public void Destroy()
+        public void Remove()
         {
             Parent = null;
         }
@@ -140,19 +140,15 @@ namespace Platform.world {
         public virtual void Update(GameTime gameTime)
         {
             float timeDifference = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
             oldPos = position;
-            
-            if (Anchored == false) {//don't handle movement if ent is anchored
-                position = position + timeDifference * velocity;
-            }
-            if (gravity == true) { //handle gravity on ent if gravity is true
-                velocity = new Vector2(velocity.X, velocity.Y + parent.Gravity * timeDifference);
-            }
 
+            UpdatePosition(timeDifference);
+            UpdateGravity(timeDifference);
+            
             if (animState != null) {
                 animState.Update(gameTime);
             }
+            CorrectCollisionPosition();
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch) 
@@ -166,12 +162,24 @@ namespace Platform.world {
             }
         }
 
-        public virtual void CorrectCollisionPosition(List<Entity> ents)
+        public virtual void UpdatePosition(float timeDifference)
         {
+            if (Anchored == false) {//don't handle movement if ent is anchored
+                position = position + timeDifference * velocity;
+            }
+        }
+
+        public virtual void UpdateGravity(float timeDifference)
+        {
+            if (gravity == true) { //handle gravity on ent if gravity is true
+                velocity = new Vector2(velocity.X, velocity.Y + parent.Gravity * timeDifference);
+            }
+        }
+
+        public virtual void CorrectCollisionPosition()
+        {
+            List<Entity> ents = parent.TileEntities;
             foreach (Entity tilent in ents) { //Tile collisions
-                //System.Drawing.RectangleF re = tilent.getRekt();
-                //re.Size += new System.Drawing.SizeF(0,WALL_BUFFER);
-                //re = new System.Drawing.RectangleF(tilent.Position.X - re.Size.Width / 2, -(tilent.Position.Y + re.Size.Height), re.Size.Width, re.Size.Height);
                 if (Collides(tilent)) {//if ent collides with a tileent
                     if (oldPos.Y + size.Y / 2 <= tilent.Position.Y - tilent.Size.Y / 2) {// if ent is under tile
 

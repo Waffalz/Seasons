@@ -150,55 +150,76 @@ namespace Platform.mobs {
 
 			oldPos = Position;
 
-			if ( anchored == false ) {//don't handle movement if ent is anchored
-				Position += timeDifference * ( velocity + WalkVelocity );
-			}
-			if ( gravity == true ) { //handle gravity on ent if gravity is true
-				velocity = new Vector2( velocity.X, velocity.Y + parent.Gravity * timeDifference );
-			}
+            UpdatePosition(timeDifference);
 
-			if ( onGround ) {
-				if ( !velocity.Equals( Vector2.Zero ) ) {
-					Vector2 toDisp = velocity;
-					toDisp.Normalize();
+            UpdateGravity(timeDifference);
 
-					int tilePositionX = ( int )( Position.X / Tile.TILE_WIDTH );
-					int tilePositionY = ( int )( Position.Y / Tile.TILE_WIDTH );
-					Tile nextTile = null;
-					try {
-						nextTile = parent.Tiles[ tilePositionY - 1, tilePositionX ];
-					} catch ( Exception e ) {
-						Console.Error.WriteLine( "Error finding nextTile!" );
-						Console.Error.WriteLine( e.Message );
-					}
-					if ( nextTile != null ) {
-						previousPosition = new Vector2( ( tilePositionX + .5f ) * Tile.TILE_WIDTH, Position.Y + .1f );
-					}
+			RecordLastSafePosition(timeDifference);
 
+            UpdateGroundVelocity(timeDifference);
 
+            UpdateWalkVelocity(timeDifference);
 
-					if ( velocity.X != 0 ) {
-						velocity.X = Math.Sign( velocity.X ) * ( Math.Max( Math.Abs( velocity.X ) - movementAccel / 2 * Math.Abs( toDisp.X ) * timeDifference, 0 ) );
-					}
-				}
-				walkVelocity.Y = 0;
-			}
-
-			if ( !walkVelocity.Equals( Vector2.Zero ) ) {
-				Vector2 toDisp = walkVelocity;
-				toDisp.Normalize();
-
-				if ( walkVelocity.X != 0 && onGround ) {
-					walkVelocity.X = Math.Sign( walkVelocity.X ) * ( Math.Max( Math.Abs( walkVelocity.X ) - movementAccel / 2 * Math.Abs( toDisp.X ) * timeDifference, 0 ) );
-				}
-				if ( walkVelocity.Y != 0 ) {
-					walkVelocity.Y = Math.Sign( walkVelocity.Y ) * ( Math.Max( Math.Abs( walkVelocity.Y ) - movementAccel / 2 * Math.Abs( toDisp.Y ) * timeDifference, 0 ) );
-				}
-			}
-
+            CorrectCollisionPosition();
 		}
 
-		public override void CorrectCollisionPosition( List<Entity> ents ) {
+        
+        public override void UpdatePosition(float timeDifference)
+        {
+            if (anchored == false) {//don't handle movement if ent is anchored
+                Position += timeDifference * (velocity + WalkVelocity);
+            }
+        }
+
+        public virtual void UpdateWalkVelocity(float timeDifference)
+        {
+            if (!walkVelocity.Equals(Vector2.Zero)) {
+                Vector2 toDisp = walkVelocity;
+                toDisp.Normalize();
+
+                if (walkVelocity.X != 0 && onGround) {
+                    walkVelocity.X = Math.Sign(walkVelocity.X) * (Math.Max(Math.Abs(walkVelocity.X) - movementAccel / 2 * Math.Abs(toDisp.X) * timeDifference, 0));
+                }
+                if (walkVelocity.Y != 0) {
+                    walkVelocity.Y = Math.Sign(walkVelocity.Y) * (Math.Max(Math.Abs(walkVelocity.Y) - movementAccel / 2 * Math.Abs(toDisp.Y) * timeDifference, 0));
+                }
+            }
+        }
+
+        public virtual void UpdateGroundVelocity(float timeDifference)
+        {
+            //reduce velocity when on the ground
+            if (onGround) {
+                if (velocity.X != 0) {
+                    Vector2 toDisp = velocity;
+                    toDisp.Normalize();
+                    //decelerate x velocity
+                    velocity.X = Math.Sign(velocity.X) * (Math.Max(Math.Abs(velocity.X) - movementAccel / 2 * Math.Abs(toDisp.X) * timeDifference, 0));
+                }
+            }
+        }
+
+        public virtual void RecordLastSafePosition(float timeDifference)
+        {
+            if (onGround && !velocity.Equals(Vector2.Zero)) {
+                int tilePositionX = (int)(Position.X / Tile.TILE_WIDTH);
+                int tilePositionY = (int)(Position.Y / Tile.TILE_WIDTH);
+                Tile nextTile = null;
+                try {
+                    nextTile = parent.Tiles[tilePositionY - 1, tilePositionX];
+                }
+                catch (Exception e) {
+                    Console.Error.WriteLine("Error finding nextTile!");
+                    Console.Error.WriteLine(e.Message);
+                }
+                if (nextTile != null) {
+                    previousPosition = new Vector2((tilePositionX + .5f) * Tile.TILE_WIDTH, Position.Y + .1f);
+                }
+            }
+        }
+
+		public override void CorrectCollisionPosition() {
+            List<Entity> ents = parent.TileEntities;
 			onGround = false;
 			System.Drawing.RectangleF thisRekt = rect;
 			System.Drawing.RectangleF botPlace = new System.Drawing.RectangleF( thisRekt.X, thisRekt.Y + thisRekt.Height, thisRekt.Width, .1f );

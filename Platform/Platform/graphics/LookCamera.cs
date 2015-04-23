@@ -15,15 +15,15 @@ namespace Platform.graphics
 {
     class LookCamera : Camera
     {
-        private float maxWorldExtend; //maximum amount camera will pan out from origin
-        private float maxMouseExtend;
+        //private float maxWorldExtend; //maximum amount camera will pan out from origin
+        //private float maxMouseExtend;
 
         private Vector2 origin;
 
         public LookCamera(Map p):base(p)
         {
-            maxWorldExtend = 70;
-            maxMouseExtend = 200;
+            //maxWorldExtend = 70;
+            //maxMouseExtend = 200;
         }
 
        /* public override void Update(GameTime gameTime)

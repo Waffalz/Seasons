@@ -144,13 +144,22 @@ namespace Platform.mobs {
 		}
 
 		public override void Update( GameTime gameTime ) {
-			base.Update( gameTime );
+            float timeDifference = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-			float gTime = ( float )gameTime.ElapsedGameTime.TotalSeconds;
+            oldPos = Position;
 
-			foreach ( KeyValuePair<string, GameAction> a in controls ) {
-				a.Value.Update( gameTime );
-			}
+            UpdatePosition(timeDifference);
+
+            UpdateGravity(timeDifference);
+
+            RecordLastSafePosition(timeDifference);
+
+            UpdateGroundVelocity(timeDifference);
+
+            UpdateWalkVelocity(timeDifference);
+
+            UpdateControls(gameTime);
+
 			/*
 			for (int i = 0; i < 30; i++){//particle effects
                 
@@ -164,11 +173,30 @@ namespace Platform.mobs {
 				parent.AddParticle(poi);
 			}
 			*/
-			parent.Camera.ZoomScale += ( Game1.CurrentGame.MouseInput.ScrollWheelValue - Game1.CurrentGame.OldMouseInput.ScrollWheelValue ) / 120;
 
-			mana = Math.Min( maxMana, mana + manaGen * gTime );
+            UpdateZoom();
+
+            UpdateMana(timeDifference);
+
+            CorrectCollisionPosition();
 		}
 
+        public virtual void UpdateMana(float timeDifference)
+        {
+            mana = Math.Min(maxMana, mana + manaGen * timeDifference);
+        }
+
+        public virtual void UpdateControls(GameTime gameTime)
+        {
+            foreach (KeyValuePair<string, GameAction> a in controls) {
+                a.Value.Update(gameTime);
+            }
+        }
+
+        public virtual void UpdateZoom()
+        {
+            parent.Camera.ZoomScale += (Game1.CurrentGame.MouseInput.ScrollWheelValue - Game1.CurrentGame.OldMouseInput.ScrollWheelValue) / 120;
+        }
 
 	}
 

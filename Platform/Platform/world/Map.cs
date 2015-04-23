@@ -40,24 +40,22 @@ namespace Platform.world {
 			get {
 				return tiles;
 			}
-			set {
-				tiles = value;
-			}
 		}
+        public List<Entity> TileEntities
+        {
+            get {
+                return tileEnts;
+            }
+        }
+
 		public List<Entity> Entities {
 			get {
 				return entList;
-			}
-			set {
-				entList = value;
 			}
 		}
 		public List<Particle> Particles {
 			get {
 				return partList;
-			}
-			set {
-				partList = value;
 			}
 		}
 		public float Gravity {
@@ -172,9 +170,6 @@ namespace Platform.world {
 				}
 
 				ent.Update( gameTime );//if ent has to do some specific things, do them
-				if ( ent.Solid ) {
-					ent.CorrectCollisionPosition( tileEnts );
-				}
 
 				//TODO: fix onground problems due to the fact that entities no longer collide after repositioning after collision
 

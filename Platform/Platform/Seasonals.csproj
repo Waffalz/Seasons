@@ -135,6 +135,8 @@
     <Compile Include="control\ContinuousAction.cs" />
     <Compile Include="control\OnceAction.cs" />
     <Compile Include="projectiles\BasicSeed.cs" />
+    <Compile Include="projectiles\Projectile.cs" />
+    <Compile Include="projectiles\WinterBasic.cs" />
     <Compile Include="ui\UIButton.cs" />
     <Compile Include="ui\UIComponent.cs" />
     <Compile Include="ui\UIHealthBar.cs" />

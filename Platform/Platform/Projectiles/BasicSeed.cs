@@ -11,7 +11,7 @@ using Platform.logger;
 
 namespace Platform.projectiles
 {
-    class BasicSeed : Entity
+    class BasicSeed : Projectile
     {
 
 
