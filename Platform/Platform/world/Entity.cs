@@ -202,9 +202,16 @@ namespace Platform.world {
             }
         }
 
-		//public RectangleF getRekt() {
-		//    return new RectangleF( this.position.X - this.size.X / 2, -( this.position.Y + this.size.Y / 2 ), this.size.X, this.size.Y );
-		//}
+        public List<Entity> CheckForCollision(Map mep)
+        {
+            List<Entity> toReturn = new List<Entity>();
+            foreach (Entity ent in mep.Entities){
+                if (ent.Collides(this) && ent != this) {
+                    toReturn.Add(ent);
+                }
+            }
+            return toReturn;
+        }
 
 	}
 

@@ -8,6 +8,9 @@ using Microsoft.Xna.Framework;
 using Platform.mobs;
 using Platform.world;
 using Platform.logger;
+using Platform.gameflow;
+using Microsoft.Xna.Framework.Input;
+using Platform.control;
 
 namespace Platform.characters
 {
@@ -21,6 +24,24 @@ namespace Platform.characters
         {
             manaGen = -5f;
             ghostShield = 0.20f;
+
+            controls.Add("Basic Attack", new ContinuousAction(this, (float).75,
+                delegate() { return (Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed);},
+                delegate(GameTime gametime){
+                    Entity icicle = new Entity();
+                    icicle.Size = new Vector2(20,40);
+                    Vector2 p = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
+                    icicle.Position = new Vector2(this.Position.X + (p.X<this.Position.X?-1:1)*(this.Size.X/2),this.Position.Y);
+                    foreach(Entity ent in icicle.CheckForCollision(parent)){
+                        if (ent is Mob && ent != this){
+                            ((Mob)ent).Damage(attack, this);
+                            Console.WriteLine("Attacking someone");
+                        }
+                    }
+
+
+                }));
+
         }
 
         public override void Damage(float amount)
