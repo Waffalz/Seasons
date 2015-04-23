@@ -6,10 +6,11 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-using Platform.GameFlow;
-using Platform.World;
+using Platform.gameflow;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Mobs {
+namespace Platform.mobs {
 	class Ball : Entity {
 
 		private Entity creator;

@@ -6,10 +6,11 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.GameFlow;
-using Platform.World;
+using Platform.gameflow;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Graphics {
+namespace Platform.graphics {
 	public abstract class Camera {
 		protected Map parent;
 		protected int zoomScale;

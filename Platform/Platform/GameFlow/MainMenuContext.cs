@@ -6,10 +6,11 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.UserInterface;
-using Platform.Mobs;
+using Platform.userinterface;
+using Platform.mobs;
+using Platform.logger;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     public class MainMenuContext: GameContext
     {

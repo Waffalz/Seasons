@@ -6,10 +6,11 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.GameFlow;
-using Platform.Graphics;
+using Platform.gameflow;
+using Platform.graphics;
+using Platform.logger;
 
-namespace Platform.World {
+namespace Platform.world {
 
     public class Tile {
         

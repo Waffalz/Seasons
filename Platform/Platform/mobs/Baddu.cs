@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
-using Platform.GameFlow;
-using Platform.World;
 
-namespace Platform.Mobs {
+using Platform.gameflow;
+using Platform.world;
+using Platform.logger;
+
+namespace Platform.mobs {
 	class Baddu : Mob, Behavior {
 		MoveDirection moveDirection;
 

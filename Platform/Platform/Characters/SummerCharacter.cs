@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Platform.mobs;
+using Platform.world;
+using Platform.logger;
 
-using Platform.Mobs;
-using Platform.World;
-
-namespace Platform.Characters
+namespace Platform.characters
 {
     class SummerCharacter : Player
     {

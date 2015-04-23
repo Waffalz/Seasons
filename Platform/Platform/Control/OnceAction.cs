@@ -5,10 +5,11 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-using Platform.GameFlow;
-using Platform.World;
+using Platform.gameflow;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Control
+namespace Platform.control
 {
     class OnceAction: GameAction
     {

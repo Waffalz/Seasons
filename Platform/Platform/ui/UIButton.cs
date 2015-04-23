@@ -7,9 +7,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.GameFlow;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.UserInterface
+namespace Platform.userinterface
 {
     delegate void ButtonAction();
 

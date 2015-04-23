@@ -6,9 +6,10 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.GameFlow;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.UserInterface
+namespace Platform.userinterface
 {
     public class UIComponent : IComparable
     {

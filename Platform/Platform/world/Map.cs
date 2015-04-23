@@ -7,11 +7,12 @@ using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.Mobs;
-using Platform.Graphics;
-using Platform.GameFlow;
+using Platform.mobs;
+using Platform.graphics;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.World {
+namespace Platform.world {
 	public class Map {
 		public const int MAP_BOUNDS = 256;//max number of tiles in each dimension
 		public const float WALL_BUFFER = 1;

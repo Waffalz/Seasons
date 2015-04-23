@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.Graphics;
+using Platform.graphics;
+using Platform.logger;
 
-using System.Drawing;
-
-namespace Platform.World {
+namespace Platform.world {
 
     public class Entity {
 
@@ -108,51 +108,8 @@ namespace Platform.World {
 		private Vector2 position;
         private Vector2 size;
 		private AnimationState animState;
-		private int damage;
 
-		protected int maxHealth;
-		protected int health;
-		protected int attack;
-		protected int defense;
-
-		protected Vector2 previousPos;
-
-		protected Vector2 walkVelocity;
-		protected float walkSpeed;
-		protected float jumpSpeed;
-		protected bool onGround;
-
-		protected float movementAccel;
-		protected float airControl;
-
-		protected float AirControl {
-			get {
-				return airControl;
-			}
-			set {
-				airControl = value;
-			}
-		}
-		public Vector2 WalkVelocity {
-			get {
-				return walkVelocity;
-			}
-			set {
-				walkVelocity = value;
-			}
-		}
-		public float WalkSpeed {
-			get {
-				return walkSpeed;
-			}
-			set {
-				walkSpeed = value;
-			}
-		}
-		public 
-
-
-		protected Entity()
+		public Entity()
         {
             position = new Vector2();
             size = new Vector2();
@@ -164,7 +121,6 @@ namespace Platform.World {
             color = Microsoft.Xna.Framework.Color.White;
             oldPos = position;
             rect = new RectangleF(this.position.X - this.size.X / 2, -(this.position.Y + this.size.Y / 2), this.size.X, this.size.Y);
-			damage = 0;
         }
 		
 
@@ -180,16 +136,6 @@ namespace Platform.World {
         {
             Parent = null;
         }
-
-		public int Damage {
-			get {
-				return damage;
-			}
-			set {
-				damage = value;
-			}
-
-		}
 
         public virtual void Update(GameTime gameTime)
         {

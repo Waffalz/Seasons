@@ -7,11 +7,12 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.World;
-using Platform.Graphics;
-using Platform.UserInterface;
+using Platform.world;
+using Platform.graphics;
+using Platform.userinterface;
+using Platform.logger;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     public class CombatContext : GameContext
     {

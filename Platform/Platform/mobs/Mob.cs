@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 using Microsoft.Xna.Framework;
 
-using Platform.GameFlow;
-using Platform.World;
-using System.Drawing;
+using Platform.gameflow;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Mobs {
+namespace Platform.mobs {
 	public class Mob : Entity {
 
 		protected float maxHealth;

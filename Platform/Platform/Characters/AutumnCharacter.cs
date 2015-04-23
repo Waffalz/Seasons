@@ -6,13 +6,14 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.GameFlow;
-using Platform.Control;
-using Platform.Mobs;
-using Platform.World;
-using Platform.UserInterface;
+using Platform.gameflow;
+using Platform.control;
+using Platform.mobs;
+using Platform.world;
+using Platform.userinterface;
+using Platform.logger;
 
-namespace Platform.Characters
+namespace Platform.characters
 {
     class AutumnCharacter : Player
     {

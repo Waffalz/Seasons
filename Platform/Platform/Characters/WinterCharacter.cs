@@ -5,10 +5,11 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-using Platform.Mobs;
-using Platform.World;
+using Platform.mobs;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Characters
+namespace Platform.characters
 {
     class WinterCharacter : Player
     {

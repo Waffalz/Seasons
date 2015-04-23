@@ -6,9 +6,10 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-using Platform.GameFlow;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.UserInterface
+namespace Platform.userinterface
 {
     class UIStatusBar: UIComponent
     {

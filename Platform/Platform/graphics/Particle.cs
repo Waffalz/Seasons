@@ -5,10 +5,11 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-using Platform.Graphics;
-using Platform.GameFlow;
+using Platform.graphics;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.World
+namespace Platform.world
 {
     public class Particle:Entity
     {

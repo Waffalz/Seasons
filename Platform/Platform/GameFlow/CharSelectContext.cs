@@ -6,12 +6,13 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.UserInterface;
-using Platform.Characters;
-using Platform.Mobs;
-using Platform.World;
+using Platform.userinterface;
+using Platform.characters;
+using Platform.mobs;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     class CharSelectContext: GameContext
     {

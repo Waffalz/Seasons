@@ -6,9 +6,10 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.World;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Graphics
+namespace Platform.graphics
 {
     public class AnimationState
     {

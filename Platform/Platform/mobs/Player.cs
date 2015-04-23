@@ -6,12 +6,13 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.GameFlow;
-using Platform.Graphics;
-using Platform.World;
-using Platform.Control;
+using Platform.gameflow;
+using Platform.graphics;
+using Platform.world;
+using Platform.control;
+using Platform.logger;
 
-namespace Platform.Mobs {
+namespace Platform.mobs {
 	public class Player : Mob {
 		protected float mana;
 		public float Mana {

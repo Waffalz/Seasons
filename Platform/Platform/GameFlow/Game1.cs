@@ -10,15 +10,19 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-using Platform.Graphics;
-using Platform.World;
-using Platform.Mobs;
+using Platform.graphics;
+using Platform.world;
+using Platform.mobs;
+using Platform.logger;
 
-namespace Platform.GameFlow {
+namespace Platform.gameflow {
 	/// <summary>
 	/// This is the main type for your game
 	/// </summary>
 	public class Game1 : Microsoft.Xna.Framework.Game {
+
+		private const string className = "Game1";
+		private const string classNamespace = "gameflow";
 
 		private Player player;
 
@@ -44,7 +48,6 @@ namespace Platform.GameFlow {
 				return currentGame;
 			}
 		}
-
 		public Random Rand {
 			get {
 				return rand;
@@ -106,6 +109,8 @@ namespace Platform.GameFlow {
 			rand = new Random();
 			currentGame = this;
 			graphics.PreferMultiSampling = true;
+
+			Logger.Info( className, classNamespace, "Game created" );
 		}
 
 		/// <summary>
@@ -135,6 +140,7 @@ namespace Platform.GameFlow {
 			//Debugging hardcode here
 			gameMode = new MainMenuContext();
 
+			Logger.Info( className, classNamespace, "Game init successful" );
 		}
 
 		/// <summary>
@@ -147,17 +153,23 @@ namespace Platform.GameFlow {
 
 			// TODO: use this.Content to load your game content here
 
-			textures.Add( "Blocks", Content.Load<Texture2D>( "Tiles/Blocks" ) );
-			textures.Add( "Player", Content.Load<Texture2D>( "Entities/Player" ) );
-			textures.Add( "Square", Content.Load<Texture2D>( "Particles/Square" ) );
-			textures.Add( "MenuBack", Content.Load<Texture2D>( "MenuItems/Seasons_Menu" ) );
-			textures.Add( "HealthBar", Content.Load<Texture2D>( "GUITextures/HealthBar" ) );
-			//textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
-			textures.Add( "CircleParticle", Content.Load<Texture2D>( "Particles/CircleParticle" ) );
-			textures.Add( "ScrollBorder", Content.Load<Texture2D>( "GUITextures/ScrollBorder" ) );
-			textures.Add( "NewBlocks", Content.Load<Texture2D>( "Tiles/NewBlocks" ) );
-			fonts.Add( "ButtonFont", Content.Load<SpriteFont>( "Fonts/ButtonFont" ) );
+			textures.Add( "Blocks", Content.Load<Texture2D>( "Tiles/blocks" ) );
+			textures.Add( "NewBlocks", Content.Load<Texture2D>( "Tiles/newBlocks" ) );
 
+			textures.Add( "Player", Content.Load<Texture2D>( "Entities/player" ) );
+
+			textures.Add( "Square", Content.Load<Texture2D>( "Particles/square" ) );
+			textures.Add( "CircleParticle", Content.Load<Texture2D>( "Particles/circleParticle" ) );
+
+			textures.Add( "MenuBack", Content.Load<Texture2D>( "MenuItems/seasonsMenu" ) );
+			textures.Add( "HealthBar", Content.Load<Texture2D>( "GUITextures/healthBar" ) );
+			//textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
+			
+			textures.Add( "ScrollBorder", Content.Load<Texture2D>( "GUITextures/scrollBorder" ) );
+			
+			fonts.Add( "ButtonFont", Content.Load<SpriteFont>( "Fonts/buttonFont" ) );
+
+			Logger.Info( className, classNamespace, "Game content load successful" );
 		}
 
 		/// <summary>
@@ -166,6 +178,7 @@ namespace Platform.GameFlow {
 		/// </summary>
 		protected override void UnloadContent() {
 			// TODO: Unload any non ContentManager content here
+			Logger.Info( className, classNamespace, "Game content unload successful" );
 		}
 
 		/// <summary>

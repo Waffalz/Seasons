@@ -124,6 +124,7 @@
     <Compile Include="graphics\LookCamera.cs" />
     <Compile Include="graphics\AnimationState.cs" />
     <Compile Include="lib\PriorityQueue.cs" />
+    <Compile Include="logger\Logger.cs" />
     <Compile Include="mobs\Baddu.cs" />
     <Compile Include="mobs\Ball.cs" />
     <Compile Include="mobs\Behavior.cs" />

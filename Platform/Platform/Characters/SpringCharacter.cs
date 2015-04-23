@@ -6,10 +6,11 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.Mobs;
-using Platform.World;
+using Platform.mobs;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Characters
+namespace Platform.characters
 {
     class SpringCharacter : Player
     {

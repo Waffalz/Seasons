@@ -5,7 +5,9 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-namespace Platform.Mobs {
+using Platform.logger;
+
+namespace Platform.mobs {
 	interface Behavior {
 		void Behave( float timeDif );
 

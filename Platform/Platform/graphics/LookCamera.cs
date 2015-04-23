@@ -7,10 +7,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.World;
-using Platform.GameFlow;
+using Platform.world;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.Graphics
+namespace Platform.graphics
 {
     class LookCamera : Camera
     {
