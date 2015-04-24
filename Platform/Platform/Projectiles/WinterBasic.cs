@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 using Platform.world;
+using Platform.mobs;
 
 namespace Platform.projectiles
 {
@@ -15,13 +16,19 @@ namespace Platform.projectiles
         public WinterBasic()
             : base()
         {
-
+            
         }
+
+        
+        public WinterBasic(Mob creator, float time): base(creator, time)
+        {
+        }
+         
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            color = new Color(color.R, color.G, color.B, lifeTime/maxLifeTime);
+            color.A = (byte)(255*lifeTime/maxLifeTime);
         }
         
 

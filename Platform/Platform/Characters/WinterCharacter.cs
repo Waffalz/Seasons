@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 using Platform.mobs;
 using Platform.world;
 using Platform.logger;
 using Platform.gameflow;
-using Microsoft.Xna.Framework.Input;
+using Platform.projectiles;
 using Platform.control;
 
 namespace Platform.characters
@@ -24,20 +25,34 @@ namespace Platform.characters
         {
             manaGen = -5f;
             ghostShield = 0.20f;
+            attack = 10;
 
             controls.Add("Basic Attack", new ContinuousAction(this, (float).75,
                 delegate() { return (Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed);},
                 delegate(GameTime gametime){
-                    Entity icicle = new Entity();
-                    icicle.Size = new Vector2(20,40);
+                    WinterBasic icicle = new WinterBasic(this, .5f);
+                    icicle.Size = new Vector2(20,10);
                     Vector2 p = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
-                    icicle.Position = new Vector2(this.Position.X + this.Size.X/2 + Math.Sign(p.X-this.Position.X)*(icicle.Size.X/2),this.Position.Y);
-                    foreach(Entity ent in icicle.CheckForCollision(parent)){
-                        if (ent is Mob && ent != this){
-                            ((Mob)ent).Damage(attack, this);
-                            Console.WriteLine("Attacking someone");
+                    icicle.Position = new Vector2(this.Position.X + Math.Sign(p.X - this.Position.X) * (icicle.Size.X / 2 + this.Size.X / 2), this.Position.Y);
+                    foreach(Entity ent in icicle.CheckForCollision(parent)){//check for collision
+                        if (ent is Mob && ent != this){ //if collided ent is a mob then
+                            ((Mob)ent).Damage(attack, this); // damage mob
+                            mana += attack; //manasteal
                         }
+                        for (int i = 0; i < 30; i++) {//particle effects
+                            Particle poi = new Particle((float).5f, (float)2);
+                            poi.Color = Color.SkyBlue;
+                            poi.Position = new Vector2(ent.Position.X, ent.Position.Y);
+                            double rAngle = MathHelper.ToRadians(Game1.CurrentGame.Rand.Next(0, 360));
+                            double speed = Game1.CurrentGame.Rand.Next(20, 40);
+                            poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), (float)Math.Round(Math.Sin(rAngle) * speed));
+                            poi.ColorSpeed = new Vector3(Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10));
+                            poi.Color = Color.Red;
+                            parent.AddParticle(poi);
+                        }
+
                     }
+                    parent.AddEntity(icicle);
                     
 
                 }));

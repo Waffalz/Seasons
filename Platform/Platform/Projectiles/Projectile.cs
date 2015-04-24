@@ -5,6 +5,7 @@ using System.Text;
 
 using Platform.world;
 using Platform.mobs;
+using Platform.gameflow;
 
 using Microsoft.Xna.Framework;
 
@@ -19,6 +20,8 @@ namespace Platform.projectiles
         public Projectile()
         {
             creator = null;
+            Texture = Game1.CurrentGame.Textures["Square"];
+            sourceRect = texture.Bounds;
         }
 
         public Projectile(Mob creator, float time)
@@ -26,18 +29,23 @@ namespace Platform.projectiles
             this.creator = creator;
             maxLifeTime = time;
             lifeTime = maxLifeTime;
+            Texture = Game1.CurrentGame.Textures["Square"];
+            sourceRect = texture.Bounds;
         }
 
         public override void Update(GameTime gameTime)
         {
-            base.Update(gameTime);
-            lifeTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float timeElapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            UpdateLifeTime(timeElapsed);
+        }
+
+        public virtual void UpdateLifeTime(float timeElapsed)
+        {
+            lifeTime -= timeElapsed;
             if (lifeTime <= 0 && maxLifeTime > 0) {
                 Remove();
             }
         }
-
-
 
     }
 }

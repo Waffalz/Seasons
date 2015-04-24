@@ -1,6 +1,5 @@
 Content\Tiles\blocks.xnb
 Content\Entities\player.xnb
-Content\Particles\square.xnb
 Content\MenuItems\seasonsMenu.xnb
 Content\GUITextures\healthBar.xnb
 Content\GUITextures\hUDBack.xnb
@@ -8,6 +7,7 @@ Content\Particles\circleParticle.xnb
 Content\GUITextures\scrollBorder.xnb
 Content\Tiles\newBlocks.xnb
 Content\Fonts\buttonFont.xnb
+Content\Particles\square.xnb
 Content\Tiles\blocks.png
 Content\Entities\player.png
 Content\Particles\square.bmp

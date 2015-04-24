@@ -158,7 +158,7 @@ namespace Platform.world {
                     (int)((position.X - size.X / 2 - parent.Camera.Position.X) * parent.Camera.ZoomScale + parent.Camera.PointOnScreen.X),
                     (int)(-(position.Y + size.Y / 2 - parent.Camera.Position.Y) * parent.Camera.ZoomScale + parent.Camera.PointOnScreen.Y),
                     (int)(size.X * parent.Camera.ZoomScale), (int)(size.Y * parent.Camera.ZoomScale)),
-                    sourceRect, color);
+                    sourceRect, color * ((float)(color.A)/255));
             }
         }
 

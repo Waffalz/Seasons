@@ -18,7 +18,7 @@ namespace Platform.graphics
         //private float maxWorldExtend; //maximum amount camera will pan out from origin
         //private float maxMouseExtend;
 
-        private Vector2 origin;
+        //private Vector2 origin;
 
         public LookCamera(Map p):base(p)
         {

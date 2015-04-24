@@ -20,15 +20,6 @@
       <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <Item>
-      <Source>Particles\square.bmp</Source>
-      <Name>Particles\square</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb</Output>
-      <Time>2015-04-12T20:35:32-05:00</Time>
-    </Item>
-    <Item>
       <Source>MenuItems\seasonsMenu.png</Source>
       <Name>MenuItems\seasonsMenu</Name>
       <Importer>TextureImporter</Importer>
@@ -90,6 +81,19 @@
       <Options>None</Options>
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb</Output>
       <Time>2015-04-23T08:52:42.8021238-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Particles\square.bmp</Source>
+      <Name>Particles\square</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="PremultiplyAlpha">False</Data>
+        <Data Key="ColorKeyEnabled">False</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb</Output>
+      <Time>2015-04-12T20:35:32-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
