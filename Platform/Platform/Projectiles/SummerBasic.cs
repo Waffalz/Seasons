@@ -4,22 +4,20 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
-using Platform.world;
 using Platform.mobs;
 
 namespace Platform.projectiles
 {
-    class WinterBasic: Projectile
+    class SummerBasic:Projectile
     {
-        public WinterBasic()
+        public SummerBasic()
             : base()
         {
 
         }
 
-        public WinterBasic(Mob creator, float time)
+        public SummerBasic(Mob creator, float time)
             : base(creator, time)
         {
 
@@ -30,7 +28,6 @@ namespace Platform.projectiles
             base.Update(gameTime);
             color.A = (byte)(255*lifeTime/maxLifeTime);
         }
-        
 
     }
 }

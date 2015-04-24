@@ -65,7 +65,7 @@ namespace Platform.mobs {
 					double rAngle = MathHelper.ToRadians( Game1.CurrentGame.Rand.Next( 0, 360 ) );
 					double speed = Game1.CurrentGame.Rand.Next( 20, 40 );
 					poi.Velocity = new Vector2( ( float )Math.Round( Math.Cos( rAngle ) * speed ), ( float )Math.Round( Math.Sin( rAngle ) * speed ) );
-					poi.ColorSpeed = new Vector3( Game1.CurrentGame.Rand.Next( -10, 10 ), Game1.CurrentGame.Rand.Next( -10, 10 ), Game1.CurrentGame.Rand.Next( -10, 10 ) );
+                    poi.ColorSpeed = new Vector4(Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 0));
 					Parent.AddParticle( poi );
 				}
 				parent.RemoveEntity( this );

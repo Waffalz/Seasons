@@ -27,34 +27,39 @@ namespace Platform.characters
             ghostShield = 0.20f;
             attack = 10;
 
-            controls.Add("Basic Attack", new ContinuousAction(this, (float).75,
+            //adds player control for basic attacks
+            controls.Add("Basic Attack", new ContinuousAction(this, (float)1.2f,
                 delegate() { return (Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed);},
                 delegate(GameTime gametime){
+
+                    //create a projectile that checks for collision
                     WinterBasic icicle = new WinterBasic(this, .5f);
                     icicle.Size = new Vector2(20,10);
+
+                    //get position of the mouse in the world to calculate the icicle's new position
                     Vector2 p = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
+                    
                     icicle.Position = new Vector2(this.Position.X + Math.Sign(p.X - this.Position.X) * (icicle.Size.X / 2 + this.Size.X / 2), this.Position.Y);
+                    
                     foreach(Entity ent in icicle.CheckForCollision(parent)){//check for collision
                         if (ent is Mob && ent != this){ //if collided ent is a mob then
                             ((Mob)ent).Damage(attack, this); // damage mob
-                            mana += attack; //manasteal
+                            mana += attack; //mana-steal
                         }
                         for (int i = 0; i < 30; i++) {//particle effects
-                            Particle poi = new Particle((float).5f, (float)2);
+                            Particle poi = new Particle((float)1.5f, (float)2);
                             poi.Color = Color.SkyBlue;
                             poi.Position = new Vector2(ent.Position.X, ent.Position.Y);
                             double rAngle = MathHelper.ToRadians(Game1.CurrentGame.Rand.Next(0, 360));
-                            double speed = Game1.CurrentGame.Rand.Next(20, 40);
+                            double speed = Game1.CurrentGame.Rand.Next(10, 40);
                             poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), (float)Math.Round(Math.Sin(rAngle) * speed));
-                            poi.ColorSpeed = new Vector3(Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10));
+                            poi.ColorSpeed = new Vector4(Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-1000, -700));
                             poi.Color = Color.Red;
                             parent.AddParticle(poi);
                         }
 
                     }
                     parent.AddEntity(icicle);
-                    
-
                 }));
 
         }

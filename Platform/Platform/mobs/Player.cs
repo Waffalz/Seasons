@@ -132,14 +132,6 @@ namespace Platform.mobs {
 						velocity = new Vector2( velocity.X, jumpSpeed );
 					}
 				} ) );
-			//controls.Add("Jump", new ContinuousAction(this, 0,
-			//    delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
-			//    delegate(GameTime gameTime) {
-			//        if (onGround) {
-			//            onGrou nd = false;
-			//            velocity = new Vector2(velocity.X, jumpSpeed);
-			//        }
-			//    }));
 
 		}
 
@@ -160,19 +152,6 @@ namespace Platform.mobs {
 
             UpdateControls(gameTime);
 
-			/*
-			for (int i = 0; i < 30; i++){//particle effects
-                
-				Particle poi = new Particle((float)2, (float)2);
-				poi.Color = Color.SkyBlue;
-				poi.Position = new Vector2(position.X, position.Y - size.Y / 2);
-				double rAngle = MathHelper.ToRadians(Game1.Rand.Next(0, 360));
-				double speed = Game1.Rand.Next(20, 40);
-				poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), Math.Abs((float)Math.Round(Math.Sin(rAngle) * speed)));
-				poi.ColorSpeed = new Vector3(Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10), Game1.Rand.Next(-10, 10));
-				parent.AddParticle(poi);
-			}
-			*/
 
             UpdateZoom();
 
