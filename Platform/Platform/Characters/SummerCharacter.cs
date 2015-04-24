@@ -42,9 +42,9 @@ namespace Platform.characters
                             ((Mob)ent).Damage(attack, this); // damage mob
                             mana += attack; //mana-steal
                         }
+
                         for (int i = 0; i < 10; i++) {//particle effects
                             Particle poi = new Particle((float)1f, (float)2);
-                            poi.Color = Color.SkyBlue;
                             poi.Position = new Vector2(ent.Position.X, ent.Position.Y);
                             double rAngle = MathHelper.ToRadians(Game1.CurrentGame.Rand.Next(0, 360));
                             double speed = Game1.CurrentGame.Rand.Next(10, 100);
@@ -54,6 +54,7 @@ namespace Platform.characters
                             poi.Gravity = false;
                             parent.AddParticle(poi);
                         }
+                         
 
                     }
                     parent.AddEntity(slash);

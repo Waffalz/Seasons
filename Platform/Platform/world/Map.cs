@@ -148,19 +148,19 @@ namespace Platform.world {
 
 			float timeDifference = ( float )gameTime.ElapsedGameTime.TotalSeconds;
 
-			foreach ( Entity ent in addEList ) {//add entities in queue
+            //add entities in queue
+			foreach ( Entity ent in addEList ) {
 				entList.Add( ent );
 				ent.parent = this;
 			}
 			addEList.Clear();
-			foreach ( Particle p in addPList ) {//add particles in queue
+
+            //add particles in queue
+			foreach ( Particle p in addPList ) {
 				partList.Add( p );
 				p.parent = this;
 			}
 			addPList.Clear();
-
-
-
 
 			foreach ( Entity ent in entList ) { //iterate over each entity in entlist to calculate all happenings
 				Vector2 oldPos = ent.Position;//old position of ent in case we ever need to revert to it
@@ -182,7 +182,6 @@ namespace Platform.world {
                     }
                 }
                 
-                
 				if ( ent.Position.Y < -50 ) {//remove ent if below the kill level
 					if ( ent is Mob ) {
 						ent.Position = ( ( Mob )ent ).previousPosition;
@@ -196,6 +195,7 @@ namespace Platform.world {
 
 
 			}
+
 			foreach ( Particle p in partList ) {//call to each particle's specific behaviors
 				p.Update( gameTime );
 			}
@@ -210,6 +210,7 @@ namespace Platform.world {
 				}
 			}
 			removeEList.Clear();
+
 			foreach ( Particle p in removePList ) {//removes entities in queue
 				if ( partList.Contains( p ) ) {
 					partList.Remove( p );
@@ -221,6 +222,7 @@ namespace Platform.world {
 			cam.Update( gameTime );
 		}
 
+        //initializes tileEnts with TileEntities based on each tile
 		public void UpdateTileWorld() {
 			tileEnts = new List<Entity>();
 			for ( int y = 0; y < tiles.GetLength( 0 ); y++ ) {
@@ -238,7 +240,7 @@ namespace Platform.world {
 			}
 		}
 
-		//Loading the map into an array to store the initial locations of tiles, enemies, and the player
+		//Loading the map into an array to store the initial locations of tiles, enemies, and the player. I really should have commented this
 		public static Map LoadMap2( string pathname ) {
 			Map nMap = new Map();
 			try {
