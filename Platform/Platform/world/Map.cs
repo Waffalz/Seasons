@@ -171,17 +171,18 @@ namespace Platform.world {
 
 				ent.Update( gameTime );//if ent has to do some specific things, do them
 
-				//TODO: fix onground problems due to the fact that entities no longer collide after repositioning after collision
-
-				foreach ( Entity other in entList ) { //check for interactions between entities in entlis
-					if ( ent != other ) {
-						if ( ent.Collides( other ) ) {
-							ent.OnCollide( other );
-							other.OnCollide( ent );
-						}
-					}
-				}
-
+                if (ent.Interactable) {
+                    foreach (Entity other in entList) { //check for interactions between entities in entlis
+                        if (ent != other && other.Interactable) {
+                            if (ent.Collides(other)) {
+                                ent.OnCollide(other);
+                                other.OnCollide(ent);
+                            }
+                        }
+                    }
+                }
+                
+                
 				if ( ent.Position.Y < -50 ) {//remove ent if below the kill level
 					if ( ent is Mob ) {
 						ent.Position = ( ( Mob )ent ).previousPosition;
@@ -225,7 +226,7 @@ namespace Platform.world {
 			for ( int y = 0; y < tiles.GetLength( 0 ); y++ ) {
 				for ( int x = 0; x < tiles.GetLength( 1 ); x++ ) {
 					if ( tiles[ y, x ] != null ) {
-						Entity lent = new Entity();
+						TileEntity lent = new TileEntity();
 						lent.Size = new Vector2( Tile.TILE_WIDTH, Tile.TILE_WIDTH );
 						lent.Position = new Vector2( x * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2, y * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2 );
 						lent.Anchored = true;

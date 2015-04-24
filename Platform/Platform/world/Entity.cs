@@ -66,6 +66,11 @@ namespace Platform.world {
             get { return solid; }
             set { solid = value; }
         }
+        public bool Interactable
+        {
+            get { return interactable; }
+            set { interactable = value; }
+        }
         public Texture2D Texture{
             get { return texture; }
             set { texture = value; }
@@ -104,6 +109,7 @@ namespace Platform.world {
         protected Microsoft.Xna.Framework.Color color;
         protected Vector2 oldPos;
         protected RectangleF rect;
+        protected bool interactable;
 
 		private Vector2 position;
         private Vector2 size;
@@ -116,6 +122,7 @@ namespace Platform.world {
             velocity = new Vector2();
             gravity = true;
             solid = true;
+            interactable = true;
             texture = null;
             sourceRect = new Microsoft.Xna.Framework.Rectangle();
             color = Microsoft.Xna.Framework.Color.White;
@@ -123,7 +130,6 @@ namespace Platform.world {
             rect = new RectangleF(this.position.X - this.size.X / 2, -(this.position.Y + this.size.Y / 2), this.size.X, this.size.Y);
         }
 		
-
         public virtual void OnCollide(Entity other){
         }
 
@@ -214,6 +220,17 @@ namespace Platform.world {
         {
             List<Entity> toReturn = new List<Entity>();
             foreach (Entity ent in mep.Entities){
+                if (ent.Collides(this) && ent != this) {
+                    toReturn.Add(ent);
+                }
+            }
+            return toReturn;
+        }
+
+        public List<Entity> CheckForTileCollision(Map mep)
+        {
+            List<Entity> toReturn = new List<Entity>();
+            foreach (Entity ent in mep.TileEntities) {
                 if (ent.Collides(this) && ent != this) {
                     toReturn.Add(ent);
                 }

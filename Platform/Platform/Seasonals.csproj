@@ -134,7 +134,7 @@
     <Compile Include="control\GameAction.cs" />
     <Compile Include="control\ContinuousAction.cs" />
     <Compile Include="control\OnceAction.cs" />
-    <Compile Include="projectiles\BasicSeed.cs" />
+    <Compile Include="projectiles\SpringBasic.cs" />
     <Compile Include="projectiles\Projectile.cs" />
     <Compile Include="projectiles\SummerBasic.cs" />
     <Compile Include="projectiles\WinterBasic.cs" />
@@ -150,6 +150,7 @@
     <Compile Include="gameflow\Program.cs" />
     <Compile Include="gameflow\Game1.cs" />
     <Compile Include="world\Tile.cs" />
+    <Compile Include="world\TileEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
