@@ -169,7 +169,7 @@ namespace Platform.world {
 					( ( Behavior )ent ).Behave( timeDifference );
 				}
 
-				ent.Update( gameTime );//if ent has to do some specific things, do them
+				ent.Update( gameTime );//make the ent do stuff
 
                 if (ent.Interactable) {
                     foreach (Entity other in entList) { //check for interactions between entities in entlis

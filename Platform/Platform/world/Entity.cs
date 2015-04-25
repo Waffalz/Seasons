@@ -29,21 +29,20 @@ namespace Platform.world {
                 if (value != null){
                     value.AddEntity(this);
                 }
-                parent = value;
             }
         }
         public Vector2 Position
         {
             get { return position; }
             set { position = value;
-            rect = new RectangleF(position.X - size.X / 2, -(position.Y + size.Y / 2), size.X, size.Y);
+            rect = new RectangleF((float)position.X - (float)size.X / 2, -((float)position.Y + (float)size.Y / 2), (float)size.X, (float)size.Y);
             }
         }
         public Vector2 Size
         {
             get { return size; }
             set { size = value;
-            rect = new RectangleF(position.X - size.X / 2, -(position.Y + size.Y / 2), size.X, size.Y);
+            rect = new RectangleF((float)position.X - (float)size.X / 2, -((float)position.Y + (float)size.Y / 2), (float)size.X, (float)size.Y);
             }
         }
         public virtual Vector2 Velocity
@@ -171,7 +170,7 @@ namespace Platform.world {
         public virtual void UpdatePosition(float timeDifference)
         {
             if (Anchored == false) {//don't handle movement if ent is anchored
-                position = position + timeDifference * velocity;
+                Position = position + timeDifference * velocity;
             }
         }
 

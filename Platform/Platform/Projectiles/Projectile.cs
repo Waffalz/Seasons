@@ -17,14 +17,14 @@ namespace Platform.projectiles
         protected float maxLifeTime;
         protected float lifeTime;
 
-        public Projectile()
+        public Projectile() : base()
         {
             creator = null;
             Texture = Game1.CurrentGame.Textures["Square"];
             sourceRect = texture.Bounds;
         }
 
-        public Projectile(Mob creator, float time)
+        public Projectile(Mob creator, float time) : base()
         {
             this.creator = creator;
             maxLifeTime = time;
