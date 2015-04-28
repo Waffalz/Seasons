@@ -92,24 +92,6 @@
       <Time>2015-04-07T09:36:31.7494357-05:00</Time>
     </Item>
     <Item>
-      <Source>Tiles\BackPortal.png</Source>
-      <Name>Tiles\BackPortal</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\BackPortal.xnb</Output>
-      <Time>2015-04-13T09:51:07.584077-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Tiles\ForwardPortal.png</Source>
-      <Name>Tiles\ForwardPortal</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\ForwardPortal.xnb</Output>
-      <Time>2015-04-13T09:51:23.6410258-05:00</Time>
-    </Item>
-    <Item>
       <Source>Songs\Ah, The 808's.mp3</Source>
       <Name>Songs\Ah, The 808's</Name>
       <Importer>Mp3Importer</Importer>

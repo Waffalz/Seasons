@@ -272,22 +272,6 @@ namespace Platform.World
                                     b.Position = new Vector2(x1 * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2, y1 * Tile.TILE_WIDTH + b.Size.Y / 2);
                                     b.Parent = nMap;
                                     break;
-                                case "BackPortal":
-                                    Portal backPortal = new Portal();
-                                    backPortal.Size = new Vector2(10, 10);
-                                    backPortal.Position = new Vector2(x1 * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2, y1 * Tile.TILE_WIDTH + backPortal.Size.Y / 2);
-                                    backPortal.Parent = nMap;
-                                    backPortal.Texture = Game1.CurrentGame.Textures["BackPortal"];
-                                    backPortal.Anchored = true;
-                                    break;
-                                case "ForwardPortal":
-                                    Portal forwardPortal = new Portal();
-                                    forwardPortal.Size = new Vector2(10, 10);
-                                    forwardPortal.Position = new Vector2(x1 * Tile.TILE_WIDTH + Tile.TILE_WIDTH / 2, y1 * Tile.TILE_WIDTH + forwardPortal.Size.Y / 2);
-                                    forwardPortal.Parent = nMap;
-                                    forwardPortal.Texture = Game1.CurrentGame.Textures["ForwardPortal"];
-                                    forwardPortal.Anchored = true;
-                                    break;
                                 default:
                                     try{
                                         string[] values = tileDat.Split(',');

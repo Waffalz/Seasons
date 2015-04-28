@@ -158,8 +158,6 @@ namespace Platform.GameFlow
             textures.Add("CircleParticle", Content.Load<Texture2D>("Particles/CircleParticle"));
             textures.Add("ScrollBorder", Content.Load<Texture2D>("GUITextures/ScrollBorder"));
             textures.Add("NewBlocks", Content.Load<Texture2D>("Tiles/NewBlocks"));
-            textures.Add("BackPortal", Content.Load<Texture2D>("Tiles/BackPortal"));
-            textures.Add("ForwardPortal", Content.Load<Texture2D>("Tiles/ForwardPortal"));
             fonts.Add("ButtonFont", Content.Load<SpriteFont>("Fonts/ButtonFont"));
 
             gameMusic.Add(Content.Load<Song>("Songs/Ah, The 808's"));
