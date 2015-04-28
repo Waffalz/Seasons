@@ -108,15 +108,14 @@ namespace Platform.world {
 			for ( int i = 0; i < 200; i++ ) {
 
 				BackgroundObject boi = new BackgroundObject();
-				int ro = Game1.CurrentGame.Rand.Next( 0, 25 );
 				boi.Depth = ( float )Game1.CurrentGame.Rand.Next( 1, 100 ) / 100;
 				boi.Position = new Vector2( Game1.CurrentGame.Rand.Next( -100, 500 ), Game1.CurrentGame.Rand.Next( -100, 500 ) ) * ( 2 - boi.Depth );
 				boi.Size = new Vector2( Game1.CurrentGame.Rand.Next( 5, 10 ) ) * ( boi.Depth / 2 + ( float ).5 );
 				boi.Col = Color.White;
 				boi.Image = Game1.CurrentGame.Textures[ "NewBlocks" ];
 				boi.SrcRect = new Rectangle(
-								( ro * 5 ) * Tile.TILE_TEX_WIDTH,
-								( ro * 5 ) * Tile.TILE_TEX_WIDTH,
+								(2) * Tile.TILE_TEX_WIDTH,
+								(4) * Tile.TILE_TEX_WIDTH,
 								Tile.TILE_TEX_WIDTH, Tile.TILE_TEX_WIDTH );
 				backList.Add( boi );
 

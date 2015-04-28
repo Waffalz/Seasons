@@ -38,7 +38,10 @@ namespace Platform.projectiles
             base.Update(gameTime);
             UpdatePosition(timeElapsed);
             UpdateGravity(timeElapsed);
-            CorrectCollisionPosition();
+            List<Entity> tilist = CheckForTileCollision(parent);
+            if (tilist.Count > 0) {
+                OnCollide(tilist[0]);
+            }
         }
 
         public override void OnCollide(Entity other)
@@ -53,6 +56,18 @@ namespace Platform.projectiles
                     //implement 
 
                 }
+
+                for (int i = 0; i < 30; i++) {//particle effects
+                    Particle poi = new Particle((float)1.5f, (float)2);
+                    poi.Position = new Vector2(Position.X, Position.Y);
+                    double rAngle = MathHelper.ToRadians(Game1.CurrentGame.Rand.Next(0, 360));
+                    double speed = Game1.CurrentGame.Rand.Next(10, 40);
+                    poi.Velocity = new Vector2((float)Math.Round(Math.Cos(rAngle) * speed), (float)Math.Round(Math.Sin(rAngle) * speed));
+                    poi.ColorSpeed = new Vector4(Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-10, 10), Game1.CurrentGame.Rand.Next(-1000, -700));
+                    poi.Color = Color.Brown;
+                    parent.AddParticle(poi);
+                }
+
                 Remove();
             }
         }

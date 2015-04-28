@@ -226,6 +226,17 @@ namespace Platform.world {
             return toReturn;
         }
 
+        public List<Entity> CheckForCollision(List<Entity> jep)
+        {
+            List<Entity> toReturn = new List<Entity>();
+            foreach (Entity ent in jep) {
+                if (ent.Collides(this) && ent != this) {
+                    toReturn.Add(ent);
+                }
+            }
+            return toReturn;
+        }
+
         public List<Entity> CheckForTileCollision(Map mep)
         {
             List<Entity> toReturn = new List<Entity>();

@@ -134,6 +134,7 @@
     <Compile Include="control\GameAction.cs" />
     <Compile Include="control\ContinuousAction.cs" />
     <Compile Include="control\OnceAction.cs" />
+    <Compile Include="projectiles\AutumnBasic.cs" />
     <Compile Include="projectiles\SpringBasic.cs" />
     <Compile Include="projectiles\Projectile.cs" />
     <Compile Include="projectiles\SummerBasic.cs" />

@@ -12,6 +12,7 @@ using Platform.mobs;
 using Platform.world;
 using Platform.userinterface;
 using Platform.logger;
+using Platform.projectiles;
 
 namespace Platform.characters
 {
@@ -32,6 +33,18 @@ namespace Platform.characters
             boostAccel = 200;
             airControl = 1;
             boostVelocityTolerance = 30;
+
+            controls.Add("Autumn Basic Attack", new ContinuousAction(this, 1,
+                delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },
+                delegate(GameTime gameTime) {
+                    MouseState mouse = Game1.CurrentGame.MouseInput;
+                    Vector2 dif = parent.Camera.PositionFromScreen(new Point(mouse.X, mouse.Y)) - this.Position;
+                    dif.Normalize();
+                    AutumnBasic gust = new AutumnBasic(this, 10);
+                    gust.Position = this.Position;
+                    gust.Velocity = dif * 100;
+                    parent.AddEntity(gust);
+                }));
             
             controls.Add("Aerial Boost", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
