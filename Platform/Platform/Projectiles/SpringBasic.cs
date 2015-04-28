@@ -19,7 +19,7 @@ namespace Platform.projectiles
         public SpringBasic()
             : base()
         {
-            Size = new Vector2(5f,5f);
+            Size = new Vector2(5f, 5f);
             texture = Game1.CurrentGame.Textures["CircleParticle"];
             sourceRect = texture.Bounds;
         }

@@ -58,6 +58,7 @@ namespace Platform.characters
                 }));
 
             GameContext gameCont = Game1.CurrentGame.GameMode;
+
             if (gameCont is CombatContext) {
                 boostBar = new UIHealthBar();
                 boostBar.bounds = new Rectangle(50, 110, 350, 40);
