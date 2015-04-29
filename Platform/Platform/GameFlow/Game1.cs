@@ -166,6 +166,8 @@ namespace Platform.gameflow {
 			//textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
 			
 			textures.Add( "ScrollBorder", Content.Load<Texture2D>( "GUITextures/scrollBorder" ) );
+            
+            //Add player sprites
 			
 			fonts.Add( "ButtonFont", Content.Load<SpriteFont>( "Fonts/buttonFont" ) );
 

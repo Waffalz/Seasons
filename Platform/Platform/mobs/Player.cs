@@ -153,6 +153,7 @@ namespace Platform.mobs {
             UpdateControls(gameTime);
 
 
+
             UpdateZoom();
 
             UpdateMana(timeDifference);

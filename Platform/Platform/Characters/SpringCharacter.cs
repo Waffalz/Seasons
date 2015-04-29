@@ -24,7 +24,7 @@ namespace Platform.characters
         public SpringCharacter()
             : base()
         {
-
+            //set texture 
 
             //basic attack
             controls.Add("Spring Basic Attack", new ContinuousAction(this, .75f,
