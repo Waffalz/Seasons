@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb</Output>
-      <Time>2015-04-30T08:47:25.1326987-05:00</Time>
+      <Time>2015-04-30T08:59:08.2439981-05:00</Time>
     </Item>
     <Item>
       <Source>Entities\player.png</Source>
@@ -75,7 +75,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb</Output>
-      <Time>2015-04-30T08:47:24.9746829-05:00</Time>
+      <Time>2015-04-30T08:59:08.202994-05:00</Time>
     </Item>
     <Item>
       <Source>Players\WinterAnim.png</Source>
@@ -84,7 +84,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb</Output>
-      <Time>2015-04-30T08:47:24.9916846-05:00</Time>
+      <Time>2015-04-30T08:59:08.2179955-05:00</Time>
     </Item>
     <Item>
       <Source>Players\AutumnAnim.png</Source>
@@ -93,7 +93,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb</Output>
-      <Time>2015-04-30T08:47:24.9446799-05:00</Time>
+      <Time>2015-04-30T08:59:08.1939931-05:00</Time>
     </Item>
     <Item>
       <Source>Players\SummerAnim.png</Source>
@@ -102,7 +102,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb</Output>
-      <Time>2015-04-30T08:47:24.9846839-05:00</Time>
+      <Time>2015-04-30T08:59:08.2119949-05:00</Time>
     </Item>
     <Item>
       <Source>MenuItems\Menuback.png</Source>
@@ -111,7 +111,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb</Output>
-      <Time>2015-04-30T08:47:24.8936748-05:00</Time>
+      <Time>2015-04-30T08:59:08.1719909-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\buttonFont.spritefont</Source>
@@ -120,7 +120,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb</Output>
-      <Time>2015-04-30T08:47:24.8006655-05:00</Time>
+      <Time>2015-04-30T08:59:08.1379875-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

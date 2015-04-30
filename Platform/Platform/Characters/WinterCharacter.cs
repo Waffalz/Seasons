@@ -25,7 +25,6 @@ namespace Platform.characters
         public WinterCharacter()
             : base()
         {
-            Size = new Vector2(10, 25);
             manaGen = -5f;
             ghostShield = 0.20f;
             attack = 10;
