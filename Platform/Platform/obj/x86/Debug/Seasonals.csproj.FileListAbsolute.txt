@@ -72,7 +72,6 @@ H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
@@ -220,3 +219,12 @@ C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.png
