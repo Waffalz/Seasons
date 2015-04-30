@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 using Platform.world;
+using Platform.gameflow;
 using Platform.mobs;
 
 namespace Platform.projectiles
@@ -16,13 +17,13 @@ namespace Platform.projectiles
         public WinterBasic()
             : base()
         {
-
+            texture = Game1.CurrentGame.Textures["Icicle"];
         }
 
         public WinterBasic(Mob creator, float time)
             : base(creator, time)
         {
-
+            texture = Game1.CurrentGame.Textures["Icicle"];
         }
 
         public override void Update(GameTime gameTime)

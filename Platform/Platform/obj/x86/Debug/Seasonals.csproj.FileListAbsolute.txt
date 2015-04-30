@@ -228,3 +228,4 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextu
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Projectiles\Icicle.xnb

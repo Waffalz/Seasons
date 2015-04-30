@@ -38,11 +38,16 @@ namespace Platform.characters
 
                     //create a projectile that checks for collision
                     WinterBasic icicle = new WinterBasic(this, .5f);
-                    icicle.Size = new Vector2(20,10);
+                    icicle.Size = new Vector2(21,7);
 
                     //get position of the mouse in the world to calculate the icicle's new position
                     Vector2 p = parent.Camera.PositionFromScreen(new Point(Game1.CurrentGame.MouseInput.X, Game1.CurrentGame.MouseInput.Y));
-                    
+
+                    if (p.X >= Position.X) {
+                        icicle.SourceRect = new Rectangle(0, 0, 768, 256);
+                    } else {
+                        icicle.SourceRect = new Rectangle(768, 0, 768, 256);
+                    }
                     icicle.Position = new Vector2(this.Position.X + Math.Sign(p.X - this.Position.X) * (icicle.Size.X / 2 + this.Size.X / 2), this.Position.Y);
                     
                     foreach(Entity ent in icicle.CheckForCollision(parent)){//check for collision

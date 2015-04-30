@@ -93,7 +93,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb</Output>
-      <Time>2015-04-30T10:15:35.8268968-05:00</Time>
+      <Time>2015-04-30T10:16:31.7763659-05:00</Time>
     </Item>
     <Item>
       <Source>Players\SummerAnim.png</Source>
@@ -121,6 +121,15 @@
       <Options>None</Options>
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb</Output>
       <Time>2015-04-30T02:15:13.7047465-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Projectiles\Icicle.png</Source>
+      <Name>Projectiles\Icicle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Projectiles\Icicle.xnb</Output>
+      <Time>2015-04-30T14:46:24.9582366-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

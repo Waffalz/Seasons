@@ -172,6 +172,9 @@ namespace Platform.gameflow {
             textures.Add("SummerAnim", Content.Load<Texture2D>("Players/SummerAnim"));
             textures.Add("AutumnAnim", Content.Load<Texture2D>("Players/AutumnAnim"));
             textures.Add("WinterAnim", Content.Load<Texture2D>("Players/WinterAnim"));
+
+            //projectiles
+            textures.Add("Icicle", Content.Load<Texture2D>("Projectiles/Icicle"));
 			
 			fonts.Add( "ButtonFont", Content.Load<SpriteFont>( "Fonts/buttonFont" ) );
 
