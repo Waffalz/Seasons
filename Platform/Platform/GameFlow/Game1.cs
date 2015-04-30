@@ -166,17 +166,17 @@ namespace Platform.GameFlow
             gameMusic.Add(Content.Load<Song>("Songs/Questionable"));
             gameMusic.Add(Content.Load<Song>("Songs/The Key"));
             gameMusic.Add(Content.Load<Song>("Songs/Welcome to Summer"));
+ 
             ShuffleMusic();
+
             for (int i = 0; i < gameMusic.Count; i++)
             {
                 MediaPlayer.Play(gameMusic[i]);
             }
             MediaPlayer.IsRepeating = true;
-
-
         }
 
-        public void ShuffleMusic()
+        private void ShuffleMusic()
         {
             Random rand = new Random();
             int x = gameMusic.Count;

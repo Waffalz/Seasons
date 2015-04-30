@@ -112,19 +112,10 @@ namespace Platform.Mobs
                 delegate(GameTime gameTime) {
                     if (onGround) {
                         onGround = false;
-                        Position += new Vector2(0,.1f);//elevating player position by a negligible amount to get around that stupid no-jumping bug
+                        Position += new Vector2(0,.1f); //elevating player position by a negligible amount to get around that stupid no-jumping bug
                         velocity = new Vector2(velocity.X, jumpSpeed);
                     }
                 }));
-            //controls.Add("Jump", new ContinuousAction(this, 0,
-            //    delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
-            //    delegate(GameTime gameTime) {
-            //        if (onGround) {
-            //            onGrou nd = false;
-            //            velocity = new Vector2(velocity.X, jumpSpeed);
-            //        }
-            //    }));
-            
         }
 
         public override void Update(GameTime gameTime)

@@ -77,16 +77,16 @@ namespace Platform.GameFlow
 
             UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
                 selected = CharType.Spring;
-                charName.text = "Anoixi";
-                charDesc.text = "A member of royalty for the kingdom of the Geogon, or Earthborn, who have a special affinity\nwith plants and the natural world. However, humans have indirectly wiped out her race as a\nresult of industrialization.";
+                charName.text = "Haru";
+                charDesc.text = "A ranged character that shoots seeds at her enemies";
                 //TODO: set splash for selected char
             }, "Spring");
             gui.Add(springSelect);
 
             UIButton summerSelect = new UIButton(new Rectangle(210, 100, 150, 150), delegate() {
                 selected = CharType.Summer;
-                charName.text = "Kalokairi";
-                charDesc.text = "Formerly a priest to Pelor, the Sun god. He died a heroic death protecting his city from an\ninvasion of demons.";
+                charName.text = "Natsu";
+                charDesc.text = "A melee character that does damage very close to him";
                 //TODO: set splash for selected char
 
             }, "Summer");
@@ -94,16 +94,16 @@ namespace Platform.GameFlow
 
             UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate() {
                 selected = CharType.Autumn;
-                charName.text = "Akichira";
-                charDesc.text = "A poor, kindhearted girl, the Titan of Autumn took pity on her for her kindness when she starved\nto death, and made her his envoy.";
+                charName.text = "Aki";
+                charDesc.text = "A ranged character that shoots leaves at her enemies.\nAbility - Control the winds: Hold \"W\" key to float.";
                 //TODO: set splash for selected char
             }, "Autumn");
             gui.Add(autumnSelect);
 
             UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
                 selected = CharType.Winter;
-                charName.text = "Zimo";
-                charDesc.text = "During an enemy raid of his city, Zimo\'s wife sacrificed herself to save him. Stricken with\ngrief, Zimo hung himself. By the time the previous Envoy of Winter found him, Zimo was already\npartially gone.";
+                charName.text = "Hiems";
+                charDesc.text = "A ghost character. Takes less damage, but loses mana slowly, and will die if he runs out.\nHas a sweeping melee attack that converts damage to mana to stay alive.";
                 //TODO: set splash for selected char
             }, "Winter");
             gui.Add(winterSelect);

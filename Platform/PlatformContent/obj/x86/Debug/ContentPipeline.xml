@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
       <Time>2015-04-02T09:19:03.9533648-05:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
       <Time>2015-03-25T09:22:30.1960223-05:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
       <Time>2015-04-02T09:19:19.3646699-05:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
       <Time>2015-04-02T10:08:39.0022786-05:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
       <Time>2015-04-02T10:08:38.9802764-05:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
       <Time>2015-04-02T10:08:38.9782762-05:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
       <Time>2015-04-02T10:08:39.01628-05:00</Time>
     </Item>
     <Item>
@@ -70,17 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
       <Time>2015-04-02T10:08:38.9812765-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Fonts\ButtonFont.spritefont</Source>
-      <Name>Fonts\ButtonFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-04-02T10:08:38.9872771-05:00</Time>
     </Item>
     <Item>
       <Source>Tiles\NewBlocks.png</Source>
@@ -88,8 +79,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb</Output>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb</Output>
       <Time>2015-04-07T09:36:31.7494357-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\ButtonFont.spritefont</Source>
+      <Name>Fonts\ButtonFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
+      <Time>2015-04-02T10:08:38.9872771-05:00</Time>
     </Item>
     <Item>
       <Source>Songs\Ah, The 808's.mp3</Source>
@@ -97,8 +97,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma</Extra>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb</Output>
+      <Extra>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma</Extra>
       <Time>2015-04-21T08:34:30.0895487-05:00</Time>
     </Item>
     <Item>
@@ -107,8 +107,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma</Extra>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb</Output>
+      <Extra>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma</Extra>
       <Time>2015-04-21T08:34:30.5107487-05:00</Time>
     </Item>
     <Item>
@@ -117,8 +117,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma</Extra>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb</Output>
+      <Extra>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma</Extra>
       <Time>2015-04-21T08:34:30.8695487-05:00</Time>
     </Item>
     <Item>
@@ -127,8 +127,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma</Extra>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb</Output>
+      <Extra>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma</Extra>
       <Time>2015-04-21T08:34:31.1659487-05:00</Time>
     </Item>
     <Item>
@@ -137,8 +137,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma</Extra>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb</Output>
+      <Extra>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma</Extra>
       <Time>2015-04-21T08:34:31.5091487-05:00</Time>
     </Item>
     <Item>
@@ -147,8 +147,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma</Extra>
+      <Output>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb</Output>
+      <Extra>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma</Extra>
       <Time>2015-04-21T08:34:31.9609487-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -157,10 +157,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\PlatformContent\</RootDirectory>
+      <LoggerRootDirectory>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\</LoggerRootDirectory>
+      <IntermediateDirectory>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

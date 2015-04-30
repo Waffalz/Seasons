@@ -46,6 +46,7 @@ namespace Platform.GameFlow
                     Game1.CurrentGame.GameMode = Game1.CurrentGame.SaveCombatContext;
                 }, "Resume Game");
                 resumeGameButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - resumeGameButton.bounds.Width) / 2;
+                resumeGameButton.Border = UIBorder.Scroll;
                 gui.Add(resumeGameButton);
             }
 
@@ -54,6 +55,7 @@ namespace Platform.GameFlow
                 Game1.CurrentGame.GameMode = new ControlContext(this);
             }, "Controls");
             controlButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - controlButton.bounds.Width) / 2;
+            controlButton.Border = UIBorder.Scroll;
             gui.Add(controlButton);
 
             UIButton creditsButton = new UIButton(new Rectangle(0, 550, 300, 60), delegate()
@@ -61,6 +63,7 @@ namespace Platform.GameFlow
                     Game1.CurrentGame.GameMode = new CreditsContext();
             }, "Credits");
             creditsButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - creditsButton.bounds.Width) / 2;
+            creditsButton.Border = UIBorder.Scroll;
             gui.Add(creditsButton);
 
             UIButton exitButton = new UIButton(new Rectangle(0, 620, 300, 60), delegate()
@@ -68,14 +71,15 @@ namespace Platform.GameFlow
                 Game1.CurrentGame.Exit();
             }, "Exit");
             exitButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - exitButton.bounds.Width) / 2;
+            exitButton.Border = UIBorder.Scroll;
             gui.Add(exitButton);
-            MediaPlayer.Volume = 1.0f;
 
         }
 
         public override void Update(GameTime gameTime)
         {
             gui.Update(gameTime);
+            MediaPlayer.Volume = 1.0f;
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
