@@ -95,7 +95,7 @@ namespace Platform.GameFlow
             UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate() {
                 selected = CharType.Autumn;
                 charName.text = "Aki";
-                charDesc.text = "A ranged character that shoots leaves at her enemies.\nAbility - Control the winds: Hold \"W\" key to float.";
+                charDesc.text = "A ranged character that shoots leaves at her enemies. Her bullets travel through walls.\nAbility - Control the winds: Hold \"W\" key to float.";
                 //TODO: set splash for selected char
             }, "Autumn");
             gui.Add(autumnSelect);
