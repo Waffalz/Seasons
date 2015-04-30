@@ -1,15 +1,15 @@
 <
 . = null
-q = NewBlocks, 0, 0
-w = NewBlocks, 1, 0
-e = NewBlocks, 2, 0
-r = NewBlocks, 3, 0
-t = NewBlocks, 4, 0
-a = NewBlocks, 0, 1
-s = NewBlocks, 1, 1
-d = NewBlocks, 2, 1
-f = NewBlocks, 3, 1
-g = NewBlocks, 4, 1
+q = Blocks, 0, 0
+w = Blocks, 1, 0
+e = Blocks, 2, 0
+r = Blocks, 3, 0
+t = Blocks, 4, 0
+a = Blocks, 0, 1
+s = Blocks, 1, 1
+d = Blocks, 2, 1
+f = Blocks, 3, 1
+g = Blocks, 4, 1
 + = Player
 x = Baddu
 >

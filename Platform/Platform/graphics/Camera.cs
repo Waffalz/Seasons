@@ -134,20 +134,16 @@ namespace Platform.graphics {
 					}
 				}
 
-
-
 				foreach ( Particle p in Parent.Particles ) {
 					if ( p.Texture != null ) {
 						p.Draw( gameTime, spriteBatch );
 					}
 				}
 
-
-
-
 			}
 
 		}
+
 	}
 
 }

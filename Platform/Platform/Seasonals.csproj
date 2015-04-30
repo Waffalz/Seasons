@@ -111,6 +111,7 @@
     <Compile Include="ai\AIBase.cs" />
     <Compile Include="ai\AIPathing.cs" />
     <Compile Include="ai\AIBasicEnemy.cs" />
+    <Compile Include="characters\animation\PlayerMovementAnimation.cs" />
     <Compile Include="characters\AutumnCharacter.cs" />
     <Compile Include="characters\SpringCharacter.cs" />
     <Compile Include="characters\SummerCharacter.cs" />

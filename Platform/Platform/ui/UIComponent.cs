@@ -57,7 +57,7 @@ namespace Platform.userinterface
             visible = true;
             texture = Game1.CurrentGame.Textures["Square"];
             sourceRect = texture.Bounds;
-            color = Color.MediumSeaGreen;
+            color = Color.DarkGray;
             depth = (float)0.5;
             border = UIBorder.None;
             borderSize = 30;

@@ -22,6 +22,8 @@ namespace Platform.characters
         public SummerCharacter()
             : base()
         {
+            texture = Game1.CurrentGame.Textures["SummerAnim"];
+
 
             //adds player control for basic attacks
             controls.Add("Basic Attack", new ContinuousAction(this, (float).75,

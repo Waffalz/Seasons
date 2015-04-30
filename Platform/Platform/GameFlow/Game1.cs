@@ -154,20 +154,24 @@ namespace Platform.gameflow {
 			// TODO: use this.Content to load your game content here
 
 			textures.Add( "Blocks", Content.Load<Texture2D>( "Tiles/blocks" ) );
-			textures.Add( "NewBlocks", Content.Load<Texture2D>( "Tiles/newBlocks" ) );
+			//textures.Add( "NewBlocks", Content.Load<Texture2D>( "Tiles/newBlocks" ) );
 
 			textures.Add( "Player", Content.Load<Texture2D>( "Entities/player" ) );
 
 			textures.Add( "Square", Content.Load<Texture2D>( "Particles/square" ) );
 			textures.Add( "CircleParticle", Content.Load<Texture2D>( "Particles/circleParticle" ) );
 
-			textures.Add( "MenuBack", Content.Load<Texture2D>( "MenuItems/seasonsMenu" ) );
+			textures.Add( "MenuBack", Content.Load<Texture2D>( "MenuItems/Menuback" ) );
 			textures.Add( "HealthBar", Content.Load<Texture2D>( "GUITextures/healthBar" ) );
 			//textures.Add("CombatHUD", Content.Load<Texture2D>("GUITextures/HUDBack"));
 			
 			textures.Add( "ScrollBorder", Content.Load<Texture2D>( "GUITextures/scrollBorder" ) );
             
             //Add player sprites
+            textures.Add("SpringAnim", Content.Load<Texture2D>("Players/SpringAnim"));
+            textures.Add("SummerAnim", Content.Load<Texture2D>("Players/SummerAnim"));
+            textures.Add("AutumnAnim", Content.Load<Texture2D>("Players/AutumnAnim"));
+            textures.Add("WinterAnim", Content.Load<Texture2D>("Players/WinterAnim"));
 			
 			fonts.Add( "ButtonFont", Content.Load<SpriteFont>( "Fonts/buttonFont" ) );
 
@@ -211,7 +215,7 @@ namespace Platform.gameflow {
 		/// </summary>
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw( GameTime gameTime ) {
-			GraphicsDevice.Clear( Color.CornflowerBlue );
+			GraphicsDevice.Clear( Color.Gray );
 
 			// TODO: Add your drawing code here
 			spriteBatch.Begin();

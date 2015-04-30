@@ -23,11 +23,15 @@ namespace Platform.characters
         float boostAccel;
         float boostVelocityTolerance;
 
+
+
         UIHealthBar boostBar;
 
         public AutumnCharacter()
             : base()
         {
+            texture = Game1.CurrentGame.Textures["AutumnAnim"];
+
             maxBoostTime = .75f;
             boostTime = maxBoostTime;
             boostAccel = 200;

@@ -5,12 +5,14 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Graphics;
 
 using Platform.mobs;
 using Platform.world;
 using Platform.logger;
 using Platform.gameflow;
 using Platform.projectiles;
+using Platform.characters.animation;
 using Platform.control;
 
 namespace Platform.characters
@@ -23,9 +25,12 @@ namespace Platform.characters
         public WinterCharacter()
             : base()
         {
+            Size = new Vector2(10, 25);
             manaGen = -5f;
             ghostShield = 0.20f;
             attack = 10;
+
+            texture = Game1.CurrentGame.Textures["WinterAnim"];
 
             //adds player control for basic attacks
             controls.Add("Basic Attack", new ContinuousAction(this, (float)1.2f,
@@ -62,6 +67,43 @@ namespace Platform.characters
                     parent.AddEntity(icicle);
                 }));
 
+            /*
+            defaultAnimState = new PlayerMovementAnimation(0, 1);
+            defaultAnimState.Draw = delegate(GameTime gameTime, SpriteBatch spriteBatch) {
+                KeyboardState kipz = Game1.CurrentGame.KeyboardInput;
+                if (kipz.IsKeyDown(Keys.D)) {
+                    if (onGround) {
+                        //running left on ground animation
+                    } else {
+                        //going left in air animation
+                    }
+                }
+                if (kipz.IsKeyDown(Keys.A)) {
+                    if (onGround) {
+                        //running left on ground animation
+                    } else {
+                        //going right in air animation
+                    }
+                }
+                if (!(kipz.IsKeyDown(Keys.D) || (kipz.IsKeyDown(Keys.A)))) {
+                    if (onGround) {
+                        if (moveDir == MoveDirection.Right) {
+                            //idle on ground facing right animation
+                        }
+                        if (moveDir == MoveDirection.Left) {
+                            //idle on ground facing left animation
+                        }
+                    } else {
+                        if (moveDir == MoveDirection.Right) {
+                            //idle in air facing right animation
+                        }
+                        if (moveDir == MoveDirection.Left) {
+                            //idle in air facing left animation
+                        }
+                    }
+                }
+            };
+            */
         }
 
         public override void Damage(float amount)

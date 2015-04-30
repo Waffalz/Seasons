@@ -1,7 +1,5 @@
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
@@ -131,7 +129,6 @@ C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.png
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb
 F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
 F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
 F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb
@@ -216,4 +213,10 @@ H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level0
 H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level05.txt
 H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
 H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\seasonsMenu.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.png

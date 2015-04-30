@@ -105,14 +105,14 @@ namespace Platform.world {
 
 			tileEnts = new List<Entity>();
 
-			for ( int i = 0; i < 200; i++ ) {
+			for ( int i = 0; i < 400; i++ ) {
 
 				BackgroundObject boi = new BackgroundObject();
 				boi.Depth = ( float )Game1.CurrentGame.Rand.Next( 1, 100 ) / 100;
-				boi.Position = new Vector2( Game1.CurrentGame.Rand.Next( -100, 500 ), Game1.CurrentGame.Rand.Next( -100, 500 ) ) * ( 2 - boi.Depth );
+				boi.Position = new Vector2( Game1.CurrentGame.Rand.Next( -100, 1000 ), Game1.CurrentGame.Rand.Next( -100, 500 ) ) * ( 2 - boi.Depth );
 				boi.Size = new Vector2( Game1.CurrentGame.Rand.Next( 5, 10 ) ) * ( boi.Depth / 2 + ( float ).5 );
 				boi.Col = Color.White;
-				boi.Image = Game1.CurrentGame.Textures[ "NewBlocks" ];
+				boi.Image = Game1.CurrentGame.Textures[ "Blocks" ];
 				boi.SrcRect = new Rectangle(
 								(2) * Tile.TILE_TEX_WIDTH,
 								(4) * Tile.TILE_TEX_WIDTH,

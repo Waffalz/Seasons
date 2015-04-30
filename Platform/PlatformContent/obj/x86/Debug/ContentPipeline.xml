@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Tiles\blocks.png</Source>
-      <Name>Tiles\blocks</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb</Output>
-      <Time>2015-04-12T20:35:32-05:00</Time>
-    </Item>
-    <Item>
       <Source>Entities\player.png</Source>
       <Name>Entities\player</Name>
       <Importer>TextureImporter</Importer>
@@ -18,15 +9,6 @@
       <Options>None</Options>
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\player.xnb</Output>
       <Time>2015-04-12T20:35:32-05:00</Time>
-    </Item>
-    <Item>
-      <Source>MenuItems\seasonsMenu.png</Source>
-      <Name>MenuItems\seasonsMenu</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\seasonsMenu.xnb</Output>
-      <Time>2015-04-23T08:52:42.7981201-05:00</Time>
     </Item>
     <Item>
       <Source>GUITextures\healthBar.png</Source>
@@ -65,15 +47,6 @@
       <Time>2015-04-23T08:52:42.7921158-05:00</Time>
     </Item>
     <Item>
-      <Source>Tiles\newBlocks.png</Source>
-      <Name>Tiles\newBlocks</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\newBlocks.xnb</Output>
-      <Time>2015-04-23T08:52:42.8372623-05:00</Time>
-    </Item>
-    <Item>
       <Source>Fonts\buttonFont.spritefont</Source>
       <Name>Fonts\buttonFont</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -94,6 +67,60 @@
       <Options>None</Options>
       <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb</Output>
       <Time>2015-04-12T20:35:32-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Players\WinterAnim.png</Source>
+      <Name>Players\WinterAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb</Output>
+      <Time>2015-04-30T01:53:51.7564343-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Players\SpringAnim.png</Source>
+      <Name>Players\SpringAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb</Output>
+      <Time>2015-04-30T01:53:51.1197757-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Players\AutumnAnim.png</Source>
+      <Name>Players\AutumnAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb</Output>
+      <Time>2015-04-30T01:53:49.6180982-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Players\SummerAnim.png</Source>
+      <Name>Players\SummerAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb</Output>
+      <Time>2015-04-30T01:53:51.1217771-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MenuItems\Menuback.png</Source>
+      <Name>MenuItems\Menuback</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb</Output>
+      <Time>2015-04-30T01:58:32.5637222-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tiles\blocks.png</Source>
+      <Name>Tiles\blocks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb</Output>
+      <Time>2015-04-30T02:15:13.7047465-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
