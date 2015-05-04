@@ -163,6 +163,9 @@ namespace Platform.gameflow
             {
                 Game1.CurrentGame.GameMode = new GameOverContext();
             }
+
+            if (world.Player.Health <= 0)
+                Game1.CurrentGame.GameMode = new GameOverContext();
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
