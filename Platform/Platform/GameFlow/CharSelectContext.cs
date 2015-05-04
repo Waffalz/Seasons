@@ -95,7 +95,7 @@ namespace Platform.GameFlow
             UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate() {
                 selected = CharType.Autumn;
                 charName.text = "Aki";
-                charDesc.text = "A ranged character that shoots leaves at her enemies. Her bullets travel through walls.\nAbility - Control the winds: Hold \"W\" key to float.";
+                charDesc.text = "A ranged character that shoots leaves at her enemies. Her leaves travel through walls.\nAbility - Control the winds: Hold \"W\" key to float.";
                 //TODO: set splash for selected char
             }, "Autumn");
             gui.Add(autumnSelect);
@@ -103,7 +103,7 @@ namespace Platform.GameFlow
             UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
                 selected = CharType.Winter;
                 charName.text = "Hiems";
-                charDesc.text = "A ghost character. Takes less damage, but loses mana slowly, and will die if he runs out.\nHas a sweeping melee attack that converts damage to mana to stay alive.";
+                charDesc.text = "A ghost character. Takes less damage, but loses mana slowly, and will die if he runs out.\nHas a sweeping melee attack that converts damage dealt to mana.";
                 //TODO: set splash for selected char
             }, "Winter");
             gui.Add(winterSelect);
