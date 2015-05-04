@@ -28,7 +28,7 @@ namespace Platform.gameflow
             UIButton menuButton = new UIButton(new Rectangle(0, 300, 300, 100), delegate()
             {
                 Game1.CurrentGame.GameMode = new MainMenuContext();
-            }, "New Game");
+            }, "Main Menu");
             menuButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - menuButton.bounds.Width) / 2;
             menuButton.Border = UIBorder.Scroll;
             gui.Add(menuButton);
