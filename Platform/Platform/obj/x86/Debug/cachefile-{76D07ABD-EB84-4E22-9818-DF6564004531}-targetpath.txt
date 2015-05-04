@@ -12,6 +12,18 @@ Content\Players\SummerAnim.xnb
 Content\MenuItems\Menuback.xnb
 Content\Projectiles\Icicle.xnb
 Content\Fonts\buttonFont.xnb
+Content\Songs\Ah, The 808's.xnb
+Content\Songs\Ah, The 808's.wma
+Content\Songs\Description N-A.xnb
+Content\Songs\Description N-A.wma
+Content\Songs\Ominosity.xnb
+Content\Songs\Ominosity.wma
+Content\Songs\Questionable.xnb
+Content\Songs\Questionable.wma
+Content\Songs\The Key.xnb
+Content\Songs\The Key.wma
+Content\Songs\Welcome to Summer.xnb
+Content\Songs\Welcome to Summer.wma
 Content\Tiles\blocks.png
 Content\Entities\player.png
 Content\Particles\square.bmp

@@ -43,6 +43,8 @@ namespace Platform.gameflow {
 		private MouseState mus;
 		private MouseState oMus;
 
+        public List<Song> gameMusic;
+
 		public static Game1 CurrentGame {
 			get {
 				return currentGame;
@@ -131,7 +133,7 @@ namespace Platform.gameflow {
 			textures = new Dictionary<string, Texture2D>();
 			fonts = new Dictionary<string, SpriteFont>();
 			//call to LoadContent
-
+            gameMusic = new List<Song>();
 
 			base.Initialize();
 
@@ -178,14 +180,41 @@ namespace Platform.gameflow {
 			
 			fonts.Add( "ButtonFont", Content.Load<SpriteFont>( "Fonts/buttonFont" ) );
 
+            gameMusic.Add(Content.Load<Song>("Songs/Ah, The 808's"));
+            gameMusic.Add(Content.Load<Song>("Songs/Description N-A"));
+            gameMusic.Add(Content.Load<Song>("Songs/Ominosity"));
+            gameMusic.Add(Content.Load<Song>("Songs/Questionable"));
+            gameMusic.Add(Content.Load<Song>("Songs/The Key"));
+            gameMusic.Add(Content.Load<Song>("Songs/Welcome to Summer"));
+
+            ShuffleMusic();
+
+            for (int i = 0; i < gameMusic.Count; i++)
+            {
+                MediaPlayer.Play(gameMusic[i]);
+            }
+            MediaPlayer.IsRepeating = true;
+
 			Logger.Info( className, classNamespace, "Game content load successful" );
 		}
 
-		/// <summary>
-		/// UnloadContent will be called once per game and is the place to unload
-		/// all content.
-		/// </summary>
-		protected override void UnloadContent() {
+        private void ShuffleMusic()
+        {
+            for (int i = 0; i < gameMusic.Count; i++)
+            {
+                int randIndex = rand.Next( gameMusic.Count );
+                Song toReplace = gameMusic[ randIndex ];
+                gameMusic[ i ] = toReplace;
+                gameMusic[randIndex] = gameMusic[i];
+            }
+        }
+
+        /// <summary>
+        /// UnloadContent will be called once per game and is the place to unload
+        /// all content.
+        /// </summary>
+        protected override void UnloadContent()
+        {
 			// TODO: Unload any non ContentManager content here
 			Logger.Info( className, classNamespace, "Game content unload successful" );
 		}

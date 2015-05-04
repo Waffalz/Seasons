@@ -131,6 +131,66 @@
       <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb</Output>
       <Time>2015-05-04T09:11:35.4769742-05:00</Time>
     </Item>
+    <Item>
+      <Source>Songs\Ah, The 808's.mp3</Source>
+      <Name>Songs\Ah, The 808's</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma</Extra>
+      <Time>2015-05-04T09:59:53.361837-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\Description N-A.mp3</Source>
+      <Name>Songs\Description N-A</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma</Extra>
+      <Time>2015-05-04T09:59:53.8142457-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\Ominosity.mp3</Source>
+      <Name>Songs\Ominosity</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma</Extra>
+      <Time>2015-05-04T09:59:54.2822547-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\Questionable.mp3</Source>
+      <Name>Songs\Questionable</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma</Extra>
+      <Time>2015-05-04T09:59:54.5942607-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\The Key.mp3</Source>
+      <Name>Songs\The Key</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma</Extra>
+      <Time>2015-05-04T09:59:54.9374673-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\Welcome to Summer.mp3</Source>
+      <Name>Songs\Welcome to Summer</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma</Extra>
+      <Time>2015-05-04T09:59:55.4366769-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
