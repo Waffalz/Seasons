@@ -53,12 +53,8 @@ namespace Platform.projectiles
                         poi.Color = Color.Gray;
                         parent.AddParticle(poi);
                     }
-
                 }
             }
-
         }
-
-
     }
 }

@@ -120,7 +120,9 @@
     <Compile Include="gameflow\CharSelectContext.cs" />
     <Compile Include="gameflow\CombatContext.cs" />
     <Compile Include="gameflow\GameContext.cs" />
+    <Compile Include="gameflow\GameOverContext.cs" />
     <Compile Include="gameflow\MainMenuContext.cs" />
+    <Compile Include="gameflow\VictoryContext.cs" />
     <Compile Include="graphics\BackgroundObject.cs" />
     <Compile Include="graphics\LookCamera.cs" />
     <Compile Include="graphics\AnimationState.cs" />

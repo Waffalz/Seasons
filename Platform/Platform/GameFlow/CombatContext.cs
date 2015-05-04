@@ -11,6 +11,7 @@ using Platform.world;
 using Platform.graphics;
 using Platform.userinterface;
 using Platform.logger;
+using Platform.mobs;
 
 namespace Platform.gameflow
 {
@@ -135,6 +136,24 @@ namespace Platform.gameflow
 
             manaBar.MaxValue = Game1.CurrentGame.Player.MaxMana;
             manaBar.Value = Game1.CurrentGame.Player.Mana;
+
+            bool noMobsOnMap = true;
+            for (int i = 0; i < world.Entities.Count; i++)
+            {
+                if (world.Entities[i] is Baddu)
+                {
+                    noMobsOnMap = false;
+                }
+            }
+            if (noMobsOnMap)
+            {
+                Game1.CurrentGame.GameMode = new VictoryContext();
+            }
+
+            if (world.Player.Health <= 0)
+            {
+                Game1.CurrentGame.GameMode = new GameOverContext();
+            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
