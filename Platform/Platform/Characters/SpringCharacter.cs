@@ -29,6 +29,8 @@ namespace Platform.characters
             //set texture 
             texture = Game1.CurrentGame.Textures["SpringAnim"];
 
+            attack = 6;
+
             //basic attack
             controls.Add("Spring Basic Attack", new ContinuousAction(this, .75f,
                 delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },

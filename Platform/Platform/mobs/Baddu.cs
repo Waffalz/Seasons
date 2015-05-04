@@ -29,7 +29,7 @@ namespace Platform.mobs {
 			Texture = Game1.CurrentGame.Textures[ "Player" ];
 			SourceRect = texture.Bounds;
 			color = Color.Red;
-            health = 10;
+            health = 5;
 		}
 
 		public void Behave( float timeDif ) {

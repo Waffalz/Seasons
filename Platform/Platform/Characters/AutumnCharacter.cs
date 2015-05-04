@@ -31,7 +31,7 @@ namespace Platform.characters
         {
             texture = Game1.CurrentGame.Textures["AutumnAnim"];
 
-            attack = 2;
+            attack = 10;
             maxBoostTime = .75f;
             boostTime = maxBoostTime;
             boostAccel = 200;

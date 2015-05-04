@@ -24,6 +24,7 @@ namespace Platform.characters
         {
             texture = Game1.CurrentGame.Textures["SummerAnim"];
 
+            attack = 7;
 
             //adds player control for basic attacks
             controls.Add("Basic Attack", new ContinuousAction(this, (float).75,
