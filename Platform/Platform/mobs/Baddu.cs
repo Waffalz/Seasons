@@ -29,6 +29,7 @@ namespace Platform.mobs {
 			Texture = Game1.CurrentGame.Textures[ "Player" ];
 			SourceRect = texture.Bounds;
 			color = Color.Red;
+            health = 10;
 		}
 
 		public void Behave( float timeDif ) {
@@ -66,7 +67,10 @@ namespace Platform.mobs {
 				}
 
 			}
-
+            if (health <= 0)
+            {
+                parent.RemoveEntity(this);
+            }
 
 		}
 

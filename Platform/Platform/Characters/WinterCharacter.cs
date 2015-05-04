@@ -116,7 +116,7 @@ namespace Platform.characters
         }
         public override void Damage(Mob attacker, float power)
         {
-            health -= ((attacker.Attack - defense) * power / 100) * (100 - ghostShield) / 100;
+            health -= ((attacker.Attack) * power / 100) * (100 - ghostShield) / 100;
         }
         public override void Damage(float amount, Mob attacker)
         {

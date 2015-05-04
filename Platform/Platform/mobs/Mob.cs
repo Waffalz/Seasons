@@ -15,8 +15,7 @@ namespace Platform.mobs {
 
 		protected float maxHealth;
 		protected float health;
-		protected int attack; //the amount of damage dealt by a 100% power attack on an enemy with no defense
-		protected int defense; //the amount subtracted from attack when taking damage
+        protected int attack;
 
 		public Vector2 previousPosition;
 
@@ -95,14 +94,6 @@ namespace Platform.mobs {
 				attack = value;
 			}
 		}
-		public int Defense {
-			get {
-				return defense;
-			}
-			set {
-				defense = value;
-			}
-		}
 
 		public Mob()
 			: base() {
@@ -139,7 +130,7 @@ namespace Platform.mobs {
 			health -= amount;
 		}
 		public virtual void Damage( Mob attacker, float power ) {
-			health -= ( attacker.Attack - defense ) * power / 100;
+			health -= ( attacker.attack ) * power / 100;
 		}
 		public virtual void Damage( float amount, Mob attacker ) {
 			health -= amount;
