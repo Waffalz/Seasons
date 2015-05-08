@@ -228,6 +228,7 @@ namespace Platform.mobs {
             UpdateMana(timeDifference);
 
             CorrectCollisionPosition();
+
 		}
 
         public virtual void UpdateMana(float timeDifference)

@@ -24,12 +24,14 @@ namespace Platform.mobs {
 
 		public Baddu()
 			: base() {
+            
 			moveDirection = MoveDirection.Left;
 			Size = new Vector2( 10, 10 );
 			Texture = Game1.CurrentGame.Textures[ "Player" ];
 			SourceRect = texture.Bounds;
 			color = Color.Red;
-            health = 5;
+            health = 50;
+            attack = 10;
 		}
 
 		public void Behave( float timeDif ) {
@@ -67,6 +69,14 @@ namespace Platform.mobs {
 				}
 
 			}
+
+
+            foreach (Mob m in parent.Mobs) {
+                if (m is Player && m.Collides(this)) {
+                    ((Player)m).Damage(attack*timeDif, this);
+                }
+            }
+
             if (health <= 0)
             {
                 parent.RemoveEntity(this);

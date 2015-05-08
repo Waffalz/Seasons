@@ -149,23 +149,11 @@ namespace Platform.gameflow
             {
                 Game1.CurrentGame.GameMode = new VictoryContext();
             }
-            
-            bool mobTouchesPlayer = false;
-            for (int i = 0; i < world.Entities.Count; i++)
-            {
-                if (world.Entities[i] is Baddu)
-                {
-                    if(world.Entities[i].Collides(world.Player))
-                        mobTouchesPlayer = true;
-                }
-            }
-            if (mobTouchesPlayer)
-            {
+
+            if (world.Player.Health <= 0) {
                 Game1.CurrentGame.GameMode = new GameOverContext();
             }
 
-            if (world.Player.Health <= 0)
-                Game1.CurrentGame.GameMode = new GameOverContext();
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

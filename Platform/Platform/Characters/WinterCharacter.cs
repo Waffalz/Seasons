@@ -49,7 +49,7 @@ namespace Platform.characters
                         icicle.SourceRect = new Rectangle(768, 0, 768, 256);
                     }
                     icicle.Position = new Vector2(this.Position.X + Math.Sign(p.X - this.Position.X) * (icicle.Size.X / 2 + this.Size.X / 2), this.Position.Y);
-                    
+
                     foreach(Entity ent in icicle.CheckForCollision(parent)){//check for collision
                         if (ent is Mob && ent != this){ //if collided ent is a mob then
                             ((Mob)ent).Damage(attack, this); // damage mob

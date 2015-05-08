@@ -33,6 +33,7 @@ namespace Platform.world {
 		private float gAccel; //default -150
 
 		private List<Entity> tileEnts;//since I don't wanna make tile to entity collisions, create an entity based off of tiles to check for entity collision
+        private List<Mob> mobList;
 
 		private List<BackgroundObject> backList;
 
@@ -47,7 +48,6 @@ namespace Platform.world {
                 return tileEnts;
             }
         }
-
 		public List<Entity> Entities {
 			get {
 				return entList;
@@ -58,6 +58,10 @@ namespace Platform.world {
 				return partList;
 			}
 		}
+        public List<Mob> Mobs
+        {
+            get { return mobList; }
+        }
 		public float Gravity {
 			get {
 				return gAccel;
@@ -102,6 +106,7 @@ namespace Platform.world {
 			gAccel = -150;
 			cam = new DefaultCamera( this );
 			backList = new List<BackgroundObject>();
+            mobList = new List<Mob>();
 
 			tileEnts = new List<Entity>();
 
@@ -151,6 +156,9 @@ namespace Platform.world {
 			foreach ( Entity ent in addEList ) {
 				entList.Add( ent );
 				ent.parent = this;
+                if (ent is Mob) {
+                    mobList.Add((Mob)ent);
+                }
 			}
 			addEList.Clear();
 
@@ -206,6 +214,9 @@ namespace Platform.world {
 					if ( ent is Player && player == ent ) {
 						player = null;
 					}
+                    if (ent is Mob) {
+                        mobList.Remove((Mob)ent);
+                    }
 				}
 			}
 			removeEList.Clear();
@@ -217,6 +228,8 @@ namespace Platform.world {
 				}
 			}
 			removePList.Clear();
+
+            
 
 			cam.Update( gameTime );
 		}
