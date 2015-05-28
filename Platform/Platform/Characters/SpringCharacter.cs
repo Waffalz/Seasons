@@ -45,6 +45,7 @@ namespace Platform.characters
                     seed.Velocity = dif * BULLET_SPEED;
                     parent.AddEntity(seed);
 
+                    /*
                     //set animation stuff
                     AnimState = new AnimationState(1,1);
                     AnimState.Draw = delegate(GameTime gTime, SpriteBatch spriteBatch) {
@@ -61,6 +62,7 @@ namespace Platform.characters
                     AnimState.LastFrame = delegate(int frame) {
                         AnimState = null;
                     };
+                    */
                 }));
 
         }

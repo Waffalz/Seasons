@@ -28,6 +28,8 @@ namespace Platform.world {
 		private List<Particle> addPList;
 		private List<Particle> removePList;
 
+        private List<Mob> mobList;
+
 		private Camera cam;
 		private Player player;
 		private float gAccel; //default -150
@@ -53,6 +55,12 @@ namespace Platform.world {
 				return entList;
 			}
 		}
+
+        public List<Mob> MobList
+        {
+            get { return mobList; }
+        }
+
 		public List<Particle> Particles {
 			get {
 				return partList;
@@ -94,6 +102,7 @@ namespace Platform.world {
 		public Map() {
 			tiles = new Tile[ MAP_BOUNDS, MAP_BOUNDS ];
 			entList = new List<Entity>();
+            mobList = new List<Mob>();
 			addEList = new List<Entity>();
 			removeEList = new List<Entity>();
 			partList = new List<Particle>();
@@ -150,6 +159,9 @@ namespace Platform.world {
             //add entities in queue
 			foreach ( Entity ent in addEList ) {
 				entList.Add( ent );
+                if (ent is Mob) {
+                    mobList.Add((Mob)ent);
+                }
 				ent.parent = this;
 			}
 			addEList.Clear();
@@ -203,6 +215,9 @@ namespace Platform.world {
 				if ( entList.Contains( ent ) ) {
 					entList.Remove( ent );
 					ent.parent = null;
+                    if ( ent is Mob && mobList.Contains((Mob)ent)){
+                        mobList.Remove((Mob)ent);
+                    }
 					if ( ent is Player && player == ent ) {
 						player = null;
 					}

@@ -29,7 +29,8 @@ namespace Platform.mobs {
 			Texture = Game1.CurrentGame.Textures[ "Player" ];
 			SourceRect = texture.Bounds;
 			color = Color.Red;
-            health = 5;
+            health = 50;
+            attack = 10;
 		}
 
 		public void Behave( float timeDif ) {
@@ -67,6 +68,11 @@ namespace Platform.mobs {
 				}
 
 			}
+            foreach (Mob m in parent.MobList) {
+                if (m is Player && m.Collides(this)) {
+                  ((Player)m).Damage(attack*timeDif, this);
+                }
+            }
             if (health <= 0)
             {
                 parent.RemoveEntity(this);

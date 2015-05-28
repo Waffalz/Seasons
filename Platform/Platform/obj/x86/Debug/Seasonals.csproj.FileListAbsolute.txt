@@ -2,7 +2,6 @@ C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
@@ -120,10 +119,6 @@ H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.png
@@ -286,3 +281,20 @@ C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Deb
 C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level3.txt
 C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level4.txt
 C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level5.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level2.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level1.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level3.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level4.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level5.txt

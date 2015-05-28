@@ -161,20 +161,6 @@ namespace Platform.gameflow
             {
                 Game1.CurrentGame.GameMode = new VictoryContext();
             }
-            
-            bool mobTouchesPlayer = false;
-            for (int i = 0; i < world.Entities.Count; i++)
-            {
-                if (world.Entities[i] is Baddu)
-                {
-                    if(world.Entities[i].Collides(world.Player))
-                        mobTouchesPlayer = true;
-                }
-            }
-            if (mobTouchesPlayer)
-            {
-                Game1.CurrentGame.GameMode = new GameOverContext();
-            }
 
             if (Game1.CurrentGame.Player.Health <= 0)
                 Game1.CurrentGame.GameMode = new GameOverContext();
