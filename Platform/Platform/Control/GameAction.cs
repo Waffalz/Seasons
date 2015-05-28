@@ -6,9 +6,10 @@ using System.Text;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 
-using Platform.World;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.Control
+namespace Platform.control
 {
     delegate void ActionDelegate(GameTime gameTime);
     delegate bool ActionCheck();

@@ -18,6 +18,7 @@
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,7 +31,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -108,42 +108,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters\AutumnCharacter.cs" />
-    <Compile Include="Characters\SpringCharacter.cs" />
-    <Compile Include="Characters\SummerCharacter.cs" />
-    <Compile Include="Characters\TestPlayer.cs" />
-    <Compile Include="Characters\WinterCharacter.cs" />
-    <Compile Include="GameFlow\CharSelectContext.cs" />
-    <Compile Include="GameFlow\CombatContext.cs" />
-    <Compile Include="GameFlow\ControlContext.cs" />
-    <Compile Include="GameFlow\CreditsContext.cs" />
-    <Compile Include="GameFlow\GameContext.cs" />
-    <Compile Include="GameFlow\LevelSelectContext.cs" />
-    <Compile Include="GameFlow\MainMenuContext.cs" />
-    <Compile Include="Graphics\BackgroundObject.cs" />
-    <Compile Include="Graphics\LookCamera.cs" />
-    <Compile Include="Graphics\AnimationState.cs" />
-    <Compile Include="Mobs\Baddu.cs" />
-    <Compile Include="Mobs\Ball.cs" />
-    <Compile Include="Mobs\Behavior.cs" />
-    <Compile Include="Mobs\Mob.cs" />
-    <Compile Include="Graphics\Camera.cs" />
-    <Compile Include="Graphics\Particle.cs" />
-    <Compile Include="Control\GameAction.cs" />
-    <Compile Include="Control\ContinuousAction.cs" />
-    <Compile Include="Control\OnceAction.cs" />
-    <Compile Include="UserInterface\UIButton.cs" />
-    <Compile Include="UserInterface\UIComponent.cs" />
-    <Compile Include="UserInterface\UIHealthBar.cs" />
-    <Compile Include="UserInterface\UILabel.cs" />
-    <Compile Include="UserInterface\UIStatusBar.cs" />
-    <Compile Include="World\Entity.cs" />
-    <Compile Include="World\Map.cs" />
-    <Compile Include="Mobs\Player.cs" />
+    <Compile Include="ai\AIBase.cs" />
+    <Compile Include="ai\AIPathing.cs" />
+    <Compile Include="ai\AIBasicEnemy.cs" />
+    <Compile Include="characters\animation\PlayerMovementAnimation.cs" />
+    <Compile Include="characters\AutumnCharacter.cs" />
+    <Compile Include="characters\SpringCharacter.cs" />
+    <Compile Include="characters\SummerCharacter.cs" />
+    <Compile Include="characters\TestPlayer.cs" />
+    <Compile Include="characters\WinterCharacter.cs" />
+    <Compile Include="gameflow\CharSelectContext.cs" />
+    <Compile Include="gameflow\CombatContext.cs" />
+    <Compile Include="gameflow\ControlContext.cs" />
+    <Compile Include="gameflow\CreditsContext.cs" />
+    <Compile Include="gameflow\GameContext.cs" />
+    <Compile Include="gameflow\GameOverContext.cs" />
+    <Compile Include="gameflow\LevelSelectContext.cs" />
+    <Compile Include="gameflow\MainMenuContext.cs" />
+    <Compile Include="gameflow\VictoryContext.cs" />
+    <Compile Include="graphics\BackgroundObject.cs" />
+    <Compile Include="graphics\LookCamera.cs" />
+    <Compile Include="graphics\AnimationState.cs" />
+    <Compile Include="lib\PriorityQueue.cs" />
+    <Compile Include="logger\Logger.cs" />
+    <Compile Include="mobs\Baddu.cs" />
+    <Compile Include="mobs\Ball.cs" />
+    <Compile Include="mobs\Behavior.cs" />
+    <Compile Include="mobs\Mob.cs" />
+    <Compile Include="graphics\Camera.cs" />
+    <Compile Include="graphics\Particle.cs" />
+    <Compile Include="control\GameAction.cs" />
+    <Compile Include="control\ContinuousAction.cs" />
+    <Compile Include="control\OnceAction.cs" />
+    <Compile Include="projectiles\AutumnBasic.cs" />
+    <Compile Include="projectiles\SpringBasic.cs" />
+    <Compile Include="projectiles\Projectile.cs" />
+    <Compile Include="projectiles\SummerBasic.cs" />
+    <Compile Include="projectiles\WinterBasic.cs" />
+    <Compile Include="ui\UIButton.cs" />
+    <Compile Include="ui\UIComponent.cs" />
+    <Compile Include="ui\UIHealthBar.cs" />
+    <Compile Include="ui\UILabel.cs" />
+    <Compile Include="ui\UIStatusBar.cs" />
+    <Compile Include="world\Entity.cs" />
+    <Compile Include="world\Map.cs" />
+    <Compile Include="mobs\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GameFlow\Program.cs" />
-    <Compile Include="GameFlow\Game1.cs" />
-    <Compile Include="World\Tile.cs" />
+    <Compile Include="gameflow\Program.cs" />
+    <Compile Include="gameflow\Game1.cs" />
+    <Compile Include="world\Tile.cs" />
+    <Compile Include="world\TileEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

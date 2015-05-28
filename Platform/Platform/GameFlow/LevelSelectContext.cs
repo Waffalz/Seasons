@@ -6,16 +6,16 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.UserInterface;
-using Platform.Mobs;
+using Platform.userinterface;
+using Platform.mobs;
 using Microsoft.Xna.Framework.Media;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     public class LevelSelectContext : GameContext
     {
         private enum NumberType { one = 1, two = 2, three = 3, four = 4, five = 5, none }
-       
+
         UIComponent gui;
 
         private int level;

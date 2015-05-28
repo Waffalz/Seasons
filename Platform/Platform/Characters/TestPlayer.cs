@@ -6,11 +6,12 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.GameFlow;
-using Platform.Mobs;
-using Platform.Control;
+using Platform.gameflow;
+using Platform.mobs;
+using Platform.control;
+using Platform.logger;
 
-namespace Platform.Characters
+namespace Platform.characters
 {
     class TestPlayer : Player
     {

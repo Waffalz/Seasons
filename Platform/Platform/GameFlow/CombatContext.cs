@@ -7,12 +7,13 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.World;
-using Platform.Graphics;
-using Platform.UserInterface;
-using Microsoft.Xna.Framework.Media;
+using Platform.world;
+using Platform.graphics;
+using Platform.userinterface;
+using Platform.logger;
+using Platform.mobs;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     public class CombatContext : GameContext
     {
@@ -98,6 +99,12 @@ namespace Platform.GameFlow
             }, "Controls");
             pauseMenu.Add(controlButton);
 
+            UIButton creditsButton = new UIButton(new Rectangle(10, 230, 200, 100), delegate()
+            {
+                Game1.CurrentGame.GameMode = new CreditsContext(this);
+            }, "Credits");
+            pauseMenu.Add(creditsButton);
+
             gameHUD.visible = true;
             pauseMenu.visible = false;
 
@@ -111,21 +118,18 @@ namespace Platform.GameFlow
             MouseState oMus = Game1.CurrentGame.OldMouseInput;
             int scroll = mus.ScrollWheelValue - oMus.ScrollWheelValue;
 
-
             if (!paused)
             {
                 world.Tick(gameTime); //update stuff in the Map
                 gameHUD.visible = true;
                 pauseMenu.visible = false; 
                 gameHUD.Update(gameTime);
-                MediaPlayer.Volume = 1.0f;
                 
             }
             else
             {
                 pauseMenu.visible = true;
                 pauseMenu.Update(gameTime);
-                MediaPlayer.Volume = .4f;
             }
 
             if (kipz.IsKeyDown(Keys.Escape) && !oKipz.IsKeyDown(Keys.Escape)){
@@ -144,6 +148,36 @@ namespace Platform.GameFlow
 
             manaBar.MaxValue = Game1.CurrentGame.Player.MaxMana;
             manaBar.Value = Game1.CurrentGame.Player.Mana;
+
+            bool noMobsOnMap = true;
+            for (int i = 0; i < world.Entities.Count; i++)
+            {
+                if (world.Entities[i] is Baddu)
+                {
+                    noMobsOnMap = false;
+                }
+            }
+            if (noMobsOnMap)
+            {
+                Game1.CurrentGame.GameMode = new VictoryContext();
+            }
+            
+            bool mobTouchesPlayer = false;
+            for (int i = 0; i < world.Entities.Count; i++)
+            {
+                if (world.Entities[i] is Baddu)
+                {
+                    if(world.Entities[i].Collides(world.Player))
+                        mobTouchesPlayer = true;
+                }
+            }
+            if (mobTouchesPlayer)
+            {
+                Game1.CurrentGame.GameMode = new GameOverContext();
+            }
+
+            if (Game1.CurrentGame.Player.Health <= 0)
+                Game1.CurrentGame.GameMode = new GameOverContext();
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -154,5 +188,6 @@ namespace Platform.GameFlow
 
 
         }
+
     }
 }

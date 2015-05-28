@@ -5,10 +5,10 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.UserInterface;
+using Platform.userinterface;
 using Microsoft.Xna.Framework.Media;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     class ControlContext : GameContext
     {
@@ -48,9 +48,9 @@ namespace Platform.GameFlow
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             gui.Draw(gameTime, spriteBatch);
-            spriteBatch.DrawString(font, "W - Jump", new Vector2(485,250), Color.White);
-            spriteBatch.DrawString(font, "A/D - Move Left/Right", new Vector2(420, 285), Color.White);
-            spriteBatch.DrawString(font, "Left Click - attack", new Vector2(430, 320), Color.White);
+            spriteBatch.DrawString(font, "W - Jump", new Vector2(485, 250), Color.Black);
+            spriteBatch.DrawString(font, "A/D - Move Left/Right", new Vector2(420, 285), Color.Black);
+            spriteBatch.DrawString(font, "Left Click - attack", new Vector2(430, 320), Color.Black);
         }
     }
 }

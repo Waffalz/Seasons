@@ -5,10 +5,11 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-using Platform.Graphics;
-using Platform.GameFlow;
+using Platform.graphics;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.World
+namespace Platform.world
 {
     public class Particle:Entity
     {
@@ -16,7 +17,8 @@ namespace Platform.World
         private float maxLife;
         private float lifeTime;
         private float degen;
-        private Vector3 colorSpeed;
+        private Vector4 colorAcceleration;
+        private Vector4 colorSpeed;
         private Vector2 maxSize;
         private float acceleration;
 
@@ -26,10 +28,10 @@ namespace Platform.World
             set { acceleration = value; }
         }
 
-        public Vector3 ColorSpeed
+        public Vector4 ColorSpeed
         {
-            get { return colorSpeed; }
-            set { colorSpeed = value; }
+            get { return colorAcceleration; }
+            set { colorAcceleration = value; }
         }
         public Vector2 MaxSize
         {
@@ -75,7 +77,8 @@ namespace Platform.World
             texture = Game1.CurrentGame.Textures["CircleParticle"];
             SourceRect = texture.Bounds;
             color = Color.Red;
-            colorSpeed = new Vector3();
+            colorAcceleration = new Vector4();
+            colorSpeed = new Vector4();
             acceleration = -50;
         }
 
@@ -88,7 +91,8 @@ namespace Platform.World
             texture = Game1.CurrentGame.Textures["CircleParticle"];
             SourceRect = Texture.Bounds;
             color = Color.Red;
-            colorSpeed = new Vector3();
+            colorAcceleration = new Vector4();
+            colorSpeed = new Vector4();
             acceleration = -50;
         }
 
@@ -96,22 +100,33 @@ namespace Platform.World
         {
             float timeElapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            Position += Velocity * timeElapsed;
-            Velocity = new Vector2(Velocity.X, Velocity.Y + timeElapsed * parent.Gravity *(float).5);
+            
             lifeTime -= timeElapsed;
+            if (lifeTime <= 0){
+                            Remove();
+                            return;
+            }
             Size = maxSize * (lifeTime / maxLife);
+
+            UpdatePosition(timeElapsed);
+            UpdateGravity(timeElapsed*.5f);
+            colorSpeed += colorAcceleration * timeElapsed;
+            Vector4 cv = color.ToVector4()*255 + colorSpeed * timeElapsed;
+            color = new Color(
+                (byte)MathHelper.Clamp(cv.X, 0, 255),
+                (byte)MathHelper.Clamp(cv.Y, 0, 255),
+                (byte)MathHelper.Clamp(cv.Z, 0, 255),
+                (byte)MathHelper.Clamp(cv.W, 0, 255)
+                );
+
+        }
+
+        public void UpdateVelocity(float timeDifference)
+        {
             float toDec = velocity.Length();
             Vector2 dir = velocity;
             dir.Normalize();
-            velocity = velocity + dir * acceleration * timeElapsed;
-            color = new Color(
-                (byte)(color.R + colorSpeed.X * timeElapsed),
-                (byte)(color.G + colorSpeed.Y * timeElapsed),
-                (byte)(color.B + colorSpeed.Z * timeElapsed));
-            if (lifeTime <= 0){
-                Parent = null;
-            }
-
+            velocity = velocity + dir * acceleration * timeDifference;
         }
 
     }

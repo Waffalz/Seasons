@@ -17,15 +17,56 @@
 *.RTF	 diff=astextplain
 
 # Developer added attributes
-*.suo merge=ours
-*.sln merge=ours
-*.contentproj merge=ours
-*.csproj merge=ours
-*.csproj.user merge=ours
-*.csproj.Debug.cachefile merge=ours
-Platform/PlatformContent/obj/ merge=ours
-Platform/Platform/bin/ merge=ours
-Platform/Platform/obj/ merge=ours
-Platform/Platform/Properties merge=ours
-Platform/Platform/Game.ico merge=ours
-Platform/Platform/GameThumbnail.png merge=ours
+*.cs     diff=csharp
+
+#*.suo binary merge=ours
+*.sln binary merge=ours
+
+Platform\PlatformContent\PlatformContent.contentproj merge=text
+Platform\PlatformContent\bin\x86\Debug\ binary merge=ours
+Platform\PlatformContent\entities\ binary merge=ours
+Platform\PlatformContent\Fonts\ merge=text
+Platform\PlatformContent\GUITextures\ binary merge=ours
+Platform\PlatformContent\maps\ merge=text
+Platform\PlatformContent\MenuItems\ merge=text
+Platform\PlatformContent\obj\x86\Debug\TempPE\ binary merge=ours
+Platform\PlatformContent\obj\x86\Debug\ContentPipeline.xml merge=text
+Platform\PlatformContent\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache binary merge=ours
+Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentproj.FileListAbsolute.txt merge=text
+Platform\PlatformContent\obj\x86\Debug\PlatformContent.contentprojResolveAssemblyReference.cache binary merge=ours
+Platform\PlatformContent\particles\ binary merge=ours
+Platform\PlatformContent\tiles\ binary merge=ours
+
+Platform\PlatformContent\SeasonsContent.contentproj merge=text
+Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentproj.FileListAbsolute.txt merge=text
+Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache binary merge=ours
+Platform\PlatformContent\Entities\ binary merge=ours
+Platform\PlatformContent\Maps\ merge=text
+Platform\PlatformContent\Particles\ binary merge=ours
+Platform\PlatformContent\Tiles\ binary merge=ours
+
+Platform\Platform\ai\ merge=text
+Platform\Platform\AI\ merge=text
+Platform\Platform\bin\x86\Debug\ binary merge=ours
+Platform\Platform\graphics\ merge=text
+Platform\Platform\lib\ merge=text
+Platform\Platform\mobs\ merge=text
+Platform\Platform\obj\x86\Debug\ binary merge=ours
+Platform\Platform\Properties\ binary merge=ours
+Platform\Platform\world\ merge=text
+Platform\Platform\Game.ico binary merge=ours
+Platform\Platform\Game1.cs merge=text
+Platform\Platform\GameThumbnail.png binary merge=ours
+Platform\Platform\Platform.csproj merge=text
+Platform\Platform\Platform.csproj.Debug.cachefile merge=text
+Platform\Platform\Platform.csproj.user merge=text
+Platform\Platform\Program.cs merge=text
+
+Platform\Platform\Characters\ merge=text
+Platform\Platform\Control\ merge=text
+Platform\Platform\GameFlow\ merge=text
+Platform\Platform\Projectiles\ merge=text
+Platform\Platform\UserInterface\ merge=text
+Platform\Platform\Seasonals.csproj merge=text
+Platform\Platform\Seasonals.csproj.Debug.cachefile merge=text
+Platform\Platform\Seasonals.csproj.user merge=text

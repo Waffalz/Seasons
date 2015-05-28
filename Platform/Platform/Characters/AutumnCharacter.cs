@@ -6,13 +6,15 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.GameFlow;
-using Platform.Control;
-using Platform.Mobs;
-using Platform.World;
-using Platform.UserInterface;
+using Platform.gameflow;
+using Platform.control;
+using Platform.mobs;
+using Platform.world;
+using Platform.userinterface;
+using Platform.logger;
+using Platform.projectiles;
 
-namespace Platform.Characters
+namespace Platform.characters
 {
     class AutumnCharacter : Player
     {
@@ -21,16 +23,32 @@ namespace Platform.Characters
         float boostAccel;
         float boostVelocityTolerance;
 
+
         UIHealthBar boostBar;
 
         public AutumnCharacter()
             : base()
         {
+            texture = Game1.CurrentGame.Textures["AutumnAnim"];
+
+            attack = 10;
             maxBoostTime = .75f;
             boostTime = maxBoostTime;
             boostAccel = 200;
             airControl = 1;
             boostVelocityTolerance = 30;
+
+            controls.Add("Autumn Basic Attack", new ContinuousAction(this, 1,
+                delegate() { return Game1.CurrentGame.MouseInput.LeftButton == ButtonState.Pressed; },
+                delegate(GameTime gameTime) {
+                    MouseState mouse = Game1.CurrentGame.MouseInput;
+                    Vector2 dif = parent.Camera.PositionFromScreen(new Point(mouse.X, mouse.Y)) - this.Position;
+                    dif.Normalize();
+                    AutumnBasic gust = new AutumnBasic(this, 10);
+                    gust.Position = this.Position;
+                    gust.Velocity = dif * 100;
+                    parent.AddEntity(gust);
+                }));
             
             controls.Add("Aerial Boost", new ContinuousAction(this, 0,
                 delegate() { return Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.W) || Game1.CurrentGame.KeyboardInput.IsKeyDown(Keys.Space); },
@@ -44,6 +62,7 @@ namespace Platform.Characters
                 }));
 
             GameContext gameCont = Game1.CurrentGame.GameMode;
+
             if (gameCont is CombatContext) {
                 boostBar = new UIHealthBar();
                 boostBar.bounds = new Rectangle(50, 110, 350, 40);

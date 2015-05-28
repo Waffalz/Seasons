@@ -1,9 +1,5 @@
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.xnb
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.xnb
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Blocks.png
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\tiles\Platforms.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\entities\player.png
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\particles\Square.bmp
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
@@ -28,7 +24,6 @@ H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debu
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.exe
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\obj\x86\Debug\Platform.pdb
-C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
 C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\menuItems\Seasons_Menu.xnb
 H:\Documents\Visual Studio 2010\Projects\Platform\Platform\Platform\bin\x86\Debug\Content\fonts\ButtonFont.xnb
@@ -77,7 +72,6 @@ H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
@@ -86,12 +80,17 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\Bu
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.png
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.bmp
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
 C:\Users\131546\Desktop\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Platforms.xnb
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
@@ -121,12 +120,116 @@ H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
 H:\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level2.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level1.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level3.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level4.txt
-C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level5.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.bmp
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.png
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level02.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level01.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level03.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level04.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Content\maps\Level05.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
+F:\Video_Game_Design\New folder\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+H:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
+H:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
+H:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+F:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
+F:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Platform.exe
+F:\Video_Game_Design\Seasons\Platform\Platform\obj\x86\Debug\Platform.pdb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\player.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\seasonsMenu.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\newBlocks.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\player.png
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.bmp
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.png
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.png
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.png
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.png
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.png
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level02.txt
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level01.txt
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level03.txt
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level04.txt
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level05.txt
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
+F:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\player.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\seasonsMenu.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\newBlocks.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.png
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\player.png
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\square.bmp
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.png
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.png
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.png
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.png
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level02.txt
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level01.txt
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level03.txt
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level04.txt
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Content\Maps\level05.txt
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Platform.exe
+H:\Video_Game_Design\Seasons\Platform\Platform\bin\x86\Debug\Platform.pdb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.png
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.png
+C:\Users\Ethan\Documents\GitHub\Seasons\Platform\Platform\bin\x86\Debug\Content\Projectiles\Icicle.xnb
+C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Projectiles\Icicle.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb
@@ -139,75 +242,47 @@ C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Om
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma
 C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.png
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Entities\Player.png
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\Particles\Square.bmp
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\maps\Level2.txt
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\maps\Level1.txt
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\maps\Level3.txt
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\maps\Level4.txt
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Content\maps\Level5.txt
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Platform.exe
-C:\Users\131546\Desktop\New folder\Platform\Platform\bin\x86\Debug\Platform.pdb
-C:\Users\131546\Desktop\New folder\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
-C:\Users\131546\Desktop\New folder\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\131546\Desktop\New folder\Platform\Platform\obj\x86\Debug\Platform.exe
-C:\Users\131546\Desktop\New folder\Platform\Platform\obj\x86\Debug\Platform.pdb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.png
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Entities\Player.png
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\Particles\Square.bmp
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\maps\Level2.txt
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\maps\Level1.txt
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\maps\Level3.txt
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\maps\Level4.txt
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Content\maps\Level5.txt
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Platform.exe
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\bin\x86\Debug\Platform.pdb
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\obj\x86\Debug\Platform.exe
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\Platform\obj\x86\Debug\Platform.pdb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Entities\player.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Projectiles\Icicle.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.png
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Entities\player.png
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Particles\square.bmp
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.png
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.png
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.png
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.png
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Platform.exe
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Platform.pdb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\obj\x86\Debug\Seasonals.csprojResolveAssemblyReference.cache
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\obj\x86\Debug\Platform.exe
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\obj\x86\Debug\Platform.pdb
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level2.txt
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level1.txt
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level3.txt
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level4.txt
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Maps\level5.txt

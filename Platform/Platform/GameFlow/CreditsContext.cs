@@ -5,9 +5,9 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.UserInterface;
+using Platform.userinterface;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     class CreditsContext : GameContext
     {
@@ -21,7 +21,7 @@ namespace Platform.GameFlow
             set { gui = value; }
         }
 
-        public CreditsContext()
+        public CreditsContext(GameContext lastContext)
         {
             gui = new UIComponent();
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
@@ -31,7 +31,7 @@ namespace Platform.GameFlow
 
             UIButton backButton = new UIButton(new Rectangle(0, 0, 100, 50), delegate()
             {
-                Game1.CurrentGame.GameMode = new MainMenuContext();
+                Game1.CurrentGame.GameMode = lastContext;
             }, "Back");
             gui.Add(backButton);
 
@@ -46,15 +46,15 @@ namespace Platform.GameFlow
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             gui.Draw(gameTime, spriteBatch);
-            spriteBatch.DrawString(font, "Programmed by:", new Vector2(455, 250), Color.White);
-            spriteBatch.DrawString(font, "Ethan Tran", new Vector2(470, 285), Color.White);
-            spriteBatch.DrawString(font, "Max Poarch", new Vector2(470, 320), Color.White);
-            spriteBatch.DrawString(font, "Caine Mongeau", new Vector2(455, 355), Color.White);
-            spriteBatch.DrawString(font, "Michael Milton", new Vector2(455, 390), Color.White);
-            spriteBatch.DrawString(font, "Art:", new Vector2(510, 440), Color.White);
-            spriteBatch.DrawString(font, "Ethan Tran", new Vector2(470, 475), Color.White);
-            spriteBatch.DrawString(font, "Music:", new Vector2(500, 525), Color.White);
-            spriteBatch.DrawString(font, "Caine Mongeau", new Vector2(455, 560), Color.White);
+            spriteBatch.DrawString(font, "Programmed by:", new Vector2(455, 250), Color.Black);
+            spriteBatch.DrawString(font, "Ethan Tran", new Vector2(470, 285), Color.Black);
+            spriteBatch.DrawString(font, "Max Poarch", new Vector2(470, 320), Color.Black);
+            spriteBatch.DrawString(font, "Caine Mongeau", new Vector2(455, 355), Color.Black);
+            spriteBatch.DrawString(font, "Michael Milton", new Vector2(455, 390), Color.Black);
+            spriteBatch.DrawString(font, "Art:", new Vector2(510, 440), Color.Black);
+            spriteBatch.DrawString(font, "Ethan Tran", new Vector2(470, 475), Color.Black);
+            spriteBatch.DrawString(font, "Music:", new Vector2(500, 525), Color.Black);
+            spriteBatch.DrawString(font, "Caine Mongeau", new Vector2(455, 560), Color.Black);
         }
     }
 }

@@ -6,11 +6,12 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.UserInterface;
-using Platform.Mobs;
+using Platform.userinterface;
+using Platform.mobs;
+using Platform.logger;
 using Microsoft.Xna.Framework.Media;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     public class MainMenuContext: GameContext
     {
@@ -24,12 +25,19 @@ namespace Platform.GameFlow
 
         public MainMenuContext()
         {
-
             gui = new UIComponent();
             gui.texture = Game1.CurrentGame.Textures["MenuBack"];
             gui.sourceRect = gui.texture.Bounds;
             gui.bounds = new Rectangle(0, 0, Game1.CurrentGame.Window.ClientBounds.Width, Game1.CurrentGame.Window.ClientBounds.Height);
             gui.color = Color.White;
+
+            //Title
+            UILabel titleLabel = new UILabel();
+            titleLabel.text = "ARISTAEA";
+            titleLabel.bounds = new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width/2, 200,0,0);
+            titleLabel.hAlign = HorizontalTextAlignment.Center;
+            titleLabel.textColor = Color.Black;
+            gui.Add(titleLabel);
 
             UIButton startButton = new UIButton(new Rectangle(0, 300, 300, 100), delegate()
             {
@@ -60,7 +68,7 @@ namespace Platform.GameFlow
 
             UIButton creditsButton = new UIButton(new Rectangle(0, 550, 300, 60), delegate()
             {
-                    Game1.CurrentGame.GameMode = new CreditsContext();
+                Game1.CurrentGame.GameMode = new CreditsContext(this);
             }, "Credits");
             creditsButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - creditsButton.bounds.Width) / 2;
             creditsButton.Border = UIBorder.Scroll;
@@ -73,7 +81,6 @@ namespace Platform.GameFlow
             exitButton.bounds.X = (Game1.CurrentGame.Window.ClientBounds.Width - exitButton.bounds.Width) / 2;
             exitButton.Border = UIBorder.Scroll;
             gui.Add(exitButton);
-
         }
 
         public override void Update(GameTime gameTime)

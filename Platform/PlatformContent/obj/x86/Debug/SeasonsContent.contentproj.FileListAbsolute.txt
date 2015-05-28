@@ -4,5 +4,7 @@ H:\Documents\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsConten
 C:\Users\116162\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
 C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
 C:\Users\115254\Desktop\GitHub\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
-C:\Users\131546\Desktop\New folder\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
-H:\Video Game Design\Contest Project - 4 Seasons\GAME CODE\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
+F:\Video_Game_Design\New folder\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
+H:\Video_Game_Design\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
+F:\Video_Game_Design\Seasons\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache
+C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\PlatformContent\obj\x86\Debug\SeasonsContent.contentprojResolveAssemblyReference.cache

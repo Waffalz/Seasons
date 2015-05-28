@@ -6,13 +6,13 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.GameFlow;
-using Platform.Graphics;
+using Platform.gameflow;
+using Platform.graphics;
+using Platform.logger;
 
-namespace Platform.World
-{
-    public class Tile
-    {
+namespace Platform.world {
+
+    public class Tile {
         
         public const float TILE_WIDTH = 10;// in wubs
         public const int TILE_TEX_WIDTH = 64;
@@ -34,5 +34,7 @@ namespace Platform.World
         {
             return new Tile(sheetName, colorRow, colorCol);
         }
-    }
+
+	}
+
 }

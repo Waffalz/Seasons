@@ -8,8 +8,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Seasons")]
 [assembly: AssemblyProduct("Seasons")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Waffalz")]
-[assembly: AssemblyCopyright("Copyright is for losers")]
+[assembly: AssemblyCompany("fyadyada")]
+[assembly: AssemblyCopyright("Copyright is not for losers, mate.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

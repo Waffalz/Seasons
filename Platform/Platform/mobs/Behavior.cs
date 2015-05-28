@@ -5,13 +5,19 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-namespace Platform.Mobs
-{
-    interface Behavior
-    {
-        void Behave(float timeDif);
+using Platform.logger;
 
-    }
-    public enum MoveDirection { Up, Down, Left, Right , None}
-    
+namespace Platform.mobs {
+	interface Behavior {
+		void Behave( float timeDif );
+
+	}
+	public enum MoveDirection {
+		Up,
+		Down,
+		Left,
+		Right,
+		None
+	}
+
 }

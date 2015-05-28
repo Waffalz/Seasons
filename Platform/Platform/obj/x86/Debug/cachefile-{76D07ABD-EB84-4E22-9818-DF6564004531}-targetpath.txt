@@ -1,13 +1,17 @@
-Content\Tiles\Blocks.xnb
-Content\Entities\Player.xnb
-Content\Particles\Square.xnb
-Content\MenuItems\Seasons_Menu.xnb
-Content\GUITextures\HealthBar.xnb
-Content\GUITextures\HUDBack.xnb
-Content\Particles\CircleParticle.xnb
-Content\GUITextures\ScrollBorder.xnb
-Content\Tiles\NewBlocks.xnb
-Content\Fonts\ButtonFont.xnb
+Content\Tiles\blocks.xnb
+Content\Entities\player.xnb
+Content\Particles\square.xnb
+Content\GUITextures\healthBar.xnb
+Content\GUITextures\hUDBack.xnb
+Content\Particles\circleParticle.xnb
+Content\GUITextures\scrollBorder.xnb
+Content\Players\SpringAnim.xnb
+Content\Players\WinterAnim.xnb
+Content\Players\AutumnAnim.xnb
+Content\Players\SummerAnim.xnb
+Content\MenuItems\Menuback.xnb
+Content\Projectiles\Icicle.xnb
+Content\Fonts\buttonFont.xnb
 Content\Songs\Ah, The 808's.xnb
 Content\Songs\Ah, The 808's.wma
 Content\Songs\Description N-A.xnb
@@ -20,11 +24,15 @@ Content\Songs\The Key.xnb
 Content\Songs\The Key.wma
 Content\Songs\Welcome to Summer.xnb
 Content\Songs\Welcome to Summer.wma
-Content\Tiles\Blocks.png
-Content\Entities\Player.png
-Content\Particles\Square.bmp
-Content\maps\Level2.txt
-Content\maps\Level1.txt
-Content\maps\Level3.txt
-Content\maps\Level4.txt
-Content\maps\Level5.txt
+Content\Tiles\blocks.png
+Content\Entities\player.png
+Content\Particles\square.bmp
+Content\GUITextures\healthBar.png
+Content\GUITextures\hUDBack.png
+Content\Particles\circleParticle.png
+Content\GUITextures\scrollBorder.png
+Content\Maps\level2.txt
+Content\Maps\level1.txt
+Content\Maps\level3.txt
+Content\Maps\level4.txt
+Content\Maps\level5.txt

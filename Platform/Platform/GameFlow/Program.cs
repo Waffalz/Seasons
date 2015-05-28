@@ -1,6 +1,6 @@
 using System;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
 #if WINDOWS || XBOX
     static class Program

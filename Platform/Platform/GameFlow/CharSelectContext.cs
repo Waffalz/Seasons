@@ -6,12 +6,13 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using Platform.UserInterface;
-using Platform.Characters;
-using Platform.Mobs;
-using Platform.World;
+using Platform.userinterface;
+using Platform.characters;
+using Platform.mobs;
+using Platform.world;
+using Platform.logger;
 
-namespace Platform.GameFlow
+namespace Platform.gameflow
 {
     class CharSelectContext: GameContext
     {
@@ -43,7 +44,7 @@ namespace Platform.GameFlow
 
             UIButton backButton = new UIButton(new Rectangle(0, 0, 100, 50), delegate()
             {
-                Game1.CurrentGame.GameMode = new LevelSelectContext(); 
+                Game1.CurrentGame.GameMode = new MainMenuContext(); 
             }, "Back");
             gui.Add(backButton);
 
@@ -75,7 +76,8 @@ namespace Platform.GameFlow
             charName.borderSize = 20;
             gui.Add(charName);
 
-            UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate() {
+            UIButton springSelect = new UIButton(new Rectangle(50, 100, 150, 150), delegate()
+            {
                 selected = CharType.Spring;
                 charName.text = "Haru";
                 charDesc.text = "A ranged character that shoots seeds at her enemies";
@@ -83,7 +85,8 @@ namespace Platform.GameFlow
             }, "Spring");
             gui.Add(springSelect);
 
-            UIButton summerSelect = new UIButton(new Rectangle(210, 100, 150, 150), delegate() {
+            UIButton summerSelect = new UIButton(new Rectangle(210, 100, 150, 150), delegate()
+            {
                 selected = CharType.Summer;
                 charName.text = "Natsu";
                 charDesc.text = "A melee character that does damage very close to him";
@@ -92,7 +95,8 @@ namespace Platform.GameFlow
             }, "Summer");
             gui.Add(summerSelect);
 
-            UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate() {
+            UIButton autumnSelect = new UIButton(new Rectangle(210, 260, 150, 150), delegate()
+            {
                 selected = CharType.Autumn;
                 charName.text = "Aki";
                 charDesc.text = "A ranged character that shoots leaves at her enemies. Her leaves travel through walls.\nAbility - Control the winds: Hold \"W\" key to float.";
@@ -100,7 +104,8 @@ namespace Platform.GameFlow
             }, "Autumn");
             gui.Add(autumnSelect);
 
-            UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate() {
+            UIButton winterSelect = new UIButton(new Rectangle(50, 260, 150, 150), delegate()
+            {
                 selected = CharType.Winter;
                 charName.text = "Hiems";
                 charDesc.text = "A ghost character. Takes less damage, but loses mana slowly, and will die if he runs out.\nHas a sweeping melee attack that converts damage dealt to mana.";
@@ -108,8 +113,7 @@ namespace Platform.GameFlow
             }, "Winter");
             gui.Add(winterSelect);
 
-            playButton = new UIButton(new Rectangle(Game1.CurrentGame.Window.ClientBounds.Width - 150, 0, 150, 50), delegate()
-            {
+            playButton = new UIButton(new Rectangle(370, 100, 150, 60), delegate() {
                 CombatContext nextSlide = new CombatContext();
                 Player ploy = new TestPlayer();
                 Game1.CurrentGame.GameMode = nextSlide;
@@ -122,8 +126,8 @@ namespace Platform.GameFlow
                 }
                 
                 Game1.CurrentGame.Player = ploy;
-                
-                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/Level"+mapNumber+".txt");
+
+                nextSlide.CombatWorld = Map.LoadMap2(@"Content/maps/level" + level + ".txt");
                 nextSlide.CombatWorld.Camera.PointOnScreen = new Point(Game1.CurrentGame.Window.ClientBounds.Width / 2, Game1.CurrentGame.Window.ClientBounds.Height / 2);
 
             }, "Start Game");

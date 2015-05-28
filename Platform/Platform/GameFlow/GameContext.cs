@@ -6,7 +6,9 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Platform.GameFlow
+using Platform.logger;
+
+namespace Platform.gameflow
 {
     public abstract class GameContext
     {

@@ -43,7 +43,7 @@ Temporary Items
 .apdisk
 
 # Developer generated ignores
-#*.suo
+*.suo
 #*.sln
 #Platform/PlatformContent/PlatformContent.contentproj
 #Platform/PlatformContent/SeasonsContent.contentproj

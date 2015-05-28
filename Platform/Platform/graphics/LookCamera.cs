@@ -7,25 +7,26 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using Platform.World;
-using Platform.GameFlow;
+using Platform.world;
+using Platform.gameflow;
+using Platform.logger;
 
-namespace Platform.Graphics
+namespace Platform.graphics
 {
     class LookCamera : Camera
     {
-        private float maxWorldExtend; //maximum amount camera will pan out from origin
-        private float maxMouseExtend;
+        //private float maxWorldExtend; //maximum amount camera will pan out from origin
+        //private float maxMouseExtend;
 
-        private Vector2 origin;
+        //private Vector2 origin;
 
         public LookCamera(Map p):base(p)
         {
-            maxWorldExtend = 70;
-            maxMouseExtend = 200;
+            //maxWorldExtend = 70;
+            //maxMouseExtend = 200;
         }
 
-        public override void Update(GameTime gameTime)
+       /* public override void Update(GameTime gameTime)
         {
             if (parent.Player != null) {
                 origin = parent.Player.Position;
@@ -53,10 +54,12 @@ namespace Platform.Graphics
                 position = origin;
             }
         }
+        */
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {/*
-            
+        {
+            /*
             if (parent != null) {
+
 
                 for (int i = 0; i < parent.BackList.Count; i++) {//draw background
 
@@ -101,8 +104,8 @@ namespace Platform.Graphics
                         p.Draw(gameTime, spriteBatch);
                     }
                 }
-            }
-            */
-        }
+            }*/
+        }
+
     }
 }

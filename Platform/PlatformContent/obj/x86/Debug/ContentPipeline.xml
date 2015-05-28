@@ -2,94 +2,134 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Tiles\Blocks.png</Source>
-      <Name>Tiles\Blocks</Name>
+      <Source>Tiles\blocks.png</Source>
+      <Name>Tiles\blocks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\Blocks.xnb</Output>
-      <Time>2015-05-04T09:07:22.8613887-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Tiles\blocks.xnb</Output>
+      <Time>2015-05-04T09:11:35.6079873-05:00</Time>
     </Item>
     <Item>
-      <Source>Entities\Player.png</Source>
-      <Name>Entities\Player</Name>
+      <Source>Entities\player.png</Source>
+      <Name>Entities\player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Entities\Player.xnb</Output>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Entities\player.xnb</Output>
       <Time>2015-03-25T09:22:30.1960223-05:00</Time>
     </Item>
     <Item>
-      <Source>Particles\Square.bmp</Source>
-      <Name>Particles\Square</Name>
+      <Source>Particles\square.bmp</Source>
+      <Name>Particles\square</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="PremultiplyAlpha">False</Data>
+        <Data Key="ColorKeyEnabled">False</Data>
+      </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\Square.xnb</Output>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Particles\square.xnb</Output>
       <Time>2015-04-02T09:19:19.3646699-05:00</Time>
     </Item>
     <Item>
-      <Source>MenuItems\Seasons_Menu.png</Source>
-      <Name>MenuItems\Seasons_Menu</Name>
+      <Source>GUITextures\healthBar.png</Source>
+      <Name>GUITextures\healthBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\MenuItems\Seasons_Menu.xnb</Output>
-      <Time>2015-05-04T09:07:22.8363862-05:00</Time>
-    </Item>
-    <Item>
-      <Source>GUITextures\HealthBar.png</Source>
-      <Name>GUITextures\HealthBar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HealthBar.xnb</Output>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\healthBar.xnb</Output>
       <Time>2015-04-02T10:08:38.9802764-05:00</Time>
     </Item>
     <Item>
-      <Source>GUITextures\HUDBack.png</Source>
-      <Name>GUITextures\HUDBack</Name>
+      <Source>GUITextures\hUDBack.png</Source>
+      <Name>GUITextures\hUDBack</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\HUDBack.xnb</Output>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\hUDBack.xnb</Output>
       <Time>2015-04-02T10:08:38.9782762-05:00</Time>
     </Item>
     <Item>
-      <Source>Particles\CircleParticle.png</Source>
-      <Name>Particles\CircleParticle</Name>
+      <Source>Particles\circleParticle.png</Source>
+      <Name>Particles\circleParticle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Particles\CircleParticle.xnb</Output>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Particles\circleParticle.xnb</Output>
       <Time>2015-04-02T10:08:39.01628-05:00</Time>
     </Item>
     <Item>
-      <Source>GUITextures\ScrollBorder.png</Source>
-      <Name>GUITextures\ScrollBorder</Name>
+      <Source>GUITextures\scrollBorder.png</Source>
+      <Name>GUITextures\scrollBorder</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\GUITextures\ScrollBorder.xnb</Output>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\GUITextures\scrollBorder.xnb</Output>
       <Time>2015-04-02T10:08:38.9812765-05:00</Time>
     </Item>
     <Item>
-      <Source>Tiles\NewBlocks.png</Source>
-      <Name>Tiles\NewBlocks</Name>
+      <Source>Players\SpringAnim.png</Source>
+      <Name>Players\SpringAnim</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Tiles\NewBlocks.xnb</Output>
-      <Time>2015-05-04T09:07:22.8633889-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\SpringAnim.xnb</Output>
+      <Time>2015-05-04T09:11:35.5629828-05:00</Time>
     </Item>
     <Item>
-      <Source>Fonts\ButtonFont.spritefont</Source>
-      <Name>Fonts\ButtonFont</Name>
+      <Source>Players\WinterAnim.png</Source>
+      <Name>Players\WinterAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\WinterAnim.xnb</Output>
+      <Time>2015-05-04T09:11:35.5779843-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Players\AutumnAnim.png</Source>
+      <Name>Players\AutumnAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\AutumnAnim.xnb</Output>
+      <Time>2015-05-04T09:11:35.5469812-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Players\SummerAnim.png</Source>
+      <Name>Players\SummerAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Players\SummerAnim.xnb</Output>
+      <Time>2015-05-04T09:11:35.5709836-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MenuItems\Menuback.png</Source>
+      <Name>MenuItems\Menuback</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\MenuItems\Menuback.xnb</Output>
+      <Time>2015-05-04T09:11:35.5309796-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Projectiles\Icicle.png</Source>
+      <Name>Projectiles\Icicle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Projectiles\Icicle.xnb</Output>
+      <Time>2015-05-04T09:11:35.5839849-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\buttonFont.spritefont</Source>
+      <Name>Fonts\buttonFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Fonts\ButtonFont.xnb</Output>
-      <Time>2015-05-04T09:07:44.5770639-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Fonts\buttonFont.xnb</Output>
+      <Time>2015-05-04T09:11:35.4769742-05:00</Time>
     </Item>
     <Item>
       <Source>Songs\Ah, The 808's.mp3</Source>
@@ -97,9 +137,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma</Extra>
-      <Time>2015-05-04T09:07:22.434346-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ah, The 808's.wma</Extra>
+      <Time>2015-05-04T09:59:53.361837-05:00</Time>
     </Item>
     <Item>
       <Source>Songs\Description N-A.mp3</Source>
@@ -107,9 +147,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma</Extra>
-      <Time>2015-05-04T09:07:22.5193545-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Description N-A.wma</Extra>
+      <Time>2015-05-04T09:59:53.8142457-05:00</Time>
     </Item>
     <Item>
       <Source>Songs\Ominosity.mp3</Source>
@@ -117,9 +157,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma</Extra>
-      <Time>2015-05-04T09:07:22.5983624-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Ominosity.wma</Extra>
+      <Time>2015-05-04T09:59:54.2822547-05:00</Time>
     </Item>
     <Item>
       <Source>Songs\Questionable.mp3</Source>
@@ -127,9 +167,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma</Extra>
-      <Time>2015-05-04T09:07:22.6573683-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Questionable.wma</Extra>
+      <Time>2015-05-04T09:59:54.5942607-05:00</Time>
     </Item>
     <Item>
       <Source>Songs\The Key.mp3</Source>
@@ -137,9 +177,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma</Extra>
-      <Time>2015-05-04T09:07:22.724375-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\The Key.wma</Extra>
+      <Time>2015-05-04T09:59:54.9374673-05:00</Time>
     </Item>
     <Item>
       <Source>Songs\Welcome to Summer.mp3</Source>
@@ -147,9 +187,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb</Output>
-      <Extra>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma</Extra>
-      <Time>2015-05-04T09:07:22.824385-05:00</Time>
+      <Output>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.xnb</Output>
+      <Extra>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\Songs\Welcome to Summer.wma</Extra>
+      <Time>2015-05-04T09:59:55.4366769-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -157,10 +197,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\131546\Desktop\Seasons\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\131546\Desktop\Seasons\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\PlatformContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\PlatformContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\131546\Desktop\A1-Aristaea-Michael Milton\Platform\Platform\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
