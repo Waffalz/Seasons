@@ -1,4 +1,4 @@
 # Seasons
-It's a game thing
-This is a README.
-This project is a game project.
+by Michael Milton, Caine Mongeau, Maxwell Poarch, and Ethan Tran
+
+Release version is in the Maps/Textures branch.
